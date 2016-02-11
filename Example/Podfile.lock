@@ -1,0 +1,20 @@
+PODS:
+  - LionheartExtensions (0.1.0)
+  - Nimble (3.0.0)
+  - Quick (0.8.0)
+
+DEPENDENCIES:
+  - LionheartExtensions (from `../`)
+  - Nimble (= 3.0.0)
+  - Quick (~> 0.8.0)
+
+EXTERNAL SOURCES:
+  LionheartExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LionheartExtensions: 7739a9e2ccd41493f8d141a7ad443e1188e11a7b
+  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+
+COCOAPODS: 0.39.0
