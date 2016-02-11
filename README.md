@@ -17,7 +17,7 @@ pod "LionheartExtensions"
 
 ## Author
 
-@dlo
+Dan Loewenherz, [@dlo](https://github.com/dlo)
 
 ## License
 
