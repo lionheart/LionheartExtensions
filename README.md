@@ -1,10 +1,5 @@
 # LionheartExtensions
 
-[![CI Status](http://img.shields.io/travis/Dan Loewenherz/LionheartExtensions.svg?style=flat)](https://travis-ci.org/Dan Loewenherz/LionheartExtensions)
-[![Version](https://img.shields.io/cocoapods/v/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
-[![License](https://img.shields.io/cocoapods/l/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
-[![Platform](https://img.shields.io/cocoapods/p/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
-
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -22,7 +17,7 @@ pod "LionheartExtensions"
 
 ## Author
 
-Dan Loewenherz, dloewenherz@gmail.com
+@dlo
 
 ## License
 
