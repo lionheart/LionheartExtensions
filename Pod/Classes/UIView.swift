@@ -9,6 +9,12 @@
 import UIKit
 
 public extension UIView {
+    func removeSubviews() {
+        for subview in self.subviews {
+            subview.removeFromSuperview()
+        }
+    }
+
     func setContentSize(size: CGSize) {
         self.widthAnchor.constraintEqualToConstant(size.width).active = true
         self.heightAnchor.constraintEqualToConstant(size.height).active = true
