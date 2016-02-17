@@ -23,7 +23,6 @@
 		33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0C995C72A44C02A9369FA2BDB1F4FF /* AssertionDispatcher.swift */; };
 		37DDF1191C74059B007C2A08 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF1181C74059B007C2A08 /* UIFont.swift */; };
 		37DDF11F1C740899007C2A08 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11A1C740899007C2A08 /* Int.swift */; };
-		37DDF1201C740899007C2A08 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11B1C740899007C2A08 /* NSMutableAttributedString.swift */; };
 		37DDF1211C740899007C2A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11C1C740899007C2A08 /* String.swift */; };
 		37DDF1221C740899007C2A08 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11D1C740899007C2A08 /* UIColor.swift */; };
 		37DDF1231C740899007C2A08 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11E1C740899007C2A08 /* UIView.swift */; };
@@ -158,7 +157,6 @@
 		33DD2CC5441C4540A072B29E4A257A9D /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Quick/DSL/DSL.swift; sourceTree = "<group>"; };
 		37DDF1181C74059B007C2A08 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		37DDF11A1C740899007C2A08 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		37DDF11B1C740899007C2A08 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		37DDF11C1C740899007C2A08 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		37DDF11D1C740899007C2A08 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		37DDF11E1C740899007C2A08 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -446,7 +444,6 @@
 			isa = PBXGroup;
 			children = (
 				37DDF11A1C740899007C2A08 /* Int.swift */,
-				37DDF11B1C740899007C2A08 /* NSMutableAttributedString.swift */,
 				37DDF11C1C740899007C2A08 /* String.swift */,
 				37DDF11D1C740899007C2A08 /* UIColor.swift */,
 				37DDF11E1C740899007C2A08 /* UIView.swift */,
@@ -730,7 +727,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DDF1291C741199007C2A08 /* UIImage.swift in Sources */,
-				37DDF1201C740899007C2A08 /* NSMutableAttributedString.swift in Sources */,
 				37DDF12B1C74136C007C2A08 /* UIViewController.swift in Sources */,
 				37DDF1221C740899007C2A08 /* UIColor.swift in Sources */,
 				37DDF1321C74FBAB007C2A08 /* UIWindow.swift in Sources */,
