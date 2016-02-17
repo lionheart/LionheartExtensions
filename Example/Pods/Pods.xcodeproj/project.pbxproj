@@ -21,7 +21,7 @@
 		2D3B916F7168E9412EDB95BA203A5BB4 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC0728045ED4D4A2C12B52A561EEF7 /* ThrowError.swift */; };
 		33264C6A7A3536AD91EF42B3E8CC8220 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BB6589A73F51F073DF050F55D7F41 /* BeGreaterThanOrEqualTo.swift */; };
 		33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0C995C72A44C02A9369FA2BDB1F4FF /* AssertionDispatcher.swift */; };
-		37DDF1191C74059B007C2A08 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF1181C74059B007C2A08 /* Font.swift */; };
+		37DDF1191C74059B007C2A08 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF1181C74059B007C2A08 /* UIFont.swift */; };
 		37DDF11F1C740899007C2A08 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11A1C740899007C2A08 /* Int.swift */; };
 		37DDF1201C740899007C2A08 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11B1C740899007C2A08 /* NSMutableAttributedString.swift */; };
 		37DDF1211C740899007C2A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11C1C740899007C2A08 /* String.swift */; };
@@ -150,7 +150,7 @@
 		2B9040AB08CA7AEB727960E284F746A4 /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Nimble/DSL.swift; sourceTree = "<group>"; };
 		2FE24AE8654BDA8234080C23F6335E26 /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
 		33DD2CC5441C4540A072B29E4A257A9D /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Quick/DSL/DSL.swift; sourceTree = "<group>"; };
-		37DDF1181C74059B007C2A08 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		37DDF1181C74059B007C2A08 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		37DDF11A1C740899007C2A08 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		37DDF11B1C740899007C2A08 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		37DDF11C1C740899007C2A08 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -438,7 +438,7 @@
 				37DDF11C1C740899007C2A08 /* String.swift */,
 				37DDF11D1C740899007C2A08 /* UIColor.swift */,
 				37DDF11E1C740899007C2A08 /* UIView.swift */,
-				37DDF1181C74059B007C2A08 /* Font.swift */,
+				37DDF1181C74059B007C2A08 /* UIFont.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -717,7 +717,7 @@
 				37DDF1231C740899007C2A08 /* UIView.swift in Sources */,
 				37DDF1211C740899007C2A08 /* String.swift in Sources */,
 				1BD8B003ECAB2469E4C239583686F5EC /* LionheartExtensions-dummy.m in Sources */,
-				37DDF1191C74059B007C2A08 /* Font.swift in Sources */,
+				37DDF1191C74059B007C2A08 /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

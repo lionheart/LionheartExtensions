@@ -9,7 +9,7 @@
 import Foundation
 
 extension UIFont {
-    func displayName() throws -> String {
+    public func displayName() throws -> String {
         let expression = try NSRegularExpression(pattern: "([a-z])([A-Z])", options: NSRegularExpressionOptions())
         let fontName = NSMutableString(string: self.fontName)
         expression.replaceMatchesInString(fontName, options: NSMatchingOptions(), range: fontName.range(), withTemplate: "$1 $2")
