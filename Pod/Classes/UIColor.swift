@@ -43,7 +43,7 @@ public extension UIColor {
         
         let converted = getRed(&rgba[0], green: &rgba[1], blue: &rgba[2], alpha: &rgba[3])
         if !converted {
-            return false;
+            return false
         }
 
         let R = Float(rgba[0])
@@ -59,6 +59,6 @@ public extension UIColor {
         let newR: Float = (255 * (1 - A) + 255 * R * A) / 255
         let newG: Float = (255 * (1 - A) + 255 * G * A) / 255
         let newB: Float = (255 * (1 - A) + 255 * B * A) / 255
-        return ((newR * 255 * 299) + (newG * 255 * 587) + (newB * 255 * 114)) / 1000 < 200;
+        return ((newR * 255 * 299) + (newG * 255 * 587) + (newB * 255 * 114)) / 1000 < 200
     }
 }
