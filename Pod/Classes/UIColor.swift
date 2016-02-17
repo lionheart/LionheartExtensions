@@ -9,10 +9,10 @@ import UIKit
 
 public extension UIColor {
     convenience init(hex: Int64) {
-        let r : CGFloat = CGFloat((hex>>24) & 0xff) / 255.0
-        let g : CGFloat = CGFloat((hex>>16) & 0xff) / 255.0
-        let b : CGFloat = CGFloat((hex>>8) & 0xff) / 255.0
-        let a : CGFloat = CGFloat(hex & 0xff) / 255.0
+        let r = CGFloat((hex>>24) & 0xff) / 255.0
+        let g = CGFloat((hex>>16) & 0xff) / 255.0
+        let b = CGFloat((hex>>8) & 0xff) / 255.0
+        let a = CGFloat(hex & 0xff) / 255.0
         self.init(red: r, green: g, blue: b, alpha: a)
     }
 
