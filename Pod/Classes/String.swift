@@ -12,14 +12,17 @@ public protocol LHSStringType {
     func range() -> NSRange
 }
 
-extension String: LHSStringType {
-    public func range() -> NSRange {
+extension String: LHSStringType {}
+extension NSString: LHSStringType {}
+
+public extension String {
+    func range() -> NSRange {
         return NSMakeRange(0, self.characters.count)
     }
 }
 
-extension NSString: LHSStringType {
-    public func range() -> NSRange {
+public extension NSString {
+    func range() -> NSRange {
         return NSMakeRange(0, self.length)
     }
 }

@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension UIImage {
-    public func imageWithColor(color: UIColor) -> UIImage {
+public extension UIImage {
+    func imageWithColor(color: UIColor) -> UIImage {
         let rect = CGRectMake(0, 0, size.width, size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         let context = UIGraphicsGetCurrentContext()
@@ -24,7 +24,7 @@ extension UIImage {
         return image
     }
     
-    public func imageWithAlpha(alpha: Float) -> UIImage {
+    func imageWithAlpha(alpha: Float) -> UIImage {
         let alpha = CGFloat(alpha)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
@@ -39,7 +39,7 @@ extension UIImage {
         return image
     }
     
-    public func imageByCroppingToRect(rect: CGRect) -> UIImage? {
+    func imageByCroppingToRect(rect: CGRect) -> UIImage? {
         if let CIImage = CIImage {
             let image = CIImage.imageByCroppingToRect(rect)
             return UIImage(CIImage: image)
@@ -52,7 +52,7 @@ extension UIImage {
     // Source: https://developer.apple.com/library/ios/qa/qa1703/_index.html#//apple_ref/doc/uid/DTS40010193
     // Edited by: http://stackoverflow.com/a/8017292/39155
     // With further modifications
-    public func screenshot() -> UIImage {
+    func screenshot() -> UIImage {
         let imageSize = UIScreen.mainScreen().bounds.size
         
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)

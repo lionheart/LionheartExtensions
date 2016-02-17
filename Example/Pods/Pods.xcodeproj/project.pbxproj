@@ -27,10 +27,10 @@
 		37DDF1211C740899007C2A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11C1C740899007C2A08 /* String.swift */; };
 		37DDF1221C740899007C2A08 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11D1C740899007C2A08 /* UIColor.swift */; };
 		37DDF1231C740899007C2A08 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11E1C740899007C2A08 /* UIView.swift */; };
-		37DDF1251C740F5E007C2A08 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF1241C740F5E007C2A08 /* UIApplication.swift */; };
 		37DDF1271C74113D007C2A08 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF1261C74113D007C2A08 /* UIScreen.swift */; };
 		37DDF1291C741199007C2A08 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF1281C741199007C2A08 /* UIImage.swift */; };
 		37DDF12B1C74136C007C2A08 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF12A1C74136C007C2A08 /* UIViewController.swift */; };
+		37DDF12D1C74BE67007C2A08 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF12C1C74BE67007C2A08 /* UIAlertController.swift */; };
 		39979CE3E4035C166F793977914E2872 /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2543809E4D3D9755B94735346ACDFF03 /* QCKDSL.m */; };
 		3A92AEE86034356AF8987F20EE1F82DF /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B6303CCFDEBF93094E92D50CAFF38 /* EndWith.swift */; };
 		3AEAC447B09E7AABC140654C8529BC94 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EEEBE209F0CF242FBC231937E6922 /* MatcherFunc.swift */; };
@@ -160,10 +160,10 @@
 		37DDF11C1C740899007C2A08 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		37DDF11D1C740899007C2A08 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		37DDF11E1C740899007C2A08 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		37DDF1241C740F5E007C2A08 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		37DDF1261C74113D007C2A08 /* UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		37DDF1281C741199007C2A08 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		37DDF12A1C74136C007C2A08 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		37DDF12C1C74BE67007C2A08 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		38715BF4570032AE706B97AB11365E48 /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		3F1975D001BFB447009180BAF8C14ADB /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
 		40FBD52025077E5788ADCE71EF040393 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Nimble/objc/NMBExceptionCapture.h; sourceTree = "<group>"; };
@@ -447,10 +447,10 @@
 				37DDF11D1C740899007C2A08 /* UIColor.swift */,
 				37DDF11E1C740899007C2A08 /* UIView.swift */,
 				37DDF1181C74059B007C2A08 /* UIFont.swift */,
-				37DDF1241C740F5E007C2A08 /* UIApplication.swift */,
 				37DDF1261C74113D007C2A08 /* UIScreen.swift */,
 				37DDF1281C741199007C2A08 /* UIImage.swift */,
 				37DDF12A1C74136C007C2A08 /* UIViewController.swift */,
+				37DDF12C1C74BE67007C2A08 /* UIAlertController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -723,11 +723,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37DDF1251C740F5E007C2A08 /* UIApplication.swift in Sources */,
 				37DDF1291C741199007C2A08 /* UIImage.swift in Sources */,
 				37DDF1201C740899007C2A08 /* NSMutableAttributedString.swift in Sources */,
 				37DDF12B1C74136C007C2A08 /* UIViewController.swift in Sources */,
 				37DDF1221C740899007C2A08 /* UIColor.swift in Sources */,
+				37DDF12D1C74BE67007C2A08 /* UIAlertController.swift in Sources */,
 				37DDF11F1C740899007C2A08 /* Int.swift in Sources */,
 				37DDF1271C74113D007C2A08 /* UIScreen.swift in Sources */,
 				37DDF1231C740899007C2A08 /* UIView.swift in Sources */,

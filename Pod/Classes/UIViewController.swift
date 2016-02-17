@@ -8,20 +8,20 @@
 
 import Foundation
 
-extension UIViewController {
-    public func topViewController() -> UIViewController? {
+public extension UIViewController {
+    func topViewController() -> UIViewController? {
         return UIViewController.topViewControllerWithRootViewController(UIApplication.sharedApplication().keyWindow?.rootViewController)
     }
 
-    public class func topViewControllerWithRootViewController(rootViewController: UIViewController?) -> UIViewController? {
-        if let rootViewController = rootViewController as? UITabBarController {
-            return UIViewController.topViewControllerWithRootViewController(rootViewController.selectedViewController)
+    class func topViewControllerWithRootViewController(rootViewController: UIViewController?) -> UIViewController? {
+        if let tabBarController = rootViewController as? UITabBarController {
+            return UIViewController.topViewControllerWithRootViewController(tabBarController.selectedViewController)
         }
-        else if let rootViewController = rootViewController as? UINavigationController {
-            return UIViewController.topViewControllerWithRootViewController(rootViewController.visibleViewController)
+        else if let navigationController = rootViewController as? UINavigationController {
+            return UIViewController.topViewControllerWithRootViewController(navigationController.visibleViewController)
         }
-        else if let rootViewController = rootViewController as? UISplitViewController {
-            return UIViewController.topViewControllerWithRootViewController(rootViewController.viewControllers[1])
+        else if let splitViewController = rootViewController as? UISplitViewController {
+            return UIViewController.topViewControllerWithRootViewController(splitViewController.viewControllers[1])
         }
         else if let presentedViewController = rootViewController?.presentedViewController {
             if presentedViewController is UIAlertController {
