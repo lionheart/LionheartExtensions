@@ -19,9 +19,14 @@
 		1E28F9362956B758C4C981D3C1129C90 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CD67A0263B5D926517C112081F48B2 /* BeGreaterThan.swift */; };
 		22D00FFD61D4648F9EF31F04D57884B0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF695047E0AAFB3CA54EC10F0E97FD3 /* Configuration.swift */; };
 		2D3B916F7168E9412EDB95BA203A5BB4 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC0728045ED4D4A2C12B52A561EEF7 /* ThrowError.swift */; };
-		302AE39D793802F083343B733744DDC1 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE48C0A0543CD13FE7CB2FD4B7EF3C5 /* ReplaceMe.swift */; };
 		33264C6A7A3536AD91EF42B3E8CC8220 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BB6589A73F51F073DF050F55D7F41 /* BeGreaterThanOrEqualTo.swift */; };
 		33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0C995C72A44C02A9369FA2BDB1F4FF /* AssertionDispatcher.swift */; };
+		37DDF1191C74059B007C2A08 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF1181C74059B007C2A08 /* Font.swift */; };
+		37DDF11F1C740899007C2A08 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11A1C740899007C2A08 /* Int.swift */; };
+		37DDF1201C740899007C2A08 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11B1C740899007C2A08 /* NSMutableAttributedString.swift */; };
+		37DDF1211C740899007C2A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11C1C740899007C2A08 /* String.swift */; };
+		37DDF1221C740899007C2A08 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11D1C740899007C2A08 /* UIColor.swift */; };
+		37DDF1231C740899007C2A08 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF11E1C740899007C2A08 /* UIView.swift */; };
 		39979CE3E4035C166F793977914E2872 /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2543809E4D3D9755B94735346ACDFF03 /* QCKDSL.m */; };
 		3A92AEE86034356AF8987F20EE1F82DF /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B6303CCFDEBF93094E92D50CAFF38 /* EndWith.swift */; };
 		3AEAC447B09E7AABC140654C8529BC94 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EEEBE209F0CF242FBC231937E6922 /* MatcherFunc.swift */; };
@@ -145,6 +150,12 @@
 		2B9040AB08CA7AEB727960E284F746A4 /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Nimble/DSL.swift; sourceTree = "<group>"; };
 		2FE24AE8654BDA8234080C23F6335E26 /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
 		33DD2CC5441C4540A072B29E4A257A9D /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Quick/DSL/DSL.swift; sourceTree = "<group>"; };
+		37DDF1181C74059B007C2A08 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		37DDF11A1C740899007C2A08 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		37DDF11B1C740899007C2A08 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		37DDF11C1C740899007C2A08 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		37DDF11D1C740899007C2A08 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		37DDF11E1C740899007C2A08 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		38715BF4570032AE706B97AB11365E48 /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		3F1975D001BFB447009180BAF8C14ADB /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
 		40FBD52025077E5788ADCE71EF040393 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Nimble/objc/NMBExceptionCapture.h; sourceTree = "<group>"; };
@@ -201,7 +212,6 @@
 		C6C6219B9D2671D26205BDB84B62B4D1 /* LionheartExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LionheartExtensions-dummy.m"; sourceTree = "<group>"; };
 		C88B3DA7F51410DE74242BE5B4E70B01 /* Pods-LionheartExtensions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LionheartExtensions_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C8E9634CF58B22F95DF5AA222CDAF9B8 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
-		CCE48C0A0543CD13FE7CB2FD4B7EF3C5 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		CD6892139A4E44DF95C89A6BE52900CE /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Nimble.modulemap; sourceTree = "<group>"; };
 		D0843BD7412E439120C081E8D9FE0F80 /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
 		D17DFC0D37F8449B1B2A2D117D1179A2 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Nimble/objc/DSL.m; sourceTree = "<group>"; };
@@ -423,7 +433,12 @@
 		9B2BE4EB3C3A95197ACAA29C27598980 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CCE48C0A0543CD13FE7CB2FD4B7EF3C5 /* ReplaceMe.swift */,
+				37DDF11A1C740899007C2A08 /* Int.swift */,
+				37DDF11B1C740899007C2A08 /* NSMutableAttributedString.swift */,
+				37DDF11C1C740899007C2A08 /* String.swift */,
+				37DDF11D1C740899007C2A08 /* UIColor.swift */,
+				37DDF11E1C740899007C2A08 /* UIView.swift */,
+				37DDF1181C74059B007C2A08 /* Font.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -696,8 +711,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37DDF1201C740899007C2A08 /* NSMutableAttributedString.swift in Sources */,
+				37DDF1221C740899007C2A08 /* UIColor.swift in Sources */,
+				37DDF11F1C740899007C2A08 /* Int.swift in Sources */,
+				37DDF1231C740899007C2A08 /* UIView.swift in Sources */,
+				37DDF1211C740899007C2A08 /* String.swift in Sources */,
 				1BD8B003ECAB2469E4C239583686F5EC /* LionheartExtensions-dummy.m in Sources */,
-				302AE39D793802F083343B733744DDC1 /* ReplaceMe.swift in Sources */,
+				37DDF1191C74059B007C2A08 /* Font.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

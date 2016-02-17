@@ -8,8 +8,18 @@
 
 import UIKit
 
-public extension String {
-    func range() -> NSRange {
+public protocol LHSStringType {
+    func range() -> NSRange
+}
+
+extension String: LHSStringType {
+    public func range() -> NSRange {
         return NSMakeRange(0, self.characters.count)
+    }
+}
+
+extension NSString: LHSStringType {
+    public func range() -> NSRange {
+        return NSMakeRange(0, self.length)
     }
 }
