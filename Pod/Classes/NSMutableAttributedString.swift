@@ -13,4 +13,8 @@ public extension NSMutableAttributedString {
         let attributedString = NSAttributedString(string: string, attributes: attributes)
         self.appendAttributedString(attributedString)
     }
+    
+    func addAttribute(name: String, value: AnyObject) {
+        addAttribute(name, value: value, range: self.range())
+    }
 }
