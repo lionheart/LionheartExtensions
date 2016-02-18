@@ -5,4 +5,5 @@ if [ "$1" != "" ]; then
   git add .
   git commit -m "bump version to $1"
   git tag $1
+  git push origin master
 fi
