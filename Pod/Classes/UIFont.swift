@@ -10,7 +10,7 @@ import Foundation
 
 public extension UIFont {
     /**
-     Returns a display name for the font.
+     Returns a display name for a given `UIFont`.
      
      - throws: A regular expression error, if a match cannot be found.
      - returns: A `String` representing the font name.

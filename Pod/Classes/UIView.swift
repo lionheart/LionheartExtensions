@@ -8,9 +8,16 @@
 
 import Foundation
 
+/**
+ Auto Layout and general utility methods for `UIView`.
+ 
+ - author: Daniel Loewenherz
+ - copyright: ©2016 Lionheart Software LLC
+ - date: February 18, 2016
+ */
 public extension UIView {
     /**
-     Remove all subviews.
+     Remove all subviews of the calling `UIView`.
 
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC

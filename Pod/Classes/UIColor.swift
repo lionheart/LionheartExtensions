@@ -9,7 +9,9 @@ public extension UIColor {
     /**
      Initialize a `UIColor` object with a hexadeximal value. E.g.
      
-        let red = UIColor(hex: 0xFF000000)
+     ```
+     let red = UIColor(hex: 0xFF000000)
+     ```
      
      - parameter hex: a hex integer
      - author: Daniel Loewenherz
