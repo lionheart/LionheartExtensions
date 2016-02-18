@@ -1,6 +1,6 @@
 # LionheartExtensions
 
-This is a handy collection of helpers I've built up through the years. It started off as a bunch of Objective-C categories, but since have moved them to extensions in Swift. Please read the [documentation](http://lionheartsw.com/LionheartExtensions/) for further information.
+This is a handy collection of helpers I've built up through the years. It started off as a bunch of Objective-C categories, but since have converted them to Swift extensions. Please read the [documentation](http://lionheartsw.com/LionheartExtensions/) for further information.
 
 ## Installation
 
