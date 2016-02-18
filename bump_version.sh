@@ -6,4 +6,5 @@ if [ "$1" != "" ]; then
   git commit -m "bump version to $1"
   git tag $1
   git push origin master
+  pod trunk push
 fi
