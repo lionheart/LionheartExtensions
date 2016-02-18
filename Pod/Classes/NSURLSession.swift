@@ -13,8 +13,8 @@ public extension NSURLSession {
      Cancel all tasks associated with the `NSURLSession`.
      
      - parameter completion: A block to be called after all of the tasks have been cancelled.
-     - author: Dan Loewenherz
-     - copyright: 2016
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     func cancelAllTasks(completion: () -> Void) {

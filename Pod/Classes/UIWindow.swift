@@ -14,8 +14,8 @@ public extension UIWindow {
      
      - parameter path: The path on the local filesystem to save the screenshot to.
      - returns: A bool indicating whether the save was successful.
-     - author: Dan Loewenherz
-     - copyright: 2016
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     func takeScreenshotAndSaveToPath(path: String) -> Bool {

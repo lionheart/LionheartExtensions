@@ -12,8 +12,8 @@ public extension UIColor {
         let red = UIColor(hex: 0xFF000000)
      
      - parameter hex: a hex integer
-     - author: Dan Loewenherz
-     - copyright: 2016
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     convenience init(hex: Int64) {
@@ -23,7 +23,16 @@ public extension UIColor {
         let a = CGFloat(hex & 0xff) / 255.0
         self.init(red: r, green: g, blue: b, alpha: a)
     }
-
+    
+    /**
+     Lighten a color by a specified ratio.
+     
+     - parameter ratio: the ratio by which to lighten the color by.
+     - returns: A new `UIColor`.
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: February 17, 2016
+     */
     func lighten(ratio: CGFloat) -> UIColor {
         var rgba = [CGFloat](count: 4, repeatedValue: 0)
         getRed(&rgba[0], green: &rgba[1], blue: &rgba[2], alpha: &rgba[3])
@@ -41,8 +50,8 @@ public extension UIColor {
      - parameter ratio: the ratio by which to darken the color by.
      
      - returns: A new `UIColor`.
-     - author: Dan Loewenherz
-     - copyright: 2016
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     func darken(ratio: CGFloat) -> UIColor {
@@ -55,7 +64,15 @@ public extension UIColor {
         let a = Float(max(rgba[3] - ratio, 0))
         return UIColor(colorLiteralRed: r, green: g, blue: b, alpha: a)
     }
-    
+
+    /**
+     Indicate whether a given color is dark.
+
+     - returns: A `Bool` indicating if the given `UIColor` is dark.
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: February 17, 2016
+     */
     func isDark() -> Bool {
         var rgba = [CGFloat](count: 4, repeatedValue: 0)
         

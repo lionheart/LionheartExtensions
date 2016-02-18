@@ -14,8 +14,8 @@ public extension UIImage {
      
      - parameter color: The color to blend into the image.
      - returns: A `UIImage` with the color applied as a tint.
-     - author: Dan Loewenherz
-     - copyright: 2016
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     func imageWithColor(color: UIColor) -> UIImage {
@@ -38,8 +38,8 @@ public extension UIImage {
      
      - parameter alpha: A float specifying the alpha level of the generated image.
      - returns: A `UIImage` with the alpha applied.
-     - author: Dan Loewenherz
-     - copyright: 2016
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     func imageWithAlpha(alpha: Float) -> UIImage {
@@ -62,8 +62,8 @@ public extension UIImage {
      
      - parameter rect: the `CGRect` to crop the image to.
      - returns: A `UIImage` with the crop applied.
-     - author: Dan Loewenherz
-     - copyright: 2016
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     func imageByCroppingToRect(rect: CGRect) -> UIImage? {
@@ -84,8 +84,8 @@ public extension UIImage {
         Original Source: [Apple Developer Documentation](https://developer.apple.com/library/ios/qa/qa1703/_index.html#//apple_ref/doc/uid/DTS40010193)
     
      Edited By: [http://stackoverflow.com/a/8017292/39155](http://stackoverflow.com/a/8017292/39155)
-     - author: Dan Loewenherz
-     - copyright: 2016
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     func screenshot() -> UIImage {

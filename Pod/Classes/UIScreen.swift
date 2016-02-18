@@ -13,8 +13,8 @@ public extension UIScreen {
      Return a view snapshot containing the status bar.
 
      - returns: The `UIView` snapshot.
-     - author: Dan Loewenherz
-     - copyright: 2016
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     func snapshotContainingStatusBar() -> UIView {
