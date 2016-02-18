@@ -33,6 +33,18 @@ public extension UIView {
     func setHeight(height: CGFloat) {
         heightAnchor.constraintEqualToConstant(height).active = true
     }
+    
+    /**
+     Set the width of this view to a specified value using Auto Layout.
+     
+     - parameter width: A `Float` specifying the view's width.
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: February 17, 2016
+     */
+    func setWidth(width: CGFloat) {
+        widthAnchor.constraintEqualToConstant(width).active = true
+    }
 
     /**
      Set the size of the view using Auto Layout.
