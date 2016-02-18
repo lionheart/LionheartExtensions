@@ -9,6 +9,15 @@
 import Foundation
 
 public extension UIImage {
+    /**
+     Return a new image with the provided color blended into it.
+     
+     - parameter color: The color to blend into the image.
+     - returns: A `UIImage` with the color applied as a tint.
+     - author: Dan Loewenherz
+     - copyright: 2016
+     - date: February 17, 2016
+     */
     func imageWithColor(color: UIColor) -> UIImage {
         let rect = CGRectMake(0, 0, size.width, size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
@@ -24,6 +33,15 @@ public extension UIImage {
         return image
     }
     
+    /**
+     Return a new image with the alpha applied to the current one.
+     
+     - parameter alpha: A float specifying the alpha level of the generated image.
+     - returns: A `UIImage` with the alpha applied.
+     - author: Dan Loewenherz
+     - copyright: 2016
+     - date: February 17, 2016
+     */
     func imageWithAlpha(alpha: Float) -> UIImage {
         let alpha = CGFloat(alpha)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
@@ -39,6 +57,15 @@ public extension UIImage {
         return image
     }
     
+    /**
+     Crop a given image to the specified `CGRect`.
+     
+     - parameter rect: the `CGRect` to crop the image to.
+     - returns: A `UIImage` with the crop applied.
+     - author: Dan Loewenherz
+     - copyright: 2016
+     - date: February 17, 2016
+     */
     func imageByCroppingToRect(rect: CGRect) -> UIImage? {
         if let CIImage = CIImage {
             let image = CIImage.imageByCroppingToRect(rect)
@@ -49,9 +76,18 @@ public extension UIImage {
         }
     }
 
-    // Source: https://developer.apple.com/library/ios/qa/qa1703/_index.html#//apple_ref/doc/uid/DTS40010193
-    // Edited by: http://stackoverflow.com/a/8017292/39155
-    // With further modifications
+    /**
+     Return a screenshot of the current screen as a `UIImage`.
+     
+     - returns: The screenshot represented as a `UIImage`.
+     - note:
+        Original Source: [Apple Developer Documentation](https://developer.apple.com/library/ios/qa/qa1703/_index.html#//apple_ref/doc/uid/DTS40010193)
+    
+     Edited By: [http://stackoverflow.com/a/8017292/39155](http://stackoverflow.com/a/8017292/39155)
+     - author: Dan Loewenherz
+     - copyright: 2016
+     - date: February 17, 2016
+     */
     func screenshot() -> UIImage {
         let imageSize = UIScreen.mainScreen().bounds.size
         

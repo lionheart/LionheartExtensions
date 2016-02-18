@@ -9,6 +9,15 @@
 import Foundation
 
 public extension UIWindow {
+    /**
+     Take a screenshot and save to the specified file path. Helpful for creating screenshots via automated tests.
+     
+     - parameter path: The path on the local filesystem to save the screenshot to.
+     - returns: A bool indicating whether the save was successful.
+     - author: Dan Loewenherz
+     - copyright: 2016
+     - date: February 17, 2016
+     */
     func takeScreenshotAndSaveToPath(path: String) -> Bool {
         if let window = UIApplication.sharedApplication().keyWindow {
             let bounds = window.bounds

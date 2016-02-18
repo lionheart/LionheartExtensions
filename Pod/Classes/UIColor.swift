@@ -5,9 +5,17 @@
 //  Copyright © 2015 Lionheart Software. All rights reserved.
 //
 
-import UIKit
-
 public extension UIColor {
+    /**
+     Initialize a `UIColor` object with a hexadeximal value. E.g.
+     
+        let red = UIColor(hex: 0xFF000000)
+     
+     - parameter hex: a hex integer
+     - author: Dan Loewenherz
+     - copyright: 2016
+     - date: February 17, 2016
+     */
     convenience init(hex: Int64) {
         let r = CGFloat((hex>>24) & 0xff) / 255.0
         let g = CGFloat((hex>>16) & 0xff) / 255.0
@@ -27,6 +35,16 @@ public extension UIColor {
         return UIColor(colorLiteralRed: r, green: g, blue: b, alpha: a)
     }
 
+    /**
+     Darken a color by a specified ratio.
+     
+     - parameter ratio: the ratio by which to darken the color by.
+     
+     - returns: A new `UIColor`.
+     - author: Dan Loewenherz
+     - copyright: 2016
+     - date: February 17, 2016
+     */
     func darken(ratio: CGFloat) -> UIColor {
         var rgba = [CGFloat](count: 4, repeatedValue: 0)
         getRed(&rgba[0], green: &rgba[1], blue: &rgba[2], alpha: &rgba[3])

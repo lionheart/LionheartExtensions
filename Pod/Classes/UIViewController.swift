@@ -9,10 +9,26 @@
 import Foundation
 
 public extension UIViewController {
+    /**
+     Returns an optional with the top-level `UIViewController`.
+     
+     - returns: The active `UIViewController`, if it can be found.
+     - author: Dan Loewenherz
+     - copyright: 2016
+     - date: February 17, 2016
+     */
     func topViewController() -> UIViewController? {
         return UIViewController.topViewControllerWithRootViewController(UIApplication.sharedApplication().keyWindow?.rootViewController)
     }
 
+    /**
+     Return an optional with the top-level `UIViewController` for the provided `UIViewController`.
+     
+     - returns: The active `UIViewController`, if it can be found.
+     - author: Dan Loewenherz
+     - copyright: 2016
+     - date: February 17, 2016
+     */
     class func topViewControllerWithRootViewController(rootViewController: UIViewController?) -> UIViewController? {
         if let tabBarController = rootViewController as? UITabBarController {
             return UIViewController.topViewControllerWithRootViewController(tabBarController.selectedViewController)

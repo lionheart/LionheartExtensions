@@ -6,17 +6,23 @@
 //  Copyright © 2015 Upriise LLC. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public extension UIView {
+    /**
+     Remove all subviews.
+     */
     func removeSubviews() {
         for subview in subviews {
             subview.removeFromSuperview()
         }
     }
 
-    // MARK - Auto Layout
-
+    /**
+    Set the height of this view to a specified value using Auto Layout.
+    
+    - parameter height: as
+    */
     func setHeight(height: CGFloat) {
         heightAnchor.constraintEqualToConstant(height).active = true
     }
