@@ -18,7 +18,7 @@ public extension UIWindow {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func takeScreenshotAndSaveToPath(path: String) -> Bool {
+    class func takeScreenshotAndSaveToPath(path: String) -> Bool {
         if let window = UIApplication.sharedApplication().keyWindow {
             let bounds = window.bounds
             UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
