@@ -9,6 +9,14 @@
 import UIKit
 
 public protocol LHSStringType {
+    /**
+     Indicates that conforming types must provide a method to get the full range of the string.
+     
+     - returns: An `NSRange` representing the entire string.
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: February 17, 2016
+     */
     func range() -> NSRange
 }
 
@@ -17,18 +25,42 @@ extension NSString: LHSStringType {}
 extension NSAttributedString: LHSStringType {}
 
 public extension String {
+    /**
+     Returns an `NSRange` indicating the length of the `String`.
+     
+     - returns: An `NSRange`
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: February 17, 2016
+     */
     func range() -> NSRange {
         return NSMakeRange(0, characters.count)
     }
 }
 
 public extension NSString {
+    /**
+     Returns an `NSRange` indicating the length of the `NSString`.
+     
+     - returns: An `NSRange`
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: February 17, 2016
+     */
     func range() -> NSRange {
         return NSMakeRange(0, length)
     }
 }
 
 public extension NSAttributedString {
+    /**
+     Returns an `NSRange` indicating the length of the `NSAttributedString`.
+     
+     - returns: An `NSRange`
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: February 17, 2016
+     */
     func range() -> NSRange {
         return NSMakeRange(0, length)
     }
