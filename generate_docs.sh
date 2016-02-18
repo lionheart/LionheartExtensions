@@ -9,7 +9,7 @@ jazzy \
   --module LionheartExtensions
 
 git co gh-pages
-git cp -r docs/* .
+cp -r docs/* .
 rm -rf docs/
 git add .
 git commit -m "documentation update"
