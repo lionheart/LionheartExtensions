@@ -3,6 +3,6 @@ script:
 - pod lib lint
 
 language: objective-c
-xcode_project: LionheartExtensions.xcodeproj
+xcode_workspace: LionheartExtensions.xcworkspace
 xcode_scheme: LionheartExtensionsTests
 osx_image: xcode7.2
