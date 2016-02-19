@@ -20,6 +20,20 @@
                ReferencedContainer = "container:LionheartExtensions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "371E1C4F1C76C7A2004CC52E"
+               BuildableName = "LionheartExtensionsTests.xctest"
+               BlueprintName = "LionheartExtensionsTests"
+               ReferencedContainer = "container:LionheartExtensions.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -32,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37F1F57B1C75353D008049A3"
+               BlueprintIdentifier = "371E1C4F1C76C7A2004CC52E"
                BuildableName = "LionheartExtensionsTests.xctest"
                BlueprintName = "LionheartExtensionsTests"
                ReferencedContainer = "container:LionheartExtensions.xcodeproj">

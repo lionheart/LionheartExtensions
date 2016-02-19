@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371E1C531C76C7A2004CC52E /* LionheartExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E1C521C76C7A2004CC52E /* LionheartExtensionsTests.swift */; };
+		371E1C551C76C7A2004CC52E /* LionheartExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1F5721C75353D008049A3 /* LionheartExtensions.framework */; };
 		37F1F5761C75353D008049A3 /* LionheartExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F1F5751C75353D008049A3 /* LionheartExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37F1F57D1C75353D008049A3 /* LionheartExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1F5721C75353D008049A3 /* LionheartExtensions.framework */; };
 		37F1F58A1C753AA8008049A3 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F5621C753504008049A3 /* Int.swift */; };
 		37F1F58B1C753AA8008049A3 /* NSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F5631C753504008049A3 /* NSURLSession.swift */; };
 		37F1F58C1C753AA8008049A3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F5641C753504008049A3 /* String.swift */; };
@@ -20,10 +21,11 @@
 		37F1F5921C753AA8008049A3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F56A1C753504008049A3 /* UIView.swift */; };
 		37F1F5931C753AA8008049A3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F56B1C753504008049A3 /* UIViewController.swift */; };
 		37F1F5941C753AA8008049A3 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F56C1C753504008049A3 /* UIWindow.swift */; };
+		D0C5F9FB017BC39AD4509DAA /* Pods_LionheartExtensionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D992CF84D96192C406BCD1 /* Pods_LionheartExtensionsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		37F1F57E1C75353D008049A3 /* PBXContainerItemProxy */ = {
+		371E1C561C76C7A2004CC52E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37F1F5591C7534E2008049A3 /* Project object */;
 			proxyType = 1;
@@ -33,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CE2E38DBA6EE596AD379BAB /* Pods-LionheartExtensionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionheartExtensionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LionheartExtensionsTests/Pods-LionheartExtensionsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		371E1C501C76C7A2004CC52E /* LionheartExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionheartExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		371E1C521C76C7A2004CC52E /* LionheartExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionheartExtensionsTests.swift; sourceTree = "<group>"; };
+		371E1C541C76C7A2004CC52E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37F1F5621C753504008049A3 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		37F1F5631C753504008049A3 /* NSURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLSession.swift; sourceTree = "<group>"; };
 		37F1F5641C753504008049A3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -47,10 +53,20 @@
 		37F1F5721C75353D008049A3 /* LionheartExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LionheartExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F1F5751C75353D008049A3 /* LionheartExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LionheartExtensions.h; sourceTree = "<group>"; };
 		37F1F5771C75353D008049A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37F1F57C1C75353D008049A3 /* LionheartExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionheartExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D992CF84D96192C406BCD1 /* Pods_LionheartExtensionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LionheartExtensionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49B78F08B39F4878C50A1BB /* Pods-LionheartExtensionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionheartExtensionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LionheartExtensionsTests/Pods-LionheartExtensionsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		371E1C4D1C76C7A2004CC52E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371E1C551C76C7A2004CC52E /* LionheartExtensions.framework in Frameworks */,
+				D0C5F9FB017BC39AD4509DAA /* Pods_LionheartExtensionsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37F1F56E1C75353D008049A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,23 +74,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37F1F5791C75353D008049A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				37F1F57D1C75353D008049A3 /* LionheartExtensions.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		371E1C511C76C7A2004CC52E /* LionheartExtensionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				371E1C521C76C7A2004CC52E /* LionheartExtensionsTests.swift */,
+				371E1C541C76C7A2004CC52E /* Info.plist */,
+			);
+			path = LionheartExtensionsTests;
+			sourceTree = "<group>";
+		};
 		37F1F5581C7534E2008049A3 = {
 			isa = PBXGroup;
 			children = (
 				37F1F55F1C753504008049A3 /* Pod */,
 				37F1F5741C75353D008049A3 /* LionheartExtensions */,
+				371E1C511C76C7A2004CC52E /* LionheartExtensionsTests */,
 				37F1F5731C75353D008049A3 /* Products */,
+				41C31C11116BC68B8001503D /* Pods */,
+				FECEC8244FAB4B3F47C8ADFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				37F1F5721C75353D008049A3 /* LionheartExtensions.framework */,
-				37F1F57C1C75353D008049A3 /* LionheartExtensionsTests.xctest */,
+				371E1C501C76C7A2004CC52E /* LionheartExtensionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +140,23 @@
 				37F1F5771C75353D008049A3 /* Info.plist */,
 			);
 			path = LionheartExtensions;
+			sourceTree = "<group>";
+		};
+		41C31C11116BC68B8001503D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CE2E38DBA6EE596AD379BAB /* Pods-LionheartExtensionsTests.debug.xcconfig */,
+				E49B78F08B39F4878C50A1BB /* Pods-LionheartExtensionsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FECEC8244FAB4B3F47C8ADFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91D992CF84D96192C406BCD1 /* Pods_LionheartExtensionsTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +173,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		371E1C4F1C76C7A2004CC52E /* LionheartExtensionsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 371E1C581C76C7A2004CC52E /* Build configuration list for PBXNativeTarget "LionheartExtensionsTests" */;
+			buildPhases = (
+				524F18A7A7DC1C9F9AFA9253 /* Check Pods Manifest.lock */,
+				371E1C4C1C76C7A2004CC52E /* Sources */,
+				371E1C4D1C76C7A2004CC52E /* Frameworks */,
+				371E1C4E1C76C7A2004CC52E /* Resources */,
+				07C08996FF3EB4ACCBF3AE59 /* Embed Pods Frameworks */,
+				F3195A7B5ACDF58A3AE87327 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				371E1C571C76C7A2004CC52E /* PBXTargetDependency */,
+			);
+			name = LionheartExtensionsTests;
+			productName = LionheartExtensionsTests;
+			productReference = 371E1C501C76C7A2004CC52E /* LionheartExtensionsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		37F1F5711C75353D008049A3 /* LionheartExtensions */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37F1F5841C75353D008049A3 /* Build configuration list for PBXNativeTarget "LionheartExtensions" */;
@@ -154,24 +212,6 @@
 			productReference = 37F1F5721C75353D008049A3 /* LionheartExtensions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		37F1F57B1C75353D008049A3 /* LionheartExtensionsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 37F1F5871C75353D008049A3 /* Build configuration list for PBXNativeTarget "LionheartExtensionsTests" */;
-			buildPhases = (
-				37F1F5781C75353D008049A3 /* Sources */,
-				37F1F5791C75353D008049A3 /* Frameworks */,
-				37F1F57A1C75353D008049A3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				37F1F57F1C75353D008049A3 /* PBXTargetDependency */,
-			);
-			name = LionheartExtensionsTests;
-			productName = LionheartExtensionsTests;
-			productReference = 37F1F57C1C75353D008049A3 /* LionheartExtensionsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,12 +223,12 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Lionheart Software LLC";
 				TargetAttributes = {
+					371E1C4F1C76C7A2004CC52E = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					37F1F5711C75353D008049A3 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 63553QQ62F;
-					};
-					37F1F57B1C75353D008049A3 = {
-						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
@@ -205,20 +245,20 @@
 			projectRoot = "";
 			targets = (
 				37F1F5711C75353D008049A3 /* LionheartExtensions */,
-				37F1F57B1C75353D008049A3 /* LionheartExtensionsTests */,
+				371E1C4F1C76C7A2004CC52E /* LionheartExtensionsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		37F1F5701C75353D008049A3 /* Resources */ = {
+		371E1C4E1C76C7A2004CC52E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37F1F57A1C75353D008049A3 /* Resources */ = {
+		37F1F5701C75353D008049A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -227,7 +267,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07C08996FF3EB4ACCBF3AE59 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionheartExtensionsTests/Pods-LionheartExtensionsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		524F18A7A7DC1C9F9AFA9253 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3195A7B5ACDF58A3AE87327 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionheartExtensionsTests/Pods-LionheartExtensionsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		371E1C4C1C76C7A2004CC52E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371E1C531C76C7A2004CC52E /* LionheartExtensionsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37F1F56D1C75353D008049A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,35 +342,121 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37F1F5781C75353D008049A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		37F1F57F1C75353D008049A3 /* PBXTargetDependency */ = {
+		371E1C571C76C7A2004CC52E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 37F1F5711C75353D008049A3 /* LionheartExtensions */;
-			targetProxy = 37F1F57E1C75353D008049A3 /* PBXContainerItemProxy */;
+			targetProxy = 371E1C561C76C7A2004CC52E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		371E1C591C76C7A2004CC52E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CE2E38DBA6EE596AD379BAB /* Pods-LionheartExtensionsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = LionheartExtensionsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.LionheartExtensionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		371E1C5A1C76C7A2004CC52E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E49B78F08B39F4878C50A1BB /* Pods-LionheartExtensionsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = LionheartExtensionsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.LionheartExtensionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		37F1F55D1C7534E2008049A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ENABLE_TESTABILITY = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		37F1F55E1C7534E2008049A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -322,7 +504,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = LionheartExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -375,7 +557,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = LionheartExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.LionheartExtensions;
@@ -389,98 +571,18 @@
 			};
 			name = Release;
 		};
-		37F1F5881C75353D008049A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = LionheartExtensionsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.LionheartExtensionsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		37F1F5891C75353D008049A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = LionheartExtensionsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.LionheartExtensionsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		371E1C581C76C7A2004CC52E /* Build configuration list for PBXNativeTarget "LionheartExtensionsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371E1C591C76C7A2004CC52E /* Debug */,
+				371E1C5A1C76C7A2004CC52E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37F1F55C1C7534E2008049A3 /* Build configuration list for PBXProject "LionheartExtensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -495,15 +597,6 @@
 			buildConfigurations = (
 				37F1F5851C75353D008049A3 /* Debug */,
 				37F1F5861C75353D008049A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		37F1F5871C75353D008049A3 /* Build configuration list for PBXNativeTarget "LionheartExtensionsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				37F1F5881C75353D008049A3 /* Debug */,
-				37F1F5891C75353D008049A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
