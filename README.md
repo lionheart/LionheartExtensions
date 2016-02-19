@@ -1,9 +1,9 @@
 # LionheartExtensions
 
-[![CI Status](http://img.shields.io/travis/lionheart/lionheartextensions.svg?style=flat)](https://travis-ci.org/lionheart/lionheartextensions)
-[![Version](https://img.shields.io/cocoapods/v/lionheartextensions.svg?style=flat)](http://cocoapods.org/pods/lionheartextensions)
-[![License](https://img.shields.io/cocoapods/l/lionheartextensions.svg?style=flat)](http://cocoapods.org/pods/lionheartextensions)
-[![Platform](https://img.shields.io/cocoapods/p/lionheartextensions.svg?style=flat)](http://cocoapods.org/pods/lionheartextensions)
+[![CI Status](http://img.shields.io/travis/lionheart/LionheartExtensions.svg?style=flat)](https://travis-ci.org/lionheart/LionheartExtensions)
+[![Version](https://img.shields.io/cocoapods/v/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
+[![License](https://img.shields.io/cocoapods/l/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
+[![Platform](https://img.shields.io/cocoapods/p/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
 
 This is a handy collection of helpers I've built up through the years. It started off as a bunch of Objective-C categories, but since have converted them to Swift extensions. Please read the [documentation](http://lionheartsw.com/LionheartExtensions/) for further information.
 
