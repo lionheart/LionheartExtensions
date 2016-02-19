@@ -28,6 +28,14 @@ public extension UIView {
             subview.removeFromSuperview()
         }
     }
+    
+    func centerOnXAxis() {
+        centerXAnchor.constraintEqualToAnchor(superview?.centerXAnchor).active = true
+    }
+    
+    func centerOnYAxis() {
+        centerYAnchor.constraintEqualToAnchor(superview?.centerYAnchor).active = true
+    }
 
     /**
      Set the height of this view to a specified value using Auto Layout.
