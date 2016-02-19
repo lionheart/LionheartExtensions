@@ -239,4 +239,18 @@ public extension UIView {
     func centerRect() -> CGRect {
         return CGRect(x: CGRectGetWidth(frame) / 2, y: CGRectGetHeight(frame), width: 1, height: 1)
     }
+
+    func recursiveSubviews<T>(passingTest test: (T) -> Bool = { _ in true }) -> [T] {
+        var views: [T] = []
+        for view in subviews {
+            if let view = view as? T {
+                if test(view) {
+                    views.append(view)
+                }
+            }
+
+            views.appendContentsOf(view.recursiveSubviews(passingTest: test))
+        }
+        return views
+    }
 }
