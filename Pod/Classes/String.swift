@@ -10,7 +10,17 @@ import UIKit
 
 public protocol LHSStringType {
     /**
-     Indicates that conforming types must provide a method to get the full range of the string.
+     Conforming types must provide a getter for the length of the string.
+     
+     - returns: An `Int` representing the "length" of the string (understood that this can differ based on encoding).
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: February 17, 2016
+     */
+    var length: Int { get }
+
+    /**
+     Conforming types must provide a method to get the full range of the string.
      
      - returns: An `NSRange` representing the entire string.
      - author: Daniel Loewenherz
@@ -20,7 +30,12 @@ public protocol LHSStringType {
     func range() -> NSRange
 }
 
-extension String: LHSStringType {}
+public protocol LHSURLStringType {
+    mutating func URLEncode()
+    mutating func slugify() throws
+}
+
+extension String: LHSStringType, LHSURLStringType {}
 extension NSString: LHSStringType {}
 extension NSAttributedString: LHSStringType {}
 
@@ -36,6 +51,21 @@ public extension String {
     func range() -> NSRange {
         return NSMakeRange(0, characters.count)
     }
+
+    var length: Int {
+        return NSString(string: self).length
+    }
+
+    mutating func URLEncode() {
+        if let string = stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+            self = string
+        }
+    }
+
+    mutating func slugify() throws {
+        let regex = try NSRegularExpression(pattern: "[ ]", options: NSRegularExpressionOptions())
+        self = regex.stringByReplacingMatchesInString(self, options: NSMatchingOptions(), range: self.range(), withTemplate: "-").lowercaseString
+    }
 }
 
 public extension NSString {
@@ -48,7 +78,11 @@ public extension NSString {
      - date: February 17, 2016
      */
     func range() -> NSRange {
-        return NSMakeRange(0, length)
+        return String(self).range()
+    }
+    
+    func slugify() {
+        return String(self).slugify()
     }
 }
 

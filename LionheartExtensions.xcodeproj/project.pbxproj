@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		371E1C531C76C7A2004CC52E /* LionheartExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E1C521C76C7A2004CC52E /* LionheartExtensionsTests.swift */; };
 		371E1C551C76C7A2004CC52E /* LionheartExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1F5721C75353D008049A3 /* LionheartExtensions.framework */; };
+		376B68521C7A254D00631A9C /* UIMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B68511C7A254D00631A9C /* UIMultilineLabel.swift */; };
 		37F1F5761C75353D008049A3 /* LionheartExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F1F5751C75353D008049A3 /* LionheartExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37F1F58A1C753AA8008049A3 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F5621C753504008049A3 /* Int.swift */; };
 		37F1F58B1C753AA8008049A3 /* NSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F5631C753504008049A3 /* NSURLSession.swift */; };
@@ -39,6 +40,7 @@
 		371E1C501C76C7A2004CC52E /* LionheartExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionheartExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		371E1C521C76C7A2004CC52E /* LionheartExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionheartExtensionsTests.swift; sourceTree = "<group>"; };
 		371E1C541C76C7A2004CC52E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376B68511C7A254D00631A9C /* UIMultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMultilineLabel.swift; sourceTree = "<group>"; };
 		37F1F5621C753504008049A3 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		37F1F5631C753504008049A3 /* NSURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLSession.swift; sourceTree = "<group>"; };
 		37F1F5641C753504008049A3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -101,14 +103,15 @@
 		37F1F55F1C753504008049A3 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				37F1F5601C753504008049A3 /* Classes */,
+				37F1F5601C753504008049A3 /* Extensions */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
 		};
-		37F1F5601C753504008049A3 /* Classes */ = {
+		37F1F5601C753504008049A3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				376B68511C7A254D00631A9C /* UIMultilineLabel.swift */,
 				37F1F5621C753504008049A3 /* Int.swift */,
 				37F1F5631C753504008049A3 /* NSURLSession.swift */,
 				37F1F5641C753504008049A3 /* String.swift */,
@@ -121,6 +124,7 @@
 				37F1F56B1C753504008049A3 /* UIViewController.swift */,
 				37F1F56C1C753504008049A3 /* UIWindow.swift */,
 			);
+			name = Extensions;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -338,6 +342,7 @@
 				37F1F5911C753AA8008049A3 /* UIScreen.swift in Sources */,
 				37F1F5921C753AA8008049A3 /* UIView.swift in Sources */,
 				37F1F5931C753AA8008049A3 /* UIViewController.swift in Sources */,
+				376B68521C7A254D00631A9C /* UIMultilineLabel.swift in Sources */,
 				37F1F5941C753AA8008049A3 /* UIWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
