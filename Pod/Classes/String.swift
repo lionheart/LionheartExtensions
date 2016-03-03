@@ -8,6 +8,12 @@
 
 import UIKit
 
+public enum VariableNamingFormat {
+    case CamelCase
+    case Underscores
+    case PascalCase
+}
+
 public protocol LHSStringType {
     /**
      Conforming types must provide a getter for the length of the string.
@@ -28,11 +34,16 @@ public protocol LHSStringType {
      - date: February 17, 2016
      */
     func range() -> NSRange
+
+    func stringByLowercasingFirstLetter() -> String
+    func stringByUppercasingFirstLetter() -> String
+    func stringByTrimmingString(string: String) -> String
+    func stringByReplacingSpacesWithDashes() -> String
+    func stringByConvertingToNamingFormat(naming: VariableNamingFormat) -> String
 }
 
 public protocol LHSURLStringType {
-    mutating func URLEncode()
-    mutating func slugify() throws
+    func URLEncodedString() -> String?
 }
 
 extension String: LHSStringType, LHSURLStringType {}
@@ -56,15 +67,69 @@ public extension String {
         return NSString(string: self).length
     }
 
+    mutating func trim(string: String) {
+        self = self.stringByTrimmingString(string)
+    }
+
     mutating func URLEncode() {
-        if let string = stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+        if let string = URLEncodedString() {
             self = string
         }
     }
 
-    mutating func slugify() throws {
-        let regex = try NSRegularExpression(pattern: "[ ]", options: NSRegularExpressionOptions())
-        self = regex.stringByReplacingMatchesInString(self, options: NSMatchingOptions(), range: self.range(), withTemplate: "-").lowercaseString
+    mutating func replaceSpacesWithDashes() {
+        self = stringByReplacingSpacesWithDashes()
+    }
+
+    mutating func replaceCapitalsWithUnderscores() {
+        self = stringByConvertingToNamingFormat(.Underscores)
+    }
+
+    func stringByLowercasingFirstLetter() -> String {
+        let start = startIndex.successor()
+        return substringToIndex(start).lowercaseString + substringWithRange(Range<Index>(start: start, end: endIndex))
+    }
+
+    func stringByUppercasingFirstLetter() -> String {
+        let start = startIndex.successor()
+        return substringToIndex(start).uppercaseString + substringWithRange(Range<Index>(start: start, end: endIndex))
+    }
+
+    func stringByTrimmingString(string: String) -> String {
+        let cfString = NSMutableString(string: self) as CFMutableString
+        CFStringTrim(cfString, string)
+        return cfString as String
+    }
+
+    func URLEncodedString() -> String? {
+        if let string = stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+            return string
+        }
+        else {
+            return nil
+        }
+    }
+
+    func stringByReplacingSpacesWithDashes() -> String {
+        let regexOptions = NSRegularExpressionOptions()
+        let regex = try! NSRegularExpression(pattern: "[ ]", options: regexOptions)
+        return regex.stringByReplacingMatchesInString(self, options: NSMatchingOptions(), range: range(), withTemplate: "-").lowercaseString as String
+    }
+
+    public func stringByConvertingToNamingFormat(naming: VariableNamingFormat) -> String {
+        switch naming {
+        case .Underscores:
+            let regex = try! NSRegularExpression(pattern: "([A-Z]+)", options: NSRegularExpressionOptions())
+            let string = NSMutableString(string: self)
+            regex.replaceMatchesInString(string, options: NSMatchingOptions(), range: range(), withTemplate: "_$0")
+            return string.stringByTrimmingString("_").lowercaseString
+
+        case .CamelCase:
+            fatalError("Not implemented")
+
+        case .PascalCase:
+            fatalError("Not implemented")
+        }
     }
 }
 
@@ -84,6 +149,26 @@ public extension NSString {
     func slugify() {
         return String(self).slugify()
     }
+
+    func stringByLowercasingFirstLetter() -> String {
+        return String(self).stringByLowercasingFirstLetter()
+    }
+
+    func stringByUppercasingFirstLetter() -> String {
+        return String(self).stringByLowercasingFirstLetter()
+    }
+
+    func stringByReplacingSpacesWithDashes() -> String {
+        return String(self).stringByReplacingSpacesWithDashes()
+    }
+
+    func stringByConvertingToNamingFormat(naming: VariableNamingFormat) -> String {
+        return String(self).stringByConvertingToNamingFormat(naming)
+    }
+
+    func stringByTrimmingString(string: String) -> String {
+        return String(self).stringByTrimmingString(string)
+    }
 }
 
 public extension NSAttributedString {
@@ -96,7 +181,27 @@ public extension NSAttributedString {
      - date: February 17, 2016
      */
     func range() -> NSRange {
-        return NSMakeRange(0, length)
+        return String(self).range()
+    }
+
+    func stringByLowercasingFirstLetter() -> String {
+        return String(self).stringByLowercasingFirstLetter()
+    }
+
+    func stringByUppercasingFirstLetter() -> String {
+        return String(self).stringByLowercasingFirstLetter()
+    }
+
+    func stringByReplacingSpacesWithDashes() -> String {
+        return String(self).stringByReplacingSpacesWithDashes()
+    }
+
+    func stringByConvertingToNamingFormat(naming: VariableNamingFormat) -> String {
+        return String(self).stringByConvertingToNamingFormat(.Underscores)
+    }
+
+    func stringByTrimmingString(string: String) -> String {
+        return String(self).stringByTrimmingString(string)
     }
 }
 
