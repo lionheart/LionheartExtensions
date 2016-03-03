@@ -11,21 +11,22 @@ import Nimble
 @testable import LionheartExtensions
 
 class LionheartExtensionsTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testDate() {
+        let aLongTimeAgo = NSDate.distantPast()
+        let theFuture = NSDate.distantFuture()
+
+        expect(aLongTimeAgo) < theFuture
+        expect(aLongTimeAgo) <= theFuture
+        expect(theFuture) > aLongTimeAgo
+        expect(theFuture) >= aLongTimeAgo
+        expect(aLongTimeAgo) == aLongTimeAgo
     }
     
     func testString() {
         let string = "1234"
         let rangeA = string.range()
         let rangeB = NSRange(location: 0, length: 4)
+
         expect(rangeA.length) == rangeB.length
         expect(rangeA.location) == rangeA.location
     }

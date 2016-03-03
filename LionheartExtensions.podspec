@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = "Swift Extensions you probably will find useful."
 
   s.homepage         = "https://github.com/lionheart/LionheartExtensions"
-  s.license          = 'MIT'
+  s.license          = 'Apache 2.0'
   s.author           = { "Dan Loewenherz" => "dloewenherz@gmail.com" }
   s.source           = { :git => "https://github.com/lionheart/LionheartExtensions.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/dwlz'
