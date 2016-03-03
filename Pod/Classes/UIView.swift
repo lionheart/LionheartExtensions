@@ -253,4 +253,9 @@ public extension UIView {
         }
         return views
     }
+    
+    func lastRecursiveSubview<T>(passingTest test: (T) -> Bool = { i in true }) -> T? {
+        let views: [T] = recursiveSubviews(passingTest: test)
+        return views.last
+    }
 }
