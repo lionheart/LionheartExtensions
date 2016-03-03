@@ -7,8 +7,34 @@
 //
 
 import Foundation
+import Photos
+
+public enum UIImageFormat {
+    case PNG
+    case JPEG(quality: CGFloat)
+}
+
+public enum UIImageSaveError: ErrorType {
+    case Unspecified
+}
 
 public extension UIImage {
+    convenience init?(view: UIView) {
+        let bounds = view.bounds
+
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
+        view.drawViewHierarchyInRect(bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        if let data = UIImagePNGRepresentation(image) {
+            self.init(data: data)
+        }
+        else {
+            return nil
+        }
+    }
+
     /**
      Return a new image with the provided color blended into it.
      
@@ -88,7 +114,7 @@ public extension UIImage {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func screenshot() -> UIImage {
+    class func screenshot() -> UIImage {
         let imageSize = UIScreen.mainScreen().bounds.size
         
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
@@ -126,5 +152,34 @@ public extension UIImage {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
+    }
+    
+    func saveToFile(path: String, format: UIImageFormat) throws {
+        var data: NSData?
+        switch format {
+        case .PNG:
+            data = UIImagePNGRepresentation(self)
+            
+        case .JPEG(let quality):
+            data = UIImageJPEGRepresentation(self, quality)
+        }
+
+        if let data = data {
+            data.writeToFile(path, atomically: true)
+        }
+        else {
+            throw UIImageSaveError.Unspecified
+        }
+    }
+    
+    func saveToCameraRoll(completion: ((Bool, NSError?) -> Void)?) throws {
+        let library = PHPhotoLibrary.sharedPhotoLibrary()
+        library.performChanges({
+            PHAssetCreationRequest.creationRequestForAssetFromImage(self)
+        }) { (success, error) in
+            if let completion = completion {
+                completion(success, error)
+            }
+        }
     }
 }
