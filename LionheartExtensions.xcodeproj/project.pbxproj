@@ -14,7 +14,6 @@
 		376B68521C7A254D00631A9C /* UIMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B68511C7A254D00631A9C /* UIMultilineLabel.swift */; };
 		37DAB5241C88CF5C0020376E /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAB5231C88CF5C0020376E /* NSDate.swift */; };
 		37DAB5261C88E0CE0020376E /* NSRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAB5251C88E0CE0020376E /* NSRegularExpression.swift */; };
-		37DAB5331C89DE810020376E /* FMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAB5321C89DE810020376E /* FMDB.swift */; };
 		37DAB5361C89DFBC0020376E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAB5351C89DFBC0020376E /* File.swift */; };
 		37F1F5761C75353D008049A3 /* LionheartExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F1F5751C75353D008049A3 /* LionheartExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37F1F58A1C753AA8008049A3 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F5621C753504008049A3 /* Int.swift */; };
@@ -53,7 +52,6 @@
 		376B68511C7A254D00631A9C /* UIMultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMultilineLabel.swift; sourceTree = "<group>"; };
 		37DAB5231C88CF5C0020376E /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		37DAB5251C88E0CE0020376E /* NSRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRegularExpression.swift; sourceTree = "<group>"; };
-		37DAB5321C89DE810020376E /* FMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDB.swift; sourceTree = "<group>"; };
 		37DAB5351C89DFBC0020376E /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Classes/File.swift; sourceTree = "<group>"; };
 		37F1F5621C753504008049A3 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		37F1F5631C753504008049A3 /* NSURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLSession.swift; sourceTree = "<group>"; };
@@ -128,14 +126,6 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		37DAB5311C89DE770020376E /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				37DAB5321C89DE810020376E /* FMDB.swift */,
-			);
-			path = FMDB;
-			sourceTree = "<group>";
-		};
 		37DAB5341C89DFB20020376E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +158,6 @@
 		37F1F5601C753504008049A3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				37DAB5311C89DE770020376E /* FMDB */,
 				37DAB52E1C89DE040020376E /* Core */,
 			);
 			name = Extensions;
@@ -430,7 +419,6 @@
 				37F1F5921C753AA8008049A3 /* UIView.swift in Sources */,
 				37F1F5931C753AA8008049A3 /* UIViewController.swift in Sources */,
 				376B68521C7A254D00631A9C /* UIMultilineLabel.swift in Sources */,
-				37DAB5331C89DE810020376E /* FMDB.swift in Sources */,
 				37F1F5941C753AA8008049A3 /* UIWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
