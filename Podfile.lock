@@ -1,10 +1,19 @@
 PODS:
+  - LionheartExtensions/Core (1.0.5)
+  - LionheartExtensions/FMDB (1.0.5)
   - Nimble (3.1.0)
 
 DEPENDENCIES:
+  - LionheartExtensions/Core (from `.`)
+  - LionheartExtensions/FMDB (from `.`)
   - Nimble (~> 3.1.0)
 
+EXTERNAL SOURCES:
+  LionheartExtensions:
+    :path: "."
+
 SPEC CHECKSUMS:
+  LionheartExtensions: 63c6fb6ef88b64561b9ccd465c051d266fc23d8f
   Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
 
 COCOAPODS: 0.39.0
