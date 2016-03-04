@@ -21,10 +21,4 @@ Pod::Spec.new do |s|
   s.subspec 'Core' do |spec|
     spec.source_files = ['Pod/Classes/Core/*', 'Pod/Classes/*']
   end
-
-  s.subspec 'TableView' do |spec|
-    spec.source_files = 'Pod/Classes/TableView/*'
-    spec.dependency 'LionheartTableViewCells'
-    spec.dependency 'KeyboardAdjuster'
-  end
 end
