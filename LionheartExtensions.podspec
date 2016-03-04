@@ -16,5 +16,15 @@ Pod::Spec.new do |s|
     'LionheartExtensions' => ['Pod/Assets/*.png']
   }
 
-  s.source_files = ['Pod/Classes/Core/*', 'Pod/Classes/*']
+  s.default_subspec = 'Core'
+
+  s.subspec 'Core' do |spec|
+    spec.source_files = ['Pod/Classes/Core/*', 'Pod/Classes/*']
+  end
+
+  s.subspec 'TableView' do |spec|
+    spec.source_files = 'Pod/Classes/TableView/*'
+    spec.dependency 'LionheartTableViewCells'
+    spec.dependency 'KeyboardAdjuster'
+  end
 end
