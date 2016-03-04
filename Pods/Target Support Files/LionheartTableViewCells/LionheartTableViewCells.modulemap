@@ -1,0 +1,6 @@
+framework module LionheartTableViewCells {
+  umbrella header "LionheartTableViewCells-umbrella.h"
+
+  export *
+  module * { export * }
+}
