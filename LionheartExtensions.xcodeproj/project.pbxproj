@@ -13,6 +13,7 @@
 		372B01001C850B65007C2EBB /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B00FF1C850B65007C2EBB /* Any.swift */; };
 		376B68521C7A254D00631A9C /* UIMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B68511C7A254D00631A9C /* UIMultilineLabel.swift */; };
 		37DAB5241C88CF5C0020376E /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAB5231C88CF5C0020376E /* NSDate.swift */; };
+		37DAB5261C88E0CE0020376E /* NSRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAB5251C88E0CE0020376E /* NSRegularExpression.swift */; };
 		37F1F5761C75353D008049A3 /* LionheartExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F1F5751C75353D008049A3 /* LionheartExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37F1F58A1C753AA8008049A3 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F5621C753504008049A3 /* Int.swift */; };
 		37F1F58B1C753AA8008049A3 /* NSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1F5631C753504008049A3 /* NSURLSession.swift */; };
@@ -47,6 +48,7 @@
 		372B00FF1C850B65007C2EBB /* Any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
 		376B68511C7A254D00631A9C /* UIMultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMultilineLabel.swift; sourceTree = "<group>"; };
 		37DAB5231C88CF5C0020376E /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
+		37DAB5251C88E0CE0020376E /* NSRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRegularExpression.swift; sourceTree = "<group>"; };
 		37F1F5621C753504008049A3 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		37F1F5631C753504008049A3 /* NSURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLSession.swift; sourceTree = "<group>"; };
 		37F1F5641C753504008049A3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				37F1F56C1C753504008049A3 /* UIWindow.swift */,
 				372B00FF1C850B65007C2EBB /* Any.swift */,
 				37DAB5231C88CF5C0020376E /* NSDate.swift */,
+				37DAB5251C88E0CE0020376E /* NSRegularExpression.swift */,
 			);
 			name = Extensions;
 			path = Classes;
@@ -345,6 +348,7 @@
 				37F1F58A1C753AA8008049A3 /* Int.swift in Sources */,
 				37F1F58B1C753AA8008049A3 /* NSURLSession.swift in Sources */,
 				372B01001C850B65007C2EBB /* Any.swift in Sources */,
+				37DAB5261C88E0CE0020376E /* NSRegularExpression.swift in Sources */,
 				37F1F58C1C753AA8008049A3 /* String.swift in Sources */,
 				37DAB5241C88CF5C0020376E /* NSDate.swift in Sources */,
 				37F1F58D1C753AA8008049A3 /* UIAlertController.swift in Sources */,
