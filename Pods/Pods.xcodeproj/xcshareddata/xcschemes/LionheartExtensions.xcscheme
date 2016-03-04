@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8F0183DE03603230721681A0'
+               BlueprintIdentifier = 'D9CDFC4F9B1C2A93791D41B9'
                BlueprintName = 'LionheartExtensions'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'LionheartExtensions.framework'>

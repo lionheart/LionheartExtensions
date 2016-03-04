@@ -22,14 +22,25 @@
     ]
   },
   "default_subspecs": "Core",
-  "source_files": "Pod/Classes/Core/*",
+  "dependencies": {
+    "LionheartTableViewCells": [
+
+    ],
+    "KeyboardAdjuster": [
+
+    ]
+  },
   "subspecs": [
     {
-      "name": "Core"
+      "name": "Core",
+      "source_files": [
+        "Pod/Classes/Core/*",
+        "Pod/Classes/*"
+      ]
     },
     {
-      "name": "FMDB",
-      "source_files": "Pod/Classes/FMDB/*"
+      "name": "TableView",
+      "source_files": "Pod/Classes/TableView/*"
     }
   ]
 }
