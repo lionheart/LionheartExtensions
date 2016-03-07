@@ -190,13 +190,15 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    class func addVisualFormatConstraints(format: String, metrics: [String: AnyObject]? = nil, views: [String: UIView]) {
+    class func addVisualFormatConstraints(format: String, metrics: [String: AnyObject]? = nil, views: [String: UIView]) -> [NSLayoutConstraint] {
         let options = NSLayoutFormatOptions(rawValue: 0)
         let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: options, metrics: metrics, views: views)
 
         for constraint in constraints {
             constraint.active = true
         }
+
+        return constraints
     }
 
     /**
