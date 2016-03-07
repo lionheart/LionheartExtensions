@@ -84,12 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/KeyboardAdjuster.framework"
   install_framework "Pods/LionheartExtensions.framework"
-  install_framework "Pods/LionheartTableViewCells.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/KeyboardAdjuster.framework"
   install_framework "Pods/LionheartExtensions.framework"
-  install_framework "Pods/LionheartTableViewCells.framework"
 fi
