@@ -1,9 +1,5 @@
 PODS:
-  - KeyboardAdjuster (1.0.5)
-  - LionheartExtensions/Core (1.0.5):
-    - KeyboardAdjuster
-    - LionheartTableViewCells
-  - LionheartTableViewCells (1.0.0)
+  - LionheartExtensions/Core (1.0.6)
   - Nimble (3.1.0)
 
 DEPENDENCIES:
@@ -15,9 +11,7 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  KeyboardAdjuster: 39b77931b110900e84a4b888c57369d680ee8fcf
-  LionheartExtensions: 078d7108a2b5f36c8044a505f6b41df6dfafe881
-  LionheartTableViewCells: b8bfe8920e0f6abb99fb3030a25d7bd164ad4c54
+  LionheartExtensions: e4186916d9ca3cf4031ed172946eab6f095e9c99
   Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
 
 COCOAPODS: 0.39.0
