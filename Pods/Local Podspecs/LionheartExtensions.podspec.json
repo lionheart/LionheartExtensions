@@ -1,6 +1,6 @@
 {
   "name": "LionheartExtensions",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "summary": "Swift Extensions you probably will find useful.",
   "homepage": "https://github.com/lionheart/LionheartExtensions",
   "license": "Apache 2.0",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/lionheart/LionheartExtensions.git",
-    "tag": "1.0.5"
+    "tag": "1.0.6"
   },
   "social_media_url": "https://twitter.com/dwlz",
   "platforms": {
@@ -22,14 +22,6 @@
     ]
   },
   "default_subspecs": "Core",
-  "dependencies": {
-    "LionheartTableViewCells": [
-
-    ],
-    "KeyboardAdjuster": [
-
-    ]
-  },
   "subspecs": [
     {
       "name": "Core",
@@ -37,10 +29,6 @@
         "Pod/Classes/Core/*",
         "Pod/Classes/*"
       ]
-    },
-    {
-      "name": "TableView",
-      "source_files": "Pod/Classes/TableView/*"
     }
   ]
 }
