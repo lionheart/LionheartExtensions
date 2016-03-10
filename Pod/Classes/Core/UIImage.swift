@@ -19,6 +19,14 @@ public enum UIImageSaveError: ErrorType {
 }
 
 public extension UIImage {
+    /**
+     Initialize a `UIImage` as a screenshot of the provided `UIView`.
+
+     - parameter view: The `UIView` to take the screenshot of.
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: March 9, 2016
+     */
     convenience init?(view: UIView) {
         let bounds = view.bounds
 

@@ -29,6 +29,13 @@ public extension UIView {
         }
     }
 
+    /**
+     Center the calling `UIView` on the X-axis, with optional margins to the right and left.
+
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: March 9, 2016
+     */
     @available(iOS 9, *)
     func centerOnXAxis(width width: CGFloat? = nil) {
         centerXAnchor.constraintEqualToAnchor(superview?.centerXAnchor).active = true
@@ -38,6 +45,13 @@ public extension UIView {
         }
     }
 
+    /**
+     Center the calling `UIView` on the Y-axis, with optional margins to the top and bottom.
+
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: March 9, 2016
+     */
     @available(iOS 9, *)
     func centerOnYAxis(height height: CGFloat? = nil) {
         centerYAnchor.constraintEqualToAnchor(superview?.centerYAnchor).active = true
@@ -251,11 +265,42 @@ public extension UIView {
     }
     
     // MARK - Misc
-    
+
+    /**
+    Returns a 1x1 `CGRect` in the center of the calling `UIView`.
+
+    - returns: A 1x1 `CGRect`.
+    - author: Daniel Loewenherz
+    - copyright: ©2016 Lionheart Software LLC
+    - date: March 9, 2016
+    */
     func centerRect() -> CGRect {
-        return CGRect(x: CGRectGetWidth(frame) / 2, y: CGRectGetHeight(frame), width: 1, height: 1)
+        return CGRect(x: center.x, y: center.y, width: 1, height: 1)
     }
 
+    /**
+     Return an `Array` of recursive subviews matching the provided test. This method is incredibly helpful in returning all descendants of a given view of a certain type. For instance:
+
+     ```
+     let view = UIView()
+     let subview = UILabel()
+     let label1 = UILabel()
+     let label2 = UILabel()
+     
+     view.addSubview(subview)
+     view.addSubview(label1)
+     subview.addSubview(label2)
+     
+     let labels: [UILabel] = view.recursiveSubviews()
+     ```
+     
+     `labels` will contain both `label1` and `label2`.
+
+     - returns: An `Array` of `UIView`s of type `T`.
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: March 9, 2016
+     */
     func recursiveSubviews<T>(passingTest test: (T) -> Bool = { _ in true }) -> [T] {
         var views: [T] = []
         for view in subviews {
@@ -269,7 +314,15 @@ public extension UIView {
         }
         return views
     }
-    
+
+    /**
+     This method simply returns the last object in `recursiveSubviews(passingTest:)`.
+
+     - returns: A view of type `T`.
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: March 9, 2016
+     */
     func lastRecursiveSubview<T>(passingTest test: (T) -> Bool = { i in true }) -> T? {
         let views: [T] = recursiveSubviews(passingTest: test)
         return views.last
