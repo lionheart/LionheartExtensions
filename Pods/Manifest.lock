@@ -1,5 +1,5 @@
 PODS:
-  - LionheartExtensions/Core (1.0.6)
+  - LionheartExtensions/Core (1.1.0)
   - Nimble (3.1.0)
 
 DEPENDENCIES:
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  LionheartExtensions: e4186916d9ca3cf4031ed172946eab6f095e9c99
+  LionheartExtensions: c5d1f39b3a09c7deed6b8369aec969d2eaf2d483
   Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
 
 COCOAPODS: 0.39.0
