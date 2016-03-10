@@ -28,13 +28,23 @@ public extension UIView {
             subview.removeFromSuperview()
         }
     }
-    
-    func centerOnXAxis() {
+
+    @available(iOS 9, *)
+    func centerOnXAxis(width width: CGFloat? = nil) {
         centerXAnchor.constraintEqualToAnchor(superview?.centerXAnchor).active = true
+
+        if let width = width {
+            setWidth(width)
+        }
     }
-    
-    func centerOnYAxis() {
+
+    @available(iOS 9, *)
+    func centerOnYAxis(height height: CGFloat? = nil) {
         centerYAnchor.constraintEqualToAnchor(superview?.centerYAnchor).active = true
+
+        if let height = height {
+            setHeight(height)
+        }
     }
 
     /**
@@ -44,7 +54,8 @@ public extension UIView {
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
-    */
+     */
+    @available(iOS 9, *)
     func setHeight(height: CGFloat) {
         heightAnchor.constraintEqualToConstant(height).active = true
     }
@@ -57,6 +68,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
+    @available(iOS 9, *)
     func setWidth(width: CGFloat) {
         widthAnchor.constraintEqualToConstant(width).active = true
     }
@@ -81,6 +93,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
+    @available(iOS 9, *)
     func fillWidthOfSuperview() {
         fillWidthOfSuperview(margin: 0)
     }
@@ -92,6 +105,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
+    @available(iOS 9, *)
     func fillHeightOfSuperview() {
         fillHeightOfSuperview(margin: 0)
     }
@@ -104,6 +118,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
+    @available(iOS 9, *)
     func fillWidthOfSuperview(margin margin: CGFloat) {
         if let superview = superview {
             leftAnchor.constraintEqualToAnchor(superview.leftAnchor, constant: margin).active = true
@@ -119,6 +134,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
+    @available(iOS 9, *)
     func fillHeightOfSuperview(margin margin: CGFloat) {
         if let superview = superview {
             topAnchor.constraintEqualToAnchor(superview.topAnchor, constant: margin).active = true
@@ -135,6 +151,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
+    @available(iOS 9, *)
     func fillSuperview(axis: UILayoutConstraintAxis? = nil, margin: CGFloat = 0) {
         if let axis = axis {
             switch (axis) {
@@ -172,12 +189,12 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func addVisualFormatConstraints(format: String) {
+    func addVisualFormatConstraints(format: String, metrics: [String: AnyObject]? = nil) -> [NSLayoutConstraint] {
         let views = [
             "view": self,
         ]
 
-        UIView.addVisualFormatConstraints(format, views: views)
+        return UIView.addVisualFormatConstraints(format, metrics: metrics, views: views)
     }
 
     /**
@@ -194,10 +211,7 @@ public extension UIView {
         let options = NSLayoutFormatOptions(rawValue: 0)
         let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: options, metrics: metrics, views: views)
 
-        for constraint in constraints {
-            constraint.active = true
-        }
-
+        NSLayoutConstraint.activateConstraints(constraints)
         return constraints
     }
 

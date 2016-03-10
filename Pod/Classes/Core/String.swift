@@ -116,7 +116,8 @@ public extension String {
         return regex.stringByReplacingMatchesInString(self, options: NSMatchingOptions(), range: range(), withTemplate: "-").lowercaseString as String
     }
 
-    public func stringByConvertingToNamingFormat(naming: VariableNamingFormat) -> String {
+    @warn_unused_result(mutable_variant="convertToNamingFormat")
+    func stringByConvertingToNamingFormat(naming: VariableNamingFormat) -> String {
         switch naming {
         case .Underscores:
             let regex = try! NSRegularExpression(pattern: "([A-Z]+)", options: NSRegularExpressionOptions())
@@ -130,6 +131,20 @@ public extension String {
         case .PascalCase:
             fatalError("Not implemented")
         }
+    }
+
+    mutating func convertToNamingFormat(naming: VariableNamingFormat) {
+        self = stringByConvertingToNamingFormat(naming)
+    }
+
+    func isComposedOfCharactersInSet(characterSet: NSCharacterSet) -> Bool {
+        for scalar in unicodeScalars {
+            if !characterSet.longCharacterIsMember(scalar.value) {
+                return false
+            }
+        }
+
+        return true
     }
 }
 
