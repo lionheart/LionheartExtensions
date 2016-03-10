@@ -5,6 +5,9 @@
 //  Copyright © 2015 Lionheart Software. All rights reserved.
 //
 
+/**
+`UIColor` extension.
+*/
 public extension UIColor {
     /**
      Initialize a `UIColor` object with a hexadeximal value. E.g.
