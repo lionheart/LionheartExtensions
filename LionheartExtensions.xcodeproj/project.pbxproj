@@ -12,7 +12,6 @@
 		371E1C551C76C7A2004CC52E /* LionheartExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1F5721C75353D008049A3 /* LionheartExtensions.framework */; };
 		372B01001C850B65007C2EBB /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B00FF1C850B65007C2EBB /* Any.swift */; };
 		376B68521C7A254D00631A9C /* UIMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B68511C7A254D00631A9C /* UIMultilineLabel.swift */; };
-		37AF68E51C89F77E00A46B0D /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF68E41C89F77E00A46B0D /* SimpleTableViewController.swift */; };
 		37DAB5241C88CF5C0020376E /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAB5231C88CF5C0020376E /* NSDate.swift */; };
 		37DAB5261C88E0CE0020376E /* NSRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAB5251C88E0CE0020376E /* NSRegularExpression.swift */; };
 		37DAB5361C89DFBC0020376E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAB5351C89DFBC0020376E /* File.swift */; };
@@ -415,7 +414,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37AF68E51C89F77E00A46B0D /* SimpleTableViewController.swift in Sources */,
 				37F1F58A1C753AA8008049A3 /* Int.swift in Sources */,
 				37F1F58B1C753AA8008049A3 /* NSURLSession.swift in Sources */,
 				372B01001C850B65007C2EBB /* Any.swift in Sources */,
