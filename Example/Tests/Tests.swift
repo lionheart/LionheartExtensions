@@ -55,6 +55,67 @@ class LionheartExtensionsTests: XCTestCase {
     }
 
     func testFunctional() {
-        expect(all([1, 2, 3])) == true
+        let noTrueBool: [Bool?] = [false, false, false]
+        let oneTrueBool: [Bool?] = [false, false, true]
+        let twoTrueBool: [Bool?] = [false, true, true]
+        let allTrueBool: [Bool?] = [true, true, true]
+
+        let noTrueString: [String?] = [nil, "", "", ""]
+        let oneTrueString: [String?] = [nil, "", "", "one"]
+        let twoTrueString: [String?] = ["", "one", "two"]
+        let allTrueString: [String?] = ["one", "two", "three"]
+
+        let noTrueInt: [Int?] = [nil, 0, -1, -100]
+        let oneTrueInt: [Int?] = [nil, 0, 0, 1]
+        let twoTrueIntA: [Int?] = [0, 1, 10]
+        let twoTrueIntB: [Int?] = [0, 10, 20]
+        let allTrueInt: [Int?] = [1, 10, 100]
+
+        let noTrueMix: [AnyObject?] = [nil, 0, false, ""]
+        let oneTrueMixA: [AnyObject?] = [nil, 1, false, ""]
+        let oneTrueMixB: [AnyObject?] = [0, true, ""]
+        let oneTrueMixC: [AnyObject?] = [0, false, "one"]
+
+        expect(all(noTrueBool)) == false
+        expect(all(oneTrueBool)) == false
+        expect(all(twoTrueBool)) == false
+        expect(all(allTrueBool)) == true
+
+        expect(any(noTrueBool)) == false
+        expect(any(oneTrueBool)) == true
+        expect(any(twoTrueBool)) == true
+        expect(any(allTrueBool)) == true
+
+        expect(all(noTrueString)) == false
+        expect(all(oneTrueString)) == false
+        expect(all(twoTrueString)) == false
+        expect(all(allTrueString)) == true
+
+        expect(any(noTrueString)) == false
+        expect(any(oneTrueString)) == true
+        expect(any(twoTrueString)) == true
+        expect(any(allTrueString)) == true
+
+        expect(all(noTrueInt)) == false
+        expect(all(oneTrueInt)) == false
+        expect(all(twoTrueIntA)) == false
+        expect(all(twoTrueIntB)) == false
+        expect(all(allTrueInt)) == true
+
+        expect(any(noTrueInt)) == false
+        expect(any(oneTrueInt)) == true
+        expect(any(twoTrueIntA)) == true
+        expect(any(twoTrueIntB)) == true
+        expect(any(allTrueInt)) == true
+
+        expect(all(noTrueMix)) == false
+        expect(all(oneTrueMixA)) == false
+        expect(all(oneTrueMixB)) == false
+        expect(all(oneTrueMixC)) == false
+
+        expect(any(noTrueMix)) == false
+        expect(any(oneTrueMixA)) == true
+        expect(any(oneTrueMixB)) == true
+        expect(any(oneTrueMixC)) == true
     }
 }
