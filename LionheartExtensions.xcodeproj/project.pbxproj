@@ -50,7 +50,6 @@
 		371E1C541C76C7A2004CC52E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372B00FF1C850B65007C2EBB /* Any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
 		376B68511C7A254D00631A9C /* UIMultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMultilineLabel.swift; sourceTree = "<group>"; };
-		37AF68E41C89F77E00A46B0D /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleTableViewController.swift; path = TableView/SimpleTableViewController.swift; sourceTree = "<group>"; };
 		37DAB5231C88CF5C0020376E /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		37DAB5251C88E0CE0020376E /* NSRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRegularExpression.swift; sourceTree = "<group>"; };
 		37DAB5351C89DFBC0020376E /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Classes/File.swift; sourceTree = "<group>"; };
@@ -103,14 +102,6 @@
 				371E1C541C76C7A2004CC52E /* Info.plist */,
 			);
 			path = LionheartExtensionsTests;
-			sourceTree = "<group>";
-		};
-		37AF68E31C89F76900A46B0D /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				37AF68E41C89F77E00A46B0D /* SimpleTableViewController.swift */,
-			);
-			name = TableView;
 			sourceTree = "<group>";
 		};
 		37DAB52E1C89DE040020376E /* Core */ = {
@@ -167,7 +158,6 @@
 		37F1F5601C753504008049A3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				37AF68E31C89F76900A46B0D /* TableView */,
 				37DAB52E1C89DE040020376E /* Core */,
 			);
 			name = Extensions;
