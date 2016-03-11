@@ -38,7 +38,9 @@ public func truthy(item: AnyObject?) -> Bool {
 
 public func all(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> Bool {
     for element in elements {
+            print(element)
         if !test(element) {
+
             return false
         }
     }
@@ -58,10 +60,18 @@ public func any(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> 
 
 public func all<T: Truthy>(elements: [T?], test: (AnyObject? -> Bool) = truthy) -> Bool {
     for element in elements {
-        if let element = element as? AnyObject {
-            if !test(element) {
+        if let element = element {
+            if let element = element as? AnyObject {
+                if !test(element) {
+                    return false
+                }
+            }
+            else {
                 return false
             }
+        }
+        else {
+            return false
         }
     }
 
