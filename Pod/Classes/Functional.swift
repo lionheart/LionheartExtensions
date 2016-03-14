@@ -38,9 +38,7 @@ public func truthy(item: AnyObject?) -> Bool {
 
 public func all(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> Bool {
     for element in elements {
-            print(element)
         if !test(element) {
-
             return false
         }
     }
