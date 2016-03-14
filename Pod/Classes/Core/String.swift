@@ -63,6 +63,13 @@ public extension String {
         return NSMakeRange(0, characters.count)
     }
 
+    func toRange(range: NSRange) -> Range<String.Index> {
+        let start = startIndex.advancedBy(range.location)
+        let end = start.advancedBy(range.length)
+
+        return start..<end
+    }
+
     var length: Int {
         return NSString(string: self).length
     }
