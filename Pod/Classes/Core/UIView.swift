@@ -100,6 +100,15 @@ public extension UIView {
         heightAnchor.constraintEqualToConstant(size.height).active = true
     }
 
+    @available(iOS 9, *)
+    func fillHorizontalMarginsOfSuperview(margin margin: CGFloat = 0) {
+        if let superview = superview {
+            let margins = superview.layoutMarginsGuide
+            leftAnchor.constraintEqualToAnchor(margins.leftAnchor, constant: margin).active = true
+            rightAnchor.constraintEqualToAnchor(margins.rightAnchor, constant: -margin).active = true
+        }
+    }
+
     /**
      Pin the view's horizontal edges to the left and right of its superview.
 
@@ -221,7 +230,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    class func addVisualFormatConstraints(format: String, metrics: [String: AnyObject]? = nil, views: [String: UIView]) -> [NSLayoutConstraint] {
+    class func addVisualFormatConstraints(format: String, metrics: [String: AnyObject]? = nil, views: [String: AnyObject]) -> [NSLayoutConstraint] {
         let options = NSLayoutFormatOptions(rawValue: 0)
         let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: options, metrics: metrics, views: views)
 

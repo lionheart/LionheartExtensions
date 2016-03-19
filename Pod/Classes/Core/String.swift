@@ -103,9 +103,7 @@ public extension String {
     }
 
     func stringByTrimmingString(string: String) -> String {
-        let cfString = NSMutableString(string: self) as CFMutableString
-        CFStringTrim(cfString, string)
-        return cfString as String
+        return self.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: string))
     }
 
     func URLEncodedString() -> String? {
