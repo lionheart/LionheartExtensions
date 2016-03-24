@@ -14,13 +14,13 @@ public extension UIColor {
      
      ```
      // 3-character
-     let red = UIColor(hex: 0xF00)
+     let red = UIColor(0xF00)
      
      // 6-digit specification...
-     let red = UIColor(hex: 0xFF0000)
+     let red = UIColor(0xFF0000)
      
      // ...and with alpha.
-     let red = UIColor(hex: 0xFF0000FF)
+     let red = UIColor(0xFF0000FF)
      ```
      
      - parameter hex: a hex integer
