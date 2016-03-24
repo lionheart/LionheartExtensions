@@ -33,7 +33,7 @@ public enum ColorRepresentation: IntegerLiteralConvertible, ArrayLiteralConverti
             self = RGBA(intElements[0], intElements[1], intElements[2], elements[3])
         }
         else {
-            self = Hex(0x000)
+            self = Hex(0)
         }
     }
 
