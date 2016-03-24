@@ -29,9 +29,7 @@ public extension Int {
         let screen = UIScreen.mainScreen()
         return (CGRectGetWidth(screen.bounds) / baseWidth) * (CGFloat)(self)
     }
-}
 
-public extension Int64 {
     func toRGBA(inout r: CGFloat!, inout _ g: CGFloat!, inout _ b: CGFloat!, inout _ a: CGFloat!) {
         if self > 0xFFFFFF {
             r = CGFloat((self>>24) & 0xFF) / 0xFF
