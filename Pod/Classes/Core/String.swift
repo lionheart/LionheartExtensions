@@ -94,12 +94,12 @@ public extension String {
 
     func stringByLowercasingFirstLetter() -> String {
         let start = startIndex.successor()
-        return substringToIndex(start).lowercaseString + substringWithRange(Range<Index>(start: start, end: endIndex))
+        return substringToIndex(start).lowercaseString + substringWithRange(start..<endIndex)
     }
 
     func stringByUppercasingFirstLetter() -> String {
         let start = startIndex.successor()
-        return substringToIndex(start).uppercaseString + substringWithRange(Range<Index>(start: start, end: endIndex))
+        return substringToIndex(start).uppercaseString + substringWithRange(start..<endIndex)
     }
 
     func stringByTrimmingString(string: String) -> String {
