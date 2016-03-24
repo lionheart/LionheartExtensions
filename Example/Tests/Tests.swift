@@ -44,13 +44,13 @@ class LionheartExtensionsTests: XCTestCase {
     }
 
     func testColor() {
-        let red = UIColor(hex: 0xFF0000FF)
+        let red = UIColor(0xF00)
         expect(red) == UIColor.redColor()
 
-        let green = UIColor(hex: 0x00FF00FF)
+        let green = UIColor(0x0F0)
         expect(green) == UIColor.greenColor()
 
-        let blue = UIColor(hex: 0x0000FFFF)
+        let blue = UIColor(0x00F)
         expect(blue) == UIColor.blueColor()
     }
 
