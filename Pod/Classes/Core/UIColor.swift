@@ -13,7 +13,14 @@ public extension UIColor {
      Initialize a `UIColor` object with a hexadeximal value. E.g.
      
      ```
-     let red = UIColor(hex: 0xFF000000)
+     // 3-character
+     let red = UIColor(hex: 0xF00)
+     
+     // 6-digit specification...
+     let red = UIColor(hex: 0xFF0000)
+     
+     // ...and with alpha.
+     let red = UIColor(hex: 0xFF0000FF)
      ```
      
      - parameter hex: a hex integer
@@ -21,11 +28,13 @@ public extension UIColor {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    convenience init(hex: Int64) {
-        let r = CGFloat((hex>>24) & 0xff) / 255.0
-        let g = CGFloat((hex>>16) & 0xff) / 255.0
-        let b = CGFloat((hex>>8) & 0xff) / 255.0
-        let a = CGFloat(hex & 0xff) / 255.0
+    convenience init(_ integer: Int64) {
+        var r: CGFloat!
+        var g: CGFloat!
+        var b: CGFloat!
+        var a: CGFloat!
+
+        integer.toRGBA(&r, &g, &b, &a)
         self.init(red: r, green: g, blue: b, alpha: a)
     }
     
