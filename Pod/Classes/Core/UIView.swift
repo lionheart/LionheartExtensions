@@ -332,7 +332,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: March 9, 2016
      */
-    func descendantViewsOfType<T>(passingTest test: (T) -> Bool = { i in true }) -> T? {
+    func lastDescendantViewOfType<T>(passingTest test: (T) -> Bool = { i in true }) -> T? {
         let views: [T] = descendantViewsOfType(passingTest: test)
         return views.last
     }
