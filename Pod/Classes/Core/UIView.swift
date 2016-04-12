@@ -300,7 +300,7 @@ public extension UIView {
      view.addSubview(label1)
      subview.addSubview(label2)
      
-     let labels: [UILabel] = view.recursiveSubviews()
+     let labels: [UILabel] = view.descendantViewsOfType()
      ```
      
      `labels` will contain both `label1` and `label2`.
@@ -310,7 +310,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: March 9, 2016
      */
-    func recursiveSubviews<T>(passingTest test: (T) -> Bool = { _ in true }) -> [T] {
+    func descendantViewsOfType<T>(passingTest test: (T) -> Bool = { _ in true }) -> [T] {
         var views: [T] = []
         for view in subviews {
             if let view = view as? T {
@@ -319,21 +319,21 @@ public extension UIView {
                 }
             }
 
-            views.appendContentsOf(view.recursiveSubviews(passingTest: test))
+            views.appendContentsOf(view.descendantViewsOfType(passingTest: test))
         }
         return views
     }
 
     /**
-     This method simply returns the last object in `recursiveSubviews(passingTest:)`.
+     This method simply returns the last object in `descendantViewsOfType(passingTest:)`.
 
      - returns: A view of type `T`.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
      - date: March 9, 2016
      */
-    func lastRecursiveSubview<T>(passingTest test: (T) -> Bool = { i in true }) -> T? {
-        let views: [T] = recursiveSubviews(passingTest: test)
+    func descendantViewsOfType<T>(passingTest test: (T) -> Bool = { i in true }) -> T? {
+        let views: [T] = descendantViewsOfType(passingTest: test)
         return views.last
     }
 }
