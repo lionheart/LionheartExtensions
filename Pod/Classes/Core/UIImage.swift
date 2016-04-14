@@ -44,6 +44,29 @@ public extension UIImage {
     }
 
     /**
+     Initialize a `UIImage` with a base64 data URL.
+
+     - parameter view: The `UIView` to take the screenshot of.
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: March 9, 2016
+     */
+    convenience init?(base64DataURLString: String?) {
+        guard let base64DataURLString = base64DataURLString else {
+            return nil
+        }
+
+        if let range = base64DataURLString.rangeOfString("base64,"),
+            index = range.last,
+            data = NSData(base64EncodedString: base64DataURLString.substringFromIndex(index.successor()), options: NSDataBase64DecodingOptions()) {
+            self.init(data: data)
+        }
+        else {
+            return nil
+        }
+    }
+
+    /**
      Return a new image with the provided color blended into it.
      
      - parameter color: The color to blend into the image.
