@@ -52,7 +52,8 @@ public extension UIImage {
      - date: March 9, 2016
      */
     convenience init?(base64DataURLString: String?) {
-        guard let base64DataURLString = base64DataURLString else {
+        guard let base64DataURLString = base64DataURLString where base64DataURLString == "" else {
+            self.init()
             return nil
         }
 
@@ -62,6 +63,7 @@ public extension UIImage {
             self.init(data: data)
         }
         else {
+            self.init()
             return nil
         }
     }
