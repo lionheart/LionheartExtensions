@@ -10,6 +10,7 @@ import Foundation
 
 final class File: StringLiteralConvertible {
     var filename: String?
+
     lazy var documentsPath: String? = {
         let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         if let path = paths.first,
@@ -20,6 +21,7 @@ final class File: StringLiteralConvertible {
             return nil
         }
     }()
+
     var bundlePath: String? {
         let bundle = NSBundle.mainBundle()
         if let filename = filename {
@@ -58,5 +60,25 @@ final class File: StringLiteralConvertible {
         else {
             return nil
         }
+    }
+
+    func existsInBundle() -> Bool {
+        let manager = NSFileManager.defaultManager()
+
+        guard let path = bundlePath else {
+            return false
+        }
+
+        return manager.fileExistsAtPath(path)
+    }
+
+    func existsInDocuments() -> Bool {
+        let manager = NSFileManager.defaultManager()
+
+        guard let path = documentsPath else {
+            return false
+        }
+
+        return manager.fileExistsAtPath(path)
     }
 }

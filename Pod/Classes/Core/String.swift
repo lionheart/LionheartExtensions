@@ -128,13 +128,35 @@ public extension String {
             let regex = try! NSRegularExpression(pattern: "([A-Z]+)", options: NSRegularExpressionOptions())
             let string = NSMutableString(string: self)
             regex.replaceMatchesInString(string, options: NSMatchingOptions(), range: range(), withTemplate: "_$0")
-            return string.stringByTrimmingString("_").lowercaseString
+            let newString = string.stringByTrimmingString("_").lowercaseString
+            if hasPrefix("_") {
+                return "_" + newString
+            }
+            else {
+                return newString
+            }
 
         case .CamelCase:
-            fatalError("Not implemented")
+            fatalError()
 
         case .PascalCase:
-            fatalError("Not implemented")
+            var uppercaseNextCharacter = false
+            var result = ""
+            for character in characters {
+                if character == "_" {
+                    uppercaseNextCharacter = true
+                }
+                else {
+                    if uppercaseNextCharacter {
+                        result += String(character).uppercaseString
+                        uppercaseNextCharacter = false
+                    }
+                    else {
+                        character.writeTo(&result)
+                    }
+                }
+            }
+            return result
         }
     }
 
