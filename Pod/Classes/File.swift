@@ -49,17 +49,19 @@ final class File: StringLiteralConvertible {
     }
 
     func read() -> String? {
-        if let path = documentsPath,
-            contents = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding) {
-                return contents
+        var contents: String?
+        var path = documentsPath ?? bundlePath
+
+        if let path = path {
+            do {
+                contents = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+            }
+            catch {
+                // MARK: TODO
+            }
         }
-        else if let path = bundlePath,
-            contents = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding) {
-                return contents
-        }
-        else {
-            return nil
-        }
+
+        return contents
     }
 
     func existsInBundle() -> Bool {
