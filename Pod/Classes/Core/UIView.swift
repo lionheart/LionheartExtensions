@@ -337,3 +337,9 @@ public extension UIView {
         return views.last
     }
 }
+
+public extension Array where Element: UIView {
+    func removeFromSuperviews() {
+        forEach { $0.removeFromSuperview() }
+    }
+}
