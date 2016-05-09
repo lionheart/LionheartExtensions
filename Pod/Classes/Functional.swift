@@ -8,32 +8,35 @@
 
 import Foundation
 
-public protocol Truthy {}
-extension Int: Truthy {}
-extension String: Truthy {}
-extension Bool: Truthy {}
+public protocol Truthy {
+    var truthy: Bool { get }
+}
+
+extension Int: Truthy {
+    public var truthy: Bool { return self > 0 }
+}
+
+extension String: Truthy {
+    public var truthy: Bool { return length.truthy }
+}
+
+extension Bool: Truthy {
+    public var truthy: Bool { return self }
+}
+
+extension Optional: Truthy {
+    public var truthy: Bool {
+        return self != nil
+    }
+}
 
 public func truthy(item: AnyObject?) -> Bool {
-    if item == nil {
+    if let item = item as? Truthy {
+        return item.truthy
+    }
+    else {
         return false
     }
-
-    if let item = item {
-        if let item = item as? String {
-            return item.length > 0
-        }
-        else if let item = item as? Int {
-            return item > 0
-        }
-        else if let item = item as? Bool {
-            return item
-        }
-        else {
-            return false
-        }
-    }
-
-    return true
 }
 
 public func all(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> Bool {
@@ -56,19 +59,17 @@ public func any(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> 
     return false
 }
 
-public func all<T: Truthy>(elements: [T?], test: (AnyObject? -> Bool) = truthy) -> Bool {
+public func all<T: Truthy>(elements: [T?], test: (AnyObject? -> Bool)? = nil) -> Bool {
     for element in elements {
         if let element = element {
-            if let element = element as? AnyObject {
-                if !test(element) {
-                    return false
-                }
+            if let element = element as? AnyObject, test = test where !test(element) {
+                return false
             }
-            else {
+            else if !element.truthy {
                 return false
             }
         }
-        else {
+        else if !element.truthy {
             return false
         }
     }
