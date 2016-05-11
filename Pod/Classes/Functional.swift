@@ -30,7 +30,7 @@ extension Optional: Truthy {
     }
 }
 
-public func truthy(item: AnyObject?) -> Bool {
+public func truthy<T>(item: T) -> Bool {
     if let item = item as? Truthy {
         return item.truthy
     }
@@ -45,7 +45,6 @@ public func all(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> 
             return false
         }
     }
-
     return true
 }
 
@@ -87,4 +86,22 @@ public func any<T: Truthy>(elements: [T?], test: (AnyObject? -> Bool) = truthy) 
     }
 
     return false
+}
+
+public extension Array {
+    func all(@noescape where predicate: Generator.Element throws -> Bool = truthy) rethrows -> Bool {
+        for element in self {
+            guard try predicate(element) else { return false }
+        }
+        return true
+    }
+
+    func any(@noescape where predicate: Generator.Element throws -> Bool = truthy) rethrows -> Bool {
+        for element in self {
+            if let result = try? predicate(element) where result {
+                return true
+            }
+        }
+        return false
+    }
 }
