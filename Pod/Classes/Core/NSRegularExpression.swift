@@ -8,10 +8,10 @@
 
 import Foundation
 
-public extension NSRegularExpression {
-    func replaceMatchesInString(inout string: String, options: NSMatchingOptions, range: NSRange, withTemplate templ: String) -> Int {
+public extension RegularExpression {
+    func replaceMatchesInString(_ string: inout String, options: RegularExpression.MatchingOptions, range: NSRange, withTemplate templ: String) -> Int {
         let mutableString = NSMutableString(string: string)
-        let result = self.replaceMatchesInString(mutableString, options: options, range: range, withTemplate: templ)
+        let result = self.replaceMatches(in: mutableString, options: options, range: range, withTemplate: templ)
         string = String(mutableString)
         return result
     }

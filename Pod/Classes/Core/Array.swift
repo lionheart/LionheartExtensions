@@ -9,11 +9,11 @@
 import Foundation
 
 public extension Array {
-    func chunks(size: Int) -> AnyGenerator<[Element]> {
+    func chunks(_ size: Int) -> AnyIterator<[Element]> {
         let indices = startIndex.stride(to: count, by: size)
-        var generator = indices.generate()
+        var generator = indices.makeIterator()
 
-        return AnyGenerator {
+        return AnyIterator {
             if let i = generator.next() {
                 let j = i.advancedBy(size, limit: self.endIndex)
                 return self[i..<j].map { $0 }

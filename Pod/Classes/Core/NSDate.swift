@@ -8,20 +8,20 @@
 
 import UIKit
 
-extension NSDate: Comparable { }
+extension Date: Comparable { }
 
-public func <=(lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) != .OrderedDescending
+public func <=(lhs: Date, rhs: Date) -> Bool {
+    return lhs.compare(rhs) != .orderedDescending
 }
 
-public func >=(lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) != .OrderedAscending
+public func >=(lhs: Date, rhs: Date) -> Bool {
+    return lhs.compare(rhs) != .orderedAscending
 }
 
-public func >(lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedDescending
+public func >(lhs: Date, rhs: Date) -> Bool {
+    return lhs.compare(rhs) == .orderedDescending
 }
 
-public func <(lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedAscending
+public func <(lhs: Date, rhs: Date) -> Bool {
+    return lhs.compare(rhs) == .orderedAscending
 }

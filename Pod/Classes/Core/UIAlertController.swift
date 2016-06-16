@@ -19,7 +19,7 @@ public extension UIAlertController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func addActionWithTitle(title: String, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) {
+    func addActionWithTitle(_ title: String, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) {
         addAction(UIAlertAction(title: title, style: style, handler: handler))
     }
 }

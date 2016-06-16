@@ -25,12 +25,12 @@ public extension Int {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
     */
-    func scaledToDeviceWidth(baseWidth: CGFloat) -> CGFloat {
-        let screen = UIScreen.mainScreen()
-        return (CGRectGetWidth(screen.bounds) / baseWidth) * (CGFloat)(self)
+    func scaledToDeviceWidth(_ baseWidth: CGFloat) -> CGFloat {
+        let screen = UIScreen.main()
+        return (screen.bounds.width / baseWidth) * (CGFloat)(self)
     }
 
-    func toRGBA(inout r: CGFloat!, inout _ g: CGFloat!, inout _ b: CGFloat!, inout _ a: CGFloat!) {
+    func toRGBA(_ r: inout CGFloat!, _ g: inout CGFloat!, _ b: inout CGFloat!, _ a: inout CGFloat!) {
         if self > 0xFFFFFF {
             r = CGFloat((self>>24) & 0xFF) / 0xFF
             g = CGFloat((self>>16) & 0xFF) / 0xFF

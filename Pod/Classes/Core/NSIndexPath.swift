@@ -8,10 +8,10 @@
 
 import Foundation
 
-public func ==(tuple: (Int, Int), indexPath: NSIndexPath) -> Bool {
-    return indexPath.section == tuple.0 && indexPath.row == tuple.1
+public func ==(tuple: (Int, Int), indexPath: IndexPath) -> Bool {
+    return (indexPath as NSIndexPath).section == tuple.0 && (indexPath as NSIndexPath).row == tuple.1
 }
 
-public func ==(indexPath: NSIndexPath, tuple: (Int, Int)) -> Bool {
-    return indexPath.section == tuple.0 && indexPath.row == tuple.1
+public func ==(indexPath: IndexPath, tuple: (Int, Int)) -> Bool {
+    return (indexPath as NSIndexPath).section == tuple.0 && (indexPath as NSIndexPath).row == tuple.1
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension NSURLSession {
+public extension URLSession {
     /**
      Cancel all tasks associated with the `NSURLSession`.
      
@@ -17,8 +17,8 @@ public extension NSURLSession {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func cancelAllTasks(completion: () -> Void) {
-        getAllTasksWithCompletionHandler { tasks in
+    func cancelAllTasks(_ completion: () -> Void) {
+        getAllTasks { tasks in
             for task in tasks {
                 task.cancel()
             }

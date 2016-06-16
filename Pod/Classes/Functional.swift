@@ -30,7 +30,7 @@ extension Optional: Truthy {
     }
 }
 
-public func truthy<T>(item: T) -> Bool {
+public func truthy<T>(_ item: T) -> Bool {
     if let item = item as? Truthy {
         return item.truthy
     }
@@ -39,7 +39,7 @@ public func truthy<T>(item: T) -> Bool {
     }
 }
 
-public func all(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> Bool {
+public func all(_ elements: [AnyObject?], test: ((AnyObject?) -> Bool) = truthy) -> Bool {
     for element in elements {
         if !test(element) {
             return false
@@ -48,7 +48,7 @@ public func all(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> 
     return true
 }
 
-public func any(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> Bool {
+public func any(_ elements: [AnyObject?], test: ((AnyObject?) -> Bool) = truthy) -> Bool {
     for element in elements {
         if test(element) {
             return true
@@ -58,7 +58,7 @@ public func any(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> 
     return false
 }
 
-public func all<T: Truthy>(elements: [T?], test: (AnyObject? -> Bool)? = nil) -> Bool {
+public func all<T: Truthy>(_ elements: [T?], test: ((AnyObject?) -> Bool)? = nil) -> Bool {
     for element in elements {
         if let element = element {
             if let element = element as? AnyObject, test = test where !test(element) {
@@ -76,7 +76,7 @@ public func all<T: Truthy>(elements: [T?], test: (AnyObject? -> Bool)? = nil) ->
     return true
 }
 
-public func any<T: Truthy>(elements: [T?], test: (AnyObject? -> Bool) = truthy) -> Bool {
+public func any<T: Truthy>(_ elements: [T?], test: ((AnyObject?) -> Bool) = truthy) -> Bool {
     for element in elements {
         if let element = element as? AnyObject {
             if test(element) {
@@ -89,14 +89,14 @@ public func any<T: Truthy>(elements: [T?], test: (AnyObject? -> Bool) = truthy) 
 }
 
 public extension Array {
-    func all(@noescape where predicate: Generator.Element throws -> Bool = truthy) rethrows -> Bool {
+    func all(@noescape where predicate: (Iterator.Element) throws -> Bool = truthy) rethrows -> Bool {
         for element in self {
             guard try predicate(element) else { return false }
         }
         return true
     }
 
-    func any(@noescape where predicate: Generator.Element throws -> Bool = truthy) rethrows -> Bool {
+    func any(@noescape where predicate: (Iterator.Element) throws -> Bool = truthy) rethrows -> Bool {
         for element in self {
             if let result = try? predicate(element) where result {
                 return true

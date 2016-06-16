@@ -22,15 +22,15 @@ public extension UIWindow {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    class func takeScreenshotAndSaveToPath(path: String) -> Bool {
-        if let window = UIApplication.sharedApplication().keyWindow {
+    class func takeScreenshotAndSaveToPath(_ path: String) -> Bool {
+        if let window = UIApplication.shared().keyWindow {
             let bounds = window.bounds
             UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
-            window.drawViewHierarchyInRect(bounds, afterScreenUpdates: true)
+            window.drawHierarchy(in: bounds, afterScreenUpdates: true)
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            let data = UIImagePNGRepresentation(image)
-            return data?.writeToFile(path, atomically: true) ?? false
+            let data = UIImagePNGRepresentation(image!)
+            return ((try? data?.write(to: URL(fileURLWithPath: path), options: [.dataWritingAtomic])) != nil) ?? false
         }
         else {
             return false

@@ -19,10 +19,10 @@ public extension UIFont {
      - date: February 17, 2016
      */
     func displayName() throws -> String {
-        let expression = try NSRegularExpression(pattern: "([a-z])([A-Z])", options: NSRegularExpressionOptions())
+        let expression = try RegularExpression(pattern: "([a-z])([A-Z])", options: RegularExpression.Options())
         let fontName = NSMutableString(string: self.fontName)
-        expression.replaceMatchesInString(fontName, options: NSMatchingOptions(), range: fontName.range(), withTemplate: "$1 $2")
-        let components = fontName.componentsSeparatedByString("-")
-        return components.joinWithSeparator(" ")
+        expression.replaceMatches(in: fontName, options: RegularExpression.MatchingOptions(), range: fontName.range(), withTemplate: "$1 $2")
+        let components = fontName.components(separatedBy: "-")
+        return components.joined(separator: " ")
     }
 }
