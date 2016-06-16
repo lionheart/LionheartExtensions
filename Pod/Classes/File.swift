@@ -50,7 +50,7 @@ final class File: StringLiteralConvertible {
 
     func read() -> String? {
         var contents: String?
-        var path = documentsPath ?? bundlePath
+        let path = documentsPath ?? bundlePath
 
         if let path = path {
             do {
