@@ -1,15 +1,16 @@
 source 'https://github.com/CocoaPods/Specs.git'
+project "LionheartExtensions.xcodeproj"
 use_frameworks!
 
-target 'LionheartExtensions_Example', :exclusive => true do
-  pod 'LionheartExtensions', :path => '../'
-end
-
-target 'LionheartExtensions_Tests', :exclusive => true do
+target 'LionheartExtensions_Example' do
   pod 'LionheartExtensions', :path => '../'
 
-  pod 'Quick', '~> 0.8.0'
-  pod 'Nimble', '~> 3.0.0'
-  pod 'FBSnapshotTestCase'
-  pod 'Nimble-Snapshots'
+  target 'LionheartExtensions_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 0.8.0'
+    pod 'Nimble', '~> 3.0.0'
+    pod 'FBSnapshotTestCase'
+    pod 'Nimble-Snapshots'
+  end
 end
