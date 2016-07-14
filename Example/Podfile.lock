@@ -1,12 +1,12 @@
 PODS:
-  - FBSnapshotTestCase (2.1.1):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
-  - FBSnapshotTestCase/Core (2.1.1)
-  - FBSnapshotTestCase/SwiftSupport (2.1.1):
+  - FBSnapshotTestCase (2.1.2):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.2)
+  - FBSnapshotTestCase/Core (2.1.2)
+  - FBSnapshotTestCase/SwiftSupport (2.1.2):
     - FBSnapshotTestCase/Core
-  - LionheartExtensions (1.7.3):
-    - LionheartExtensions/Core (= 1.7.3)
-  - LionheartExtensions/Core (1.7.3)
+  - LionheartExtensions (1.8.0):
+    - LionheartExtensions/Core (= 1.8.0)
+  - LionheartExtensions/Core (1.8.0)
   - Nimble (3.0.0)
   - Nimble-Snapshots (4.1.0):
     - FBSnapshotTestCase (~> 2.0)
@@ -26,8 +26,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
-  LionheartExtensions: 39e7675aad3d4c05c5fcdb369698a70784128fa5
+  FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
+  LionheartExtensions: c3771293fed4b369e0f4a5dac730319460774247
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
