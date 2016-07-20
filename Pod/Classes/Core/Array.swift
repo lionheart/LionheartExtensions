@@ -10,16 +10,22 @@ import Foundation
 
 public extension Array {
     func chunks(size: Int) -> AnyGenerator<[Element]> {
+        if size == 0 {
+            return AnyGenerator {
+                return nil
+            }
+        }
+
         let indices = startIndex.stride(to: count, by: size)
         var generator = indices.generate()
 
         return AnyGenerator {
-            if let i = generator.next() {
-                let j = i.advancedBy(size, limit: self.endIndex)
-                return self[i..<j].map { $0 }
+            guard let i = generator.next() else {
+                return nil
             }
 
-            return nil
+            let j = i.advancedBy(size, limit: self.endIndex)
+            return self[i..<j].map { $0 }
         }
     }
 }
