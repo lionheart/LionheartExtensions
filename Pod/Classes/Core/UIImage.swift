@@ -53,7 +53,6 @@ public extension UIImage {
      */
     convenience init?(base64DataURLString: String?) {
         guard let base64DataURLString = base64DataURLString where base64DataURLString == "" else {
-            self.init()
             return nil
         }
 
@@ -63,7 +62,6 @@ public extension UIImage {
             self.init(data: data)
         }
         else {
-            self.init()
             return nil
         }
     }
@@ -102,15 +100,10 @@ public extension UIImage {
      - date: February 17, 2016
      */
     func imageWithAlpha(alpha: Float) -> UIImage {
-        let alpha = CGFloat(alpha)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        let context = UIGraphicsGetCurrentContext()
-        let area = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
-        CGContextScaleCTM(context, 1, -1)
-        CGContextTranslateCTM(context, 0, -area.size.height)
-        CGContextSetBlendMode(context, .Multiply)
-        CGContextSetAlpha(context, alpha)
-        CGContextDrawImage(context, area, CGImage)
+        let point = CGPoint(x: 0, y: 0)
+        let area = CGRect(origin: point, size: size)
+        drawInRect(area, blendMode: .Multiply, alpha: CGFloat(alpha))
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
@@ -142,7 +135,8 @@ public extension UIImage {
      - note:
         Original Source: [Apple Developer Documentation](https://developer.apple.com/library/ios/qa/qa1703/_index.html#//apple_ref/doc/uid/DTS40010193)
     
-     Edited By: [http://stackoverflow.com/a/8017292/39155](http://stackoverflow.com/a/8017292/39155)
+        Edited By: [http://stackoverflow.com/a/8017292/39155](http://stackoverflow.com/a/8017292/39155)
+
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
@@ -186,7 +180,24 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return image
     }
-    
+
+    /**
+     Save the image to a file using the given parameters.
+     
+     ```
+     image.saveToFile("image.png", format: .PNG)
+     ```
+     
+     You can also specify a JPEG export, but you'll need to specify the quality as well.
+     
+     ```
+     image.saveToFile("image.jpg", format: .JPEG(0.9))
+     ```
+
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: July 20, 2016
+     */
     func saveToFile(path: String, format: UIImageFormat) throws {
         var data: NSData?
         switch format {
@@ -204,7 +215,14 @@ public extension UIImage {
             throw UIImageSaveError.Unspecified
         }
     }
-    
+
+    /**
+     Save the image to the user's camera roll.
+
+     - author: Daniel Loewenherz
+     - copyright: ©2016 Lionheart Software LLC
+     - date: July 20, 2016
+     */
     @available(iOS 9.0, *)
     func saveToCameraRoll(completion: ((Bool, NSError?) -> Void)?) throws {
         let library = PHPhotoLibrary.sharedPhotoLibrary()
