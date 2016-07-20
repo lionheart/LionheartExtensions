@@ -7,19 +7,19 @@ PODS:
   - LionheartExtensions (1.8.0):
     - LionheartExtensions/Core (= 1.8.0)
   - LionheartExtensions/Core (1.8.0)
-  - Nimble (3.0.0)
+  - Nimble (4.1.0)
   - Nimble-Snapshots (4.1.0):
     - FBSnapshotTestCase (~> 2.0)
     - Nimble
     - Quick
-  - Quick (0.8.0)
+  - Quick (0.9.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
   - LionheartExtensions (from `../`)
-  - Nimble (~> 3.0.0)
+  - Nimble (~> 4.0)
   - Nimble-Snapshots
-  - Quick (~> 0.8.0)
+  - Quick (~> 0.0)
 
 EXTERNAL SOURCES:
   LionheartExtensions:
@@ -28,10 +28,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
   LionheartExtensions: c3771293fed4b369e0f4a5dac730319460774247
-  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
   Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
-  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
 
-PODFILE CHECKSUM: cc2349979d6d69353e503040d357e37b5ddda342
+PODFILE CHECKSUM: 1804165e3b5b74114231fb30a77499f28596c6f5
 
 COCOAPODS: 1.0.1
