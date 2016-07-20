@@ -7,9 +7,9 @@ jazzy \
   --github-file-prefix https://github.com/lionheart/LionheartExtensions/tree/1.9.0 \
   --module LionheartExtensions
 
-#git co gh-pages
-#cp -r docs/* .
-#rm -rf docs/
-#git add .
-#git commit -m "documentation update"
-#git co master
+git co gh-pages
+cp -r docs/* .
+rm -rf docs/
+git add .
+git commit -m "documentation update"
+git co master
