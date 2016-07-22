@@ -9,9 +9,9 @@
 import Foundation
 
 public struct TruthTeller<T> {
-    var value: Bool
+    public var value: Bool
 
-    init(_ value: T?) {
+    public init(_ value: T?) {
         guard let value = value else {
             self.value = false
             return
