@@ -1,9 +1,4 @@
 //
-//  UIImage.swift
-//  LionheartExtensions
-//
-//  Created by Daniel Loewenherz on 2/16/16.
-//
 //  Copyright 2016 Lionheart Software LLC
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");

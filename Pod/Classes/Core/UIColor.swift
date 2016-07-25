@@ -1,9 +1,4 @@
 //
-//  UIColor.swift
-//  LionheartExtensions
-//
-//  Created by Daniel Loewenherz on 7/12/15.
-//
 //  Copyright 2016 Lionheart Software LLC
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
