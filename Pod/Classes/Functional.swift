@@ -32,6 +32,8 @@ public struct TruthTeller<T> {
             self.value = value.length > 0 && value != ""
         } else if let value = value as? Bool {
             self.value = value
+        } else if value is NSDate {
+            self.value = true
         } else {
             self.value = false
         }
