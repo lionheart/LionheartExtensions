@@ -208,21 +208,16 @@ public extension UIImage {
      - date: July 20, 2016
      */
     func saveToFile(path: String, format: UIImageFormat) throws {
-        var data: NSData?
+        let data: NSData?
         switch format {
         case .PNG:
             data = UIImagePNGRepresentation(self)
-            
+
         case .JPEG(let quality):
             data = UIImageJPEGRepresentation(self, quality)
         }
 
-        if let data = data {
-            data.writeToFile(path, atomically: true)
-        }
-        else {
-            throw UIImageSaveError.Unspecified
-        }
+        try data?.writeToFile(path, options: .AtomicWrite)
     }
 
     /**
