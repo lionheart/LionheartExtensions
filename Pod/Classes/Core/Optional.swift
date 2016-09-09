@@ -17,7 +17,7 @@
 
 import Foundation
 
-public extension Optional where Wrapped: StringLiteralConvertible {
+public extension Optional where Wrapped: ExpressibleByStringLiteral {
     func nilIfEmpty() -> String? {
         if let value = self as? String {
             if value == "" {

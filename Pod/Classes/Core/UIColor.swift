@@ -17,7 +17,7 @@
 
 import UIKit
 
-public enum ColorRepresentation: IntegerLiteralConvertible, ArrayLiteralConvertible, StringLiteralConvertible {
+public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArrayLiteral, ExpressibleByStringLiteral {
     public typealias IntegerLiteralType = Int
     public typealias Element = Float
 
@@ -25,25 +25,25 @@ public enum ColorRepresentation: IntegerLiteralConvertible, ArrayLiteralConverti
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias StringLiteralType = String
 
-    case Hex(Int)
-    case RGB(Int, Int, Int)
-    case RGBA(Int, Int, Int, Float)
-    case Invalid
+    case hex(Int)
+    case rgb(Int, Int, Int)
+    case rgba(Int, Int, Int, Float)
+    case invalid
 
     public init(integerLiteral value: IntegerLiteralType) {
-        self = Hex(value)
+        self = .hex(value)
     }
 
     public init(arrayLiteral elements: Element...) {
         let intElements = elements.map { Int($0) }
         if elements.count == 3 {
-            self = RGB(intElements[0], intElements[1], intElements[2])
+            self = .rgb(intElements[0], intElements[1], intElements[2])
         }
         else if elements.count == 4 {
-            self = RGBA(intElements[0], intElements[1], intElements[2], elements[3])
+            self = .rgba(intElements[0], intElements[1], intElements[2], elements[3])
         }
         else {
-            self = Hex(0)
+            self = .hex(0)
         }
     }
 
@@ -59,17 +59,17 @@ public enum ColorRepresentation: IntegerLiteralConvertible, ArrayLiteralConverti
         self = ColorRepresentation.valueFromString(value)
     }
 
-    private static func valueFromString(value: String) -> ColorRepresentation {
-        let hexColorRegularExpression = try! NSRegularExpression(pattern: "^#?([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$", options: NSRegularExpressionOptions())
-        let rgbColorRegularExpression = try! NSRegularExpression(pattern: "^rgb\\((1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5])\\)$", options: NSRegularExpressionOptions())
-        let rgbaColorRegularExpression = try! NSRegularExpression(pattern: "^rgba\\((1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(0?\\.\\d+)\\)$", options: NSRegularExpressionOptions())
+    fileprivate static func valueFromString(_ value: String) -> ColorRepresentation {
+        let hexColorRegularExpression = try! NSRegularExpression(pattern: "^#?([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$", options: NSRegularExpression.Options())
+        let rgbColorRegularExpression = try! NSRegularExpression(pattern: "^rgb\\((1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5])\\)$", options: NSRegularExpression.Options())
+        let rgbaColorRegularExpression = try! NSRegularExpression(pattern: "^rgba\\((1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(0?\\.\\d+)\\)$", options: NSRegularExpression.Options())
 
         let stringValue = value as NSString
-        if let match = hexColorRegularExpression.firstMatchInString(value, options: NSMatchingOptions(), range: NSMakeRange(0, value.characters.count)) {
-            let group = stringValue.substringWithRange(match.rangeAtIndex(1))
+        if let match = hexColorRegularExpression.firstMatch(in: value, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, value.characters.count)) {
+            let group = stringValue.substring(with: match.rangeAt(1))
 
             if let integerValue = Int(group, radix: 16) {
-                return .Hex(integerValue)
+                return .hex(integerValue)
             }
         }
 
@@ -79,34 +79,34 @@ public enum ColorRepresentation: IntegerLiteralConvertible, ArrayLiteralConverti
         var a: String?
 
         for regex in [rgbColorRegularExpression, rgbaColorRegularExpression] {
-            if let match = regex.firstMatchInString(value, options: NSMatchingOptions(), range: NSMakeRange(0, value.characters.count)) {
-                r = stringValue.substringWithRange(match.rangeAtIndex(1))
-                g = stringValue.substringWithRange(match.rangeAtIndex(2))
-                b = stringValue.substringWithRange(match.rangeAtIndex(3))
+            if let match = regex.firstMatch(in: value, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, value.characters.count)) {
+                r = stringValue.substring(with: match.rangeAt(1))
+                g = stringValue.substring(with: match.rangeAt(2))
+                b = stringValue.substring(with: match.rangeAt(3))
 
                 if match.numberOfRanges == 5 {
-                    a = stringValue.substringWithRange(match.rangeAtIndex(4))
+                    a = stringValue.substring(with: match.rangeAt(4))
                 }
             }
         }
 
         if let r = r,
-            g = g,
-            b = b,
-            redValue = Int(r),
-            greenValue = Int(g),
-            blueValue = Int(b) {
+            let g = g,
+            let b = b,
+            let redValue = Int(r),
+            let greenValue = Int(g),
+            let blueValue = Int(b) {
 
             if let a = a,
-                alpha = Float(a) {
-                return .RGBA(redValue, greenValue, blueValue, alpha)
+                let alpha = Float(a) {
+                return .rgba(redValue, greenValue, blueValue, alpha)
             }
             else {
-                return .RGB(redValue, greenValue, blueValue)
+                return .rgb(redValue, greenValue, blueValue)
             }
         }
         
-        return .Invalid
+        return .invalid
     }
 }
 
@@ -151,7 +151,7 @@ public extension UIColor {
      */
     convenience init(_ color: ColorRepresentation) {
         switch color {
-        case .Hex(let value):
+        case .hex(let value):
             var r: CGFloat!
             var g: CGFloat!
             var b: CGFloat!
@@ -160,13 +160,13 @@ public extension UIColor {
             value.toRGBA(&r, &g, &b, &a)
             self.init(red: r, green: g, blue: b, alpha: a)
 
-        case .RGB(let r, let g, let b):
+        case .rgb(let r, let g, let b):
             self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: 1)
 
-        case .RGBA(let r, let g, let b, let a):
+        case .rgba(let r, let g, let b, let a):
             self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a))
 
-        case .Invalid:
+        case .invalid:
             self.init(white: 0, alpha: 0)
         }
     }
@@ -180,8 +180,8 @@ public extension UIColor {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func lighten(ratio: CGFloat) -> UIColor {
-        var rgba = [CGFloat](count: 4, repeatedValue: 0)
+    func lighten(_ ratio: CGFloat) -> UIColor {
+        var rgba = [CGFloat](repeating: 0, count: 4)
         getRed(&rgba[0], green: &rgba[1], blue: &rgba[2], alpha: &rgba[3])
 
         let r = Float(min(rgba[0] + ratio, 1))
@@ -201,8 +201,8 @@ public extension UIColor {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func darken(ratio: CGFloat) -> UIColor {
-        var rgba = [CGFloat](count: 4, repeatedValue: 0)
+    func darken(_ ratio: CGFloat) -> UIColor {
+        var rgba = [CGFloat](repeating: 0, count: 4)
         getRed(&rgba[0], green: &rgba[1], blue: &rgba[2], alpha: &rgba[3])
 
         let r = Float(max(rgba[0] - ratio, 0))
@@ -221,7 +221,7 @@ public extension UIColor {
      - date: February 17, 2016
      */
     func isDark() -> Bool {
-        var rgba = [CGFloat](count: 4, repeatedValue: 0)
+        var rgba = [CGFloat](repeating: 0, count: 4)
         
         let converted = getRed(&rgba[0], green: &rgba[1], blue: &rgba[2], alpha: &rgba[3])
         if !converted {
@@ -241,6 +241,9 @@ public extension UIColor {
         let newR: Float = (255 * (1 - A) + 255 * R * A) / 255
         let newG: Float = (255 * (1 - A) + 255 * G * A) / 255
         let newB: Float = (255 * (1 - A) + 255 * B * A) / 255
-        return ((newR * 255 * 299) + (newG * 255 * 587) + (newB * 255 * 114)) / 1000 < 200
+        let newR1: Float = (newR * 255 * 299)
+        let newG1: Float = (newG * 255 * 587)
+        let newB1: Float = (newB * 255 * 114)
+        return ((newR1 + newG1 + newB1) / 1000) < 200
     }
 }

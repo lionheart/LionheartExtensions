@@ -17,33 +17,33 @@
 
 import Foundation
 
-public func async(queue: dispatch_queue_t, delay: Double = 0, callback: Void -> Void) {
+public func async(_ queue: DispatchQueue, delay: Double = 0, callback: @escaping (Void) -> Void) {
     if delay > 0 {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(delay * Double(NSEC_PER_MSEC))), queue) {
+        queue.asyncAfter(deadline: DispatchTime.now() + Double((Int64)(delay * Double(NSEC_PER_MSEC))) / Double(NSEC_PER_SEC)) {
             callback()
         }
     }
     else {
-        dispatch_async(queue) {
+        queue.async {
             callback()
         }
     }
 }
 
-public func async_main(delay delay: Double = 0, callback: Void -> Void) {
-    async(dispatch_get_main_queue(), delay: delay) {
+public func async_main(delay: Double = 0, callback: @escaping (Void) -> Void) {
+    async(DispatchQueue.main, delay: delay) {
         callback()
     }
 }
 
-public func async_default(delay delay: Double = 0, callback: Void -> Void) {
-    async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), delay: delay) {
+public func async_default(delay: Double = 0, callback: @escaping (Void) -> Void) {
+    async(DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default), delay: delay) {
         callback()
     }
 }
 
-public func async_background(delay delay: Double = 0, callback: Void -> Void) {
-    async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), delay: delay) {
+public func async_background(delay: Double = 0, callback: @escaping (Void) -> Void) {
+    async(DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.background), delay: delay) {
         callback()
     }
 }

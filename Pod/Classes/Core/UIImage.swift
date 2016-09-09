@@ -19,12 +19,12 @@ import Foundation
 import Photos
 
 public enum UIImageFormat {
-    case PNG
-    case JPEG(quality: CGFloat)
+    case png
+    case jpeg(quality: CGFloat)
 }
 
-public enum UIImageSaveError: ErrorType {
-    case Unspecified
+public enum UIImageSaveError: Error {
+    case unspecified
 }
 
 public extension UIImage {
@@ -40,11 +40,11 @@ public extension UIImage {
         let bounds = view.bounds
 
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
-        view.drawViewHierarchyInRect(bounds, afterScreenUpdates: true)
+        view.drawHierarchy(in: bounds, afterScreenUpdates: true)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        if let data = UIImagePNGRepresentation(image) {
+        if let data = UIImagePNGRepresentation(image!) {
             self.init(data: data)
         }
         else {
@@ -61,14 +61,16 @@ public extension UIImage {
      - date: March 9, 2016
      */
     convenience init?(base64DataURLString: String?) {
-        guard let base64DataURLString = base64DataURLString where base64DataURLString == "" else {
+        guard let base64DataURLString = base64DataURLString , base64DataURLString == "" else {
             return nil
         }
 
-        if let range = base64DataURLString.rangeOfString("base64,"),
-            index = range.last,
-            data = NSData(base64EncodedString: base64DataURLString.substringFromIndex(index.successor()), options: NSDataBase64DecodingOptions()) {
-            self.init(data: data)
+//        if let range = base64DataURLString.range(of: "base64,") {
+//            range.upperBound
+//        }
+        if let range = base64DataURLString.range(of: "base64,"),
+            let data = Data(base64Encoded: base64DataURLString.substring(from: base64DataURLString.characters.index(range.upperBound, offsetBy: 1)), options: NSData.Base64DecodingOptions()) {
+                self.init(data: data)
         }
         else {
             return nil
@@ -84,19 +86,22 @@ public extension UIImage {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func imageWithColor(color: UIColor) -> UIImage {
-        let rect = CGRectMake(0, 0, size.width, size.height)
+    func imageWithColor(_ color: UIColor) -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         let context = UIGraphicsGetCurrentContext()
-        CGContextTranslateCTM(context, 0, size.height)
-        CGContextScaleCTM(context, 1.0, -1.0)
-        CGContextSetBlendMode(context, .Normal)
-        CGContextClipToMask(context, rect, CGImage)
+        context?.translateBy(x: 0, y: size.height)
+        context?.scaleBy(x: 1.0, y: -1.0)
+        context?.setBlendMode(.normal)
+
+        // MARK: TODO !!!
+        // Was: CGContextClipToMask(context, rect, CGImage)
+//        context?.clip(to: rect, mask: CGImage.self)
         color.setFill()
-        CGContextFillRect(context, rect)
+        context?.fill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
     
     /**
@@ -108,14 +113,14 @@ public extension UIImage {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func imageWithAlpha(alpha: Float) -> UIImage {
+    func imageWithAlpha(_ alpha: Float) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let point = CGPoint(x: 0, y: 0)
         let area = CGRect(origin: point, size: size)
-        drawInRect(area, blendMode: .Multiply, alpha: CGFloat(alpha))
+        draw(in: area, blendMode: .multiply, alpha: CGFloat(alpha))
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
     
     /**
@@ -127,10 +132,10 @@ public extension UIImage {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func imageByCroppingToRect(rect: CGRect) -> UIImage? {
-        if let CIImage = CIImage {
-            let image = CIImage.imageByCroppingToRect(rect)
-            return UIImage(CIImage: image)
+    func imageByCroppingToRect(_ rect: CGRect) -> UIImage? {
+        if let CIImage = ciImage {
+            let image = CIImage.cropping(to: rect)
+            return UIImage(ciImage: image)
         }
         else {
             return nil
@@ -151,43 +156,43 @@ public extension UIImage {
      - date: February 17, 2016
      */
     class func screenshot() -> UIImage {
-        let imageSize = UIScreen.mainScreen().bounds.size
+        let imageSize = UIScreen.main.bounds.size
         
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
         let context = UIGraphicsGetCurrentContext()
-        for window in UIApplication.sharedApplication().windows {
-            CGContextSaveGState(context)
-            CGContextTranslateCTM(context, window.center.x, window.center.y)
-            CGContextConcatCTM(context, window.transform)
-            CGContextTranslateCTM(context, -window.bounds.size.width * window.layer.anchorPoint.x, -window.bounds.size.height * window.layer.anchorPoint.y)
+        for window in UIApplication.shared.windows {
+            context?.saveGState()
+            context?.translateBy(x: window.center.x, y: window.center.y)
+            context?.concatenate(window.transform)
+            context?.translateBy(x: -window.bounds.size.width * window.layer.anchorPoint.x, y: -window.bounds.size.height * window.layer.anchorPoint.y)
             
-            switch UIApplication.sharedApplication().statusBarOrientation {
-            case .LandscapeLeft:
-                CGContextRotateCTM(context, CGFloat(M_PI_2))
-                CGContextTranslateCTM(context, 0, -imageSize.width)
+            switch UIApplication.shared.statusBarOrientation {
+            case .landscapeLeft:
+                context?.rotate(by: CGFloat(M_PI_2))
+                context?.translateBy(x: 0, y: -imageSize.width)
                 break
                 
-            case .LandscapeRight:
-                CGContextRotateCTM(context, -CGFloat(M_PI_2))
-                CGContextTranslateCTM(context, -imageSize.height, 0)
+            case .landscapeRight:
+                context?.rotate(by: -CGFloat(M_PI_2))
+                context?.translateBy(x: -imageSize.height, y: 0)
                 break
                 
-            case .PortraitUpsideDown:
-                CGContextRotateCTM(context, CGFloat(M_PI))
-                CGContextTranslateCTM(context, -imageSize.width, -imageSize.height)
+            case .portraitUpsideDown:
+                context?.rotate(by: CGFloat(M_PI))
+                context?.translateBy(x: -imageSize.width, y: -imageSize.height)
                 break
                 
             default:
                 break
             }
             
-            window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: false)
-            CGContextRestoreGState(context)
+            window.drawHierarchy(in: window.bounds, afterScreenUpdates: false)
+            context?.restoreGState()
         }
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
 
     /**
@@ -207,17 +212,17 @@ public extension UIImage {
      - copyright: ©2016 Lionheart Software LLC
      - date: July 20, 2016
      */
-    func saveToFile(path: String, format: UIImageFormat) throws {
-        let data: NSData?
+    func saveToFile(_ path: String, format: UIImageFormat) throws {
+        let data: Data?
         switch format {
-        case .PNG:
+        case .png:
             data = UIImagePNGRepresentation(self)
 
-        case .JPEG(let quality):
+        case .jpeg(let quality):
             data = UIImageJPEGRepresentation(self, quality)
         }
 
-        try data?.writeToFile(path, options: .AtomicWrite)
+        try data?.write(to: URL(fileURLWithPath: path), options: .atomicWrite)
     }
 
     /**
@@ -228,13 +233,13 @@ public extension UIImage {
      - date: July 20, 2016
      */
     @available(iOS 9.0, *)
-    func saveToCameraRoll(completion: ((Bool, NSError?) -> Void)?) throws {
-        let library = PHPhotoLibrary.sharedPhotoLibrary()
+    func saveToCameraRoll(_ completion: ((Bool, NSError?) -> Void)?) throws {
+        let library = PHPhotoLibrary.shared()
         library.performChanges({
-            PHAssetCreationRequest.creationRequestForAssetFromImage(self)
+            PHAssetCreationRequest.creationRequestForAsset(from: self)
         }) { (success, error) in
             if let completion = completion {
-                completion(success, error)
+                completion(success, error as NSError?)
             }
         }
     }

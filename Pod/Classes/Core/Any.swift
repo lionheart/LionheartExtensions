@@ -17,12 +17,12 @@
 
 import Foundation
 
-public func liftOptionalFromAny(value: Any) -> Any {
+public func liftOptionalFromAny(_ value: Any) -> Any {
     /**
      If an optional is contained in any `Any` value, this function "lifts" the non-optional value out of it.
     */
     let mirror = Mirror(reflecting: value)
-    if mirror.displayStyle != .Optional {
+    if mirror.displayStyle != .optional {
         return value
     }
 

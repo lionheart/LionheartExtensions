@@ -19,8 +19,6 @@
 		11C22C7B844DF31A5EBDC9AC132C5E94 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 9082F45478C362610808EA87B8A66C41 /* UIImage+Compare.m */; };
 		130F048002A62769FAFCC66F2C79391A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 76DB4B5E7898B25E3F577B7641E60510 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1330782A55555085FE8872AF7BA8DD48 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B647CB04C4B4A77B6E163BF319C317 /* DSL.swift */; };
-		17A32E1903E960F415363E611F334240 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08BF269A256733F57EE7F995246AC7F /* NSDate.swift */; };
-		18B8EE721A83C939F652921C443220ED /* NSDecimalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4B06D88895599866351D9194C90EC /* NSDecimalNumber.swift */; };
 		192C4EF47D90895E51E5597323364A3C /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F01D09605E06BDE4949D96B9DAE72A1 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C696A0CCC5C29FFBBB8620F5DC8FA6D /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A628AB58593FC52C9A40D685D7A7 /* Example.swift */; };
 		21B91E0927257FD1E32601A8936DC3EA /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC308F42F647B0860A3CB0A9A657F5E /* Optional.swift */; };
@@ -35,6 +33,7 @@
 		35E0EBA7AA92E190AB5B4ACFCF0F61C4 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090D089A1067ED8CF692BB03B7CFCC3E /* AssertionDispatcher.swift */; };
 		36076C14B35110B528A15AF21826CCE1 /* Nimble-Snapshots-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28FD848AFC07C090348CAF492401F36D /* Nimble-Snapshots-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36A09777D96DA589FD7FB47DD6EDC2AB /* Nimble-Snapshots-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EE67261216789A22D959DB9229C924 /* Nimble-Snapshots-dummy.m */; };
+		3720951A1D82526B00306E37 /* NSDecimalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4B06D88895599866351D9194C90EC /* NSDecimalNumber.swift */; };
 		39007AD3711A35BCFA1D853E7AB79510 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95182FAFCCE7535B10BC213F8C3488CF /* BeLessThanOrEqual.swift */; };
 		3A584EFBFBA083D560141404C7E6142A /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E9D30FC019FF2A794A66C61B2445D /* UIFont.swift */; };
 		3AE12C0D3B01FCDBD24DBB76C48CDCA5 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D634A9377130A6453F8784D4B7522461 /* UIScreen.swift */; };
@@ -365,7 +364,6 @@
 		B180E90C713879BB5775CB942D80E04D /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Nimble.modulemap; sourceTree = "<group>"; };
 		B761630F525C847E9545C847D2728297 /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Sources/Quick/QuickSpec.m; sourceTree = "<group>"; };
 		C07A56F6C7DDC18C64217C5271826A88 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C08BF269A256733F57EE7F995246AC7F /* NSDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		C116977B4DB5773CF092ADB8284DF416 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3EE67261216789A22D959DB9229C924 /* Nimble-Snapshots-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-Snapshots-dummy.m"; sourceTree = "<group>"; };
 		C4EF5C14C6A644F9D6BAFDD36537FB02 /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
@@ -725,7 +723,6 @@
 				5677A5A6F723F2C54FE1D5A872F14C2E /* Array.swift */,
 				9D4AF66088FC1A981036E5457891116D /* Async.swift */,
 				C4EF5C14C6A644F9D6BAFDD36537FB02 /* Int.swift */,
-				C08BF269A256733F57EE7F995246AC7F /* NSDate.swift */,
 				D5A4B06D88895599866351D9194C90EC /* NSDecimalNumber.swift */,
 				417BADF47125992239B774DC54D1D5AB /* NSIndexPath.swift */,
 				462CAFD7F27DF59CC7A728F038DA7A3A /* NSRegularExpression.swift */,
@@ -1091,7 +1088,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
+				TargetAttributes = {
+					D5CB5544E6D64C29EA3C9E14553884B0 = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1128,9 +1130,8 @@
 				BFEC83F5BAB519F175677631FB34D444 /* Functional.swift in Sources */,
 				B7D4A4CFDBCFAD18CCA29D7E01337ECB /* Int.swift in Sources */,
 				F323F866C049CE8BBCE4A9CD5804717E /* LionheartExtensions-dummy.m in Sources */,
-				17A32E1903E960F415363E611F334240 /* NSDate.swift in Sources */,
-				18B8EE721A83C939F652921C443220ED /* NSDecimalNumber.swift in Sources */,
 				887580913370DEFD44BDEF1251792FFC /* NSIndexPath.swift in Sources */,
+				3720951A1D82526B00306E37 /* NSDecimalNumber.swift in Sources */,
 				7D0B86FC0ABDF67CCD64FE6A8A5CB998 /* NSRegularExpression.swift in Sources */,
 				018B33FFEC9C248AD92C59ABBFFF70B3 /* NSURLSession.swift in Sources */,
 				21B91E0927257FD1E32601A8936DC3EA /* Optional.swift in Sources */,
@@ -1336,7 +1337,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF8D908570E4203D2B1A838261DDDE1F /* LionheartExtensions.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1355,6 +1356,7 @@
 				PRODUCT_NAME = LionheartExtensions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1365,7 +1367,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01BF96909EDC4CCB6D8E5693F8D37092 /* FBSnapshotTestCase.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1395,7 +1397,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA78B6866D6E6CEAB9F5EFDFC83CF2F9 /* Pods-LionheartExtensions_Tests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1428,7 +1431,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66E7F921A5FA484CAEF02A7C6DB6EB13 /* Nimble-Snapshots.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1457,7 +1460,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 587DC5D9815FFB317EEAC730E367F968 /* Nimble.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1486,7 +1489,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66519AF444090EED6E997A4334CE0D71 /* Quick.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1516,7 +1519,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66E7F921A5FA484CAEF02A7C6DB6EB13 /* Nimble-Snapshots.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1556,13 +1559,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -1575,6 +1582,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1584,7 +1592,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 587DC5D9815FFB317EEAC730E367F968 /* Nimble.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1614,7 +1622,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66519AF444090EED6E997A4334CE0D71 /* Quick.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1643,7 +1651,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A8FE57A68389336FC762B539891ECEF /* Pods-LionheartExtensions_Tests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1677,7 +1686,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FFA5641414D5103ACBE07E168B728180 /* Pods-LionheartExtensions_Example.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1711,7 +1721,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF8D908570E4203D2B1A838261DDDE1F /* LionheartExtensions.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1731,6 +1741,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1751,14 +1762,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -1783,7 +1798,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01BF96909EDC4CCB6D8E5693F8D37092 /* FBSnapshotTestCase.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1812,7 +1827,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B462765095CC3E04F13241C1D4A6E83 /* Pods-LionheartExtensions_Example.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;

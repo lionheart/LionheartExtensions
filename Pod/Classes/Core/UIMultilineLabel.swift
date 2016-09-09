@@ -14,7 +14,7 @@
 //  limitations under the License.
 //
 
-public class MultilineLabel: UILabel {
+open class MultilineLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         

@@ -18,22 +18,23 @@
 import Foundation
 
 public extension Array {
-    func chunks(size: Int) -> AnyGenerator<[Element]> {
+    func chunks(_ size: Int) -> AnyIterator<[Element]> {
         if size == 0 {
-            return AnyGenerator {
+            return AnyIterator {
                 return nil
             }
         }
 
-        let indices = startIndex.stride(to: count, by: size)
-        var generator = indices.generate()
+        let indices = stride(from: startIndex, to: count, by: size)
+        var generator = indices.makeIterator()
 
-        return AnyGenerator {
+        return AnyIterator {
             guard let i = generator.next() else {
                 return nil
             }
 
-            let j = i.advancedBy(size, limit: self.endIndex)
+            // MARK: TODO. There used to be a `limit` here.
+            let j = i.advanced(by: size)
             return self[i..<j].map { $0 }
         }
     }

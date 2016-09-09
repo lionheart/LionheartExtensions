@@ -27,7 +27,7 @@ public extension UIViewController {
      - date: February 17, 2016
      */
     func topViewController() -> UIViewController? {
-        return UIViewController.topViewControllerWithRootViewController(UIApplication.sharedApplication().keyWindow?.rootViewController)
+        return UIViewController.topViewControllerWithRootViewController(UIApplication.shared.keyWindow?.rootViewController)
     }
 
     /**
@@ -38,7 +38,7 @@ public extension UIViewController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    class func topViewControllerWithRootViewController(rootViewController: UIViewController?) -> UIViewController? {
+    class func topViewControllerWithRootViewController(_ rootViewController: UIViewController?) -> UIViewController? {
         if let tabBarController = rootViewController as? UITabBarController {
             return UIViewController.topViewControllerWithRootViewController(tabBarController.selectedViewController)
         }

@@ -32,7 +32,7 @@ public struct TruthTeller<T> {
             self.value = value.length > 0 && value != ""
         } else if let value = value as? Bool {
             self.value = value
-        } else if value is NSDate {
+        } else if value is Date {
             self.value = true
         } else {
             self.value = false
@@ -40,11 +40,11 @@ public struct TruthTeller<T> {
     }
 }
 
-public func truthy<T>(item: T) -> Bool {
+public func truthy<T>(_ item: T) -> Bool {
     return TruthTeller(item).value
 }
 
-public func all(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> Bool {
+public func all(_ elements: [AnyObject?], test: ((AnyObject?) -> Bool) = truthy) -> Bool {
     for element in elements {
         if !test(element) {
             return false
@@ -53,7 +53,7 @@ public func all(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> 
     return true
 }
 
-public func any(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> Bool {
+public func any(_ elements: [AnyObject?], test: ((AnyObject?) -> Bool) = truthy) -> Bool {
     for element in elements {
         if test(element) {
             return true
@@ -63,7 +63,7 @@ public func any(elements: [AnyObject?], test: (AnyObject? -> Bool) = truthy) -> 
     return false
 }
 
-public func all<T>(elements: [T?], test: (AnyObject? -> Bool)? = nil) -> Bool {
+public func all<T>(_ elements: [T?], test: ((AnyObject?) -> Bool)? = nil) -> Bool {
     for element in elements {
         if !truthy(element) {
             return false
@@ -73,10 +73,10 @@ public func all<T>(elements: [T?], test: (AnyObject? -> Bool)? = nil) -> Bool {
     return true
 }
 
-public func any<T>(elements: [T?], test: (AnyObject? -> Bool) = truthy) -> Bool {
+public func any<T>(_ elements: [T?], test: ((AnyObject?) -> Bool) = truthy) -> Bool {
     for element in elements {
-        if let element = element as? AnyObject {
-            if test(element) {
+        if let element = element {
+            if test(element as AnyObject?) {
                 return true
             }
         }
@@ -86,16 +86,16 @@ public func any<T>(elements: [T?], test: (AnyObject? -> Bool) = truthy) -> Bool 
 }
 
 public extension Array {
-    func all(@noescape where predicate: Generator.Element throws -> Bool = truthy) rethrows -> Bool {
+    func all(_ predicate: (Iterator.Element) throws -> Bool = truthy) rethrows -> Bool {
         for element in self {
             guard try predicate(element) else { return false }
         }
         return true
     }
 
-    func any(@noescape where predicate: Generator.Element throws -> Bool = truthy) rethrows -> Bool {
+    func any(_ predicate: (Iterator.Element) throws -> Bool = truthy) rethrows -> Bool {
         for element in self {
-            if let result = try? predicate(element) where result {
+            if let result = try? predicate(element), result {
                 return true
             }
         }

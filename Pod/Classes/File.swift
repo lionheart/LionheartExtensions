@@ -16,14 +16,14 @@
 
 import Foundation
 
-final class File: StringLiteralConvertible {
+final class File: ExpressibleByStringLiteral {
     var filename: String?
 
     lazy var documentsPath: String? = {
-        let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [NSString]
         if let path = paths.first,
-            filename = self.filename {
-                return path.stringByAppendingPathComponent(filename)
+            let filename = self.filename {
+                return path.appendingPathComponent(filename)
         }
         else {
             return nil
@@ -31,10 +31,10 @@ final class File: StringLiteralConvertible {
     }()
 
     var bundlePath: String? {
-        let bundle = NSBundle.mainBundle()
+        let bundle = Bundle.main
         if let filename = filename {
-            let components = filename.componentsSeparatedByString(".")
-            return bundle.pathForResource(components[0], ofType: components[1])
+            let components = filename.components(separatedBy: ".")
+            return bundle.path(forResource: components[0], ofType: components[1])
         }
         else {
             return nil
@@ -62,7 +62,7 @@ final class File: StringLiteralConvertible {
 
         if let path = path {
             do {
-                contents = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+                contents = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
             }
             catch {
                 // MARK: TODO
@@ -73,22 +73,22 @@ final class File: StringLiteralConvertible {
     }
 
     func existsInBundle() -> Bool {
-        let manager = NSFileManager.defaultManager()
+        let manager = FileManager.default
 
         guard let path = bundlePath else {
             return false
         }
 
-        return manager.fileExistsAtPath(path)
+        return manager.fileExists(atPath: path)
     }
 
     func existsInDocuments() -> Bool {
-        let manager = NSFileManager.defaultManager()
+        let manager = FileManager.default
 
         guard let path = documentsPath else {
             return false
         }
 
-        return manager.fileExistsAtPath(path)
+        return manager.fileExists(atPath: path)
     }
 }
