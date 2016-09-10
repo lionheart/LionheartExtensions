@@ -10,6 +10,6 @@ import UIKit
 
 public extension UIDevice {
     static var UUIDString: String? {
-        return currentDevice().identifierForVendor?.UUIDString
+        return current.identifierForVendor?.uuidString
     }
 }
