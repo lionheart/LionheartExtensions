@@ -85,7 +85,6 @@
 		82E55B1159083B37527C20EB4E621550 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD55F3974939097556240403DEE2DFF /* Nimble.framework */; };
 		83DA9B6F380D643725CFEE4E9AAB9F5D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E5D3F8507D30BBEFC0582C6001AB3F /* Filter.swift */; };
 		8404F7168BDB16D6157E38B56C831CA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77FF979DB93FFC369BEC3D6B3C8B9C7A /* Foundation.framework */; };
-		84D2229505DE3A7B782A1C3076F61155 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4AF66088FC1A981036E5457891116D /* Async.swift */; };
 		85D178DFCA1BC67BBFB1188E34EC5B19 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E39919745142DBFA9E9A13766F238D4 /* SwiftSupport.swift */; };
 		85D4DBD7E83768DAFD903EF915D1C1DA /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB09029044A7B96730BC22905EDF254 /* HooksPhase.swift */; };
 		866830C585216CA87A15D078A28C410A /* CurrentTestCaseTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C772318B50A59DF2D79A3651AFADD01 /* CurrentTestCaseTracker.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -342,7 +341,6 @@
 		9823197EA5904A9150FB0AD8B09841E6 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C41B7B876B3CF3C7936C24847EA1948 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Sources/Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
 		9CF3C95FEF7D0FD6C288789E9061CD70 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		9D4AF66088FC1A981036E5457891116D /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		9DF419F3735AFE3CD2C2866389887081 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A0358DA1B53D0631AF148545515D7731 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/Nimble/Adapters/ObjectiveC/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		A0BE5A2FB3AFDB63417D15E2050D9747 /* World+DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "World+DSL.swift"; path = "Sources/Quick/DSL/World+DSL.swift"; sourceTree = "<group>"; };
@@ -721,7 +719,6 @@
 			children = (
 				A351C3BE1C40C9E3C30D4FB806E5FF77 /* Any.swift */,
 				5677A5A6F723F2C54FE1D5A872F14C2E /* Array.swift */,
-				9D4AF66088FC1A981036E5457891116D /* Async.swift */,
 				C4EF5C14C6A644F9D6BAFDD36537FB02 /* Int.swift */,
 				D5A4B06D88895599866351D9194C90EC /* NSDecimalNumber.swift */,
 				417BADF47125992239B774DC54D1D5AB /* NSIndexPath.swift */,
@@ -1126,7 +1123,6 @@
 			files = (
 				8E5E6DCE60E436517B4138C19B56228B /* Any.swift in Sources */,
 				7D672E65ACC58CA5448197DA91B4E99C /* Array.swift in Sources */,
-				84D2229505DE3A7B782A1C3076F61155 /* Async.swift in Sources */,
 				416D611C8CE7A2A07FF09B41311C107C /* File.swift in Sources */,
 				BFEC83F5BAB519F175677631FB34D444 /* Functional.swift in Sources */,
 				B7D4A4CFDBCFAD18CCA29D7E01337ECB /* Int.swift in Sources */,
