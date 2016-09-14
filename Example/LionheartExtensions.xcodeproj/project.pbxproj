@@ -219,6 +219,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 63553QQ62F;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -525,6 +526,7 @@
 			baseConfigurationReference = 870C9AF02D72A3651C230D8F /* Pods-LionheartExtensions_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 63553QQ62F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -546,6 +548,7 @@
 			baseConfigurationReference = BB10712BA220845EC504AE1B /* Pods-LionheartExtensions_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 63553QQ62F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

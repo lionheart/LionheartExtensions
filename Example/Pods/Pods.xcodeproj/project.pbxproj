@@ -1091,6 +1091,7 @@
 				LastUpgradeCheck = 0800;
 				TargetAttributes = {
 					D5CB5544E6D64C29EA3C9E14553884B0 = {
+						DevelopmentTeam = 63553QQ62F;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -1337,10 +1338,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF8D908570E4203D2B1A838261DDDE1F /* LionheartExtensions.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 63553QQ62F;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1349,7 +1351,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LionheartExtensions/LionheartExtensions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LionheartExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1721,10 +1723,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF8D908570E4203D2B1A838261DDDE1F /* LionheartExtensions.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 63553QQ62F;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1733,7 +1736,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LionheartExtensions/LionheartExtensions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LionheartExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
