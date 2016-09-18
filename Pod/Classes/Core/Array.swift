@@ -34,7 +34,10 @@ public extension Array {
             }
 
             // MARK: TODO. There used to be a `limit` here.
-            let j = i.advanced(by: size)
+            guard let j = self.index(i, offsetBy: size, limitedBy: self.endIndex) else {
+                return nil
+            }
+
             return self[i..<j].map { $0 }
         }
     }
