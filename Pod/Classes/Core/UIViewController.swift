@@ -26,8 +26,8 @@ public extension UIViewController {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func topViewController() -> UIViewController? {
-        return UIViewController.topViewControllerWithRootViewController(UIApplication.shared.keyWindow?.rootViewController)
+    class func topViewController() -> UIViewController? {
+        return topViewControllerWithRootViewController(UIApplication.shared.keyWindow?.rootViewController)
     }
 
     /**
