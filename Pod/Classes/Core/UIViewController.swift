@@ -39,24 +39,24 @@ public extension UIViewController {
      - date: February 17, 2016
      */
     class func topViewControllerWithRootViewController(_ rootViewController: UIViewController?) -> UIViewController? {
-        if let tabBarController = rootViewController as? UITabBarController {
-            return UIViewController.topViewControllerWithRootViewController(tabBarController.selectedViewController)
-        }
-        else if let navigationController = rootViewController as? UINavigationController {
-            return UIViewController.topViewControllerWithRootViewController(navigationController.visibleViewController)
-        }
-        else if let splitViewController = rootViewController as? UISplitViewController {
-            return UIViewController.topViewControllerWithRootViewController(splitViewController.viewControllers[1])
-        }
-        else if let presentedViewController = rootViewController?.presentedViewController {
-            if presentedViewController is UIAlertController {
-                return presentedViewController
+        switch rootViewController {
+        case let tabBarController as UITabBarController:
+            return topViewControllerWithRootViewController(tabBarController.selectedViewController)
+
+        case let navigationController as UINavigationController:
+            return topViewControllerWithRootViewController(navigationController.visibleViewController)
+
+        case let splitViewController as UISplitViewController:
+            return topViewControllerWithRootViewController(splitViewController.viewControllers[1])
+
+        case let controller where controller == rootViewController?.presentedViewController:
+            if controller is UIAlertController {
+                return controller
+            } else {
+                return topViewControllerWithRootViewController(controller)
             }
-            else {
-                return UIViewController.topViewControllerWithRootViewController(presentedViewController)
-            }
-        }
-        else {
+
+        default:
             return rootViewController
         }
     }
