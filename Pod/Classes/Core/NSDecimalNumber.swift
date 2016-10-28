@@ -35,18 +35,15 @@ public func -(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber {
     return lhs.subtracting(rhs)
 }
 
-public func +=(lhs: NSDecimalNumber, rhs: NSDecimalNumber) {
-    var lhs = lhs
+public func +=(lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
     lhs = lhs + rhs
 }
 
-public func -=(lhs: NSDecimalNumber, rhs: NSDecimalNumber) {
-    var lhs = lhs
+public func -=(lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
     lhs = lhs - rhs
 }
 
-public func *=(lhs: NSDecimalNumber, rhs: NSDecimalNumber) {
-    var lhs = lhs
+public func *=(lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
     lhs = lhs * rhs
 }
 
