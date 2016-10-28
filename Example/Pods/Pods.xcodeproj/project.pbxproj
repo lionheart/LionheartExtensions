@@ -1089,7 +1089,7 @@
 				TargetAttributes = {
 					D5CB5544E6D64C29EA3C9E14553884B0 = {
 						DevelopmentTeam = 63553QQ62F;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
