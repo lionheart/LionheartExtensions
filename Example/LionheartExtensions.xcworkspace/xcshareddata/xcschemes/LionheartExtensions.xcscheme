@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5CB5544E6D64C29EA3C9E14553884B0"
+               BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
                BuildableName = "LionheartExtensions.framework"
                BlueprintName = "LionheartExtensions"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BuildableName = "LionheartExtensions_Tests.xctest"
+               BlueprintName = "LionheartExtensions_Tests"
+               ReferencedContainer = "container:LionheartExtensions.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
+            BuildableName = "LionheartExtensions.framework"
+            BlueprintName = "LionheartExtensions"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5CB5544E6D64C29EA3C9E14553884B0"
+            BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
             BuildableName = "LionheartExtensions.framework"
             BlueprintName = "LionheartExtensions"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -60,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
+            BuildableName = "LionheartExtensions.framework"
+            BlueprintName = "LionheartExtensions"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

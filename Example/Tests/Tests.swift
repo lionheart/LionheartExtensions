@@ -12,8 +12,8 @@ import Nimble
 
 class LionheartExtensionsTests: XCTestCase {
     func testDate() {
-        let aLongTimeAgo = NSDate.distantPast()
-        let theFuture = NSDate.distantFuture()
+        let aLongTimeAgo = Date.distantPast
+        let theFuture = Date.distantFuture
 
         expect(aLongTimeAgo) < theFuture
         expect(aLongTimeAgo) <= theFuture
@@ -32,7 +32,7 @@ class LionheartExtensionsTests: XCTestCase {
     }
 
     func testFont() {
-        let font = UIFont.systemFontOfSize(12)
+        let font = UIFont.systemFont(ofSize: 12)
 
         do {
             let displayName = try font.displayName()
@@ -45,13 +45,13 @@ class LionheartExtensionsTests: XCTestCase {
 
     func testColor() {
         let red = UIColor(0xF00)
-        expect(red) == UIColor.redColor()
+        expect(red) == UIColor.red
 
         let green = UIColor(0x0F0)
-        expect(green) == UIColor.greenColor()
+        expect(green) == UIColor.green
 
         let blue = UIColor(0x00F)
-        expect(blue) == UIColor.blueColor()
+        expect(blue) == UIColor.blue
     }
 
     func testFunctional() {
@@ -71,10 +71,10 @@ class LionheartExtensionsTests: XCTestCase {
         let twoTrueIntB: [Int?] = [0, 10, 20]
         let allTrueInt: [Int?] = [1, 10, 100]
 
-        let noTrueMix: [AnyObject?] = [nil, 0, false, ""]
-        let oneTrueMixA: [AnyObject?] = [nil, 1, false, ""]
-        let oneTrueMixB: [AnyObject?] = [0, true, ""]
-        let oneTrueMixC: [AnyObject?] = [0, false, "one"]
+        let noTrueMix: [Any?] = [nil, 0, false, ""]
+        let oneTrueMixA: [Any?] = [nil, 1, false, ""]
+        let oneTrueMixB: [Any?] = [0, true, ""]
+        let oneTrueMixC: [Any?] = [0, false, "one"]
 
         expect(all(noTrueBool)) == false
         expect(all(oneTrueBool)) == false
