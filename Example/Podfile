@@ -10,8 +10,8 @@ target 'LionheartExtensions_Example' do
   target 'LionheartExtensions_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 0.0'
-    pod 'Nimble', '~> 4.0'
+    pod 'Quick', '~> 1.0'
+    pod 'Nimble', '~> 5.1'
     pod 'FBSnapshotTestCase'
     pod 'Nimble-Snapshots'
   end
