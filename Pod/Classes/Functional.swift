@@ -44,7 +44,7 @@ public func truthy<T>(_ item: T) -> Bool {
     return TruthTeller(item).value
 }
 
-public func all(_ elements: [AnyObject?], test: ((AnyObject?) -> Bool) = truthy) -> Bool {
+public func all(_ elements: [Any?], test: ((Any?) -> Bool) = truthy) -> Bool {
     for element in elements {
         if !test(element) {
             return false
@@ -53,7 +53,7 @@ public func all(_ elements: [AnyObject?], test: ((AnyObject?) -> Bool) = truthy)
     return true
 }
 
-public func any(_ elements: [AnyObject?], test: ((AnyObject?) -> Bool) = truthy) -> Bool {
+public func any(_ elements: [Any?], test: ((Any?) -> Bool) = truthy) -> Bool {
     for element in elements {
         if test(element) {
             return true
@@ -63,7 +63,7 @@ public func any(_ elements: [AnyObject?], test: ((AnyObject?) -> Bool) = truthy)
     return false
 }
 
-public func all<T>(_ elements: [T?], test: ((AnyObject?) -> Bool)? = nil) -> Bool {
+public func all<T>(_ elements: [T?], test: ((Any?) -> Bool)? = nil) -> Bool {
     for element in elements {
         if !truthy(element) {
             return false
@@ -73,7 +73,7 @@ public func all<T>(_ elements: [T?], test: ((AnyObject?) -> Bool)? = nil) -> Boo
     return true
 }
 
-public func any<T>(_ elements: [T?], test: ((AnyObject?) -> Bool) = truthy) -> Bool {
+public func any<T>(_ elements: [T?], test: ((Any?) -> Bool) = truthy) -> Bool {
     for element in elements {
         if let element = element {
             if test(element as AnyObject?) {
