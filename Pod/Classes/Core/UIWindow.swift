@@ -18,9 +18,8 @@
 import Foundation
 
 /**
-Helper methods for `UIWindow`.
+    Helper methods for `UIWindow`.
 */
-
 public extension UIWindow {
     /**
      Take a screenshot and save to the specified file path. Helpful for creating screenshots via automated tests.
@@ -32,24 +31,27 @@ public extension UIWindow {
      - date: February 17, 2016
      */
     class func takeScreenshotAndSaveToPath(_ path: String) -> Bool {
-        if let window = UIApplication.shared.keyWindow {
-            let bounds = window.bounds
-            UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
-            window.drawHierarchy(in: bounds, afterScreenUpdates: true)
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            guard let data = UIImagePNGRepresentation(image!) else {
-                return false
-            }
-            let url = URL(fileURLWithPath: path)
-            guard let _ = try? data.write(to: url, options: []) else {
-                return false
-            }
-
-            return true
-        }
-        else {
+        guard let window = UIApplication.shared.keyWindow else {
             return false
         }
+
+        let bounds = window.bounds
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
+        window.drawHierarchy(in: bounds, afterScreenUpdates: true)
+        let _image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        guard let image = _image,
+            let data = UIImagePNGRepresentation(image) else {
+                return false
+        }
+
+        let url = URL(fileURLWithPath: path)
+
+        guard let _ = try? data.write(to: url, options: []) else {
+            return false
+        }
+
+        return true
     }
 }

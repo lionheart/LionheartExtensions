@@ -46,9 +46,9 @@ public protocol LHSStringType {
 
     func stringByLowercasingFirstLetter() -> String
     func stringByUppercasingFirstLetter() -> String
-    func stringByTrimmingString(_ string: String) -> String
+    func stringByTrimming(string: String) -> String
     func stringByReplacingSpacesWithDashes() -> String
-    func stringByConvertingToNamingFormat(_ naming: VariableNamingFormat) -> String
+    func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String
 }
 
 public protocol LHSURLStringType {
@@ -84,7 +84,7 @@ public extension String {
     }
 
     mutating func trim(_ string: String) {
-        self = self.stringByTrimmingString(string)
+        self = self.stringByTrimming(string: string)
     }
 
     mutating func URLEncode() {
@@ -98,7 +98,7 @@ public extension String {
     }
 
     mutating func replaceCapitalsWithUnderscores() {
-        self = stringByConvertingToNamingFormat(.underscores)
+        self = stringByConverting(toNamingFormat: .underscores)
     }
 
     func stringByLowercasingFirstLetter() -> String {
@@ -111,8 +111,8 @@ public extension String {
         return substring(to: start).uppercased() + substring(with: start..<endIndex)
     }
 
-    func stringByTrimmingString(_ string: String) -> String {
-        return self.trimmingCharacters(in: CharacterSet(charactersIn: string))
+    public func stringByTrimming(string: String) -> String {
+        return trimmingCharacters(in: CharacterSet(charactersIn: string))
     }
 
     func URLEncodedString() -> String? {
@@ -131,13 +131,13 @@ public extension String {
     }
 
     
-    func stringByConvertingToNamingFormat(_ naming: VariableNamingFormat) -> String {
+    func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String {
         switch naming {
         case .underscores:
             let regex = try! NSRegularExpression(pattern: "([A-Z]+)", options: NSRegularExpression.Options())
             let string = NSMutableString(string: self)
             regex.replaceMatches(in: string, options: NSRegularExpression.MatchingOptions(), range: range(), withTemplate: "_$0")
-            let newString = string.stringByTrimmingString("_").lowercased()
+            let newString = string.stringByTrimming(string: "_").lowercased()
             if hasPrefix("_") {
                 return "_" + newString
             }
@@ -169,11 +169,11 @@ public extension String {
         }
     }
 
-    mutating func convertToNamingFormat(_ naming: VariableNamingFormat) {
-        self = stringByConvertingToNamingFormat(naming)
+    mutating func convert(toNamingFormat naming: VariableNamingFormat) {
+        self = stringByConverting(toNamingFormat: naming)
     }
 
-    func isComposedOfCharactersInSet(_ characterSet: CharacterSet) -> Bool {
+    func isComposedOf(charactersInSet characterSet: CharacterSet) -> Bool {
         for scalar in unicodeScalars {
             if !characterSet.contains(UnicodeScalar(scalar.value)!) {
                 return false
@@ -213,12 +213,12 @@ public extension NSString {
         return String(self).stringByReplacingSpacesWithDashes()
     }
 
-    func stringByConvertingToNamingFormat(_ naming: VariableNamingFormat) -> String {
-        return String(self).stringByConvertingToNamingFormat(naming)
+    public func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String {
+        return String(self).stringByConverting(toNamingFormat: naming)
     }
 
-    func stringByTrimmingString(_ string: String) -> String {
-        return String(self).stringByTrimmingString(string)
+    func stringByTrimming(string: String) -> String {
+        return String(self).stringByTrimming(string: string)
     }
 }
 
@@ -232,32 +232,32 @@ public extension NSAttributedString {
      - date: February 17, 2016
      */
     func range() -> NSRange {
-        return String(describing: self).range()
+        return string.range()
     }
 
     func stringByLowercasingFirstLetter() -> String {
-        return String(describing: self).stringByLowercasingFirstLetter()
+        return string.stringByLowercasingFirstLetter()
     }
 
     func stringByUppercasingFirstLetter() -> String {
-        return String(describing: self).stringByLowercasingFirstLetter()
+        return string.stringByLowercasingFirstLetter()
     }
 
     func stringByReplacingSpacesWithDashes() -> String {
-        return String(describing: self).stringByReplacingSpacesWithDashes()
+        return string.stringByReplacingSpacesWithDashes()
     }
 
-    func stringByConvertingToNamingFormat(_ naming: VariableNamingFormat) -> String {
-        return String(describing: self).stringByConvertingToNamingFormat(.underscores)
+    func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String {
+        return string.stringByConverting(toNamingFormat: .underscores)
     }
 
-    func stringByTrimmingString(_ string: String) -> String {
-        return String(describing: self).stringByTrimmingString(string)
+    func stringByTrimming(string stringToTrim: String) -> String {
+        return string.stringByTrimming(string: stringToTrim)
     }
 }
 
 public extension NSMutableAttributedString {
-    func addStringWithAttributes(_ string: String, attributes: [String: AnyObject]) {
+    func addString(withAttributes string: String, attributes: [String: AnyObject]) {
         let attributedString = NSAttributedString(string: string, attributes: attributes)
         append(attributedString)
     }

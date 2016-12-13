@@ -17,6 +17,13 @@
 
 import UIKit
 
+/**
+ An easy way to represent colors through hex, RGB, and RGBA values.
+
+ - author: Daniel Loewenherz
+ - copyright: ©2016 Lionheart Software LLC
+ - date: December 13, 2016
+ */
 public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArrayLiteral, ExpressibleByStringLiteral {
     public typealias IntegerLiteralType = Int
     public typealias Element = Float
@@ -38,75 +45,72 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
         let intElements = elements.map { Int($0) }
         if elements.count == 3 {
             self = .rgb(intElements[0], intElements[1], intElements[2])
-        }
-        else if elements.count == 4 {
+        } else if elements.count == 4 {
             self = .rgba(intElements[0], intElements[1], intElements[2], elements[3])
-        }
-        else {
+        } else {
             self = .hex(0)
         }
     }
 
-    public init(stringLiteral value: StringLiteralType) {
-        self = ColorRepresentation.valueFromString(value)
-    }
-
-    public init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
-        self = ColorRepresentation.valueFromString(value)
-    }
-
-    public init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
-        self = ColorRepresentation.valueFromString(value)
-    }
-
-    fileprivate static func valueFromString(_ value: String) -> ColorRepresentation {
+    init(fromString string: String) {
         let hexColorRegularExpression = try! NSRegularExpression(pattern: "^#?([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$", options: NSRegularExpression.Options())
         let rgbColorRegularExpression = try! NSRegularExpression(pattern: "^rgb\\((1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5])\\)$", options: NSRegularExpression.Options())
         let rgbaColorRegularExpression = try! NSRegularExpression(pattern: "^rgba\\((1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(0?\\.\\d+)\\)$", options: NSRegularExpression.Options())
 
-        let stringValue = value as NSString
-        if let match = hexColorRegularExpression.firstMatch(in: value, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, value.characters.count)) {
+        let stringValue = string as NSString
+        if let match = hexColorRegularExpression.firstMatch(in: string, options: [], range: NSMakeRange(0, string.characters.count)) {
             let group = stringValue.substring(with: match.rangeAt(1))
 
             if let integerValue = Int(group, radix: 16) {
-                return .hex(integerValue)
+                self = .hex(integerValue)
             }
         }
 
-        var r: String?
-        var g: String?
-        var b: String?
-        var a: String?
+        var _r: String?
+        var _g: String?
+        var _b: String?
+        var _a: String?
 
         for regex in [rgbColorRegularExpression, rgbaColorRegularExpression] {
-            if let match = regex.firstMatch(in: value, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, value.characters.count)) {
-                r = stringValue.substring(with: match.rangeAt(1))
-                g = stringValue.substring(with: match.rangeAt(2))
-                b = stringValue.substring(with: match.rangeAt(3))
+            if let match = regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.characters.count)) {
+                _r = stringValue.substring(with: match.rangeAt(1))
+                _g = stringValue.substring(with: match.rangeAt(2))
+                _b = stringValue.substring(with: match.rangeAt(3))
 
                 if match.numberOfRanges == 5 {
-                    a = stringValue.substring(with: match.rangeAt(4))
+                    _a = stringValue.substring(with: match.rangeAt(4))
                 }
             }
         }
 
-        if let r = r,
-            let g = g,
-            let b = b,
+        guard let r = _r,
+            let g = _g,
+            let b = _b,
             let redValue = Int(r),
             let greenValue = Int(g),
-            let blueValue = Int(b) {
-
-            if let a = a,
-                let alpha = Float(a) {
-                return .rgba(redValue, greenValue, blueValue, alpha)
-            }
-            else {
-                return .rgb(redValue, greenValue, blueValue)
-            }
+            let blueValue = Int(b) else {
+                self = .invalid
+                return
         }
-        
-        return .invalid
+
+        if let a = _a, let alpha = Float(a) {
+            self = .rgba(redValue, greenValue, blueValue, alpha)
+        }
+        else {
+            self = .rgb(redValue, greenValue, blueValue)
+        }
+    }
+
+    public init(stringLiteral value: StringLiteralType) {
+        self.init(fromString: value)
+    }
+
+    public init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
+        self.init(fromString: value)
+    }
+
+    public init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
+        self.init(fromString: value)
     }
 }
 
@@ -137,9 +141,9 @@ public extension UIColor {
      Or (preferably), if you want to be a bit more explicit:
      
      ```
-     UIColor(.Hex(0xF00))
-     UIColor(.RGB(255, 0, 0))
-     UIColor(.RGBA(255, 0, 0, 0.5))
+     UIColor(.hex(0xF00))
+     UIColor(.rgb(255, 0, 0))
+     UIColor(.rgba(255, 0, 0, 0.5))
      ```
      
      If a provided value is invalid, the color will be white with an alpha value of 0.
@@ -220,7 +224,7 @@ public extension UIColor {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func isDark() -> Bool {
+    var isDark: Bool {
         var rgba = [CGFloat](repeating: 0, count: 4)
         
         let converted = getRed(&rgba[0], green: &rgba[1], blue: &rgba[2], alpha: &rgba[3])

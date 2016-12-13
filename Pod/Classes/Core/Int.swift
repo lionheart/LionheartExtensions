@@ -45,14 +45,12 @@ public extension Int {
             g = CGFloat((self>>16) & 0xFF) / 0xFF
             b = CGFloat((self>>8) & 0xFF) / 0xFF
             a = CGFloat(self & 0xFF) / 0xFF
-        }
-        else if self > 0xFFF {
+        } else if self > 0xFFF {
             r = CGFloat((self>>16) & 0xFF) / 0xFF
             g = CGFloat((self>>8) & 0xFF) / 0xFF
             b = CGFloat(self & 0xFF) / 0xFF
             a = 1
-        }
-        else {
+        } else {
             r = CGFloat((self>>8) & 0xF) / 0xF
             g = CGFloat((self>>4) & 0xF) / 0xF
             b = CGFloat(self & 0xF) / 0xF

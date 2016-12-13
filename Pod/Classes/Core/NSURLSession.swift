@@ -27,7 +27,7 @@ public extension URLSession {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func cancelAllTasks(_ completion: @escaping () -> Void) {
+    func cancelAllTasks(withCompletion completion: @escaping () -> Void) {
         getAllTasks { tasks in
             for task in tasks {
                 task.cancel()

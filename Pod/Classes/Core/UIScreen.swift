@@ -26,8 +26,9 @@ public extension UIScreen {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func statusBarView() -> UIView {
+    func statusBarView() -> UIView? {
         let view = snapshotView(afterScreenUpdates: true)
-        return view.resizableSnapshotView(from: CGRect(x: 0, y: 0, width: (bounds).width, height: (bounds).height), afterScreenUpdates: true, withCapInsets: UIEdgeInsets.zero)!
+        let rect = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
+        return view.resizableSnapshotView(from: rect, afterScreenUpdates: true, withCapInsets: UIEdgeInsets.zero)
     }
 }

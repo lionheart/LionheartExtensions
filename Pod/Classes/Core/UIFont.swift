@@ -28,10 +28,10 @@ public extension UIFont {
      - date: February 17, 2016
      */
     func displayName() throws -> String {
-        let expression = try NSRegularExpression(pattern: "([a-z])([A-Z])", options: NSRegularExpression.Options())
-        let fontName = NSMutableString(string: self.fontName)
-        expression.replaceMatches(in: fontName, options: NSRegularExpression.MatchingOptions(), range: fontName.range(), withTemplate: "$1 $2")
-        let components = fontName.components(separatedBy: "-")
+        let expression = try NSRegularExpression(pattern: "([a-z])([A-Z])", options: [])
+        let _fontName = NSMutableString(string: fontName)
+        expression.replaceMatches(in: _fontName, options: [], range: _fontName.range(), withTemplate: "$1 $2")
+        let components = _fontName.components(separatedBy: "-")
         return components.joined(separator: " ")
     }
 }

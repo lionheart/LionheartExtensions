@@ -18,16 +18,11 @@
 import Foundation
 
 public extension Optional where Wrapped: ExpressibleByStringLiteral {
-    func nilIfEmpty() -> String? {
-        if let value = self as? String {
-            if value == "" {
-                return nil
-            }
-
-            return value
-        }
-        else {
+    var nilIfEmpty: String? {
+        guard let value = self as? String, value != "" else {
             return nil
         }
+
+        return value
     }
 }
