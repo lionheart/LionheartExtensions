@@ -17,6 +17,8 @@
 
 import Foundation
 
+public typealias LayoutDictionary = [String: Any]
+
 /**
  Auto Layout and general utility methods for `UIView`.
  
@@ -223,7 +225,7 @@ public extension UIView {
      - date: February 17, 2016
      */
     @discardableResult
-    func addVisualFormatConstraints(_ format: String, metrics: [String: Any]? = nil) -> [NSLayoutConstraint] {
+    func addVisualFormatConstraints(_ format: String, metrics: LayoutDictionary? = nil) -> [NSLayoutConstraint] {
         let views = ["view": self]
         return UIView.addVisualFormatConstraints(format, metrics: metrics, views: views)
     }
@@ -239,7 +241,7 @@ public extension UIView {
      - date: February 17, 2016
      */
     @discardableResult
-    class func addVisualFormatConstraints(_ format: String, metrics: [String: Any]? = nil, views: [String: Any]) -> [NSLayoutConstraint] {
+    class func addVisualFormatConstraints(_ format: String, metrics: LayoutDictionary? = nil, views: LayoutDictionary) -> [NSLayoutConstraint] {
         let options = NSLayoutFormatOptions(rawValue: 0)
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: format, options: options, metrics: metrics, views: views)
 
