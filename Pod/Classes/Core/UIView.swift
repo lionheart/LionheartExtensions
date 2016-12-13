@@ -223,11 +223,8 @@ public extension UIView {
      - date: February 17, 2016
      */
     @discardableResult
-    func addVisualFormatConstraints(_ format: String, metrics: [String: AnyObject]? = nil) -> [NSLayoutConstraint] {
-        let views = [
-            "view": self,
-        ]
-
+    func addVisualFormatConstraints(_ format: String, metrics: [String: Any]? = nil) -> [NSLayoutConstraint] {
+        let views = ["view": self]
         return UIView.addVisualFormatConstraints(format, metrics: metrics, views: views)
     }
 
@@ -242,7 +239,7 @@ public extension UIView {
      - date: February 17, 2016
      */
     @discardableResult
-    class func addVisualFormatConstraints(_ format: String, metrics: [String: AnyObject]? = nil, views: [String: AnyObject]) -> [NSLayoutConstraint] {
+    class func addVisualFormatConstraints(_ format: String, metrics: [String: Any]? = nil, views: [String: Any]) -> [NSLayoutConstraint] {
         let options = NSLayoutFormatOptions(rawValue: 0)
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: format, options: options, metrics: metrics, views: views)
 
