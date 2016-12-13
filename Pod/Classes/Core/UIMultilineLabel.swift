@@ -19,6 +19,7 @@ open class MultilineLabel: UILabel {
         super.init(frame: frame)
         
         numberOfLines = 0
+        lineBreakMode = .byWordWrapping
     }
     
     required public init?(coder aDecoder: NSCoder) {

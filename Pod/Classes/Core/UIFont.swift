@@ -30,7 +30,7 @@ public extension UIFont {
     func displayName() throws -> String {
         let expression = try NSRegularExpression(pattern: "([a-z])([A-Z])", options: [])
         let _fontName = NSMutableString(string: fontName)
-        expression.replaceMatches(in: _fontName, options: [], range: _fontName.range(), withTemplate: "$1 $2")
+        expression.replaceMatches(in: _fontName, options: [], range: _fontName.range, withTemplate: "$1 $2")
         let components = _fontName.components(separatedBy: "-")
         return components.joined(separator: " ")
     }
