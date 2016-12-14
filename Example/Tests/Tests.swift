@@ -24,7 +24,7 @@ class LionheartExtensionsTests: XCTestCase {
     
     func testString() {
         let string = "1234"
-        let rangeA = string.range()
+        let rangeA = string.range
         let rangeB = NSRange(location: 0, length: 4)
 
         expect(rangeA.length) == rangeB.length
@@ -36,7 +36,7 @@ class LionheartExtensionsTests: XCTestCase {
 
         do {
             let displayName = try font.displayName()
-            expect(displayName) == ".SFUIText Regular"
+            expect(displayName) == ".SFUIText"
         }
         catch {
             XCTAssert(false)

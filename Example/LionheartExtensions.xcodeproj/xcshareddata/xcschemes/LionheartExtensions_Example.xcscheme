@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
-               BuildableName = "LionheartExtensions.framework"
-               BlueprintName = "LionheartExtensions"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
+               BuildableName = "LionheartExtensions_Example.app"
+               BlueprintName = "LionheartExtensions_Example"
+               ReferencedContainer = "container:LionheartExtensions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "LionheartExtensions_Tests.xctest"
-               BlueprintName = "LionheartExtensions_Tests"
-               ReferencedContainer = "container:LionheartExtensions.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
-            BuildableName = "LionheartExtensions.framework"
-            BlueprintName = "LionheartExtensions"
-            ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
+            BuildableName = "LionheartExtensions_Example.app"
+            BlueprintName = "LionheartExtensions_Example"
+            ReferencedContainer = "container:LionheartExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -61,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
-            BuildableName = "LionheartExtensions.framework"
-            BlueprintName = "LionheartExtensions"
-            ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
+            BuildableName = "LionheartExtensions_Example.app"
+            BlueprintName = "LionheartExtensions_Example"
+            ReferencedContainer = "container:LionheartExtensions.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
-            BuildableName = "LionheartExtensions.framework"
-            BlueprintName = "LionheartExtensions"
-            ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
+            BuildableName = "LionheartExtensions_Example.app"
+            BlueprintName = "LionheartExtensions_Example"
+            ReferencedContainer = "container:LionheartExtensions.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
