@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/lionheart/LionheartExtensions.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/dwlz'
 
-  s.platform     = :ios, '9.0'
   s.requires_arc = true
+  s.ios.deployment_target = '9.3'
 
   s.default_subspec = 'Core'
 
