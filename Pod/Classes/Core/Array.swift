@@ -33,12 +33,12 @@ public extension Array {
                 return nil
             }
 
-            // MARK: TODO. There used to be a `limit` here.
-            guard let j = self.index(i, offsetBy: size, limitedBy: self.endIndex) else {
-                return nil
-            }
+            var j = self.index(i, offsetBy: size)
+            repeat {
+                j = self.index(before: j)
+            } while j >= self.endIndex
 
-            return self[i..<j].map { $0 }
+            return self[i...j].lazy.map { $0 }
         }
     }
 }
