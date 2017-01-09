@@ -16,7 +16,7 @@
 
 import UIKit
 
-extension UIPrintPageRenderer {
+public extension UIPrintPageRenderer {
     var PDF: Data {
         let data = NSMutableData()
 
