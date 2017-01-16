@@ -44,9 +44,9 @@
 		34B089F1BC61BFE6E100FA8B1F1B04FF /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2E1C895B9FEB6EB2A77B733A54E01 /* HooksPhase.swift */; };
 		36076C14B35110B528A15AF21826CCE1 /* Nimble-Snapshots-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFAA79F3715494A2A9C87B50E05DEC0E /* Nimble-Snapshots-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36A09777D96DA589FD7FB47DD6EDC2AB /* Nimble-Snapshots-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFC3CB0C7C9BDE6158189DAA3FFBED5 /* Nimble-Snapshots-dummy.m */; };
-		37746FA71E29373D0075565F /* ColorRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37746FA61E29373D0075565F /* ColorRepresentation.swift */; };
 		37746FAA1E2937830075565F /* NSLayoutAnchor+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37746FA91E2937830075565F /* NSLayoutAnchor+LionheartExtensions.swift */; };
-		378296801E2D49FA0080D0E1 /* Summable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3782967F1E2D49FA0080D0E1 /* Summable.swift */; };
+		378296811E2D51560080D0E1 /* ColorRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37746FA61E29373D0075565F /* ColorRepresentation.swift */; };
+		378296851E2D79830080D0E1 /* Summable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378296841E2D79830080D0E1 /* Summable.swift */; };
 		37C1A59E1E2435A200C4FBFB /* UIPrintPageRenderer+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C1A59D1E2435A200C4FBFB /* UIPrintPageRenderer+LionheartExtensions.swift */; };
 		3A9DE5E02A5ADDF4742F73DB9818AF40 /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73BFE6363E58209795B79CE6BC0335 /* ThrowAssertion.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		42E366DDFBF0A6747278AA389FEDAAE1 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD7DB8C4496F3D1DB3710A3D48A3D60 /* Example.swift */; };
@@ -280,7 +280,7 @@
 		341DDE8DE502A0104B7F8545C18922F8 /* String+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		37746FA61E29373D0075565F /* ColorRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorRepresentation.swift; sourceTree = "<group>"; };
 		37746FA91E2937830075565F /* NSLayoutAnchor+LionheartExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutAnchor+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		3782967F1E2D49FA0080D0E1 /* Summable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Summable.swift; path = Protocols/Summable.swift; sourceTree = "<group>"; };
+		378296841E2D79830080D0E1 /* Summable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summable.swift; sourceTree = "<group>"; };
 		37C1A59D1E2435A200C4FBFB /* UIPrintPageRenderer+LionheartExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPrintPageRenderer+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		39300992EDA6A15FDBA1BDBEBD542709 /* Nimble-Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Nimble-Snapshots.modulemap"; sourceTree = "<group>"; };
 		3B27B7D0285E628753C631366AE6D10E /* UIFont+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+LionheartExtensions.swift"; sourceTree = "<group>"; };
@@ -573,7 +573,7 @@
 		3782967E1E2D49EC0080D0E1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				3782967F1E2D49FA0080D0E1 /* Summable.swift */,
+				378296841E2D79830080D0E1 /* Summable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -1193,6 +1193,7 @@
 				1E923A6F46ADFC75462A502D237BEB26 /* NSDecimalNumber+LionheartExtensions.swift in Sources */,
 				8807B4E1882A85FBA79623F8942577EC /* NSIndexPath+LionheartExtensions.swift in Sources */,
 				CFBF6CB4AB55106B37AE21BA7FF77936 /* NSRegularExpression+LionheartExtensions.swift in Sources */,
+				378296851E2D79830080D0E1 /* Summable.swift in Sources */,
 				32FDC52757B6D5520AE993FE6A38CF43 /* NSURLSession+LionheartExtensions.swift in Sources */,
 				110346687C402163581859D3FD415D45 /* Optional+LionheartExtensions.swift in Sources */,
 				54E0D86702F14293F7EBE1B34A32B14C /* String+LionheartExtensions.swift in Sources */,
@@ -1200,7 +1201,7 @@
 				85E0D09E9E7BF7DE52004C6539A90FAF /* UIColor+LionheartExtensions.swift in Sources */,
 				6E4D84868B489DCB05A069E8C6BFAC9D /* UIDevice+LionheartExtensions.swift in Sources */,
 				CB121E13D760B7A1D4B9EAACE4FB72D8 /* UIFont+LionheartExtensions.swift in Sources */,
-				378296801E2D49FA0080D0E1 /* Summable.swift in Sources */,
+				378296811E2D51560080D0E1 /* ColorRepresentation.swift in Sources */,
 				D40B0E647521ABCF70D96089A54A41CE /* UIImage+LionheartExtensions.swift in Sources */,
 				A7186B4DC84C68C7AD06A26C918F6EE7 /* UIMultilineLabel+LionheartExtensions.swift in Sources */,
 				F97913F080F775075713209A982D8F97 /* UIScreen+LionheartExtensions.swift in Sources */,
@@ -1255,7 +1256,6 @@
 				2C87E1788C8FA06AE3481A2226E3AF2D /* UIApplication+StrictKeyWindow.m in Sources */,
 				11C22C7B844DF31A5EBDC9AC132C5E94 /* UIImage+Compare.m in Sources */,
 				C360952381641F725C15758993A0F665 /* UIImage+Diff.m in Sources */,
-				37746FA71E29373D0075565F /* ColorRepresentation.swift in Sources */,
 				D5C30BC656C11AF60394E3180A217BB1 /* UIImage+Snapshot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
