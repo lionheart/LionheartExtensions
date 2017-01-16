@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "LionheartExtensions"
-  s.version          =  "3.2.0"
+  s.version          =  "3.2.1"
   s.summary          = "Swift Extensions you probably will find useful."
 
   s.homepage         = "https://github.com/lionheart/LionheartExtensions"
