@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ExpressibleByDecimal {
+public protocol ExpressibleByDecimal {
     var decimalNumber: NSDecimalNumber { get }
     static func makeFromNumber(_ number: NSNumber) -> Self
 }
@@ -19,9 +19,9 @@ protocol NSNumberBridgeable: ExpressibleByIntegerLiteral, ExpressibleByDecimal {
 }
 
 extension NSNumberBridgeable {
-    var decimalNumber: NSDecimalNumber { return NSDecimalNumber(decimal: number.decimalValue) }
+    public var decimalNumber: NSDecimalNumber { return NSDecimalNumber(decimal: number.decimalValue) }
 
-    static func makeFromNumber(_ number: NSNumber) -> Self {
+    public static func makeFromNumber(_ number: NSNumber) -> Self {
         return Self(number)
     }
 }
@@ -79,15 +79,15 @@ extension UInt64: NSNumberBridgeable {
 }
 
 extension NSDecimalNumber: ExpressibleByDecimal {
-    var decimalNumber: NSDecimalNumber { return self }
+    public var decimalNumber: NSDecimalNumber { return self }
 
-    static func makeFromNumber(_ number: NSNumber) -> Self {
+    public static func makeFromNumber(_ number: NSNumber) -> Self {
         return self.init(decimal: number.decimalValue)
     }
 }
 
 extension Array where Element: ExpressibleByDecimal {
-    var sum: Element {
+    public var sum: Element {
         let value = reduce(0, { $0.1.decimalNumber.adding($0.0) })
         return Element.makeFromNumber(value)
     }
