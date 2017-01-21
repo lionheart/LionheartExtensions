@@ -21,7 +21,6 @@ infix operator ≤≤: ConstraintPrecedence
 public protocol HasAnchor {
     associatedtype Anchor
 
-    var multiplier: CGFloat { get }
     var constant: CGFloat { get }
     var anchor: Anchor { get }
 }
@@ -50,26 +49,29 @@ public struct LayoutContainer<T>: HasAnchor {
     public var multiplier: CGFloat
     public var constant: CGFloat
     public var anchor: Anchor
-}
 
-extension LayoutContainer where T: HasAnchor {
-    init(anchor: Anchor, constant: Double) {
-        self.constant = CGFloat(constant)
-        self.multiplier = anchor.multiplier
+    init(anchor: Anchor, constant: CGFloat) {
+        self.constant = constant
+        self.multiplier = 1
         self.anchor = anchor
     }
+}
 
-    init(anchor: Anchor, multiplier: Double) {
-        self.constant = anchor.constant
+extension LayoutContainer where T: DimensionAnchor {
+    init(container: LayoutContainer, multiplier: Double) {
+        self.constant = container.constant
         self.multiplier = CGFloat(multiplier)
-        self.anchor = anchor
+        self.anchor = container.anchor
+    }
+
+    static func *(lhs: LayoutContainer, rhs: Double) -> LayoutContainer {
+        return LayoutContainer(container: lhs, multiplier: rhs)
     }
 }
 
 extension NSLayoutYAxisAnchor: AxisAnchor {
     public typealias Anchor = NSLayoutAnchor<NSLayoutYAxisAnchor>
 
-    public var multiplier: CGFloat { return 0 }
     public var constant: CGFloat { return 0 }
     public var anchor: Anchor { return self }
 }
@@ -77,7 +79,6 @@ extension NSLayoutYAxisAnchor: AxisAnchor {
 extension NSLayoutXAxisAnchor: AxisAnchor {
     public typealias Anchor = NSLayoutAnchor<NSLayoutXAxisAnchor>
 
-    public var multiplier: CGFloat { return 0 }
     public var constant: CGFloat { return 0 }
     public var anchor: Anchor { return self }
 }
@@ -132,47 +133,37 @@ public extension DimensionAnchor where Anchor: DimensionAnchor {
         constraint.isActive = true
         return constraint
     }
-
-    static func *(lhs: Self, rhs: Double) -> LayoutContainer<Anchor> {
-        return LayoutContainer(anchor: lhs.anchor, multiplier: rhs)
-    }
-
-    static func +(lhs: Self, rhs: Double) -> LayoutContainer<Anchor> {
-        return LayoutContainer(anchor: lhs.anchor, constant: rhs)
-    }
-
-    static func -(lhs: Self, rhs: Double) -> LayoutContainer<Anchor> {
-        return LayoutContainer(anchor: lhs.anchor, constant: -rhs)
-    }
 }
 
 public extension AxisAnchor where Anchor: AxisAnchor {
     @discardableResult
-    static func ~~<T: HasAnchor>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.Anchor == Anchor {
+    static func ~~<T: AxisAnchor>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.Anchor == Anchor {
         let constraint = lhs.constraint(equalTo: rhs.anchor, constant: rhs.constant)
         constraint.isActive = true
         return constraint
     }
 
     @discardableResult
-    static func ≤≤<T: HasAnchor>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.Anchor == Anchor {
+    static func ≤≤<T: AxisAnchor>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.Anchor == Anchor {
         let constraint = lhs.constraint(lessThanOrEqualTo: rhs.anchor, constant: rhs.constant)
         constraint.isActive = true
         return constraint
     }
 
     @discardableResult
-    static func ≥≥<T: HasAnchor>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.Anchor == Anchor {
+    static func ≥≥<T: AxisAnchor>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.Anchor == Anchor {
         let constraint = lhs.constraint(greaterThanOrEqualTo: rhs.anchor, constant: rhs.constant)
         constraint.isActive = true
         return constraint
     }
+}
 
-    static func +(lhs: Self, rhs: Double) -> LayoutContainer<Anchor> {
+public extension HasAnchor {
+    static func +(lhs: Self, rhs: CGFloat) -> LayoutContainer<Anchor> {
         return LayoutContainer(anchor: lhs.anchor, constant: rhs)
     }
 
-    static func -(lhs: Self, rhs: Double) -> LayoutContainer<Anchor> {
+    static func -(lhs: Self, rhs: CGFloat) -> LayoutContainer<Anchor> {
         return LayoutContainer(anchor: lhs.anchor, constant: -rhs)
     }
 }
