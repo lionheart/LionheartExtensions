@@ -87,7 +87,7 @@ public extension UIColor {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func lighten(_ ratio: CGFloat) -> UIColor {
+    func lighten(byRatio ratio: CGFloat) -> UIColor {
         var rgba = [CGFloat](repeating: 0, count: 4)
         getRed(&rgba[0], green: &rgba[1], blue: &rgba[2], alpha: &rgba[3])
 
@@ -108,7 +108,7 @@ public extension UIColor {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
-    func darken(_ ratio: CGFloat) -> UIColor {
+    func darken(byRatio ratio: CGFloat) -> UIColor {
         var rgba = [CGFloat](repeating: 0, count: 4)
         getRed(&rgba[0], green: &rgba[1], blue: &rgba[2], alpha: &rgba[3])
 
