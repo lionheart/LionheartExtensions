@@ -58,7 +58,7 @@ public extension UIColor {
      */
     convenience init(_ color: ColorRepresentation) {
         switch color {
-        case .hex(let value):
+        case .HEX(let value):
             var r: CGFloat!
             var g: CGFloat!
             var b: CGFloat!
@@ -67,10 +67,10 @@ public extension UIColor {
             value.toRGBA(&r, &g, &b, &a)
             self.init(red: r, green: g, blue: b, alpha: a)
 
-        case .rgb(let r, let g, let b):
+        case .RGB(let r, let g, let b):
             self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: 1)
 
-        case .rgba(let r, let g, let b, let a):
+        case .RGBA(let r, let g, let b, let a):
             self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a))
 
         case .invalid:

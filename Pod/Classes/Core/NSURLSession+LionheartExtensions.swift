@@ -21,7 +21,7 @@ import Foundation
 public extension URLSession {
     /**
      Cancel all tasks associated with the `NSURLSession`.
-     
+
      - parameter completion: A block to be called after all of the tasks have been cancelled.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC

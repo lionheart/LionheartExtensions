@@ -36,19 +36,20 @@ public extension UIImage {
      - copyright: ©2016 Lionheart Software LLC
      - date: March 9, 2016
      */
-    convenience init?(view: UIView) {
+    convenience init?(_ view: UIView) {
         let bounds = view.bounds
 
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
         view.drawHierarchy(in: bounds, afterScreenUpdates: true)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        let _image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        if let data = UIImagePNGRepresentation(image!) {
-            self.init(data: data)
-        } else {
-            return nil
+        guard let image = _image,
+            let data = UIImagePNGRepresentation(image) else {
+                return nil
         }
+
+        self.init(data: data)
     }
 
     /**

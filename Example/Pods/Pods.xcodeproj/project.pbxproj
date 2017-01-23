@@ -44,7 +44,6 @@
 		34B089F1BC61BFE6E100FA8B1F1B04FF /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2E1C895B9FEB6EB2A77B733A54E01 /* HooksPhase.swift */; };
 		36076C14B35110B528A15AF21826CCE1 /* Nimble-Snapshots-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFAA79F3715494A2A9C87B50E05DEC0E /* Nimble-Snapshots-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36A09777D96DA589FD7FB47DD6EDC2AB /* Nimble-Snapshots-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFC3CB0C7C9BDE6158189DAA3FFBED5 /* Nimble-Snapshots-dummy.m */; };
-		37746FAA1E2937830075565F /* NSLayoutAnchor+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37746FA91E2937830075565F /* NSLayoutAnchor+LionheartExtensions.swift */; };
 		378296811E2D51560080D0E1 /* ColorRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37746FA61E29373D0075565F /* ColorRepresentation.swift */; };
 		378296851E2D79830080D0E1 /* Summable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378296841E2D79830080D0E1 /* Summable.swift */; };
 		37C1A59E1E2435A200C4FBFB /* UIPrintPageRenderer+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C1A59D1E2435A200C4FBFB /* UIPrintPageRenderer+LionheartExtensions.swift */; };
@@ -279,7 +278,6 @@
 		33F497544871E99D434265BAF08C3E70 /* UIViewController+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		341DDE8DE502A0104B7F8545C18922F8 /* String+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		37746FA61E29373D0075565F /* ColorRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorRepresentation.swift; sourceTree = "<group>"; };
-		37746FA91E2937830075565F /* NSLayoutAnchor+LionheartExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutAnchor+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		378296841E2D79830080D0E1 /* Summable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summable.swift; sourceTree = "<group>"; };
 		37C1A59D1E2435A200C4FBFB /* UIPrintPageRenderer+LionheartExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPrintPageRenderer+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		39300992EDA6A15FDBA1BDBEBD542709 /* Nimble-Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Nimble-Snapshots.modulemap"; sourceTree = "<group>"; };
@@ -713,7 +711,6 @@
 				B571026443E5984837D4BB506C7593E3 /* UIView+LionheartExtensions.swift */,
 				33F497544871E99D434265BAF08C3E70 /* UIViewController+LionheartExtensions.swift */,
 				066BD94912F658E679A064A3AAE718B1 /* UIWindow+LionheartExtensions.swift */,
-				37746FA91E2937830075565F /* NSLayoutAnchor+LionheartExtensions.swift */,
 			);
 			name = Extensions;
 			path = Core;
@@ -1205,7 +1202,6 @@
 				D40B0E647521ABCF70D96089A54A41CE /* UIImage+LionheartExtensions.swift in Sources */,
 				A7186B4DC84C68C7AD06A26C918F6EE7 /* UIMultilineLabel+LionheartExtensions.swift in Sources */,
 				F97913F080F775075713209A982D8F97 /* UIScreen+LionheartExtensions.swift in Sources */,
-				37746FAA1E2937830075565F /* NSLayoutAnchor+LionheartExtensions.swift in Sources */,
 				D39707E6DA81D0CAA67D57C828C76E72 /* UITextField+LionheartExtensions.swift in Sources */,
 				A83E2F271EA246D4AAA90FE9213ABD36 /* UIView+LionheartExtensions.swift in Sources */,
 				60C290089A677F5CAAB1C4E2D79F4DAB /* UIViewController+LionheartExtensions.swift in Sources */,

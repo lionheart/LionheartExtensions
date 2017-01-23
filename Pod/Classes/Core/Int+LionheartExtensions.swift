@@ -36,7 +36,7 @@ public extension Int {
     */
     func scaledToDeviceWidth(_ baseWidth: CGFloat) -> CGFloat {
         let screen = UIScreen.main
-        return (screen.bounds.width / baseWidth) * (CGFloat)(self)
+        return (screen.bounds.width / baseWidth) * CGFloat(self)
     }
 
     func toRGBA(_ r: inout CGFloat!, _ g: inout CGFloat!, _ b: inout CGFloat!, _ a: inout CGFloat!) {

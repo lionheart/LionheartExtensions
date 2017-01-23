@@ -23,6 +23,24 @@ public enum VariableNamingFormat {
     case pascalCase
 }
 
+extension CharacterSet: ExpressibleByStringLiteral {
+    public typealias StringLiteralType = String
+    public typealias UnicodeScalarLiteralType = StringLiteralType
+    public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
+
+    public init(stringLiteral value: StringLiteralType) {
+        self.init(charactersIn: value)
+    }
+
+    public init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
+        self.init(stringLiteral: value)
+    }
+
+    public init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
+        self.init(stringLiteral: value)
+    }
+}
+
 public protocol LHSStringType {
     /**
      Conforming types must provide a getter for the length of the string.
@@ -48,7 +66,6 @@ public protocol LHSStringType {
     var stringByUppercasingFirstLetter: String { get }
     var stringByReplacingSpacesWithDashes: String { get }
 
-    func stringByTrimming(string: String) -> String
     func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String
 }
 
@@ -83,14 +100,16 @@ public extension String {
         return NSString(string: self).length
     }
 
-    mutating func trim(_ string: String) {
-        self = self.stringByTrimming(string: string)
+    mutating func trim(_ characterSet: CharacterSet) {
+        self = self.trimmingCharacters(in: characterSet)
     }
 
     mutating func URLEncode() {
-        if let string = URLEncodedString {
-            self = string
+        guard let string = URLEncodedString else {
+            return
         }
+
+        self = string
     }
 
     mutating func replaceSpacesWithDashes() {
@@ -111,10 +130,6 @@ public extension String {
         return substring(to: start).uppercased() + substring(with: start..<endIndex)
     }
 
-    public func stringByTrimming(string: String) -> String {
-        return trimmingCharacters(in: CharacterSet(charactersIn: string))
-    }
-
     var URLEncodedString: String? {
         guard let string = addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
             return nil
@@ -124,9 +139,9 @@ public extension String {
     }
 
     var stringByReplacingSpacesWithDashes: String {
-        let regexOptions = NSRegularExpression.Options()
-        let regex = try! NSRegularExpression(pattern: "[ ]", options: regexOptions)
-        return regex.stringByReplacingMatches(in: self, options: NSRegularExpression.MatchingOptions(), range: range, withTemplate: "-").lowercased()
+        let options: NSRegularExpression.Options = []
+        let regex = try! NSRegularExpression(pattern: "[ ]", options: options)
+        return regex.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "-").lowercased()
     }
     
     func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String {
@@ -135,7 +150,7 @@ public extension String {
             let regex = try! NSRegularExpression(pattern: "([A-Z]+)", options: NSRegularExpression.Options())
             let string = NSMutableString(string: self)
             regex.replaceMatches(in: string, options: [], range: range, withTemplate: "_$0")
-            let newString = string.stringByTrimming(string: "_").lowercased()
+            let newString = string.trimmingCharacters(in: "_").lowercased()
             if hasPrefix("_") {
                 return "_" + newString
             } else {
@@ -206,10 +221,6 @@ public extension NSString {
     public func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String {
         return String(self).stringByConverting(toNamingFormat: naming)
     }
-
-    func stringByTrimming(string: String) -> String {
-        return String(self).stringByTrimming(string: string)
-    }
 }
 
 public extension NSAttributedString {
@@ -239,10 +250,6 @@ public extension NSAttributedString {
 
     func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String {
         return string.stringByConverting(toNamingFormat: .underscores)
-    }
-
-    func stringByTrimming(string stringToTrim: String) -> String {
-        return string.stringByTrimming(string: stringToTrim)
     }
 }
 

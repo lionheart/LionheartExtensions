@@ -23,23 +23,21 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias StringLiteralType = String
 
-    case hex(Int)
-    case rgb(Int, Int, Int)
-    case rgba(Int, Int, Int, Float)
+    case HEX(Int)
+    case RGB(Int, Int, Int)
+    case RGBA(Int, Int, Int, Float)
     case invalid
 
     public init(integerLiteral value: IntegerLiteralType) {
-        self = .hex(value)
+        self = .HEX(value)
     }
 
     public init(arrayLiteral elements: Element...) {
         let intElements = elements.map { Int($0) }
-        if elements.count == 3 {
-            self = .rgb(intElements[0], intElements[1], intElements[2])
-        } else if elements.count == 4 {
-            self = .rgba(intElements[0], intElements[1], intElements[2], elements[3])
-        } else {
-            self = .hex(0)
+        switch elements.count {
+        case 3: self = .RGB(intElements[0], intElements[1], intElements[2])
+        case 4: self = .RGBA(intElements[0], intElements[1], intElements[2], elements[3])
+        default: self = .HEX(0)
         }
     }
 
@@ -53,7 +51,7 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
             let group = stringValue.substring(with: match.rangeAt(1))
 
             if let integerValue = Int(group, radix: 16) {
-                self = .hex(integerValue)
+                self = .HEX(integerValue)
             }
         }
 
@@ -85,10 +83,10 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
         }
 
         if let a = _a, let alpha = Float(a) {
-            self = .rgba(redValue, greenValue, blueValue, alpha)
+            self = .RGBA(redValue, greenValue, blueValue, alpha)
         }
         else {
-            self = .rgb(redValue, greenValue, blueValue)
+            self = .RGB(redValue, greenValue, blueValue)
         }
     }
 

@@ -16,79 +16,72 @@
 
 import Foundation
 
-final class File: ExpressibleByStringLiteral {
+final class File {
     var filename: String?
+
+    init(_ filename: String) {
+        self.filename = filename
+    }
 
     lazy var documentsPath: String? = {
         let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [NSString]
-        if let path = paths.first,
-            let filename = self.filename {
-                return path.appendingPathComponent(filename)
+        guard let path = paths.first,
+            let filename = self.filename else {
+                return nil
         }
-        else {
-            return nil
-        }
+
+        return path.appendingPathComponent(filename)
     }()
 
     var bundlePath: String? {
         let bundle = Bundle.main
-        if let filename = filename {
-            let components = filename.components(separatedBy: ".")
-            return bundle.path(forResource: components[0], ofType: components[1])
-        }
-        else {
+        guard let filename = filename else {
             return nil
         }
-    }
 
-    typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
-    typealias UnicodeScalarLiteralType = StringLiteralType
-
-    init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
-        filename = value
-    }
-
-    init(stringLiteral value: StringLiteralType) {
-        filename = value
-    }
-
-    init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
-        filename = value
+        let components = filename.components(separatedBy: ".")
+        return bundle.path(forResource: components[0], ofType: components[1])
     }
 
     func read() -> String? {
-        var contents: String?
-        let path = documentsPath ?? bundlePath
-
-        if let path = path {
-            do {
-                contents = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
-            }
-            catch {
-                // MARK: TODO
-            }
+        guard let path = documentsPath ?? bundlePath else {
+            return nil
         }
 
-        return contents
+        return try? String(contentsOfFile: path, encoding: .utf8)
     }
 
-    func existsInBundle() -> Bool {
-        let manager = FileManager.default
-
+    var existsInBundle: Bool {
         guard let path = bundlePath else {
             return false
         }
 
-        return manager.fileExists(atPath: path)
+        return FileManager.default.fileExists(atPath: path)
     }
 
-    func existsInDocuments() -> Bool {
-        let manager = FileManager.default
-
+    var existsInDocuments: Bool {
         guard let path = documentsPath else {
             return false
         }
 
-        return manager.fileExists(atPath: path)
+        return FileManager.default.fileExists(atPath: path)
+    }
+}
+
+extension File: ExpressibleByStringLiteral {
+    public typealias StringLiteralType = String
+    public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
+    public typealias UnicodeScalarLiteralType = StringLiteralType
+
+    public convenience init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
+        self.init(value)
+    }
+
+    public convenience init(stringLiteral value: StringLiteralType) {
+        self.init(value)
+    }
+
+    public convenience init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
+        self.init(value)
     }
 }
