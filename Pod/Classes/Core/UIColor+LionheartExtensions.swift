@@ -45,8 +45,8 @@ public extension UIColor {
      
      ```
      UIColor(.hex(0xF00))
-     UIColor(.rgb(255, 0, 0))
-     UIColor(.rgba(255, 0, 0, 0.5))
+     UIColor(.RGB(255, 0, 0))
+     UIColor(.RGBA(255, 0, 0, 0.5))
      ```
      
      If a provided value is invalid, the color will be white with an alpha value of 0.
