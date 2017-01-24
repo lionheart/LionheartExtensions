@@ -34,13 +34,8 @@ class LionheartExtensionsTests: XCTestCase {
     func testFont() {
         let font = UIFont.systemFont(ofSize: 12)
 
-        do {
-            let displayName = try font.displayName()
-            expect(displayName) == ".SFUIText"
-        }
-        catch {
-            XCTAssert(false)
-        }
+        let displayName = font.displayName
+        expect(displayName) == ".SFUIText"
     }
 
     func testColor() {
