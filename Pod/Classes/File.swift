@@ -16,24 +16,41 @@
 
 import Foundation
 
-final class File {
-    var filename: String?
+public final class File {
+    public var filename: String?
 
-    init(_ filename: String) {
+    var url: URL? {
+        let manager = FileManager.default
+        guard let url = manager.urls(for: .documentDirectory, in: .userDomainMask).last,
+            let filename = filename else {
+                return nil
+        }
+
+        return url.appendingPathComponent(filename)
+    }
+
+    public required init(filename: String) {
         self.filename = filename
     }
 
-    lazy var documentsPath: String? = {
-        let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [NSString]
-        guard let path = paths.first,
+    public static var documentsPath: String? {
+        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true).first
+    }
+
+    public static var documentsURL: URL? {
+        return FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask).first
+    }
+
+    public var documentsPath: String? {
+        guard let path = File.documentsPath,
             let filename = self.filename else {
                 return nil
         }
 
-        return path.appendingPathComponent(filename)
-    }()
+        return (path as NSString).appendingPathComponent(filename)
+    }
 
-    var bundlePath: String? {
+    public var bundlePath: String? {
         let bundle = Bundle.main
         guard let filename = filename else {
             return nil
@@ -43,7 +60,7 @@ final class File {
         return bundle.path(forResource: components[0], ofType: components[1])
     }
 
-    func read() -> String? {
+    public func read() -> String? {
         guard let path = documentsPath ?? bundlePath else {
             return nil
         }
@@ -51,7 +68,7 @@ final class File {
         return try? String(contentsOfFile: path, encoding: .utf8)
     }
 
-    var existsInBundle: Bool {
+    public var existsInBundle: Bool {
         guard let path = bundlePath else {
             return false
         }
@@ -59,7 +76,7 @@ final class File {
         return FileManager.default.fileExists(atPath: path)
     }
 
-    var existsInDocuments: Bool {
+    public var existsInDocuments: Bool {
         guard let path = documentsPath else {
             return false
         }
@@ -74,14 +91,14 @@ extension File: ExpressibleByStringLiteral {
     public typealias UnicodeScalarLiteralType = StringLiteralType
 
     public convenience init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
-        self.init(value)
+        self.init(filename: value)
     }
 
     public convenience init(stringLiteral value: StringLiteralType) {
-        self.init(value)
+        self.init(filename: value)
     }
 
     public convenience init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
-        self.init(value)
+        self.init(filename: value)
     }
 }
