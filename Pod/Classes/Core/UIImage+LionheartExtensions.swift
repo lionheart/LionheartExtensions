@@ -85,17 +85,15 @@ public extension UIImage {
     func image(withColor color: UIColor) -> UIImage? {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return nil
+        guard let context = UIGraphicsGetCurrentContext(),
+            let cgImage = cgImage else {
+                return nil
         }
 
         context.translateBy(x: 0, y: size.height)
         context.scaleBy(x: 1.0, y: -1.0)
         context.setBlendMode(.normal)
-
-        // MARK: TODO !!!
-        // Was: CGContextClipToMask(context, rect, CGImage)
-//        context.clip(to: rect, mask: CGImage.self)
+        context.clip(to: rect, mask: cgImage)
         color.setFill()
         context.fill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
