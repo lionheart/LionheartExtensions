@@ -78,6 +78,14 @@ extension NSString: LHSStringType {}
 extension NSAttributedString: LHSStringType {}
 
 public extension String {
+    var nilIfEmpty: String? {
+        guard self != "" else {
+            return nil
+        }
+
+        return self
+    }
+
     /**
      Returns an `NSRange` indicating the length of the `String`.
      

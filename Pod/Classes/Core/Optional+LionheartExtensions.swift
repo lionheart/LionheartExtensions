@@ -19,7 +19,7 @@ import Foundation
 
 public extension Optional where Wrapped: ExpressibleByStringLiteral {
     /** Coerce empty strings to nil. */
-    var flattened: String? {
+    var nilIfEmpty: String? {
         guard let value = self as? String, value != "" else {
             return nil
         }

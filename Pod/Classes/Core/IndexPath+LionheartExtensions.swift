@@ -17,10 +17,24 @@
 
 import Foundation
 
-public func ==(tuple: (Int, Int), indexPath: IndexPath) -> Bool {
-    return indexPath.section == tuple.0 && indexPath.row == tuple.1
-}
+public extension IndexPath {
+    public init<T: RawRepresentable>(row: T, section: Int) where T.RawValue == Int {
+        self.init(row: row.rawValue, section: section)
+    }
 
-public func ==(indexPath: IndexPath, tuple: (Int, Int)) -> Bool {
-    return indexPath.section == tuple.0 && indexPath.row == tuple.1
+    public init<T: RawRepresentable>(row: Int, section: T) where T.RawValue == Int {
+        self.init(row: row, section: section.rawValue)
+    }
+
+    public init<T: RawRepresentable>(row: T, section: T) where T.RawValue == Int {
+        self.init(row: row.rawValue, section: section.rawValue)
+    }
+
+    public static func ==(tuple: (Int, Int), indexPath: IndexPath) -> Bool {
+        return indexPath.section == tuple.0 && indexPath.row == tuple.1
+    }
+
+    public static func ==(indexPath: IndexPath, tuple: (Int, Int)) -> Bool {
+        return indexPath.section == tuple.0 && indexPath.row == tuple.1
+    }
 }
