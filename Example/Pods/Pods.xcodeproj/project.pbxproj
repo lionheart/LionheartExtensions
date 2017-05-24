@@ -39,6 +39,7 @@
 		34317E716522D85ED2855B0C7DA146C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8CBBF32C39839511129EB1C04B4277 /* Foundation.framework */; };
 		3509162C93C42B9929597FCA92D35790 /* HaveValidSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC515501BE842CB008E9B937E323800 /* HaveValidSnapshot.swift */; };
 		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C4B015314BBB05168BA389FF2D0CA4 /* UIImage+Diff.m */; };
+		370099A61ED5090D0034BDD1 /* CIImage+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370099A51ED5090D0034BDD1 /* CIImage+LionheartExtensions.swift */; };
 		374D77A11E4BC2DE00213C78 /* FileManager+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D77A01E4BC2DE00213C78 /* FileManager+LionheartExtensions.swift */; };
 		386C27C051B60D521360BC12E384BED6 /* Pods-LionheartExtensions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 769D0AFA55C8CB26592DFDC99325AF81 /* Pods-LionheartExtensions_Example-dummy.m */; };
 		390DD636159224DEEAAED2A0AFB95593 /* UIMultilineLabel+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717669B4A9DA40C4290274A28D10030C /* UIMultilineLabel+LionheartExtensions.swift */; };
@@ -279,6 +280,7 @@
 		331AE497C208A30EDB1145039A6486B3 /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/Nimble/Utils/Errors.swift; sourceTree = "<group>"; };
 		333B8C0D91DCF7CFA89582C37611D57C /* Pods-LionheartExtensions_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LionheartExtensions_Tests-resources.sh"; sourceTree = "<group>"; };
 		33F2E1C895B9FEB6EB2A77B733A54E01 /* HooksPhase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HooksPhase.swift; path = Sources/Quick/Hooks/HooksPhase.swift; sourceTree = "<group>"; };
+		370099A51ED5090D0034BDD1 /* CIImage+LionheartExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		374D77A01E4BC2DE00213C78 /* FileManager+LionheartExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		39300992EDA6A15FDBA1BDBEBD542709 /* Nimble-Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Nimble-Snapshots.modulemap"; sourceTree = "<group>"; };
 		39BA34FB7829D5BFBE13ADF80553622F /* UIFont+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+LionheartExtensions.swift"; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 			children = (
 				E16A62A20F933B226FF9F82EE31A8B71 /* Any+LionheartExtensions.swift */,
 				E434FCE17EE8AA7A82F88BCEEE3987C3 /* Array+LionheartExtensions.swift */,
+				370099A51ED5090D0034BDD1 /* CIImage+LionheartExtensions.swift */,
 				24615E1D84F992DD563625497B2456E7 /* IndexPath+LionheartExtensions.swift */,
 				080F3EF86298EFD63B0CAFB3D9BC9CE7 /* Int+LionheartExtensions.swift */,
 				409044B6A2CA9CB5B0E2C839ACABD5D5 /* NSDecimalNumber+LionheartExtensions.swift */,
@@ -1298,6 +1301,7 @@
 				99828C5DCC1792650FA2A6E564B4A7DE /* UIPrintPageRenderer+LionheartExtensions.swift in Sources */,
 				4182CDC3C2F678EAF8467C2B266D8E9E /* UIScreen+LionheartExtensions.swift in Sources */,
 				E39C75A691DC2CAE5CED1AEFA679C0AA /* UITextField+LionheartExtensions.swift in Sources */,
+				370099A61ED5090D0034BDD1 /* CIImage+LionheartExtensions.swift in Sources */,
 				F82EFA28DBD8F8BDC8AA3894DECEFD15 /* UIView+LionheartExtensions.swift in Sources */,
 				9F1891F71968D760E326A82A4BBAC953 /* UIViewController+LionheartExtensions.swift in Sources */,
 				5415A0BA289AD7F624B9A003FDECCAD3 /* UIWindow+LionheartExtensions.swift in Sources */,

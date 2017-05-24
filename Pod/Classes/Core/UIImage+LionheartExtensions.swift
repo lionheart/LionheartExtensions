@@ -246,4 +246,38 @@ public extension UIImage {
             completion(success, error as NSError?)
         }
     }
+
+    var averageColor: UIColor? {
+        guard let ciImage = CIImage(image: self) else {
+            return nil
+        }
+
+        let parameters = [
+            kCIInputImageKey: ciImage,
+            kCIInputExtentKey: CIVector(cgRect: ciImage.extent)
+        ]
+
+        let image = ciImage.applyingFilter("CIAreaAverage", withInputParameters: parameters)
+        guard let (r, g, b, a) = image.rgbValues(atPoint: CGPoint(x: 0, y: 0)) else {
+            return nil
+        }
+
+        return UIColor(.RGBA(Int(r), Int(g), Int(b), Float(a) / 255.0))
+    }
+
+    func resizedImage(withScale: Float) -> UIImage? {
+        let _size = size.applying(CGAffineTransform(scaleX: 0.5, y: 0.5))
+        let hasAlpha = false
+
+        UIGraphicsBeginImageContextWithOptions(_size, !hasAlpha, 0)
+
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+
+        image.draw(in: CGRect(origin: .zero, size: _size))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return scaledImage
+    }
 }
