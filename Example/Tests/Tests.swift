@@ -49,6 +49,19 @@ class LionheartExtensionsTests: XCTestCase {
         expect(blue) == UIColor.blue
     }
 
+    func testToRGBA() {
+        var r: CGFloat!
+        var g: CGFloat!
+        var b: CGFloat!
+        var a: CGFloat!
+        0xFF000000.toRGBA(&r, &g, &b, &a)
+
+        expect(r) == 1
+        expect(g) == 0
+        expect(b) == 0
+        expect(a) == 0
+    }
+
     func testFunctional() {
         let noTrueBool: [Bool?] = [false, false, false]
         let oneTrueBool: [Bool?] = [false, false, true]
