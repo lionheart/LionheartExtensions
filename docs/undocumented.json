@@ -36,20 +36,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/CIImage+LionheartExtensions.swift",
-      "line": 12,
-      "symbol": "CIImage.toCGImage",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/CIImage+LionheartExtensions.swift",
-      "line": 16,
-      "symbol": "CIImage.rgbValues(atPoint:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/FileManager+LionheartExtensions.swift",
       "line": 12,
       "symbol": "FileManager.temporaryURL(forFileName:)",
