@@ -266,7 +266,7 @@ public extension UIImage {
     }
 
     func resizedImage(withScale: Float) -> UIImage? {
-        let _size = size.applying(CGAffineTransform(scaleX: 0.5, y: 0.5))
+        let _size = size.applying(CGAffineTransform(scaleX: scale, y: scale))
         let hasAlpha = false
 
         UIGraphicsBeginImageContextWithOptions(_size, !hasAlpha, 0)
