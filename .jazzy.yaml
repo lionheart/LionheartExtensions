@@ -5,3 +5,4 @@ github_file_prefix: "https://github.com/lionheart/LionheartExtensions/tree/3.4.1
 xcodebuild_arguments: ["-workspace", "Example/LionheartExtensions.xcworkspace", "-scheme", "LionheartExtensions"]
 readme: "README.md"
 copyright: "&copy; 2017 Lionheart Software LLC"
+theme: fullwidth
