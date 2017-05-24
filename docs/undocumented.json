@@ -464,14 +464,7 @@
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
-      "line": 250,
-      "symbol": "UIImage.averageColor",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
-      "line": 268,
+      "line": 273,
       "symbol": "UIImage.resizedImage(withScale:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

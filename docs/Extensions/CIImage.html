@@ -209,8 +209,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Convert to a CGImage.</p>
-<div class="aside aside-date">
+                        <div class="aside aside-date">
     <p class="aside-title">Date</p>
     May 24, 2017
 
@@ -230,7 +229,7 @@
                         <p>A CGImage that represents the current CIImage.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.4.1/Pod/Classes/Core/CIImage+LionheartExtensions.swift#L18-L20">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.4.1/Pod/Classes/Core/CIImage+LionheartExtensions.swift#L16-L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -265,11 +264,30 @@
                         </div>
                       </div>
                       <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>CGPoint</code> in the <code>CIImage</code> to extract RGBA information.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
                         <h4>Return Value</h4>
-                        <p>A tuple containing red, green, blue, and alpha values at the specified point.</p>
+                        <p>A tuple containing red, green, blue, and alpha values at the specified point if they could be extracted, or a <code>nil</code> value otherwise.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.4.1/Pod/Classes/Core/CIImage+LionheartExtensions.swift#L29-L38">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.4.1/Pod/Classes/Core/CIImage+LionheartExtensions.swift#L27-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
