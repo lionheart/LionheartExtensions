@@ -356,7 +356,7 @@ public extension UIView {
     }
 }
 
-public extension Array where Element: UIView {
+public extension Array where Element == UIView {
     func removeFromSuperviews() {
         forEach { $0.removeFromSuperview() }
     }

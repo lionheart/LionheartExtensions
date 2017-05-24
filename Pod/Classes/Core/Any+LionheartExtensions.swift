@@ -19,6 +19,8 @@ import Foundation
 
 /**
  If an optional is contained in any `Any` value, this function "lifts" the non-optional value out of it.
+ 
+ - note: May no longer be useful as of Swift 3.
  */
 public func liftOptionalFromAny(_ value: Any) -> Any {
     let mirror = Mirror(reflecting: value)
