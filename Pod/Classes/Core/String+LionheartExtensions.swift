@@ -78,6 +78,7 @@ extension NSString: LHSStringType {}
 extension NSAttributedString: LHSStringType {}
 
 public extension String {
+    /// Coerce empty strings to nil.
     var nilIfEmpty: String? {
         guard self != "" else {
             return nil

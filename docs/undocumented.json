@@ -247,175 +247,168 @@
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 81,
-      "symbol": "String.nilIfEmpty",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 101,
+      "line": 102,
       "symbol": "String.toRange(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 111,
+      "line": 112,
       "symbol": "String.trim(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 115,
+      "line": 116,
       "symbol": "String.URLEncode()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 123,
+      "line": 124,
       "symbol": "String.replaceSpacesWithDashes()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 127,
+      "line": 128,
       "symbol": "String.replaceCapitalsWithUnderscores()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 131,
+      "line": 132,
       "symbol": "String.stringByLowercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 136,
+      "line": 137,
       "symbol": "String.stringByUppercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 141,
+      "line": 142,
       "symbol": "String.URLEncodedString",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 149,
+      "line": 150,
       "symbol": "String.stringByReplacingSpacesWithDashes",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 155,
+      "line": 156,
       "symbol": "String.stringByConverting(toNamingFormat:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 191,
+      "line": 192,
       "symbol": "String.convert(toNamingFormat:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 195,
+      "line": 196,
       "symbol": "String.isComposedOf(charactersInSet:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 217,
+      "line": 218,
       "symbol": "NSString.stringByLowercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 221,
+      "line": 222,
       "symbol": "NSString.stringByUppercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 225,
+      "line": 226,
       "symbol": "NSString.stringByReplacingSpacesWithDashes",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 229,
+      "line": 230,
       "symbol": "NSString.stringByConverting(toNamingFormat:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 247,
+      "line": 248,
       "symbol": "NSAttributedString.stringByLowercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 251,
+      "line": 252,
       "symbol": "NSAttributedString.stringByUppercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 255,
+      "line": 256,
       "symbol": "NSAttributedString.stringByReplacingSpacesWithDashes",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 259,
+      "line": 260,
       "symbol": "NSAttributedString.stringByConverting(toNamingFormat:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 265,
+      "line": 266,
       "symbol": "NSMutableAttributedString.addString(withAttributes:attributes:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 270,
+      "line": 271,
       "symbol": "NSMutableAttributedString.addAttribute(_:value:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 274,
+      "line": 275,
       "symbol": "NSMutableAttributedString.addAttributes(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
-      "line": 278,
+      "line": 279,
       "symbol": "NSMutableAttributedString.removeAttribute(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

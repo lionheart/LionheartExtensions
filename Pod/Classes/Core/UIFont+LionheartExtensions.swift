@@ -22,8 +22,7 @@ let fontDisplayNameRegularExpression = try! NSRegularExpression(pattern: "([a-z]
 public extension UIFont {
     /**
      Returns a display name for a given `UIFont`.
-     
-     - throws: A regular expression error, if a match cannot be found.
+
      - returns: A `String` representing the font name.
      - date: February 17, 2016
      */
