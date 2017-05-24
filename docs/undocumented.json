@@ -29,13 +29,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/Any+LionheartExtensions.swift",
-      "line": 20,
-      "symbol": "liftOptionalFromAny(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/Array+LionheartExtensions.swift",
       "line": 21,
       "symbol": "Array.chunks(_:)",
@@ -103,13 +96,6 @@
       "line": 37,
       "symbol": "IndexPath.==(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/Int+LionheartExtensions.swift",
-      "line": 42,
-      "symbol": "Int.toRGBA(_:_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
