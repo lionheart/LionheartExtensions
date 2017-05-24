@@ -1,0 +1,5 @@
+author: "Lionheart Software"
+author_url: "http://lionheartsw.com"
+github_url: "https://github.com/lionheart/LionheartExtensions"
+github_file_prefix: "https://github.com/lionheart/LionheartExtensions/tree/3.4.1"
+xcodebuild_arguments: ["-workspace", "Example/LionheartExtensions.xcworkspace", "-scheme", "LionheartExtensions"]
