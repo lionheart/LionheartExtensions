@@ -10,8 +10,6 @@ import Foundation
 
 public extension CIImage {
     /**
-     Convert to a CGImage.
-
      - returns: A CGImage that represents the current CIImage.
      - date: May 24, 2017
      */
@@ -22,8 +20,8 @@ public extension CIImage {
     /**
      Calculate the RGBA values for the specified point in a CIImage.
 
-     - parameter: point
-     - returns: A tuple containing red, green, blue, and alpha values at the specified point.
+     - parameter point: A `CGPoint` in the `CIImage` to extract RGBA information.
+     - returns: A tuple containing red, green, blue, and alpha values at the specified point if they could be extracted, or a `nil` value otherwise.
      - date: May 24, 2017
      */
     func rgbValues(atPoint point: CGPoint) -> (red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8)? {
