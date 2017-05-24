@@ -168,7 +168,7 @@ public extension UIImage {
             
             switch UIApplication.shared.statusBarOrientation {
             case .landscapeLeft:
-                context.rotate(by: .pi / 2))
+                context.rotate(by: .pi / 2)
                 context.translateBy(x: 0, y: -imageSize.width)
                 break
                 
