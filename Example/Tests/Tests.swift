@@ -54,12 +54,12 @@ class LionheartExtensionsTests: XCTestCase {
         var g: CGFloat!
         var b: CGFloat!
         var a: CGFloat!
-        0xFF000000.toRGBA(&r, &g, &b, &a)
+        0xFF0000.toRGBA(&r, &g, &b, &a)
 
         expect(r) == 1
         expect(g) == 0
         expect(b) == 0
-        expect(a) == 0
+        expect(a) == 1
     }
 
     func testFunctional() {
