@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
+               BlueprintIdentifier = "E2DCDF2310B6587F653BB867D184F9E3"
                BuildableName = "LionheartExtensions.framework"
                BlueprintName = "LionheartExtensions"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
+            BlueprintIdentifier = "E2DCDF2310B6587F653BB867D184F9E3"
             BuildableName = "LionheartExtensions.framework"
             BlueprintName = "LionheartExtensions"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
+            BlueprintIdentifier = "E2DCDF2310B6587F653BB867D184F9E3"
             BuildableName = "LionheartExtensions.framework"
             BlueprintName = "LionheartExtensions"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "69261E1D2DD91707870A55A70FB53B54"
+            BlueprintIdentifier = "E2DCDF2310B6587F653BB867D184F9E3"
             BuildableName = "LionheartExtensions.framework"
             BlueprintName = "LionheartExtensions"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
