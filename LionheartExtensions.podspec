@@ -1,3 +1,5 @@
+# vim: ft=ruby
+
 Pod::Spec.new do |s|
   s.name             = "LionheartExtensions"
   s.version          =  "3.5.2"
@@ -7,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'Apache 2.0'
   s.author           = { "Dan Loewenherz" => "dloewenherz@gmail.com" }
   s.source           = { :git => "https://github.com/lionheart/LionheartExtensions.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/dwlz'
+  s.social_media_url = 'https://twitter.com/lionheartsw'
 
   s.requires_arc = true
   s.ios.deployment_target = '9.3'
