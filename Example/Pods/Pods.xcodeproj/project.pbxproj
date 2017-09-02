@@ -48,6 +48,7 @@
 		3509162C93C42B9929597FCA92D35790 /* HaveValidSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860D50B2909DB71F4C4268A1C52060D6 /* HaveValidSnapshot.swift */; };
 		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06FD212BD4338D2ACC0031B1CE4AE /* UIImage+Diff.m */; };
 		36FF59C9293C76AA0D8A544760FA6812 /* Optional+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4881C5E5988E97BC69D4C0D6E9E8054C /* Optional+LionheartExtensions.swift */; };
+		375B36E41F5B599D00CF94B1 /* DateFormatter+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B36E31F5B599D00CF94B1 /* DateFormatter+LionheartExtensions.swift */; };
 		377949961F58B96300E44A77 /* Bundle+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377949951F58B96300E44A77 /* Bundle+LionheartExtensions.swift */; };
 		37A6736C0FA565BCCF0466434A0787FA /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6A1765AAFAF1D449B31F56B14DD6C /* QCKDSL.m */; };
 		386C27C051B60D521360BC12E384BED6 /* Pods-LionheartExtensions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 769D0AFA55C8CB26592DFDC99325AF81 /* Pods-LionheartExtensions_Example-dummy.m */; };
@@ -273,6 +274,7 @@
 		333B8C0D91DCF7CFA89582C37611D57C /* Pods-LionheartExtensions_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LionheartExtensions_Tests-resources.sh"; sourceTree = "<group>"; };
 		35CFF315FE614E85C18564046F78A366 /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		37382877456EA7EC36224367096AA12F /* CwlDarwinDefinitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDarwinDefinitions.swift; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlDarwinDefinitions.swift; sourceTree = "<group>"; };
+		375B36E31F5B599D00CF94B1 /* DateFormatter+LionheartExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		377949951F58B96300E44A77 /* Bundle+LionheartExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		389DC8CF151B9E1F5EE27173438A88F8 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
 		3F3C84989D808B3E100271CBFBFCC30F /* CIImage+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CIImage+LionheartExtensions.swift"; sourceTree = "<group>"; };
@@ -895,6 +897,8 @@
 			children = (
 				C5ABC452E85D042864E3C8B65DF82A4C /* Any+LionheartExtensions.swift */,
 				498D7902BC11F7305EAD583807CA3C5C /* Array+LionheartExtensions.swift */,
+				375B36E31F5B599D00CF94B1 /* DateFormatter+LionheartExtensions.swift */,
+				377949951F58B96300E44A77 /* Bundle+LionheartExtensions.swift */,
 				3F3C84989D808B3E100271CBFBFCC30F /* CIImage+LionheartExtensions.swift */,
 				4DA4BEB839E6532D0F0DD940AE2E3418 /* FileManager+LionheartExtensions.swift */,
 				299281CACF93A2104ED9D1627F4C01A6 /* IndexPath+LionheartExtensions.swift */,
@@ -917,7 +921,6 @@
 				E0F7A115C05ABAD853B98778B1F0004A /* UIViewController+LionheartExtensions.swift */,
 				C557A3E4D0DB8D0656D5E671CD018E4B /* UIWindow+LionheartExtensions.swift */,
 				A880F3C34EC0154EADC3CC8C49EDD575 /* XCTestCase+LionheartExtensions.swift */,
-				377949951F58B96300E44A77 /* Bundle+LionheartExtensions.swift */,
 			);
 			name = Core;
 			path = Pod/Classes/Core;
@@ -1280,6 +1283,7 @@
 				EB76E6EABF0127900A452860412465E9 /* LionheartExtensions-dummy.m in Sources */,
 				BDA1606961F29AD80A5EE2C5753D7231 /* NSDecimalNumber+LionheartExtensions.swift in Sources */,
 				4E2FFD5454A842417C182559955957B9 /* NSRegularExpression+LionheartExtensions.swift in Sources */,
+				375B36E41F5B599D00CF94B1 /* DateFormatter+LionheartExtensions.swift in Sources */,
 				46283482FA59A76555B0DBE34D554710 /* NSURLSession+LionheartExtensions.swift in Sources */,
 				36FF59C9293C76AA0D8A544760FA6812 /* Optional+LionheartExtensions.swift in Sources */,
 				A9F832A53AD2047A2C5CA1B9308B132F /* String+LionheartExtensions.swift in Sources */,
