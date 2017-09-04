@@ -40,7 +40,8 @@ public extension DateFormatter {
     static func formatter(dateStrings: [String]) -> DateFormatter? {
         var numberOfSpaces: Int?
         for dateString in dateStrings {
-            let count = dateString.characters.filter({ $0 == " " }).count
+            let characters: [Character] = dateString.characters.filter({ $0 == " " })
+            let count = characters.count
 
             // If the number of spaces between date strings is inconsistent, there's no way we can find a formatter to match all of them.
             if let numberOfSpaces = numberOfSpaces, count != numberOfSpaces {

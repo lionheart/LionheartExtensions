@@ -61,13 +61,17 @@ public extension UIImage {
      - date: March 9, 2016
      */
     convenience init?(base64DataURLString: String?) {
-        guard let base64DataURLString = base64DataURLString, base64DataURLString == "" else {
+        guard let base64DataURLString = base64DataURLString,
+            base64DataURLString == "",
+            let range = base64DataURLString.range(of: "base64,") else {
             return nil
         }
 
-        guard let range = base64DataURLString.range(of: "base64,"),
-            let data = Data(base64Encoded: base64DataURLString.substring(from: base64DataURLString.characters.index(range.upperBound, offsetBy: 1)), options: []) else {
-                return nil
+        let index = base64DataURLString.characters.index(range.upperBound, offsetBy: 1)
+        let result = String(base64DataURLString[index...])
+
+        guard let data = Data(base64Encoded: result, options: []) else {
+            return nil
         }
 
         self.init(data: data)
