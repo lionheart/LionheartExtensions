@@ -291,7 +291,7 @@ public extension NSMutableAttributedString {
     }
     
     func addAttribute(_ name: String, value: Any) {
-        addAttribute(name, value: value, range: range)
+        addAttribute(NSAttributedStringKey(rawValue: name), value: value, range: range)
     }
     
     func addAttributes(_ attributes: [String: Any]) {
@@ -299,6 +299,6 @@ public extension NSMutableAttributedString {
     }
     
     func removeAttribute(_ name: String) {
-        removeAttribute(name, range: range)
+        removeAttribute(NSAttributedStringKey(rawValue: name), range: range)
     }
 }

@@ -135,7 +135,7 @@ public extension UIImage {
             return nil
         }
 
-        let image = CIImage.cropping(to: rect)
+        let image = CIImage.cropped(to: rect)
         return UIImage(ciImage: image)
     }
 
@@ -262,7 +262,7 @@ public extension UIImage {
             kCIInputExtentKey: CIVector(cgRect: ciImage.extent)
         ]
 
-        let image = ciImage.applyingFilter("CIAreaAverage", withInputParameters: parameters)
+        let image = ciImage.applyingFilter("CIAreaAverage", parameters: parameters)
         guard let (r, g, b, a) = image.rgbValues(atPoint: CGPoint(x: 1, y: 1)) else {
             return nil
         }

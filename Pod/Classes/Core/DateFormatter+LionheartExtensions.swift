@@ -56,11 +56,9 @@ public extension DateFormatter {
         }
 
         var formatters: [DateFormatter] = []
-        switch _numberOfSpaces {
-        case 0:
+        if _numberOfSpaces == 0 {
             formatters = DateFormatterString.NoSpaceFormatStrings.map { DateFormatter(format: $0) }
-
-        default:
+        } else {
             let timeFormatStrings: [String]
             switch _numberOfSpaces {
             case 1: timeFormatStrings = DateFormatterString.OneSpaceFormatStrings
