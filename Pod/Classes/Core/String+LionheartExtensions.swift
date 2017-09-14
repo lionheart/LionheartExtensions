@@ -147,7 +147,7 @@ public extension String {
      */
     var stringByLowercasingFirstLetter: String {
         let start = characters.index(after: startIndex)
-        return substring(to: start).lowercased() + substring(with: start..<endIndex)
+        return self[...start].lowercased() + self[start..<endIndex]
     }
 
     /**
@@ -155,7 +155,7 @@ public extension String {
      */
     var stringByUppercasingFirstLetter: String {
         let start = characters.index(after: startIndex)
-        return substring(to: start).uppercased() + substring(with: start..<endIndex)
+        return self[...start].uppercased() + self[start..<endIndex]
     }
 
     /**
@@ -285,20 +285,20 @@ public extension NSAttributedString {
 }
 
 public extension NSMutableAttributedString {
-    func addString(withAttributes string: String, attributes: [String: Any]) {
+    func addString(withAttributes string: String, attributes: [NSAttributedStringKey: Any]) {
         let attributedString = NSAttributedString(string: string, attributes: attributes)
         append(attributedString)
     }
     
-    func addAttribute(_ name: String, value: Any) {
+    func addAttribute(_ name: NSAttributedStringKey, value: Any) {
         addAttribute(name, value: value, range: range)
     }
     
-    func addAttributes(_ attributes: [String: Any]) {
+    func addAttributes(_ attributes: [NSAttributedStringKey: Any]) {
         addAttributes(attributes, range: range)
     }
     
     func removeAttribute(_ name: String) {
-        removeAttribute(name, range: range)
+        removeAttribute(NSAttributedStringKey(rawValue: name), range: range)
     }
 }

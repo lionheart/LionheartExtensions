@@ -48,7 +48,7 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
 
         let stringValue = string as NSString
         if let match = hexColorRegularExpression.firstMatch(in: string, options: [], range: NSMakeRange(0, string.characters.count)) {
-            let group = stringValue.substring(with: match.rangeAt(1))
+            let group = stringValue.substring(with: match.range(at: 1))
 
             if let integerValue = Int(group, radix: 16) {
                 self = .HEX(integerValue)
@@ -62,12 +62,12 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
 
         for regex in [rgbColorRegularExpression, rgbaColorRegularExpression] {
             if let match = regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.characters.count)) {
-                _r = stringValue.substring(with: match.rangeAt(1))
-                _g = stringValue.substring(with: match.rangeAt(2))
-                _b = stringValue.substring(with: match.rangeAt(3))
+                _r = stringValue.substring(with: match.range(at: 1))
+                _g = stringValue.substring(with: match.range(at: 2))
+                _b = stringValue.substring(with: match.range(at: 3))
 
                 if match.numberOfRanges == 5 {
-                    _a = stringValue.substring(with: match.rangeAt(4))
+                    _a = stringValue.substring(with: match.range(at: 4))
                 }
             }
         }
