@@ -1,9 +1,13 @@
 # LionheartExtensions
 
+### An invaluable collection of Swift extensions and utilities for iOS development
+
 [![CI Status](http://img.shields.io/travis/lionheart/LionheartExtensions.svg?style=flat)](https://travis-ci.org/lionheart/LionheartExtensions)
 [![Version](https://img.shields.io/cocoapods/v/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
 [![License](https://img.shields.io/cocoapods/l/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
 [![Platform](https://img.shields.io/cocoapods/p/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
+[![CocoaPods](https://img.shields.io/cocoapods/dt/LionheartExtensions.svg?style=flat)](https://cocoapods.org/pods/LionheartExtensions)
+[![CocoaPods](https://img.shields.io/cocoapods/dm/LionheartExtensions.svg?style=flat)](https://cocoapods.org/pods/LionheartExtensions)
 
 This is a handy collection of helpers I've built up through the years. It started off as a bunch of Objective-C categories, but since have converted them to Swift extensions. Please read the [documentation](http://lionheartsw.com/LionheartExtensions/) for further information.
 
