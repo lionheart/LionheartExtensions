@@ -12,7 +12,7 @@ fileprivate struct DateFormatterString {
     static let DateComponent1 = "MM-dd-yyyy"
     static let DateComponent2 = "dd-MM-yyyy"
     static let DateComponent3 = "yyyy-MM-dd"
-    static let DateComponent4 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+    static let DateComponent4 = "yyyy-MM-dd'T'HH:mm:ssZ"
 
     static let TimeComponent1 = "HH:mm"
     static let TimeComponent2 = "hh:mm a"
