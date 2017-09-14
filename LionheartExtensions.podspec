@@ -12,12 +12,12 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/lionheartsw'
 
   s.requires_arc = true
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '10.3'
 
   s.default_subspec = 'Core'
 
   s.pod_target_xcconfig = {
-    'SWIFT_VERSION' => '3.0'
+    'SWIFT_VERSION' => '4.0'
   }
 
   s.subspec 'Core' do |spec|
