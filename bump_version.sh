@@ -11,7 +11,7 @@ if [ "$1" != "" ]; then
     jazzy
 
     git add docs/
-    git add .jazzy.yml
+    git add .jazzy.yaml
     git commit -m "documentation update"
 
     git add .
