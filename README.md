@@ -2,7 +2,7 @@
 
 ### An invaluable collection of Swift extensions and utilities for iOS development
 
-[![CI Status](http://img.shields.io/travis/lionheart/LionheartExtensions.svg?style=flat)](https://travis-ci.org/lionheart/LionheartExtensions)
+[![CI Status](https://img.shields.io/travis/lionheart/LionheartExtensions.svg?style=flat)](https://travis-ci.org/lionheart/LionheartExtensions)
 [![Version](https://img.shields.io/cocoapods/v/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
 [![License](https://img.shields.io/cocoapods/l/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
 [![Platform](https://img.shields.io/cocoapods/p/LionheartExtensions.svg?style=flat)](http://cocoapods.org/pods/LionheartExtensions)
