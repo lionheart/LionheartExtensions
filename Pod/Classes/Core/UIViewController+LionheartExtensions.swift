@@ -17,7 +17,7 @@
 
 import Foundation
 
-// Helper methods for `UIViewController`.
+/// Helper methods for `UIViewController`.
 public extension UIViewController {
     /**
      Returns an optional with the top-level `UIViewController`.

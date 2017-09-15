@@ -17,7 +17,7 @@
 
 import Foundation
 
-// Helper methods for `UIWindow`.
+/// Helper methods for `UIWindow`.
 public extension UIWindow {
     /**
      Take a screenshot and save to the specified file path. Helpful for creating screenshots via automated tests.

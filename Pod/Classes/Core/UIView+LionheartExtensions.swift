@@ -19,7 +19,7 @@ import Foundation
 
 public typealias LayoutDictionary = [String: Any]
 
-// Auto Layout and general utility methods for `UIView`.
+/// Auto Layout and general utility methods for `UIView`.
 public extension UIView {
     /**
      Remove all subviews of the calling `UIView`.
