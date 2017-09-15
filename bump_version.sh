@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Usage: ./bump_version.sh 3.6.4
+
 if [ "$1" != "" ]; then
     pod spec lint --quick
 
@@ -15,10 +17,10 @@ if [ "$1" != "" ]; then
     git add .
     git commit -m "bump version to $1"
 
-    # git tag $1
-    # git push origin master
-    # git push --tags
-    # pod trunk push
+    git tag $1
+    git push origin master
+    git push --tags
+    pod trunk push
 
-    # sync_directory_to_s3 "us-east-2" "lionheart-opensource" "E33XE7TKGUV1ZD" "docs" "LionheartExtensions"
+    sync_directory_to_s3 "us-east-2" "lionheart-opensource" "E33XE7TKGUV1ZD" "docs" "LionheartExtensions/"
 fi
