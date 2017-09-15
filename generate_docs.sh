@@ -2,5 +2,6 @@
 
 jazzy
 
-git add .
+git add docs/
+git add .jazzy.yaml
 git commit -m "documentation update"

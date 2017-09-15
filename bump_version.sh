@@ -8,11 +8,7 @@ if [ "$1" != "" ]; then
     sed -i "" "s/\(s.version[ ]*=[ ]\).*/\1 \"$1\"/g" LionheartExtensions.podspec
     sed -i "" "s/tree\/[\.0-9]*/tree\/$1/g" .jazzy.yaml
 
-    jazzy
-
-    git add docs/
-    git add .jazzy.yaml
-    git commit -m "documentation update"
+    sh generate_docs.sh
 
     git add .
     git commit -m "bump version to $1"
