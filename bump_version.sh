@@ -17,6 +17,10 @@ if [ "$1" != "" ]; then
     git add .
     git commit -m "bump version to $1"
 
+    # Delete tag if already exists
+    git tag -d $1
+    git push origin master :$1
+
     git tag $1
     git push origin master
     git push --tags
