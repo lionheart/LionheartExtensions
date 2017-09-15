@@ -8,9 +8,6 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
-    <script src="js/lunr.min.js" defer></script>
-    <script src="js/typeahead.jquery.js" defer></script>
-    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -22,13 +19,7 @@
         <a class="header-link" href="index.html">
           LionheartExtensions Docs
         </a>
-         (48% documented)
-      </p>
-    
-      <p class="header-col--secondary">
-        <form role="search" action="search.json">
-          <input type="text" placeholder="Search documentation" data-typeahead>
-        </form>
+         (0% documented)
       </p>
     
         <p class="header-col header-col--secondary">
@@ -81,10 +72,16 @@
                 <a class="nav-group-task-link" href="Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/CIImage.html">CIImage</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/CharacterSet.html">CharacterSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/DateFormatter.html">DateFormatter</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/File.html">File</a>
@@ -152,31 +149,22 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/UIWindow.html">UIWindow</a>
               </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions/URLSession.html">URLSession</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Functions.html#/s:F19LionheartExtensions3allFTGSaGSqP___4testFGSqP__Sb_Sb">all(_:test:)</a>
+                <a class="nav-group-task-link" href="Functions.html#/all(_:test:)">all(_:test:)</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Functions.html#/s:F19LionheartExtensions3allurFTGSaGSqx__4testGSqFGSqP__Sb__Sb">all(_:test:)</a>
+                <a class="nav-group-task-link" href="Functions.html#/any(_:test:)">any(_:test:)</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Functions.html#/s:F19LionheartExtensions3anyFTGSaGSqP___4testFGSqP__Sb_Sb">any(_:test:)</a>
+                <a class="nav-group-task-link" href="Functions.html#/liftOptionalFromAny(_:)">liftOptionalFromAny(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Functions.html#/s:F19LionheartExtensions3anyurFTGSaGSqx__4testFGSqP__Sb_Sb">any(_:test:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Functions.html#/s:F19LionheartExtensions19liftOptionalFromAnyFP_P_">liftOptionalFromAny(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Functions.html#/s:F19LionheartExtensions6truthyurFxSb">truthy(_:)</a>
+                <a class="nav-group-task-link" href="Functions.html#/truthy(_:)">truthy(_:)</a>
               </li>
             </ul>
           </li>
@@ -212,24 +200,67 @@
         <section class="section">
           <div class="section-content">
             
-            <h1 id='lionheartextensions' class='heading'>LionheartExtensions</h1>
+            <a href='#lionheartextensions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='lionheartextensions'>LionheartExtensions</h1>
+<a href='#an-invaluable-collection-of-swift-extensions-and-utilities-for-ios-development' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='an-invaluable-collection-of-swift-extensions-and-utilities-for-ios-development'>An invaluable collection of Swift extensions and utilities for iOS development</h3>
 
 <p><a href="https://travis-ci.org/lionheart/LionheartExtensions"><img src="http://img.shields.io/travis/lionheart/LionheartExtensions.svg?style=flat" alt="CI Status"></a>
 <a href="http://cocoapods.org/pods/LionheartExtensions"><img src="https://img.shields.io/cocoapods/v/LionheartExtensions.svg?style=flat" alt="Version"></a>
 <a href="http://cocoapods.org/pods/LionheartExtensions"><img src="https://img.shields.io/cocoapods/l/LionheartExtensions.svg?style=flat" alt="License"></a>
-<a href="http://cocoapods.org/pods/LionheartExtensions"><img src="https://img.shields.io/cocoapods/p/LionheartExtensions.svg?style=flat" alt="Platform"></a></p>
+<a href="http://cocoapods.org/pods/LionheartExtensions"><img src="https://img.shields.io/cocoapods/p/LionheartExtensions.svg?style=flat" alt="Platform"></a>
+<a href="https://cocoapods.org/pods/LionheartExtensions"><img src="https://img.shields.io/cocoapods/dt/LionheartExtensions.svg?style=flat" alt="CocoaPods"></a>
+<a href="https://cocoapods.org/pods/LionheartExtensions"><img src="https://img.shields.io/cocoapods/dm/LionheartExtensions.svg?style=flat" alt="CocoaPods"></a></p>
+<a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
 
-<p>This is a handy collection of helpers I&rsquo;ve built up through the years. It started off as a bunch of Objective-C categories, but since have converted them to Swift extensions. Please read the <a href="http://lionheartsw.com/LionheartExtensions/">documentation</a> for further information.</p>
-<h2 id='installation' class='heading'>Installation</h2>
+<p><strong>LionheartExtensions</strong> is a handy collection of extensions, helpers, and other utilities that I&rsquo;ve collected since the introduction of the iOS SDK, ported to Swift. It started off as a collection of <a href="https://github.com/lionheart/LHSCategoryCollection">Objective-C categories</a> with roots going years back. These extensions make numerous cumbersome operations easy and straightforward, with improved initializers, helper methods, and other various shortcuts.</p>
+
+<p>LionheartExtensions, like all Lionheart projects, is versioned using <a href="http://www.semver.org">Semantic Versioning</a>.</p>
+
+<p>Please read the <a href="http://lionheartsw.com/LionheartExtensions/">documentation</a> for further information.</p>
+<a href='#features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='features'>Features</h2>
+
+<ul>
+<li>[x] CocoaPods support</li>
+<li>[x] Helpers, utilities, and extensions for&hellip;
+
+<ul>
+<li>[x] <code>Array&lt;T&gt;</code></li>
+<li>[x] <code>Bundle</code></li>
+<li>[x] <code>CIImage</code></li>
+<li>[x] <code>DateFormatter</code></li>
+<li>[x] <code>FileManager</code></li>
+<li>[x] <code>IndexPath</code></li>
+<li>[x] <code>Int</code></li>
+<li>[x] <code>NSDecimalNumber</code></li>
+<li>[x] <code>NSRegularExpression</code></li>
+<li>[x] <code>NSURLSession</code></li>
+<li>[x] <code>Optional&lt;T&gt;</code></li>
+<li>[x] <code>String</code></li>
+<li>[x] <code>UIAlertController</code></li>
+<li>[x] <code>UIColor</code></li>
+<li>[x] <code>UIDevice</code></li>
+<li>[x] <code>UIFont</code></li>
+<li>[x] <code>UIImage</code></li>
+<li>[x] <code>UIMultilineLabel</code></li>
+<li>[x] <code>UIPrintPageRenderer</code></li>
+<li>[x] <code>UIScreen</code></li>
+<li>[x] <code>UITextField</code></li>
+<li>[x] <code>UIViewController</code></li>
+<li>[x] <code>UIView</code></li>
+<li>[x] <code>UIWindow</code></li>
+<li>[x] <code>XCTestCase</code></li>
+</ul></li>
+<li>[x] Unit tests!</li>
+</ul>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
 
 <p>LionheartExtensions is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
 it, simply add the following line to your Podfile:</p>
 <pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"LionheartExtensions"</span>
 </code></pre>
-<h2 id='documentation' class='heading'>Documentation</h2>
+<a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='documentation'>Documentation</h2>
 
 <p>See <a href="http://lionheartsw.com/LionheartExtensions/">http://lionheartsw.com/LionheartExtensions/</a></p>
-<h2 id='license' class='heading'>License</h2>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
 
 <p>LionheartExtensions is available under the Apache 2.0 license. See the <a href="LICENSE">LICENSE</a> file for more info.</p>
 
@@ -241,7 +272,7 @@ it, simply add the following line to your Podfile:</p>
     </div>
     <section class="footer">
       <p>&copy; 2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
