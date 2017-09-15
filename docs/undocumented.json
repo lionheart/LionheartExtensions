@@ -478,14 +478,14 @@
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
-      "line": 120,
+      "line": 114,
       "symbol": "UIView.fillHorizontalMarginsOfSuperview(margin:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
-      "line": 360,
+      "line": 354,
       "symbol": "Array.removeFromSuperviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
