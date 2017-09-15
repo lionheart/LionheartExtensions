@@ -2,6 +2,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 project "LionheartExtensions.xcodeproj"
 
+platform :ios, '10.3'
+
 use_frameworks!
 
 target 'LionheartExtensions_Example' do
