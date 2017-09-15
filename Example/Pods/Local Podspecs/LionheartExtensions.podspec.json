@@ -1,6 +1,6 @@
 {
   "name": "LionheartExtensions",
-  "version": "3.4.1",
+  "version": "3.6.1",
   "summary": "Swift Extensions you probably will find useful.",
   "homepage": "https://github.com/lionheart/LionheartExtensions",
   "license": "Apache 2.0",
@@ -9,16 +9,16 @@
   },
   "source": {
     "git": "https://github.com/lionheart/LionheartExtensions.git",
-    "tag": "3.4.1"
+    "tag": "3.6.1"
   },
-  "social_media_url": "https://twitter.com/dwlz",
+  "social_media_url": "https://twitter.com/lionheartsw",
   "requires_arc": true,
   "platforms": {
-    "ios": "9.3"
+    "ios": "10.3"
   },
   "default_subspecs": "Core",
   "pod_target_xcconfig": {
-    "SWIFT_VERSION": "3.0"
+    "SWIFT_VERSION": "4.0"
   },
   "subspecs": [
     {
