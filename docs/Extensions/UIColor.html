@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           LionheartExtensions Docs
         </a>
-         (0% documented)
+         (47% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -159,22 +159,31 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIWindow.html">UIWindow</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URLSession.html">URLSession</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Functions.html#/all(_:test:)">all(_:test:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:19LionheartExtensions3allSbSayxSgG_SbypSgcSg4testtlF">all(_:test:)</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Functions.html#/any(_:test:)">any(_:test:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:19LionheartExtensions3allSbSayypSgG_SbACc4testtF">all(_:test:)</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Functions.html#/liftOptionalFromAny(_:)">liftOptionalFromAny(_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:19LionheartExtensions3anySbSayxSgG_SbypSgc4testtlF">any(_:test:)</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Functions.html#/truthy(_:)">truthy(_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:19LionheartExtensions3anySbSayypSgG_SbACc4testtF">any(_:test:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:19LionheartExtensions19liftOptionalFromAnyypypF">liftOptionalFromAny(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:19LionheartExtensions6truthySbxlF">truthy(_:)</a>
               </li>
             </ul>
           </li>
@@ -222,9 +231,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:So7UIColorC19LionheartExtensionsEAbC19ColorRepresentationOcfc"></a>
                     <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">init(_:)</a>
+                    <a class="token" href="#/s:So7UIColorC19LionheartExtensionsEAbC19ColorRepresentationOcfc">init(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -232,8 +241,40 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initialize a <code>UIColor</code> object with any number of methods. E.g.</p>
 
+<p>Integer literals:</p>
+<pre class="highlight plaintext"><code>UIColor(0xF00)
+UIColor(0xFF0000)
+UIColor(0xFF0000FF)
+</code></pre>
+
+<p>String literals:</p>
+<pre class="highlight plaintext"><code>UIColor("f00")
+UIColor("FF0000")
+UIColor("rgb(255, 0, 0)")
+UIColor("rgba(255, 0, 0, 0.15)")
+</code></pre>
+
+<p>Or (preferably), if you want to be a bit more explicit:</p>
+<pre class="highlight plaintext"><code>UIColor(.hex(0xF00))
+UIColor(.RGB(255, 0, 0))
+UIColor(.RGBA(255, 0, 0, 0.5))
+</code></pre>
+
+<p>If a provided value is invalid, the color will be white with an alpha value of 0.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Enums/ColorRepresentation.html">ColorRepresentation</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L56-L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -241,9 +282,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:So7UIColorC19LionheartExtensionsE7lightenAB12CoreGraphics7CGFloatV7byRatio_tF"></a>
                     <a name="//apple_ref/swift/Method/lighten(byRatio:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">lighten(byRatio:)</a>
+                    <a class="token" href="#/s:So7UIColorC19LionheartExtensionsE7lightenAB12CoreGraphics7CGFloatV7byRatio_tF">lighten(byRatio:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -251,8 +292,23 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Lighten a color by a specified ratio.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lighten</span><span class="p">(</span><span class="n">byRatio</span> <span class="nv">ratio</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new <code>UIColor</code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L84-L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -260,9 +316,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:So7UIColorC19LionheartExtensionsE6darkenAB12CoreGraphics7CGFloatV7byRatio_tF"></a>
                     <a name="//apple_ref/swift/Method/darken(byRatio:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">darken(byRatio:)</a>
+                    <a class="token" href="#/s:So7UIColorC19LionheartExtensionsE6darkenAB12CoreGraphics7CGFloatV7byRatio_tF">darken(byRatio:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -270,8 +326,38 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Darken a color by a specified ratio.</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Daniel Loewenherz</p>
 
+</div>
+<div class="aside aside-copyright">
+    <p class="aside-title">Copyright</p>
+    <p>©2016 Lionheart Software LLC</p>
+
+</div>
+<div class="aside aside-date">
+    <p class="aside-title">Date</p>
+    <p>February 17, 2016</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">darken</span><span class="p">(</span><span class="n">byRatio</span> <span class="nv">ratio</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new <code>UIColor</code>.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L108-L120">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -279,9 +365,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:So7UIColorC19LionheartExtensionsE6isDarkSbv"></a>
                     <a name="//apple_ref/swift/Property/isDark" class="dashAnchor"></a>
-                    <a class="token" href="#/">isDark</a>
+                    <a class="token" href="#/s:So7UIColorC19LionheartExtensionsE6isDarkSbv">isDark</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -289,8 +375,38 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Indicate whether a given color is dark.</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    Daniel Loewenherz
 
+</div>
+<div class="aside aside-copyright">
+    <p class="aside-title">Copyright</p>
+    ©2016 Lionheart Software LLC
+
+</div>
+<div class="aside aside-date">
+    <p class="aside-title">Date</p>
+    February 17, 2016
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isDark</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Bool</code> indicating if the given <code>UIColor</code> is dark.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L130-L158">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
