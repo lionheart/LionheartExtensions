@@ -13,7 +13,7 @@
 
 **LionheartExtensions** is a handy collection of extensions, helpers, and other utilities that I've collected since the introduction of the iOS SDK, ported to Swift. It started off as a collection of [Objective-C categories](https://github.com/lionheart/LHSCategoryCollection) with roots going years back. These extensions make numerous cumbersome operations easy and straightforward, with improved initializers, helper methods, and other various shortcuts.
 
-LionheartExtensions, like all Lionheart projects, is versioned using [Semantic Versioning](http://www.semver.org).
+LionheartExtensions uses [Semantic Versioning](http://www.semver.org).
 
 Please read the [documentation](http://lionheartsw.com/LionheartExtensions/) for further information.
 
