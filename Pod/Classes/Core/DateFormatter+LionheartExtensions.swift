@@ -37,7 +37,7 @@ public extension DateFormatter {
         dateFormat = format
     }
 
-    // Returns nil if inconsistencies within data
+    /// Returns a `DateFormatter` that handles all of the provided `dateStrings`, or `nil` if a formatter could not be found.
     static func formatter(dateStrings: [String]) -> DateFormatter? {
         var numberOfSpaces: Int?
         for dateString in dateStrings {

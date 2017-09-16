@@ -18,7 +18,7 @@
 import UIKit
 
 /**
-`UIColor` extension.
+ `UIColor` extension.
 */
 public extension UIColor {
     /**

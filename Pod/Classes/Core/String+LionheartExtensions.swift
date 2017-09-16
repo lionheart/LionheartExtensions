@@ -45,20 +45,16 @@ public protocol LHSStringType {
     /**
      Conforming types must provide a getter for the length of the string.
      
-     - returns: An `Int` representing the "length" of the string (understood that this can differ based on encoding).
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Returns: An `Int` representing the "length" of the string (understood that this can differ based on encoding).
+     - Date: February 17, 2016
      */
     var length: Int { get }
 
     /**
      Conforming types must provide a method to get the full range of the string.
      
-     - returns: An `NSRange` representing the entire string.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Returns: An `NSRange` representing the entire string.
+     - Date: February 17, 2016
      */
     var range: NSRange { get }
 
@@ -78,7 +74,11 @@ extension NSString: LHSStringType {}
 extension NSAttributedString: LHSStringType {}
 
 public extension String {
-    /// A string identifical to `self` if `self` is not an empty string, `nil` otherwise.
+    /**
+     A string identifical to `self` if not an empty string, `nil` otherwise.
+
+     - SeeAlso: `Optional.nilIfEmpty`
+     */
     var nilIfEmpty: String? {
         guard self != "" else {
             return nil
@@ -211,7 +211,7 @@ public extension NSString {
     /**
      An `NSRange` indicating the length of the `NSString`.
      
-     - returns: An `NSRange`
+     - Returns: An `NSRange`
      */
     var range: NSRange {
         return String(self).range
@@ -238,10 +238,10 @@ public extension NSAttributedString {
     /**
      Returns an `NSRange` indicating the length of the `NSAttributedString`.
      
-     - returns: An `NSRange`
+     - Returns: An `NSRange`
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     var range: NSRange {
         return string.range

@@ -98,7 +98,6 @@
 		8654571F855691C23B7B8E61B2141944 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674AFD8CC03C489B67690AF9686ED5B5 /* EndWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		86FFB76B2EDCF4AE79CC4C0BD8A0FE9A /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED4A8687913970305D4A0F60557C3FD /* DSL+Wait.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		87DD62F200DAB5E1D701AB9F94D1D422 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 86B259364047F450E0ADE0AFD8F161D1 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8990912F7536F7BCB94097755560A473 /* UIMultilineLabel+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7DBBE39D33F3B8E166C471F2D06F4B /* UIMultilineLabel+LionheartExtensions.swift */; };
 		8C30EAD5FFD28B387099B41C74657A67 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E07C17F96F4F8A535270B6C77F2A8 /* NMBExpectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8D36F6C3DA178D2326C27F8F91DCA907 /* LionheartExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D0A1BE0CDAF40B86458A1D92FFD619 /* LionheartExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DB6BE1327BF9988E88EE76A228DE8ED /* UIColor+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1DB29F27392B576260E567295A8152 /* UIColor+LionheartExtensions.swift */; };
@@ -322,7 +321,6 @@
 		68D0A1BE0CDAF40B86458A1D92FFD619 /* LionheartExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LionheartExtensions-umbrella.h"; sourceTree = "<group>"; };
 		6B47AE33B08D9E18713D202B98C24597 /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Sources/Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
 		6CCE7E122DD62B1AD39ACEBBCF03846C /* HaveCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveCount.swift; path = Sources/Nimble/Matchers/HaveCount.swift; sourceTree = "<group>"; };
-		6D7DBBE39D33F3B8E166C471F2D06F4B /* UIMultilineLabel+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIMultilineLabel+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		6D9556945959FBA4F5E395F39A0A356C /* IndexPath+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "IndexPath+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		6E25DC662CCD1CE8469AE0B8A3232846 /* Pods-LionheartExtensions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LionheartExtensions_Tests-dummy.m"; sourceTree = "<group>"; };
 		6E9CE52345729B78586BEF966710F8E8 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Sources/NimbleObjectiveC/DSL.m; sourceTree = "<group>"; };
@@ -757,7 +755,6 @@
 				18A1557CC100DB8987E680CFC62BCBA2 /* UIDevice+LionheartExtensions.swift */,
 				C30E6AAECF0D376A271835F88AF1D154 /* UIFont+LionheartExtensions.swift */,
 				512B4016F044D8563C3B6037BF3E116B /* UIImage+LionheartExtensions.swift */,
-				6D7DBBE39D33F3B8E166C471F2D06F4B /* UIMultilineLabel+LionheartExtensions.swift */,
 				B9C2011463C989FAF28F4D449CB11FE9 /* UIPrintPageRenderer+LionheartExtensions.swift */,
 				3EE48C166E5A277E374CF5F0A0F1AFE3 /* UIScreen+LionheartExtensions.swift */,
 				572ABA77DFA4E419867FF6998CDE0F29 /* UITextField+LionheartExtensions.swift */,
@@ -1226,7 +1223,6 @@
 				4ABE933042F2B6115007B986FBB13E0E /* UIDevice+LionheartExtensions.swift in Sources */,
 				F28510C2C9BC616936D445817580C943 /* UIFont+LionheartExtensions.swift in Sources */,
 				CA5D3507D69AD80B7EA58ACC27032EB5 /* UIImage+LionheartExtensions.swift in Sources */,
-				8990912F7536F7BCB94097755560A473 /* UIMultilineLabel+LionheartExtensions.swift in Sources */,
 				78D02A33D13FC5790393ADF0435F85A9 /* UIPrintPageRenderer+LionheartExtensions.swift in Sources */,
 				21D14B5ACE373B48F5480152E22D1784 /* UIScreen+LionheartExtensions.swift in Sources */,
 				1482D109EDED658C14A595A707FEE2DB /* UITextField+LionheartExtensions.swift in Sources */,
