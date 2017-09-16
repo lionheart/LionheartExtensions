@@ -36,7 +36,7 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
      let red: ColorRepresentation = 0xFF0000
      ```
 
-     - see: `UIColor.init(_:)`
+     - SeeAlso: `UIColor.init(_:)`
      */
     public init(integerLiteral value: IntegerLiteralType) {
         self = .HEX(value)
@@ -49,7 +49,7 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
      let red: ColorRepresentation = [255, 0, 0]
      ```
 
-     - see: `UIColor.init(_:)`
+     - SeeAlso: `UIColor.init(_:)`
      */
     public init(arrayLiteral elements: Element...) {
         let intElements = elements.map { Int($0) }

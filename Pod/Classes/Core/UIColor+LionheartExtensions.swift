@@ -22,9 +22,9 @@ import UIKit
 */
 public extension UIColor {
     /**
-     Initialize a `UIColor` object with any number of methods. E.g.
+     Helper method to instantiate a `UIColor` object any number of ways. E.g.
      
-     Integer literals:
+     With integer literals:
 
      ```
      UIColor(0xF00)
@@ -32,7 +32,7 @@ public extension UIColor {
      UIColor(0xFF0000FF)
      ```
      
-     String literals:
+     Or string literals:
 
      ```
      UIColor("f00")
@@ -44,7 +44,7 @@ public extension UIColor {
      Or (preferably), if you want to be a bit more explicit:
      
      ```
-     UIColor(.hex(0xF00))
+     UIColor(.HEX(0xFF0000))
      UIColor(.RGB(255, 0, 0))
      UIColor(.RGBA(255, 0, 0, 0.5))
      ```
@@ -75,12 +75,7 @@ public extension UIColor {
         }
     }
     
-    /**
-     Lighten a color by a specified ratio.
-     
-     - parameter ratio: the ratio by which to lighten the color by.
-     - returns: A new `UIColor`.
-     */
+    /// Returns a `UIColor` with each color component of `self` lightened by `ratio`.
     func lighten(byRatio ratio: CGFloat) -> UIColor {
         var R: CGFloat = 0
         var B: CGFloat = 0
@@ -88,23 +83,14 @@ public extension UIColor {
         var A: CGFloat = 0
         getRed(&R, green: &G, blue: &B, alpha: &A)
 
-        let r = min(R + ratio, 1)
-        let g = min(G + ratio, 1)
-        let b = min(B + ratio, 1)
-        let a = min(A + ratio, 1)
+        let r = min(R * (1 + ratio), 1)
+        let g = min(G * (1 + ratio), 1)
+        let b = min(B * (1 + ratio), 1)
+        let a = min(A * (1 + ratio), 1)
         return UIColor(red: r, green: g, blue: b, alpha: a)
     }
 
-    /**
-     Darken a color by a specified ratio.
-     
-     - parameter ratio: the ratio by which to darken the color by.
-     
-     - returns: A new `UIColor`.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
-     */
+    /// Returns a `UIColor` with each color component of `self` darkened by `ratio`.
     func darken(byRatio ratio: CGFloat) -> UIColor {
         var R: CGFloat = 0
         var B: CGFloat = 0
@@ -112,20 +98,17 @@ public extension UIColor {
         var A: CGFloat = 0
         getRed(&R, green: &G, blue: &B, alpha: &A)
 
-        let r = max(R - ratio, 0)
-        let g = max(G - ratio, 0)
-        let b = max(B - ratio, 0)
-        let a = max(A - ratio, 0)
+        let r = max(R * (1 - ratio), 0)
+        let g = max(G * (1 - ratio), 0)
+        let b = max(B * (1 - ratio), 0)
+        let a = max(A * (1 - ratio), 0)
         return UIColor(red: r, green: g, blue: b, alpha: a)
     }
 
     /**
-     Indicate whether a given color is dark.
+     A bool that indicates whether the color is dark.
 
-     - returns: A `Bool` indicating if the given `UIColor` is dark.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Note: Formula for brightness derived from [W3C Techniques For Accessibility Evaluation And Repair Tools](http://www.w3.org/WAI/ER/WD-AERT/#color-contrast), and formula for alpha-blending attributed to [StackOverflow](http://stackoverflow.com/a/746937/39155).
      */
     var isDark: Bool {
         var R1: CGFloat = 0
