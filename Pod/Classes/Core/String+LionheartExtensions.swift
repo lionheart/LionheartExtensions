@@ -78,7 +78,7 @@ extension NSString: LHSStringType {}
 extension NSAttributedString: LHSStringType {}
 
 public extension String {
-    /// Coerce empty strings to nil.
+    /// A string identifical to `self` if `self` is not an empty string, `nil` otherwise.
     var nilIfEmpty: String? {
         guard self != "" else {
             return nil
@@ -87,45 +87,29 @@ public extension String {
         return self
     }
 
-    /**
-     Returns an `NSRange` indicating the length of the `String`.
-     
-     - returns: An `NSRange`
-     */
-    var range: NSRange {
-        return NSMakeRange(0, characters.count)
+    /// The length of the current string.
+    var length: Int {
+        return NSString(string: self).length
     }
 
-    /**
-     Converts an `NSRange` for the current `String` to a a type of `Range<String.Index>`.
+    /// An `NSRange` encompassing all of `self`.
+    var range: NSRange {
+        return NSMakeRange(0, length)
+    }
 
-     - returns: A range of type `Range<String.Index>`
-     */
+    /// Returns a `Range<String.Index>` equivalent to the provided `NSRange` for `self`.
     func toRange(_ range: NSRange) -> Range<String.Index> {
         let start = characters.index(startIndex, offsetBy: range.location)
         let end = characters.index(start, offsetBy: range.length)
         return start..<end
     }
 
-    /**
-     - returns: Returns the length of the current string.
-     */
-    var length: Int {
-        return NSString(string: self).length
-    }
-
-    /**
-     Trim all characters from the string in the specified character set.
-     
-     - parameter characterSet: a `CharacterSet` specifying which characters to trim from the string
-     */
+    /// Trims all characters from the string in the specified `CharacterSet`.
     mutating func trim(_ characterSet: CharacterSet) {
         self = self.trimmingCharacters(in: characterSet)
     }
 
-    /**
-     URL encode the current string.
-     */
+    /// URL encode the current string.
     mutating func URLEncode() {
         guard let string = URLEncodedString else {
             return
@@ -142,17 +126,13 @@ public extension String {
         self = stringByConverting(toNamingFormat: .underscores)
     }
 
-    /**
-     A copy of the current `String` with the first letter lowercased.
-     */
+    /// A copy of `self` with the first letter lowercased.
     var stringByLowercasingFirstLetter: String {
         let start = characters.index(after: startIndex)
         return self[...start].lowercased() + self[start..<endIndex]
     }
 
-    /**
-     A copy of the current `String` with the first letter uppercased.
-     */
+    /// A copy of `self` with the first letter uppercased.
     var stringByUppercasingFirstLetter: String {
         let start = characters.index(after: startIndex)
         return self[...start].uppercased() + self[start..<endIndex]
