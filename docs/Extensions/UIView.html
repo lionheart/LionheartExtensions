@@ -219,7 +219,7 @@
         <section class="section">
           <div class="section-content">
             <h1>UIView</h1>
-            <p>Undocumented</p>
+            <p>Auto Layout and general utility methods for <code>UIView</code>.</p>
 
           </div>
         </section>
@@ -402,6 +402,25 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>height</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Float</code> specifying the view&rsquo;s height.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIView+LionheartExtensions.swift#L82-L84">Show on GitHub</a>
                       </div>
@@ -447,6 +466,25 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>width</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Float</code> specifying the view&rsquo;s width.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIView+LionheartExtensions.swift#L95-L97">Show on GitHub</a>
                       </div>
@@ -491,6 +529,25 @@
                           <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setContentSize</span><span class="p">(</span><span class="n">_</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>CGSize</code> specifying the view&rsquo;s size.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIView+LionheartExtensions.swift#L108-L111">Show on GitHub</a>
@@ -649,6 +706,25 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>margin</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>CGFloat</code> representing the horizontal margin.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIView+LionheartExtensions.swift#L157-L164">Show on GitHub</a>
                       </div>
@@ -694,6 +770,25 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>margin</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>CGFloat</code> representing the vertical margin.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIView+LionheartExtensions.swift#L175-L182">Show on GitHub</a>
                       </div>
@@ -738,6 +833,37 @@
                           <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fillSuperview</span><span class="p">(</span><span class="n">_</span> <span class="nv">axis</span><span class="p">:</span> <span class="kt">UILayoutConstraintAxis</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>axis</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. Specify only when you want to pin the view to a particular axis.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>margin</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>CGFloat</code> representing the vertical margin.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIView+LionheartExtensions.swift#L194-L208">Show on GitHub</a>
@@ -793,6 +919,25 @@ view.addVisualFormatConstraints("|-20-[view]-20-|")
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The format specification for the constraints. For more information, see Visual Format Language in Auto Layout Guide.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIView+LionheartExtensions.swift#L232-L235">Show on GitHub</a>
                       </div>
@@ -838,6 +983,49 @@ view.addVisualFormatConstraints("|-20-[view]-20-|")
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The format specification for the constraints. For more information, see Visual Format Language in Auto Layout Guide.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>metrics</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A dictionary of constants that appear in the visual format string. The dictionary’s keys must be the string values used in the visual format string. Their values must be NSNumber objects.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>views</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A dictionary of views that appear in the visual format string. The keys must be the string values used in the visual format string, and the values must be the view objects.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIView+LionheartExtensions.swift#L248-L254">Show on GitHub</a>
                       </div>
@@ -882,6 +1070,25 @@ view.addVisualFormatConstraints("|-20-[view]-20-|")
                           <pre class="highlight"><code><span class="kd">func</span> <span class="nf">distance</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>CGPoint</code> to measure the distance to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1062,7 +1269,7 @@ let labels: [UILabel] = view.descendantViewsOfType()
     </div>
     <section class="footer">
       <p>&copy; 2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
