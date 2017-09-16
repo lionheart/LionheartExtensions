@@ -17,15 +17,40 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias StringLiteralType = String
 
+    /// A representation of a hexadecimal-encoded color
     case HEX(Int)
+
+    /// A representation of a RGB-encoded color
     case RGB(Int, Int, Int)
+
+    /// A representation of a RGB-encoded color, with an alpha value
     case RGBA(Int, Int, Int, Float)
+
+    /// An invalid color
     case invalid
 
+    /**
+     Creates a `ColorRepresentation` with the provided hexadecimal value.
+
+     ```
+     let red: ColorRepresentation = 0xFF0000
+     ```
+
+     - see: `UIColor.init(_:)`
+     */
     public init(integerLiteral value: IntegerLiteralType) {
         self = .HEX(value)
     }
 
+    /**
+     Creates a `ColorRepresentation` from 3 or 4 integer parameters.
+
+     ```
+     let red: ColorRepresentation = [255, 0, 0]
+     ```
+
+     - see: `UIColor.init(_:)`
+     */
     public init(arrayLiteral elements: Element...) {
         let intElements = elements.map { Int($0) }
         switch elements.count {
