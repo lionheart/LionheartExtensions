@@ -8,13 +8,7 @@
 
 import Foundation
 
-/**
- An easy way to represent colors through hex, RGB, and RGBA values.
-
- - author: Daniel Loewenherz
- - copyright: ©2016 Lionheart Software LLC
- - date: December 13, 2016
- */
+/// An easy way to represent colors through hex, RGB, and RGBA values.
 public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArrayLiteral, ExpressibleByStringLiteral {
     public typealias IntegerLiteralType = Int
     public typealias Element = Float
