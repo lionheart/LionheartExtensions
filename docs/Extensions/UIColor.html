@@ -241,15 +241,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize a <code>UIColor</code> object with any number of methods. E.g.</p>
+                        <p>Helper method to instantiate a <code>UIColor</code> object any number of ways. E.g.</p>
 
-<p>Integer literals:</p>
+<p>With integer literals:</p>
 <pre class="highlight plaintext"><code>UIColor(0xF00)
 UIColor(0xFF0000)
 UIColor(0xFF0000FF)
 </code></pre>
 
-<p>String literals:</p>
+<p>Or string literals:</p>
 <pre class="highlight plaintext"><code>UIColor("f00")
 UIColor("FF0000")
 UIColor("rgb(255, 0, 0)")
@@ -257,7 +257,7 @@ UIColor("rgba(255, 0, 0, 0.15)")
 </code></pre>
 
 <p>Or (preferably), if you want to be a bit more explicit:</p>
-<pre class="highlight plaintext"><code>UIColor(.hex(0xF00))
+<pre class="highlight plaintext"><code>UIColor(.HEX(0xFF0000))
 UIColor(.RGB(255, 0, 0))
 UIColor(.RGBA(255, 0, 0, 0.5))
 </code></pre>
@@ -311,7 +311,7 @@ UIColor(.RGBA(255, 0, 0, 0.5))
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Lighten a color by a specified ratio.</p>
+                        <p>Returns a <code>UIColor</code> with each color component of <code>self</code> lightened by <code>ratio</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -322,31 +322,8 @@ UIColor(.RGBA(255, 0, 0, 0.5))
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>ratio</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the ratio by which to lighten the color by.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A new <code>UIColor</code>.</p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L84-L96">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L79-L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -364,22 +341,7 @@ UIColor(.RGBA(255, 0, 0, 0.5))
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Darken a color by a specified ratio.</p>
-<div class="aside aside-author">
-    <p class="aside-title">Author</p>
-    <p>Daniel Loewenherz</p>
-
-</div>
-<div class="aside aside-copyright">
-    <p class="aside-title">Copyright</p>
-    <p>©2016 Lionheart Software LLC</p>
-
-</div>
-<div class="aside aside-date">
-    <p class="aside-title">Date</p>
-    <p>February 17, 2016</p>
-
-</div>
+                        <p>Returns a <code>UIColor</code> with each color component of <code>self</code> darkened by <code>ratio</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -390,31 +352,8 @@ UIColor(.RGBA(255, 0, 0, 0.5))
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>ratio</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the ratio by which to darken the color by.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A new <code>UIColor</code>.</p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L108-L120">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L94-L106">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -432,20 +371,10 @@ UIColor(.RGBA(255, 0, 0, 0.5))
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicate whether a given color is dark.</p>
-<div class="aside aside-author">
-    <p class="aside-title">Author</p>
-    Daniel Loewenherz
-
-</div>
-<div class="aside aside-copyright">
-    <p class="aside-title">Copyright</p>
-    ©2016 Lionheart Software LLC
-
-</div>
-<div class="aside aside-date">
-    <p class="aside-title">Date</p>
-    February 17, 2016
+                        <p>A bool that indicates whether the color is dark.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Formula for brightness derived from <a href="http://www.w3.org/WAI/ER/WD-AERT/#color-contrast">W3C Techniques For Accessibility Evaluation And Repair Tools</a>, and formula for alpha-blending attributed to <a href="http://stackoverflow.com/a/746937/39155">StackOverflow</a>.
 
 </div>
 
@@ -458,12 +387,8 @@ UIColor(.RGBA(255, 0, 0, 0.5))
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A <code>Bool</code> indicating if the given <code>UIColor</code> is dark.</p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L130-L158">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/UIColor+LionheartExtensions.swift#L113-L141">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
