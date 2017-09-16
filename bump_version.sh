@@ -21,6 +21,4 @@ if [ "$1" != "" ]; then
     git push origin master
     git push --tags
     pod trunk push
-
-    sync_directory_to_s3 "us-east-2" "lionheart-opensource" "E33XE7TKGUV1ZD" "docs" "LionheartExtensions/"
 fi
