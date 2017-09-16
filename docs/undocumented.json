@@ -1,34 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/ColorRepresentation.swift",
-      "line": 20,
-      "symbol": "ColorRepresentation.HEX",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/ColorRepresentation.swift",
-      "line": 21,
-      "symbol": "ColorRepresentation.RGB",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/ColorRepresentation.swift",
-      "line": 22,
-      "symbol": "ColorRepresentation.RGBA",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/ColorRepresentation.swift",
-      "line": 23,
-      "symbol": "ColorRepresentation.invalid",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/Array+LionheartExtensions.swift",
       "line": 21,
       "symbol": "Array.chunks(_:)",

@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           LionheartExtensions Docs
         </a>
-         (47% documented)
+         (50% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -247,19 +247,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A representation of a hexadecimal-encoded color</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ColorRepresentation</span><span class="p">:</span> <span class="kt">ExpressibleByIntegerLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByArrayLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">HEX</span><span class="p">(</span><span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -281,19 +281,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A representation of a RGB-encoded color</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ColorRepresentation</span><span class="p">:</span> <span class="kt">ExpressibleByIntegerLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByArrayLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">RGB</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -315,19 +315,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A representation of a RGB-encoded color, with an alpha value</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ColorRepresentation</span><span class="p">:</span> <span class="kt">ExpressibleByIntegerLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByArrayLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">RGBA</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -349,19 +349,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An invalid color</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ColorRepresentation</span><span class="p">:</span> <span class="kt">ExpressibleByIntegerLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByArrayLiteral</span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">invalid</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -373,9 +373,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s27ExpressibleByIntegerLiteralPx0cD4TypeQz07integerD0_tcfc"></a>
+                    <a name="/s:19LionheartExtensions19ColorRepresentationOACSi14integerLiteral_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(integerLiteral:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s27ExpressibleByIntegerLiteralPx0cD4TypeQz07integerD0_tcfc">init(integerLiteral:)</a>
+                    <a class="token" href="#/s:19LionheartExtensions19ColorRepresentationOACSi14integerLiteral_tcfc">init(integerLiteral:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -383,7 +383,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Creates a <code>ColorRepresentation</code> with the provided hexadecimal value.</p>
+<pre class="highlight plaintext"><code>let red: ColorRepresentation = 0xFF0000
+</code></pre>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code><a href="../Extensions/UIColor.html#/s:So7UIColorC19LionheartExtensionsEAbC19ColorRepresentationOcfc">UIColor.init(_:)</a></code>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -393,27 +401,8 @@
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>value</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L25-L27">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L41-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -421,9 +410,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s25ExpressibleByArrayLiteralPxSay0cD7ElementQzG05arrayD0d_tcfc"></a>
+                    <a name="/s:19LionheartExtensions19ColorRepresentationOACSaySfG12arrayLiterald_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(arrayLiteral:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s25ExpressibleByArrayLiteralPxSay0cD7ElementQzG05arrayD0d_tcfc">init(arrayLiteral:)</a>
+                    <a class="token" href="#/s:19LionheartExtensions19ColorRepresentationOACSaySfG12arrayLiterald_tcfc">init(arrayLiteral:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -431,7 +420,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Creates a <code>ColorRepresentation</code> from 3 or 4 integer parameters.</p>
+<pre class="highlight plaintext"><code>let red: ColorRepresentation = [255, 0, 0]
+</code></pre>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code><a href="../Extensions/UIColor.html#/s:So7UIColorC19LionheartExtensionsEAbC19ColorRepresentationOcfc">UIColor.init(_:)</a></code>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -442,7 +439,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L29-L36">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L54-L61">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -490,7 +487,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L87-L89">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L112-L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -538,7 +535,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L91-L93">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L116-L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -586,7 +583,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L95-L97">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/ColorRepresentation.swift#L120-L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
