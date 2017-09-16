@@ -30,4 +30,7 @@ public extension UIAlertController {
     public func addAction(title: String, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) {
         addAction(UIAlertAction(title: title, style: style, handler: handler))
     }
+
+    @available(*, unavailable, renamed: "addAction(title:style:handler:)")
+    public func addAction(withTitle title: String, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) { }
 }
