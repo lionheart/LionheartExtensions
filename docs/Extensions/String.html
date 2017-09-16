@@ -246,7 +246,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Coerce empty strings to nil.</p>
+                        <p>A string identifical to <code>self</code> if <code>self</code> is not an empty string, <code>nil</code> otherwise.</p>
 
                       </div>
                       <div class="declaration">
@@ -266,6 +266,36 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:SS19LionheartExtensionsE6lengthSiv"></a>
+                    <a name="//apple_ref/swift/Property/length" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS19LionheartExtensionsE6lengthSiv">length</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The length of the current string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L91-L93">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:SS19LionheartExtensionsE5rangeSC8_NSRangeVv"></a>
                     <a name="//apple_ref/swift/Property/range" class="dashAnchor"></a>
                     <a class="token" href="#/s:SS19LionheartExtensionsE5rangeSC8_NSRangeVv">range</a>
@@ -276,7 +306,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an <code>NSRange</code> indicating the length of the <code>String</code>.</p>
+                        <p>An <code>NSRange</code> encompassing all of <code>self</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -287,12 +317,8 @@
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>An <code>NSRange</code></p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L95-L97">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L96-L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -310,7 +336,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts an <code>NSRange</code> for the current <code>String</code> to a a type of <code>Range&lt;String.Index&gt;</code>.</p>
+                        <p>Returns a <code>Range&lt;String.Index&gt;</code> equivalent to the provided <code>NSRange</code> for <code>self</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -321,45 +347,8 @@
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A range of type <code>Range&lt;String.Index&gt;</code></p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L104-L108">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:SS19LionheartExtensionsE6lengthSiv"></a>
-                    <a name="//apple_ref/swift/Property/length" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS19LionheartExtensionsE6lengthSiv">length</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Returns the length of the current string.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L113-L115">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L101-L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -377,7 +366,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Trim all characters from the string in the specified character set.</p>
+                        <p>Trims all characters from the string in the specified <code>CharacterSet</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -388,27 +377,8 @@
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>characterSet</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>a <code>CharacterSet</code> specifying which characters to trim from the string</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L122-L124">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L108-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -438,7 +408,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L129-L135">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L113-L119">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -468,7 +438,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L137-L139">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L121-L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -498,7 +468,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L141-L143">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L125-L127">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -516,7 +486,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A copy of the current <code>String</code> with the first letter lowercased.</p>
+                        <p>A copy of <code>self</code> with the first letter lowercased.</p>
 
                       </div>
                       <div class="declaration">
@@ -528,7 +498,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L148-L151">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L130-L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -546,7 +516,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A copy of the current <code>String</code> with the first letter uppercased.</p>
+                        <p>A copy of <code>self</code> with the first letter uppercased.</p>
 
                       </div>
                       <div class="declaration">
@@ -558,7 +528,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L156-L159">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L136-L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -588,7 +558,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L164-L170">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L144-L150">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -618,7 +588,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L175-L179">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L155-L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -648,7 +618,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L181-L215">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L161-L195">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -678,7 +648,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L217-L219">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L197-L199">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -708,7 +678,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L221-L227">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.6.2/Pod/Classes/Core/String+LionheartExtensions.swift#L201-L207">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
