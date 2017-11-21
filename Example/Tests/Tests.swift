@@ -66,6 +66,33 @@ class LionheartExtensionsTests: XCTestCase {
         expect(a) == 1
     }
 
+    func testImage() {
+        guard let image = UIImage(color: .red),
+            let data = UIImagePNGRepresentation(image) else {
+                fatalError()
+        }
+
+        let string = data.base64EncodedString()
+        expect(string) == "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUCB1j+M/A8B8ABQAB/8gPYhYAAAAASUVORK5CYII="
+
+        guard let newData = Data(base64Encoded: string),
+            let newImage = UIImage(data: newData) else {
+            fatalError()
+        }
+
+        expect(newImage.size) == CGSize(width: 1, height: 1)
+
+        let view = UIView()
+        view.backgroundColor = .red
+        view.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+        let viewImage = UIImage(view: view, scale: 1)!
+        guard let viewImageData = UIImagePNGRepresentation(viewImage) else {
+            fatalError()
+        }
+
+        expect(viewImageData) == data
+    }
+
     func testFunctional() {
         let noTrueBool: [Bool?] = [false, false, false]
         let oneTrueBool: [Bool?] = [false, false, true]
