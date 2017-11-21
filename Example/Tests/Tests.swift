@@ -31,8 +31,8 @@ class LionheartExtensionsTests: XCTestCase {
         expect(rangeA.location) == rangeA.location
 
         let sentence = "the quick brown fox jumped over the lazy dog"
-        expect(sentence.stringByUppercasingFirstLetter == "The quick brown fox jumped over the lazy dog")
-        expect(sentence.stringByLowercasingFirstLetter == sentence)
+        expect(sentence.stringByUppercasingFirstLetter) == "The quick brown fox jumped over the lazy dog"
+        expect(sentence.stringByLowercasingFirstLetter) == sentence
     }
 
     func testFont() {
