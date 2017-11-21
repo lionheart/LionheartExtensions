@@ -128,13 +128,13 @@ public extension String {
     /// A copy of `self` with the first letter lowercased.
     var stringByLowercasingFirstLetter: String {
         let start = index(after: startIndex)
-        return self[...start].lowercased() + self[start..<endIndex]
+        return self[..<start].lowercased() + self[start..<endIndex]
     }
 
     /// A copy of `self` with the first letter uppercased.
     var stringByUppercasingFirstLetter: String {
         let start = index(after: startIndex)
-        return self[...start].uppercased() + self[start..<endIndex]
+        return self[..<start].uppercased() + self[start..<endIndex]
     }
 
     /**
