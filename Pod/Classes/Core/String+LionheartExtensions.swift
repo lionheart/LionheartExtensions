@@ -264,7 +264,7 @@ public extension NSAttributedString {
 }
 
 public extension NSMutableAttributedString {
-    func addString(withAttributes string: String, attributes: [NSAttributedStringKey: Any]) {
+    func addString(_ string: String, attributes: [NSAttributedStringKey: Any]) {
         let attributedString = NSAttributedString(string: string, attributes: attributes)
         append(attributedString)
     }
