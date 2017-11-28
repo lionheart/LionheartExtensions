@@ -98,9 +98,9 @@ public extension String {
     }
 
     /// Returns a `Range<String.Index>` equivalent to the provided `NSRange` for `self`.
-    @available(*, deprecated)
-    func toRange(_ range: NSRange) -> Range<String.Index>? {
-        return Range(range, in: self)
+    @available(*, deprecated, message: "Now in the Swift Standard Library. Use `Range(_:in:)` instead.")
+    func toRange(_ range: NSRange) -> Range<String.Index> {
+        return Range(range, in: self)!
     }
 
     /// Trims all characters from the string in the specified `CharacterSet`.
