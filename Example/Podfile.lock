@@ -1,8 +1,8 @@
 PODS:
-  - LionheartExtensions (3.7.2):
-    - LionheartExtensions/Core (= 3.7.2)
-  - LionheartExtensions/Core (3.7.2)
-  - Nimble (7.0.2)
+  - LionheartExtensions (3.8.1):
+    - LionheartExtensions/Core (= 3.8.1)
+  - LionheartExtensions/Core (3.8.1)
+  - Nimble (7.0.3)
   - Quick (1.2.0)
 
 DEPENDENCIES:
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LionheartExtensions: f3c5fa5a951a787d898bf62000b562e938e72d5d
-  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
+  LionheartExtensions: 1af2a637143ed51cd2128de5affd88a73590272e
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
 PODFILE CHECKSUM: eb9c9fc5d67e266461ea2889c73f44df3fa22686
