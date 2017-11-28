@@ -1,17 +1,18 @@
 {
   "name": "LionheartExtensions",
-  "version": "3.7.2",
-  "summary": "Swift Extensions you probably will find useful.",
+  "version": "3.8.1",
+  "summary": "Swift Extensions you probably will need. Definitely.",
   "homepage": "https://github.com/lionheart/LionheartExtensions",
   "license": "Apache 2.0",
   "authors": {
-    "Dan Loewenherz": "dloewenherz@gmail.com"
+    "Dan Loewenherz": "dan@lionheartsw.com"
   },
   "source": {
     "git": "https://github.com/lionheart/LionheartExtensions.git",
-    "tag": "3.7.2"
+    "tag": "3.8.1"
   },
   "social_media_url": "https://twitter.com/lionheartsw",
+  "documentation_url": "https://code.lionheart.software/LionheartExtensions/",
   "requires_arc": true,
   "platforms": {
     "ios": "10.3"
