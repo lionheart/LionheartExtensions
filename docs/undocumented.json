@@ -220,7 +220,7 @@
     {
       "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 267,
-      "symbol": "NSMutableAttributedString.addString(withAttributes:attributes:)",
+      "symbol": "NSMutableAttributedString.addString(_:attributes:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
