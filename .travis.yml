@@ -2,5 +2,9 @@ script:
 - set -o pipefail && xcodebuild test -workspace Example/LionheartExtensions.xcworkspace -scheme LionheartExtensions -destination "platform=iOS Simulator,name=iPhone X" -destination-timeout 1 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
 
+before_install:
+  - gem update --system
+  - gem install bundler
+
 language: objective-c
 osx_image: xcode9.2
