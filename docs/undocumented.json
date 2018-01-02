@@ -1,453 +1,453 @@
 {
   "warnings": [
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/IndexPath+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/IndexPath+LionheartExtensions.swift",
       "line": 36,
       "symbol": "IndexPath.==(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/IndexPath+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/IndexPath+LionheartExtensions.swift",
       "line": 40,
       "symbol": "IndexPath.==(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift",
       "line": 65,
       "symbol": "NSDecimalNumber.+=(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift",
       "line": 69,
       "symbol": "NSDecimalNumber.-=(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift",
       "line": 73,
       "symbol": "NSDecimalNumber.*=(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift",
       "line": 77,
       "symbol": "NSDecimalNumber./=(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/NSRegularExpression+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/NSRegularExpression+LionheartExtensions.swift",
       "line": 21,
       "symbol": "NSRegularExpression.replaceMatchesInString(_:options:range:withTemplate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 20,
       "symbol": "VariableNamingFormat",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 21,
       "symbol": "VariableNamingFormat.camelCase",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 22,
       "symbol": "VariableNamingFormat.underscores",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 23,
       "symbol": "VariableNamingFormat.pascalCase",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 44,
       "symbol": "LHSStringType",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 61,
       "symbol": "LHSStringType.stringByLowercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 62,
       "symbol": "LHSStringType.stringByUppercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 63,
       "symbol": "LHSStringType.stringByReplacingSpacesWithDashes",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 65,
       "symbol": "LHSStringType.stringByConverting(toNamingFormat:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 68,
       "symbol": "LHSURLStringType",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 69,
       "symbol": "LHSURLStringType.URLEncodedString",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 120,
       "symbol": "String.replaceSpacesWithDashes()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 124,
       "symbol": "String.replaceCapitalsWithUnderscores()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 160,
       "symbol": "String.stringByConverting(toNamingFormat:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 196,
       "symbol": "String.convert(toNamingFormat:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 200,
       "symbol": "String.isComposedOf(charactersInSet:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 219,
       "symbol": "NSString.stringByLowercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 223,
       "symbol": "NSString.stringByUppercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 227,
       "symbol": "NSString.stringByReplacingSpacesWithDashes",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 231,
       "symbol": "NSString.stringByConverting(toNamingFormat:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 249,
       "symbol": "NSAttributedString.stringByLowercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 253,
       "symbol": "NSAttributedString.stringByUppercasingFirstLetter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 257,
       "symbol": "NSAttributedString.stringByReplacingSpacesWithDashes",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 261,
       "symbol": "NSAttributedString.stringByConverting(toNamingFormat:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 267,
       "symbol": "NSMutableAttributedString.addString(_:attributes:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 272,
       "symbol": "NSMutableAttributedString.addAttribute(_:value:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 276,
       "symbol": "NSMutableAttributedString.addAttributes(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/String+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/String+LionheartExtensions.swift",
       "line": 280,
       "symbol": "NSMutableAttributedString.removeAttribute(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
       "line": 21,
       "symbol": "UIImageFormat",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
       "line": 22,
       "symbol": "UIImageFormat.PNG",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
       "line": 23,
       "symbol": "UIImageFormat.JPEG",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
       "line": 26,
       "symbol": "UIImageSaveError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
       "line": 27,
       "symbol": "UIImageSaveError.unspecified",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UITextField+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UITextField+LionheartExtensions.swift",
       "line": 20,
       "symbol": "UITextFieldIdentifiable",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UITextField+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UITextField+LionheartExtensions.swift",
       "line": 21,
       "symbol": "UITextFieldIdentifiable.identifier",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
       "line": 114,
       "symbol": "UIView.fillHorizontalMarginsOfSuperview(margin:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
       "line": 354,
       "symbol": "Array.removeFromSuperviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/File.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/File.swift",
       "line": null,
       "symbol": "File",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 20,
       "symbol": "TruthTeller",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 21,
       "symbol": "TruthTeller.value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 23,
       "symbol": "TruthTeller.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 43,
       "symbol": "truthy(_:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 47,
       "symbol": "all(_:test:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 56,
       "symbol": "any(_:test:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 66,
       "symbol": "all(_:test:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 76,
       "symbol": "any(_:test:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 89,
       "symbol": "Array.all(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Functional.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Functional.swift",
       "line": 96,
       "symbol": "Array.any(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Summable.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": null,
       "symbol": "NSNumberBridgeable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Summable.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": 11,
       "symbol": "ExpressibleByDecimal",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Summable.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": 12,
       "symbol": "ExpressibleByDecimal.decimalNumber",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Summable.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": 13,
       "symbol": "ExpressibleByDecimal.makeFromNumber(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Summable.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": 22,
       "symbol": "NSNumberBridgeable.decimalNumber",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Summable.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": 24,
       "symbol": "NSNumberBridgeable.makeFromNumber(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Summable.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": 82,
       "symbol": "NSDecimalNumber.decimalNumber",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Summable.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": 84,
       "symbol": "NSDecimalNumber.makeFromNumber(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dan/Projects/LionheartExtensions/Pod/Classes/Summable.swift",
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": 90,
       "symbol": "Array.sum",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/dan/Projects/LionheartExtensions"
+  "source_directory": "/Users/dan/Projects/lionheartextensions"
 }
