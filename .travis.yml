@@ -1,5 +1,5 @@
 script:
-- set -o pipefail && xcodebuild test -workspace Example/LionheartExtensions.xcworkspace -scheme LionheartExtensions -destination "platform=iOS Simulator,name=iPhone X" -destination-timeout 1 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/LionheartExtensions.xcworkspace -scheme LionheartExtensions -destination "platform=iOS Simulator,name=iPhone X" -destination-timeout 1 ONLY_ACTIVE_ARCH=NO | bundle exec xcpretty
 - bundle exec pod lib lint
 
 before_install:
