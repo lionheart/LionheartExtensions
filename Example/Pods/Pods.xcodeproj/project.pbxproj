@@ -30,6 +30,7 @@
 		3427D1C65FAEFBA5282A9C3D2F6950BF /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D48A33A49B17952C7ABB6214240CB9 /* URL+FileName.swift */; };
 		35CADB1AD8E063A35DF68147F3183206 /* CwlMachBadInstructionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = EF959663D47B18687B5785D72D856CB6 /* CwlMachBadInstructionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		376EA3591FFC091A00238E0E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EA3581FFC091A00238E0E /* Main.swift */; };
+		37C9B277202F4DFF0061840C /* UIApplicationDelegate+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9B276202F4DFF0061840C /* UIApplicationDelegate+LionheartExtensions.swift */; };
 		386C27C051B60D521360BC12E384BED6 /* Pods-LionheartExtensions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 769D0AFA55C8CB26592DFDC99325AF81 /* Pods-LionheartExtensions_Example-dummy.m */; };
 		38D917973DDB17D02449D8AA0682D87E /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1D1A0D20C667FAF4F01C3BA4AC451 /* Behavior.swift */; };
 		3B3A88E074630B1EBC2139F4F70F0443 /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0094EAAC3C18B000459B228F01637 /* ThrowAssertion.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -216,6 +217,7 @@
 		34B5614CBE84B80AA39F75553B3C322A /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Sources/Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
 		35AEA5EE84902B2868710A17C747AE0E /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
 		376EA3581FFC091A00238E0E /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Main.swift; path = Pod/Classes/Main.swift; sourceTree = "<group>"; };
+		37C9B276202F4DFF0061840C /* UIApplicationDelegate+LionheartExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplicationDelegate+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		38A82DE4A0130E4C946A904FEDDD74CA /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Sources/QuickObjectiveC/QuickSpec.m; sourceTree = "<group>"; };
 		3B6BAD1D6087151AE80585CD387919BA /* CwlDarwinDefinitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDarwinDefinitions.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlDarwinDefinitions.swift; sourceTree = "<group>"; };
 		3D6DF824137955AF603480261BFCEFB7 /* Pods_LionheartExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LionheartExtensions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -420,6 +422,7 @@
 				5CB1EDB9649366F89CD2859BD714139E /* Optional+LionheartExtensions.swift */,
 				91DBD85C2BBF5235658FE9BA47FE69D2 /* String+LionheartExtensions.swift */,
 				E5EA0D684567E03942275E813BE8A5B6 /* UIAlertController+LionheartExtensions.swift */,
+				37C9B276202F4DFF0061840C /* UIApplicationDelegate+LionheartExtensions.swift */,
 				0D197B21F2912635CEBFCFCE79EE511C /* UIColor+LionheartExtensions.swift */,
 				F83BF22148D3ABF4CFECEAE2580C4358 /* UIDevice+LionheartExtensions.swift */,
 				F1C997ED2E5FA2B8823B8F804D155EF3 /* UIFont+LionheartExtensions.swift */,
@@ -1041,6 +1044,7 @@
 				FE3D1E142692D801BEA5356F83A047B5 /* UIPrintPageRenderer+LionheartExtensions.swift in Sources */,
 				E3114DD5BF6571D8CAE8313AEF05CABD /* UIScreen+LionheartExtensions.swift in Sources */,
 				AD83130A1BA06A3DB23C1F7B5C9087D8 /* UITextField+LionheartExtensions.swift in Sources */,
+				37C9B277202F4DFF0061840C /* UIApplicationDelegate+LionheartExtensions.swift in Sources */,
 				244065EBFDE7E4FE3E5251F46FEE7A5D /* UIView+LionheartExtensions.swift in Sources */,
 				95306F3EE46B1CF0EBDDCDDBD586DDAB /* UIViewController+LionheartExtensions.swift in Sources */,
 				C7AE818038E37D62E3F2C0ADDC00C49E /* UIWindow+LionheartExtensions.swift in Sources */,
