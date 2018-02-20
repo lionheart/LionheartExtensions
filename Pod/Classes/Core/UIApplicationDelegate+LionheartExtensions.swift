@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol UIApplicationDelegateWithWindow: UIApplicationDelegate {
+public protocol UIApplicationDelegateWithWindow: UIApplicationDelegate {
     var window: UIWindow? { get set }
 }
 
-extension UIApplicationDelegateWithWindow {
+public extension UIApplicationDelegateWithWindow {
     var rootViewController: UIViewController? {
         set {
             window = UIWindow(frame: UIScreen.main.bounds)
