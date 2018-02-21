@@ -268,7 +268,7 @@
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIApplicationDelegate+LionheartExtensions.swift",
-      "line": 15,
+      "line": 16,
       "symbol": "UIApplicationDelegateWithWindow.rootViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
