@@ -11,6 +11,7 @@ public protocol UIApplicationDelegateWithWindow: UIApplicationDelegate {
     var window: UIWindow? { get set }
 }
 
+/// Usage: `rootViewController = controller`
 public extension UIApplicationDelegateWithWindow {
     var rootViewController: UIViewController? {
         set {
