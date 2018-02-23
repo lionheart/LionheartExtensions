@@ -15,6 +15,7 @@ limitations under the License.
 -->
 
 ![](meta/repo-banner.png)
+[![](meta/repo-banner-bottom.png)][lionheart-url]
 
 ### An invaluable collection of Swift extensions and utilities for iOS development
 
@@ -97,4 +98,5 @@ LionheartExtensions is available under the Apache 2.0 license. See the [LICENSE]
 [cocoapods-url]: http://cocoapods.org
 [cocoapods-repo-url]: http://cocoapods.org/pods/LionheartExtensions
 [doc-url]: https://code.lionheart.software/LionheartExtensions/
+[lionheart-url]: https://lionheartsw.com/
 
