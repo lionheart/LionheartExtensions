@@ -16,9 +16,7 @@ Pod::Spec.new do |s|
 
   s.default_subspec = 'Core'
 
-  s.pod_target_xcconfig = {
-    'SWIFT_VERSION' => '4.0'
-  }
+  s.swift_version = '4.0'
 
   s.subspec 'Core' do |spec|
     spec.source_files = ['Pod/Classes/Core/*', 'Pod/Classes/*.swift']
