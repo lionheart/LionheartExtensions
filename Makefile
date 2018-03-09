@@ -15,6 +15,10 @@
 # Usage: make VERSION=0.1.2
 
 PODFILE := $(shell find . -name "*.podspec" -depth 1)
+DIRECTORY := $(shell basename $(PODFILE) .podspec)
+AWS_S3_BUCKET_NAME := lionheart-opensource
+AWS_S3_REGION := us-east-2
+AWS_CF_DISTRIBUTION_ID := E33XE7TKGUV1ZD
 
 all: publish
 
@@ -32,7 +36,11 @@ replace_text: podspec_found version_provided
 	sed -i "" "s/tree\/[\.0-9]*/tree\/$(VERSION)/g" .jazzy.yaml
 
 generate_docs: replace_text
-	sh generate_docs.sh
+	bundle exec jazzy
+	git add docs/
+	git add .jazzy.yaml
+	git commit -m "documentation update"
+	sync_directory_to_s3 "$(AWS_S3_REGION)" "$(AWS_S3_BUCKET_NAME)" "$(AWS_CF_DISTRIBUTION_ID)" "docs" "$(DIRECTORY)/"
 
 tag: quicklint generate_docs
 	git add .
