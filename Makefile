@@ -54,5 +54,5 @@ tag: quicklint generate_docs
 	git push --tags
 
 publish: tag
-	bundle exec pod trunk push
+	bundle exec pod trunk push --allow-warnings
 
