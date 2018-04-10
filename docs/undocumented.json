@@ -1,6 +1,55 @@
 {
   "warnings": [
     {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ActivityIndicatorButton.swift",
+      "line": null,
+      "symbol": "ActivityIndicatorButton",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ActivityIndicatorButton.swift",
+      "line": 10,
+      "symbol": "ActivityIndicatorButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ActivityIndicatorButton.swift",
+      "line": 48,
+      "symbol": "ActivityIndicatorButton.setTitle(title:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ActivityIndicatorButton.swift",
+      "line": 52,
+      "symbol": "ActivityIndicatorButton.setTitle(title:subtitle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ActivityIndicatorButton.swift",
+      "line": 66,
+      "symbol": "ActivityIndicatorButton.startAnimating()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ActivityIndicatorButton.swift",
+      "line": 72,
+      "symbol": "ActivityIndicatorButton.stopAnimating()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ColorRepresentation.swift",
+      "line": 14,
+      "symbol": "ColorRepresentation.Element",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/IndexPath+LionheartExtensions.swift",
       "line": 36,
       "symbol": "IndexPath.==(_:_:)",
@@ -324,6 +373,13 @@
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
+      "line": 20,
+      "symbol": "LayoutDictionary",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
       "line": 114,
       "symbol": "UIView.fillHorizontalMarginsOfSuperview(margin:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -333,6 +389,48 @@
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
       "line": 354,
       "symbol": "Array.removeFromSuperviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/CustomButtonType.swift",
+      "line": 10,
+      "symbol": "CustomButtonType",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/CustomButtonType.swift",
+      "line": 11,
+      "symbol": "CustomButtonType.setTitle(title:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/CustomButtonType.swift",
+      "line": 12,
+      "symbol": "CustomButtonType.setTitle(title:subtitle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/CustomButtonType.swift",
+      "line": 13,
+      "symbol": "CustomButtonType.sizeToFit()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/CustomButtonType.swift",
+      "line": 14,
+      "symbol": "CustomButtonType.startAnimating()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/CustomButtonType.swift",
+      "line": 15,
+      "symbol": "CustomButtonType.stopAnimating()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -474,6 +572,48 @@
       "line": 90,
       "symbol": "Array.sum",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": null,
+      "symbol": "TitleButton",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 10,
+      "symbol": "TitleButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 43,
+      "symbol": "TitleButton.setTitle(title:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 47,
+      "symbol": "TitleButton.setTitle(title:subtitle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 65,
+      "symbol": "TitleButton.startAnimating()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 69,
+      "symbol": "TitleButton.stopAnimating()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
