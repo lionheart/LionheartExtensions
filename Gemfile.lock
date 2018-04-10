@@ -105,10 +105,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoapods
-  jazzy
-  xcpretty
-  yarn
+  cocoapods (~> 1.5.0)
+  jazzy (~> 0.9)
+  xcpretty (~> 0.2)
+  yarn (~> 0.1)
 
 BUNDLED WITH
    1.16.1
