@@ -590,28 +590,56 @@
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 43,
+      "line": 11,
+      "symbol": "TitleButton.enableTitleCopy",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 13,
+      "symbol": "TitleButton.canBecomeFirstResponder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 17,
+      "symbol": "TitleButton.canPerformAction(_:withSender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 21,
+      "symbol": "TitleButton.copy(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 57,
       "symbol": "TitleButton.setTitle(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 47,
+      "line": 61,
       "symbol": "TitleButton.setTitle(title:subtitle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 65,
+      "line": 79,
       "symbol": "TitleButton.startAnimating()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 69,
+      "line": 83,
       "symbol": "TitleButton.stopAnimating()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
