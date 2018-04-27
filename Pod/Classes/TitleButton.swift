@@ -8,6 +8,20 @@
 import Foundation
 
 public final class TitleButton: UIButton {
+    public var enableTitleCopy = false
+    
+    public override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    public override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        return enableTitleCopy && action == #selector(UIApplication.copy(_:))
+    }
+    
+    public override func copy(_ sender: Any?) {
+        UIPasteboard.general.string = titleLabel?.text
+    }
+
     static let centeredParagraphStyle: NSParagraphStyle = {
         let style = NSMutableParagraphStyle()
         style.setParagraphStyle(.default)
