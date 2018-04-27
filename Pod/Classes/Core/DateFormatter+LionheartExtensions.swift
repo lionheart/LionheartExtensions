@@ -13,6 +13,7 @@ fileprivate struct DateFormatterString {
     static let DateComponent2 = "dd-MM-yyyy"
     static let DateComponent3 = "yyyy-MM-dd"
     static let DateComponent4 = "yyyy-dd-MM"
+    static let DateComponent5 = "yyyyMMddHHmmssZ"
     
     static let TimeComponent1 = "HH:mm"
     static let TimeComponent2 = "hh:mm a"
@@ -24,7 +25,7 @@ fileprivate struct DateFormatterString {
     static let TimeComponent8 = "HH:mm:ss.SSSZ"
     
     // Take one of the following
-    static let NoSpaceFormatStrings = [DateComponent1, DateComponent2, DateComponent3, DateComponent4]
+    static let NoSpaceFormatStrings = [DateComponent1, DateComponent2, DateComponent3, DateComponent4, DateComponent5]
     
     // And mix with one of these
     static let OneSpaceFormatStrings = [TimeComponent1, TimeComponent3, TimeComponent7, TimeComponent8]
