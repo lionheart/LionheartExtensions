@@ -31,6 +31,7 @@
 		378D949E207D7C0D00BBCA01 /* ActivityIndicatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D949D207D7C0D00BBCA01 /* ActivityIndicatorButton.swift */; };
 		378D94A0207D7C1B00BBCA01 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D949F207D7C1B00BBCA01 /* TitleButton.swift */; };
 		378D94A2207D7C2B00BBCA01 /* CustomButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D94A1207D7C2B00BBCA01 /* CustomButtonType.swift */; };
+		378ED88720BF3F9100EEC66C /* WKWebView+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378ED88620BF3F9100EEC66C /* WKWebView+LionheartExtensions.swift */; };
 		386C27C051B60D521360BC12E384BED6 /* Pods-LionheartExtensions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D118D6CF44F664A3EAAAFBB4CE442D7B /* Pods-LionheartExtensions_Example-dummy.m */; };
 		38D917973DDB17D02449D8AA0682D87E /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1D1A0D20C667FAF4F01C3BA4AC451 /* Behavior.swift */; };
 		3B3A88E074630B1EBC2139F4F70F0443 /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0094EAAC3C18B000459B228F01637 /* ThrowAssertion.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -251,6 +252,7 @@
 		378D949D207D7C0D00BBCA01 /* ActivityIndicatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityIndicatorButton.swift; path = Pod/Classes/ActivityIndicatorButton.swift; sourceTree = "<group>"; };
 		378D949F207D7C1B00BBCA01 /* TitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TitleButton.swift; path = Pod/Classes/TitleButton.swift; sourceTree = "<group>"; };
 		378D94A1207D7C2B00BBCA01 /* CustomButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomButtonType.swift; path = Pod/Classes/CustomButtonType.swift; sourceTree = "<group>"; };
+		378ED88620BF3F9100EEC66C /* WKWebView+LionheartExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		38A82DE4A0130E4C946A904FEDDD74CA /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Sources/QuickObjectiveC/QuickSpec.m; sourceTree = "<group>"; };
 		3B6BAD1D6087151AE80585CD387919BA /* CwlDarwinDefinitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDarwinDefinitions.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlDarwinDefinitions.swift; sourceTree = "<group>"; };
 		3B7490FC0F464777D25639F15926E1F3 /* UIDevice+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIDevice+LionheartExtensions.swift"; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 				B19A43DB90C3304895F5447BC389D45A /* UIView+LionheartExtensions.swift */,
 				99223E66D68CE3BE6DBD21E9B208DD7C /* UIViewController+LionheartExtensions.swift */,
 				C5AD246C90EA5DB606B2FBC6D5DB23FE /* UIWindow+LionheartExtensions.swift */,
+				378ED88620BF3F9100EEC66C /* WKWebView+LionheartExtensions.swift */,
 			);
 			name = Core;
 			path = Pod/Classes/Core;
@@ -1325,6 +1328,7 @@
 				A0D1CD179096D94D0A21B7079CB186E0 /* UIAlertController+LionheartExtensions.swift in Sources */,
 				7058D9264FE65C5980F3D81D465349F2 /* UIApplicationDelegate+LionheartExtensions.swift in Sources */,
 				29749E4E2EEBFF490D5FE5603CA1D812 /* UIColor+LionheartExtensions.swift in Sources */,
+				378ED88720BF3F9100EEC66C /* WKWebView+LionheartExtensions.swift in Sources */,
 				E3BEFBBBF1B10D927C13ED30B6E28E63 /* UIDevice+LionheartExtensions.swift in Sources */,
 				8EA16BDC07AAF65647AEC394BEACD4F7 /* UIFont+LionheartExtensions.swift in Sources */,
 				9C33C640EAD7434577DE2B2FA7B8D6F2 /* UIImage+LionheartExtensions.swift in Sources */,
