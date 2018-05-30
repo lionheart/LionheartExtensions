@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LHSStringType Protocol Reference</title>
+    <title>WKWebView Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/LHSStringType" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/WKWebView" class="dashAnchor"></a>
 
-    <a title="LHSStringType Protocol Reference"></a>
+    <a title="WKWebView Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">LionheartExtensions Reference</a>
       <img class="carat" src="../img/carat.png" />
-      LHSStringType Protocol Reference
+      WKWebView Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -241,14 +241,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>LHSStringType</h1>
+            <h1>WKWebView</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">LHSStringType</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">WKWebView</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Helper methods for WKWebView</p>
 
           </div>
         </section>
@@ -260,9 +260,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:19LionheartExtensions13LHSStringTypeP6lengthSivp"></a>
-                    <a name="//apple_ref/swift/Property/length" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19LionheartExtensions13LHSStringTypeP6lengthSivp">length</a>
+                    <a name="/s:So9WKWebViewC19LionheartExtensionsE4loady10Foundation10URLRequestV_SaySo10HTTPCookieCG4withtF"></a>
+                    <a name="//apple_ref/swift/Method/load(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So9WKWebViewC19LionheartExtensionsE4loady10Foundation10URLRequestV_SaySo10HTTPCookieCG4withtF">load(_:with:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -270,187 +270,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Conforming types must provide a getter for the length of the string.</p>
-<div class="aside aside-date">
-    <p class="aside-title">Date</p>
-    February 17, 2016
-
-</div>
+                        <p>Loads an HTTP request with the specified cookies</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>An <code>Int</code> representing the <q>length</q> of the string (understood that this can differ based on encoding).</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.14.0/Pod/Classes/Core/String+LionheartExtensions.swift#L51">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19LionheartExtensions13LHSStringTypeP5rangeSC8_NSRangeVvp"></a>
-                    <a name="//apple_ref/swift/Property/range" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19LionheartExtensions13LHSStringTypeP5rangeSC8_NSRangeVvp">range</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Conforming types must provide a method to get the full range of the string.</p>
-<div class="aside aside-date">
-    <p class="aside-title">Date</p>
-    February 17, 2016
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">NSRange</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>An <code>NSRange</code> representing the entire string.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.14.0/Pod/Classes/Core/String+LionheartExtensions.swift#L59">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19LionheartExtensions13LHSStringTypeP30stringByLowercasingFirstLetterSSvp"></a>
-                    <a name="//apple_ref/swift/Property/stringByLowercasingFirstLetter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19LionheartExtensions13LHSStringTypeP30stringByLowercasingFirstLetterSSvp">stringByLowercasingFirstLetter</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">stringByLowercasingFirstLetter</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">load</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="n">with</span> <span class="nv">cookies</span><span class="p">:</span> <span class="p">[</span><span class="kt">HTTPCookie</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.14.0/Pod/Classes/Core/String+LionheartExtensions.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19LionheartExtensions13LHSStringTypeP30stringByUppercasingFirstLetterSSvp"></a>
-                    <a name="//apple_ref/swift/Property/stringByUppercasingFirstLetter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19LionheartExtensions13LHSStringTypeP30stringByUppercasingFirstLetterSSvp">stringByUppercasingFirstLetter</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">stringByUppercasingFirstLetter</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.14.0/Pod/Classes/Core/String+LionheartExtensions.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19LionheartExtensions13LHSStringTypeP33stringByReplacingSpacesWithDashesSSvp"></a>
-                    <a name="//apple_ref/swift/Property/stringByReplacingSpacesWithDashes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19LionheartExtensions13LHSStringTypeP33stringByReplacingSpacesWithDashesSSvp">stringByReplacingSpacesWithDashes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">stringByReplacingSpacesWithDashes</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.14.0/Pod/Classes/Core/String+LionheartExtensions.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19LionheartExtensions13LHSStringTypeP18stringByConvertingSSAA20VariableNamingFormatO02toiJ0_tF"></a>
-                    <a name="//apple_ref/swift/Method/stringByConverting(toNamingFormat:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19LionheartExtensions13LHSStringTypeP18stringByConvertingSSAA20VariableNamingFormatO02toiJ0_tF">stringByConverting(toNamingFormat:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stringByConverting</span><span class="p">(</span><span class="n">toNamingFormat</span> <span class="nv">naming</span><span class="p">:</span> <span class="kt"><a href="../Enums/VariableNamingFormat.html">VariableNamingFormat</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.14.0/Pod/Classes/Core/String+LionheartExtensions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.14.0/Pod/Classes/Core/WKWebView+LionheartExtensions.swift#L13-L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

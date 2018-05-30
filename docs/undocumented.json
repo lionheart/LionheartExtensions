@@ -653,6 +653,13 @@
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 64,
+      "symbol": "TitleButton.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
       "line": 71,
       "symbol": "TitleButton.setTitle(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
