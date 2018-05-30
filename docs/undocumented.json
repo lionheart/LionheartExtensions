@@ -583,63 +583,98 @@
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": null,
+      "symbol": "TitleButtonThemeProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
       "line": 10,
+      "symbol": "TitleButtonThemeProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 11,
+      "symbol": "TitleButtonThemeProtocol.normalColor",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 12,
+      "symbol": "TitleButtonThemeProtocol.highlightedColor",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 13,
+      "symbol": "TitleButtonThemeProtocol.subtitleColor",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 49,
       "symbol": "TitleButton",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 11,
+      "line": 50,
       "symbol": "TitleButton.enableTitleCopy",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 13,
+      "line": 52,
       "symbol": "TitleButton.canBecomeFirstResponder",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 17,
+      "line": 56,
       "symbol": "TitleButton.canPerformAction(_:withSender:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 21,
+      "line": 60,
       "symbol": "TitleButton.copy(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 57,
+      "line": 71,
       "symbol": "TitleButton.setTitle(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 61,
+      "line": 75,
       "symbol": "TitleButton.setTitle(title:subtitle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 79,
+      "line": 93,
       "symbol": "TitleButton.startAnimating()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": 83,
+      "line": 97,
       "symbol": "TitleButton.stopAnimating()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
