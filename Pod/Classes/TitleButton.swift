@@ -61,7 +61,7 @@ public final class TitleButton<T>: UIButton where T: TitleButtonThemeProtocol {
         UIPasteboard.general.string = titleLabel?.text
     }
     
-    @objc convenience init() {
+    @objc public convenience init() {
         self.init(frame: .zero)
     }
 }
