@@ -50,6 +50,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ColorRepresentation.swift",
+      "line": 63,
+      "symbol": "ColorRepresentation.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/IndexPath+LionheartExtensions.swift",
       "line": 36,
       "symbol": "IndexPath.==(_:_:)",
@@ -323,6 +330,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIColor+LionheartExtensions.swift",
+      "line": 78,
+      "symbol": "UIColor.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
       "line": 21,
       "symbol": "UIImageFormat",
@@ -439,6 +453,27 @@
       "line": null,
       "symbol": "File",
       "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/File.swift",
+      "line": 19,
+      "symbol": "File",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/File.swift",
+      "line": 20,
+      "symbol": "File.filename",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/File.swift",
+      "line": 22,
+      "symbol": "File.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {

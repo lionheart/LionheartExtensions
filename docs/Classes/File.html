@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FileManager Extension Reference</title>
+    <title>File Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/FileManager" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/File" class="dashAnchor"></a>
 
-    <a title="FileManager Extension Reference"></a>
+    <a title="File Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">LionheartExtensions Reference</a>
       <img class="carat" src="../img/carat.png" />
-      FileManager Extension Reference
+      File Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -241,14 +241,15 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>FileManager</h1>
+            <h1>File</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">FileManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">File</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Undocumented</p>
+
           </div>
         </section>
 
@@ -259,9 +260,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11FileManagerC19LionheartExtensionsE12temporaryURL10Foundation0F0VSS03forA4Name_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/temporaryURL(forFileName:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11FileManagerC19LionheartExtensionsE12temporaryURL10Foundation0F0VSS03forA4Name_tFZ">temporaryURL(forFileName:)</a>
+                    <a name="/s:19LionheartExtensions4FileC8filenameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/filename" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19LionheartExtensions4FileC8filenameSSSgvp">filename</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -269,19 +270,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>URL</code> for a temporary file.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">temporaryURL</span><span class="p">(</span><span class="n">forFileName</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URL</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/Core/FileManager+LionheartExtensions.swift#L13-L19">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/File.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -289,9 +290,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11FileManagerC19LionheartExtensionsE13temporaryPathS2S03forA4Name_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/temporaryPath(forFileName:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11FileManagerC19LionheartExtensionsE13temporaryPathS2S03forA4Name_tFZ">temporaryPath(forFileName:)</a>
+                    <a name="/s:19LionheartExtensions4FileCACSScfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19LionheartExtensions4FileCACSScfc">init(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -299,19 +300,197 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A path <code>String</code> for a temporary file.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">temporaryPath</span><span class="p">(</span><span class="n">forFileName</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/Core/FileManager+LionheartExtensions.swift#L22-L28">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/File.swift#L22-L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s26ExpressibleByStringLiteralP0cD4Type"></a>
+                    <a name="//apple_ref/swift/Alias/StringLiteralType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s26ExpressibleByStringLiteralP0cD4Type">StringLiteralType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">StringLiteralType</span> <span class="o">=</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/File.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s43ExpressibleByExtendedGraphemeClusterLiteralP0cdeF4Type"></a>
+                    <a name="//apple_ref/swift/Alias/ExtendedGraphemeClusterLiteralType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s43ExpressibleByExtendedGraphemeClusterLiteralP0cdeF4Type">ExtendedGraphemeClusterLiteralType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ExtendedGraphemeClusterLiteralType</span> <span class="o">=</span> <span class="kt"><a href="../Classes/File.html#/s:s26ExpressibleByStringLiteralP0cD4Type">StringLiteralType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/File.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s33ExpressibleByUnicodeScalarLiteralP0cdE4Type"></a>
+                    <a name="//apple_ref/swift/Alias/UnicodeScalarLiteralType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s33ExpressibleByUnicodeScalarLiteralP0cdE4Type">UnicodeScalarLiteralType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">UnicodeScalarLiteralType</span> <span class="o">=</span> <span class="kt"><a href="../Classes/File.html#/s:s26ExpressibleByStringLiteralP0cD4Type">StringLiteralType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/File.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s43ExpressibleByExtendedGraphemeClusterLiteralPx0cdeF4TypeQz08extendeddeF0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(extendedGraphemeClusterLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s43ExpressibleByExtendedGraphemeClusterLiteralPx0cdeF4TypeQz08extendeddeF0_tcfc">init(extendedGraphemeClusterLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">extendedGraphemeClusterLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Classes/File.html#/s:s43ExpressibleByExtendedGraphemeClusterLiteralP0cdeF4Type">ExtendedGraphemeClusterLiteralType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/File.swift#L81-L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s26ExpressibleByStringLiteralPx0cD4TypeQz06stringD0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s26ExpressibleByStringLiteralPx0cD4TypeQz06stringD0_tcfc">init(stringLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">stringLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Classes/File.html#/s:s26ExpressibleByStringLiteralP0cD4Type">StringLiteralType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/File.swift#L85-L87">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s33ExpressibleByUnicodeScalarLiteralPx0cdE4TypeQz07unicodedE0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(unicodeScalarLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s33ExpressibleByUnicodeScalarLiteralPx0cdE4TypeQz07unicodedE0_tcfc">init(unicodeScalarLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">unicodeScalarLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Classes/File.html#/s:s33ExpressibleByUnicodeScalarLiteralP0cdE4Type">UnicodeScalarLiteralType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/3.15.0/Pod/Classes/File.swift#L89-L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
