@@ -68,7 +68,7 @@ class LionheartExtensionsTests: XCTestCase {
 
     func testImage() {
         guard let image = UIImage(color: .red),
-            let data = UIImagePNGRepresentation(image) else {
+            let data = image.pngData() else {
                 fatalError()
         }
 
@@ -86,7 +86,7 @@ class LionheartExtensionsTests: XCTestCase {
         view.backgroundColor = .red
         view.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
         let viewImage = UIImage(view: view, scale: 1)!
-        guard let viewImageData = UIImagePNGRepresentation(viewImage) else {
+        guard let viewImageData = viewImage.pngData() else {
             fatalError()
         }
 
