@@ -353,7 +353,7 @@
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIImage+LionheartExtensions.swift",
       "line": 23,
-      "symbol": "UIImageFormat.JPEG",
+      "symbol": "UIImageFormat.JPEG(quality:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
