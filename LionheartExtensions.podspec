@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.3'
 
   s.default_subspec = 'Core'
-  s.swift_version = '4.0'
+  s.swift_version = '4.2'
 
   s.subspec 'Core' do |spec|
     spec.source_files = ['Pod/Classes/Core/*', 'Pod/Classes/*.swift']
