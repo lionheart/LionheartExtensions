@@ -171,7 +171,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				417D6B1B7188327BA56549EE /* [CP] Embed Pods Frameworks */,
-				D2B3C9E43831D5F1B45D2C99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,7 +190,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				3C6BF3CA24828594A769A727 /* [CP] Embed Pods Frameworks */,
-				C609917258B33DBB04910784 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,36 +317,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionheartExtensions_Example/Pods-LionheartExtensions_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C609917258B33DBB04910784 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionheartExtensions_Tests/Pods-LionheartExtensions_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D2B3C9E43831D5F1B45D2C99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionheartExtensions_Example/Pods-LionheartExtensions_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E34D67B8D75EE74D7E8A11F9 /* [CP] Check Pods Manifest.lock */ = {
