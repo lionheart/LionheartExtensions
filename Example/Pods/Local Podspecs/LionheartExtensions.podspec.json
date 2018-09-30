@@ -1,6 +1,6 @@
 {
   "name": "LionheartExtensions",
-  "version": "3.11.3",
+  "version": "3.15.0",
   "summary": "Swift Extensions you probably will need. Definitely.",
   "homepage": "https://github.com/lionheart/LionheartExtensions",
   "license": "Apache 2.0",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/lionheart/LionheartExtensions.git",
-    "tag": "3.11.3"
+    "tag": "3.15.0"
   },
   "social_media_url": "https://twitter.com/lionheartsw",
   "documentation_url": "https://code.lionheart.software/LionheartExtensions/",
