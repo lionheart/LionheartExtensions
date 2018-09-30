@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0910"
+   LastUpgradeVersion = "1000"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2DCDF2310B6587F653BB867D184F9E3"
+               BlueprintIdentifier = "E2A881818E7907E0B4177E33DC33DE1A"
                BuildableName = "LionheartExtensions.framework"
                BlueprintName = "LionheartExtensions"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -43,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2DCDF2310B6587F653BB867D184F9E3"
+            BlueprintIdentifier = "E2A881818E7907E0B4177E33DC33DE1A"
             BuildableName = "LionheartExtensions.framework"
             BlueprintName = "LionheartExtensions"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -56,7 +55,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -66,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2DCDF2310B6587F653BB867D184F9E3"
+            BlueprintIdentifier = "E2A881818E7907E0B4177E33DC33DE1A"
             BuildableName = "LionheartExtensions.framework"
             BlueprintName = "LionheartExtensions"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -84,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2DCDF2310B6587F653BB867D184F9E3"
+            BlueprintIdentifier = "E2A881818E7907E0B4177E33DC33DE1A"
             BuildableName = "LionheartExtensions.framework"
             BlueprintName = "LionheartExtensions"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
