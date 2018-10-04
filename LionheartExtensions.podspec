@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LionheartExtensions"
-  s.version          =  "4.0.0"
+  s.version          =  "4.1.0"
   s.summary          = "Swift Extensions you probably will need. Definitely."
   s.homepage         = "https://github.com/lionheart/LionheartExtensions"
   s.license          = 'Apache 2.0'
