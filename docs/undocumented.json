@@ -57,6 +57,41 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/DateFormatter+LionheartExtensions.swift",
+      "line": 11,
+      "symbol": "DateFormatError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/DateFormatter+LionheartExtensions.swift",
+      "line": 12,
+      "symbol": "DateFormatError.emptyDates",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/DateFormatter+LionheartExtensions.swift",
+      "line": 13,
+      "symbol": "DateFormatError.inconsistentFormat",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/DateFormatter+LionheartExtensions.swift",
+      "line": 14,
+      "symbol": "DateFormatError.unspecified",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/DateFormatter+LionheartExtensions.swift",
+      "line": 15,
+      "symbol": "DateFormatError.noMatchingFormat",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/IndexPath+LionheartExtensions.swift",
       "line": 36,
       "symbol": "IndexPath.==(_:_:)",
