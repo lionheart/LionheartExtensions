@@ -49,8 +49,7 @@ public extension DateFormatter {
     }
     
     /// Returns a `DateFormatter` that handles all of the provided `dateStrings`, or `nil` if a formatter could not be found.
-    static func formatter(dateStrings: [String]) throws -> DateFormatter? {
-        var hasEmptyValues = false
+    static func formatter(dateStrings: [String]) throws -> DateFormatter {
         var numberOfSpaces: Int?
         for dateString in dateStrings {
             let characters: [Character] = dateString.filter({ $0 == " " || $0 == "T" })
@@ -63,7 +62,7 @@ public extension DateFormatter {
             
             numberOfSpaces = count
         }
-        
+
         // This will never happen, but we need to make numberOfSpaces an optional so we can compare it to count above.
         guard let _numberOfSpaces = numberOfSpaces else {
             throw DateFormatError.unspecified
