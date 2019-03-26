@@ -288,7 +288,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LionheartExtensions_Tests/Pods-LionheartExtensions_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LionheartExtensions_Tests/Pods-LionheartExtensions_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -299,7 +299,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionheartExtensions_Tests/Pods-LionheartExtensions_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LionheartExtensions_Tests/Pods-LionheartExtensions_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		417D6B1B7188327BA56549EE /* [CP] Embed Pods Frameworks */ = {
@@ -308,7 +308,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LionheartExtensions_Example/Pods-LionheartExtensions_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LionheartExtensions_Example/Pods-LionheartExtensions_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LionheartExtensions/LionheartExtensions.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -317,7 +317,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionheartExtensions_Example/Pods-LionheartExtensions_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LionheartExtensions_Example/Pods-LionheartExtensions_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E34D67B8D75EE74D7E8A11F9 /* [CP] Check Pods Manifest.lock */ = {
