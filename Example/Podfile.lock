@@ -1,14 +1,14 @@
 PODS:
-  - LionheartExtensions (4.0.0):
-    - LionheartExtensions/Core (= 4.0.0)
-  - LionheartExtensions/Core (4.0.0)
-  - Nimble (7.3.1)
-  - Quick (1.3.2)
+  - LionheartExtensions (4.1.0):
+    - LionheartExtensions/Core (= 4.1.0)
+  - LionheartExtensions/Core (4.1.0)
+  - Nimble (8.0.1)
+  - Quick (2.0.0)
 
 DEPENDENCIES:
   - LionheartExtensions (from `../`)
-  - Nimble (~> 7.0)
-  - Quick (~> 1.0)
+  - Nimble (~> 8.0)
+  - Quick (~> 2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -20,10 +20,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LionheartExtensions: bc8fbd34352f3563d1d62499372d665a2c814700
-  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
-  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  LionheartExtensions: 98469a92eb2fbc99928c33d8a6ea6298ce9bed89
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
 
-PODFILE CHECKSUM: 913d31efbbdc6d5cc1b9e8af7a04559582ec2ff0
+PODFILE CHECKSUM: 389c53d688257311c217d8a81ea0b7811f458efa
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1
