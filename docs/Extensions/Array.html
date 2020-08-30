@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          LionheartExtensions Docs
+          LionheartExtensions 5.1.0 Docs
         </a>
-         (52% documented)
+         (55% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -121,9 +121,6 @@
                 <a class="nav-group-task-link" href="../Extensions/NSMutableAttributedString.html">NSMutableAttributedString</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/NSNumberBridgeable.html">NSNumberBridgeable</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/NSRegularExpression.html">NSRegularExpression</a>
               </li>
               <li class="nav-group-task">
@@ -137,6 +134,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIAlertController.html">UIAlertController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIApplication.html">UIApplication</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIColor.html">UIColor</a>
@@ -243,11 +243,14 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>Array</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="n">_DestructorSafeContainer</span></code></pre>
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Array</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Array</span> <span class="k">where</span> <span class="kt">Element</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Array</span> <span class="k">where</span> <span class="kt">Element</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ExpressibleByDecimal.html">ExpressibleByDecimal</a></span></code></pre>
 
                 </div>
               </div>
@@ -264,7 +267,7 @@
                     <code>
                     <a name="/s:Sa19LionheartExtensionsE6chunksys11AnyIteratorVySayxGGSiF"></a>
                     <a name="//apple_ref/swift/Method/chunks(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sa19LionheartExtensionsE6chunksys11AnyIteratorVySayxGGSiF">chunks(_:)</a>
+                    <a class="token" href="#/s:Sa19LionheartExtensionsE6chunksys11AnyIteratorVySayxGGSiF">chunks(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -284,7 +287,67 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Core/Array+LionheartExtensions.swift#L22-L44">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Core/Array+LionheartExtensions.swift#L22-L44">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sa19LionheartExtensionsE3allyS2bxKXEKF"></a>
+                    <a name="//apple_ref/swift/Method/all(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sa19LionheartExtensionsE3allyS2bxKXEKF">all(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">all</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="n">truthy</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Functional.swift#L89-L94">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sa19LionheartExtensionsE3anyyS2bxKXEKF"></a>
+                    <a name="//apple_ref/swift/Method/any(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sa19LionheartExtensionsE3anyyS2bxKXEKF">any(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">any</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="n">truthy</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Functional.swift#L96-L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -292,6 +355,15 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Element%60%3A%20%60UIView%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Element`: `UIView`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Element%60%3A%20%60UIView%60"></a>
+                  <h3 class="section-name"><p>Available where <code>Element</code>: <code>UIView</code></p>
+</h3>
+                </div>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -318,7 +390,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Core/UIView+LionheartExtensions.swift#L354-L356">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Core/UIView+LionheartExtensions.swift#L357-L359">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -326,70 +398,15 @@
               </ul>
             </div>
             <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:Sa19LionheartExtensionsE3allyS2bxKXEKF"></a>
-                    <a name="//apple_ref/swift/Method/all(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sa19LionheartExtensionsE3allyS2bxKXEKF">all(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">all</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="n">truthy</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Functional.swift#L89-L94">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:Sa19LionheartExtensionsE3anyyS2bxKXEKF"></a>
-                    <a name="//apple_ref/swift/Method/any(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sa19LionheartExtensionsE3anyyS2bxKXEKF">any(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">any</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="n">truthy</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Functional.swift#L96-L103">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Element%60%3A%20%60ExpressibleByDecimal%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Element`: `ExpressibleByDecimal`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Element%60%3A%20%60ExpressibleByDecimal%60"></a>
+                  <h3 class="section-name"><p>Available where <code>Element</code>: <code><a href="../Protocols/ExpressibleByDecimal.html">ExpressibleByDecimal</a></code></p>
+</h3>
+                </div>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -416,7 +433,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Summable.swift#L90-L93">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Summable.swift#L90-L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -430,7 +447,7 @@
     </div>
     <section class="footer">
       <p>&copy; 2016-2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          LionheartExtensions Docs
+          LionheartExtensions 5.1.0 Docs
         </a>
-         (52% documented)
+         (55% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -121,9 +121,6 @@
                 <a class="nav-group-task-link" href="../Extensions/NSMutableAttributedString.html">NSMutableAttributedString</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/NSNumberBridgeable.html">NSNumberBridgeable</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/NSRegularExpression.html">NSRegularExpression</a>
               </li>
               <li class="nav-group-task">
@@ -137,6 +134,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIAlertController.html">UIAlertController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIApplication.html">UIApplication</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIColor.html">UIColor</a>
@@ -243,11 +243,12 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>NSAttributedString</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NSAttributedString</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt">NSMutableCopying</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
+                  
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NSAttributedString</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LHSStringType.html">LHSStringType</a></span></code></pre>
 
                 </div>
               </div>
@@ -277,13 +278,11 @@
     <p class="aside-title">Author</p>
     Daniel Loewenherz
 
-</div>
-<div class="aside aside-copyright">
+</div><div class="aside aside-copyright">
     <p class="aside-title">Copyright</p>
     ©2016 Lionheart Software LLC
 
-</div>
-<div class="aside aside-date">
+</div><div class="aside aside-date">
     <p class="aside-title">Date</p>
     February 17, 2016
 
@@ -303,7 +302,7 @@
                         <p>An <code>NSRange</code></p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Core/String+LionheartExtensions.swift#L245-L247">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Core/String+LionheartExtensions.swift#L245-L247">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -333,7 +332,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Core/String+LionheartExtensions.swift#L249-L251">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Core/String+LionheartExtensions.swift#L249-L251">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -363,7 +362,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Core/String+LionheartExtensions.swift#L253-L255">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Core/String+LionheartExtensions.swift#L253-L255">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -393,7 +392,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Core/String+LionheartExtensions.swift#L257-L259">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Core/String+LionheartExtensions.swift#L257-L259">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -403,7 +402,7 @@
                     <code>
                     <a name="/s:So18NSAttributedStringC19LionheartExtensionsE18stringByConverting14toNamingFormatSSAC08VariableiJ0O_tF"></a>
                     <a name="//apple_ref/swift/Method/stringByConverting(toNamingFormat:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So18NSAttributedStringC19LionheartExtensionsE18stringByConverting14toNamingFormatSSAC08VariableiJ0O_tF">stringByConverting(toNamingFormat:)</a>
+                    <a class="token" href="#/s:So18NSAttributedStringC19LionheartExtensionsE18stringByConverting14toNamingFormatSSAC08VariableiJ0O_tF">stringByConverting(toNamingFormat:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -423,7 +422,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.0.2/Pod/Classes/Core/String+LionheartExtensions.swift#L261-L263">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/LionheartExtensions/tree/5.1.0/Pod/Classes/Core/String+LionheartExtensions.swift#L261-L263">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -437,7 +436,7 @@
     </div>
     <section class="footer">
       <p>&copy; 2016-2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

@@ -2,16 +2,16 @@
   "warnings": [
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ActivityIndicatorButton.swift",
-      "line": null,
+      "line": 10,
       "symbol": "ActivityIndicatorButton",
-      "symbol_kind": "source.lang.swift.decl.extension",
+      "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/ActivityIndicatorButton.swift",
-      "line": 10,
+      "line": 47,
       "symbol": "ActivityIndicatorButton",
-      "symbol_kind": "source.lang.swift.decl.class",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -338,13 +338,6 @@
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIApplicationDelegate+LionheartExtensions.swift",
-      "line": null,
-      "symbol": "UIApplicationDelegateWithWindow",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIApplicationDelegate+LionheartExtensions.swift",
       "line": 10,
       "symbol": "UIApplicationDelegateWithWindow",
       "symbol_kind": "source.lang.swift.decl.protocol",
@@ -355,6 +348,13 @@
       "line": 11,
       "symbol": "UIApplicationDelegateWithWindow.window",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIApplicationDelegate+LionheartExtensions.swift",
+      "line": 15,
+      "symbol": "UIApplicationDelegateWithWindow",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -436,7 +436,7 @@
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Core/UIView+LionheartExtensions.swift",
-      "line": 354,
+      "line": 357,
       "symbol": "Array.removeFromSuperviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -485,13 +485,6 @@
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/File.swift",
-      "line": null,
-      "symbol": "File",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/File.swift",
       "line": 19,
       "symbol": "File",
       "symbol_kind": "source.lang.swift.decl.class",
@@ -509,6 +502,13 @@
       "line": 22,
       "symbol": "File.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/File.swift",
+      "line": 76,
+      "symbol": "File",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -583,13 +583,6 @@
     },
     {
       "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
-      "line": null,
-      "symbol": "NSNumberBridgeable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/Summable.swift",
       "line": 11,
       "symbol": "ExpressibleByDecimal",
       "symbol_kind": "source.lang.swift.decl.protocol",
@@ -642,20 +635,6 @@
       "line": 90,
       "symbol": "Array.sum",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": null,
-      "symbol": "TitleButton",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
-      "line": null,
-      "symbol": "TitleButtonThemeProtocol",
-      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -726,6 +705,13 @@
       "line": 64,
       "symbol": "TitleButton.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/lionheartextensions/Pod/Classes/TitleButton.swift",
+      "line": 70,
+      "symbol": "TitleButton",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
