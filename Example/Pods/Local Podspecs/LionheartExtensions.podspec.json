@@ -1,6 +1,6 @@
 {
   "name": "LionheartExtensions",
-  "version": "4.1.0",
+  "version": "5.0.2",
   "summary": "Swift Extensions you probably will need. Definitely.",
   "homepage": "https://github.com/lionheart/LionheartExtensions",
   "license": "Apache 2.0",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/lionheart/LionheartExtensions.git",
-    "tag": "4.1.0"
+    "tag": "5.0.2"
   },
   "social_media_url": "https://twitter.com/lionheartsw",
   "documentation_url": "https://code.lionheart.software/LionheartExtensions/",
@@ -18,7 +18,7 @@
     "ios": "10.3"
   },
   "default_subspecs": "Core",
-  "swift_version": "4.2",
+  "swift_versions": "5.0",
   "subspecs": [
     {
       "name": "Core",
@@ -27,5 +27,6 @@
         "Pod/Classes/*.swift"
       ]
     }
-  ]
+  ],
+  "swift_version": "5.0"
 }
