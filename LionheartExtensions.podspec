@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.documentation_url = 'https://code.lionheart.software/LionheartExtensions/'
 
   s.requires_arc = true
-  s.ios.deployment_target = '10.3'
+  s.ios.deployment_target = '13.6'
 
   s.default_subspec = 'Core'
   s.swift_version = '5.0'
