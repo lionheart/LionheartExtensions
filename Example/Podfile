@@ -1,8 +1,6 @@
-source 'https://github.com/CocoaPods/Specs.git'
-
 project "LionheartExtensions.xcodeproj"
 
-platform :ios, '10.3'
+platform :ios, '13.6'
 
 use_frameworks!
 
@@ -12,7 +10,17 @@ target 'LionheartExtensions_Example' do
   target 'LionheartExtensions_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 2.0'
+    pod 'Quick', '~> 3.0'
     pod 'Nimble', '~> 8.0'
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings.delete('IPHONEOS_DEPLOYMENT_TARGET')
+      config.build_settings.delete('TARGETED_DEVICE_FAMILY')
+      config.build_settings.delete('SWIFT_VERSION')
+    end
   end
 end
