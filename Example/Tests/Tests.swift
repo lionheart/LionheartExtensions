@@ -35,13 +35,6 @@ class LionheartExtensionsTests: XCTestCase {
         expect(sentence.stringByLowercasingFirstLetter) == sentence
     }
 
-    func testFont() {
-        let font = UIFont.systemFont(ofSize: 12)
-
-        let displayName = font.displayName
-        expect(displayName) == ".SFUIText"
-    }
-
     func testColor() {
         let red = UIColor(0xF00)
         expect(red) == UIColor.red
@@ -73,7 +66,7 @@ class LionheartExtensionsTests: XCTestCase {
         }
 
         let string = data.base64EncodedString()
-        expect(string) == "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUCB1j+M/A8B8ABQAB/8gPYhYAAAAASUVORK5CYII="
+        expect(string) == "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAAD5Ip3+AAAADUlEQVQIHWP4z8DwHwAFAAH/yA9iFgAAAABJRU5ErkJggg=="
 
         guard let newData = Data(base64Encoded: string),
             let newImage = UIImage(data: newData) else {
