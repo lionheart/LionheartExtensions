@@ -12,7 +12,7 @@ import Foundation
  - source: https://gist.github.com/mattt/1ed12090d7c89f36fd28
  */
 
-extension NSDecimalNumber: Comparable {}
+extension NSDecimalNumber: @retroactive Comparable {}
 
 public extension NSDecimalNumber {
     /// Returns `true` if two `NSDecimalNumber` values are equal, `false` otherwise.

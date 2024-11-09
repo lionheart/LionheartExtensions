@@ -23,7 +23,9 @@ public enum VariableNamingFormat {
     case pascalCase
 }
 
-extension CharacterSet: ExpressibleByStringLiteral {
+extension CharacterSet: @retroactive ExpressibleByExtendedGraphemeClusterLiteral {}
+extension CharacterSet: @retroactive ExpressibleByUnicodeScalarLiteral {}
+extension CharacterSet: @retroactive ExpressibleByStringLiteral {
     public typealias StringLiteralType = String
     public typealias UnicodeScalarLiteralType = StringLiteralType
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
