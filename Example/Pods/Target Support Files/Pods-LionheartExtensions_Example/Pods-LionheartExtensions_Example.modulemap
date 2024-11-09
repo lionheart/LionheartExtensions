@@ -1,6 +1,0 @@
-framework module Pods_LionheartExtensions_Example {
-  umbrella header "Pods-LionheartExtensions_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

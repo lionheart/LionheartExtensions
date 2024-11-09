@@ -54,5 +54,7 @@ tag: quicklint generate_docs
 	git push --tags
 
 publish: tag
-	bundle exec pod trunk push --allow-warnings
+	echo "not implemented"
 
+build:
+	xcodebuild build -scheme LionheartExtensions -destination "OS=18.0,name=iPhone 16 Pro"
