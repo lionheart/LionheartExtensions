@@ -9,12 +9,12 @@ let package = Package(
     products: [
         .library(
             name: "LionheartExtensions",
-            targets: ["LionheartExtensionsCore"]
+            targets: ["LionheartExtensions"]
         ),
     ],
     targets: [
         .target(
-            name: "LionheartExtensionsCore"
+            name: "LionheartExtensions"
         )
     ]
 )

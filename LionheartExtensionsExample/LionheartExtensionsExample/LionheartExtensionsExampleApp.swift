@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LionheartExtensions
 
 @main
 struct LionheartExtensionsExampleApp: App {
