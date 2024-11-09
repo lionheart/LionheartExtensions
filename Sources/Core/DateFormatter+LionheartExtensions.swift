@@ -8,11 +8,16 @@
 
 import Foundation
 
+public struct NoMatchingFormat {
+    public var input: String
+    public var format: String
+}
+
 public enum DateFormatError: Error {
     case emptyDates
     case inconsistentFormat
     case unspecified
-    case noMatchingFormat
+    case noMatchingFormat(NoMatchingFormat?)
 }
 
 fileprivate struct DateFormatterString {
@@ -84,7 +89,7 @@ public extension DateFormatter {
                 formatters.append(DateFormatter(format: DateFormatterString.DateComponent6))
 
             case 3: timeFormatStrings = DateFormatterString.ThreeSpaceFormatStrings
-            default: throw DateFormatError.noMatchingFormat
+            default: throw DateFormatError.noMatchingFormat(nil)
             }
 
             for dateString in DateFormatterString.NoSpaceFormatStrings {
@@ -97,12 +102,20 @@ public extension DateFormatter {
             }
         }
 
+        var noMatchingFormat: NoMatchingFormat? = nil
         formatterLoop: for formatter in formatters {
+            var i = 0
             for dateString in dateStrings {
                 guard formatter.date(from: dateString) != nil else {
                     // Skip to the next formatter if a string failed to parse with this formatter.
+                    if i > (dateStrings.count / 2) {
+                        noMatchingFormat = NoMatchingFormat(input: dateString, format: formatter.dateFormat)
+                    }
+                    
                     continue formatterLoop
                 }
+                
+                i += 1
             }
 
             // If we got here, all of the strings worked with this formatter.
@@ -110,6 +123,6 @@ public extension DateFormatter {
         }
 
         // No date formatter worked for everything. Fail.
-        throw DateFormatError.noMatchingFormat
+        throw DateFormatError.noMatchingFormat(noMatchingFormat)
     }
 }
