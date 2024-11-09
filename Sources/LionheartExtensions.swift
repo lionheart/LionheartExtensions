@@ -7,12 +7,12 @@
 
 import UIKit
 
-public class LionheartExtensions {
+public struct LionheartExtensions {
     static var sharedUIApplication: UIApplication? {
         guard let sharedApplication = UIApplication.perform(NSSelectorFromString("sharedApplication")).takeUnretainedValue() as? UIApplication else {
             return nil
         }
-        
+
         return sharedApplication
     }
 }
