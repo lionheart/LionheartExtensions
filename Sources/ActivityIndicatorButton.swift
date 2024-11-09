@@ -5,7 +5,7 @@
 //  Created by Dan Loewenherz on 4/10/18.
 //
 
-import Foundation
+import UIKit
 
 public final class ActivityIndicatorButton: UIButton {
     var activity: UIActivityIndicatorView!

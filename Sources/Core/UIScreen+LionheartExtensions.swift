@@ -15,7 +15,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 public extension UIScreen {
     /**

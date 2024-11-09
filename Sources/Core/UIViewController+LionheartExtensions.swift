@@ -15,7 +15,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 
 /// Helper methods for `UIViewController`.

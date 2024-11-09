@@ -15,7 +15,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 let fontDisplayNameRegularExpression = try! NSRegularExpression(pattern: "([a-z])([A-Z])", options: [])
 

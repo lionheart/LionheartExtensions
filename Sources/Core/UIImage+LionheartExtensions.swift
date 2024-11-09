@@ -15,7 +15,7 @@
 //
 //
 
-import Foundation
+import UIKit
 import Photos
 
 public enum UIImageFormat {

@@ -15,7 +15,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 public typealias LayoutDictionary = [String: Any]
 

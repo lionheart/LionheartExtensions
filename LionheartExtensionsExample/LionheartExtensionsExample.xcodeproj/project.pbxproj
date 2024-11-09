@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		37A62C642CDFA1AD001F0261 /* LionheartExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 37A62C632CDFA1AD001F0261 /* LionheartExtensions */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		37A62C502CDFA177001F0261 /* LionheartExtensionsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionheartExtensionsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A62C642CDFA1AD001F0261 /* LionheartExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = LionheartExtensionsExample;
 			packageProductDependencies = (
+				37A62C632CDFA1AD001F0261 /* LionheartExtensions */,
 			);
 			productName = LionheartExtensionsExample;
 			productReference = 37A62C502CDFA177001F0261 /* LionheartExtensionsExample.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 37A62C472CDFA177001F0261;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				37A62C622CDFA1AD001F0261 /* XCLocalSwiftPackageReference "../../lionheartextensions" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 37A62C512CDFA177001F0261 /* Products */;
 			projectDirPath = "";
@@ -339,6 +348,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		37A62C622CDFA1AD001F0261 /* XCLocalSwiftPackageReference "../../lionheartextensions" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../lionheartextensions;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		37A62C632CDFA1AD001F0261 /* LionheartExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LionheartExtensions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37A62C482CDFA177001F0261 /* Project object */;
 }

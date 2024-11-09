@@ -5,7 +5,7 @@
 //  Created by Dan Loewenherz on 4/10/18.
 //
 
-import Foundation
+import UIKit
 
 public protocol TitleButtonThemeProtocol {
     static var normalColor: UIColor { get }

@@ -5,9 +5,9 @@
 //  Created by Dan Loewenherz on 1/2/18.
 //
 
-import Foundation
+import UIKit
 
-struct LionheartExtensions {
+public class LionheartExtensions {
     static var sharedUIApplication: UIApplication? {
         guard let sharedApplication = UIApplication.perform(NSSelectorFromString("sharedApplication")).takeUnretainedValue() as? UIApplication else {
             return nil
