@@ -83,7 +83,7 @@ extension TitleButton: CustomButtonType {
         } else {
             titleLabel?.lineBreakMode = .byTruncatingTail
         }
-        
+
         setAttributedTitle(normalString, for: .normal)
         setAttributedTitle(highlightedString, for: .highlighted)
         

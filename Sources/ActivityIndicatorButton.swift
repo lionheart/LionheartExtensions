@@ -65,8 +65,8 @@ extension ActivityIndicatorButton: CustomButtonType {
     
     public func startAnimating() {
         activity.startAnimating()
-        
-        contentEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
+
+        contentEdgeInsets = .zero
     }
     
     public func stopAnimating() {
