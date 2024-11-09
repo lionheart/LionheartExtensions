@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "LionheartExtensions",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v14)
     ],
     products: [
         .library(
@@ -17,14 +17,7 @@ let package = Package(
         .target(
             name: "LionheartExtensionsCore",
             path: "Pod/Classes",
-            sources: ["Core", "*.swift"],
-            swiftSettings: [
-                .define("SWIFT_VERSION", to: "5")
-            ]
-        ),
-        .testTarget(
-            name: "LionheartExtensionsTests",
-            dependencies: ["LionheartExtensionsCore"]
-        ),
+            sources: ["Core", "*.swift"]
+        )
     ]
 )
