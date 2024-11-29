@@ -239,10 +239,10 @@ public extension UIImage {
         let data: Data?
         switch format {
         case .PNG:
-            data = self.pngData()
+            data = UIImagePNGRepresentation(self)
 
         case .JPEG(let quality):
-            data = self.jpegData(compressionQuality: quality)
+            data = UIImageJPEGRepresentation(self, quality)
         }
 
         try data?.write(to: URL(fileURLWithPath: path), options: .atomicWrite)
