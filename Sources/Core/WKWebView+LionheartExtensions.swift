@@ -8,15 +8,15 @@
 import WebKit
 
 /// Helper methods for WKWebView
-public extension WKWebView {
-    /// Loads an HTTP request with the specified cookies
-    func load(_ request: URLRequest, with cookies: [HTTPCookie]) {
-        var request = request
-        let headers = HTTPCookie.requestHeaderFields(with: cookies)
-        for (name, value) in headers {
-            request.addValue(value, forHTTPHeaderField: name)
-        }
-        
-        load(request)
+extension WKWebView {
+  /// Loads an HTTP request with the specified cookies
+  public func load(_ request: URLRequest, with cookies: [HTTPCookie]) {
+    var request = request
+    let headers = HTTPCookie.requestHeaderFields(with: cookies)
+    for (name, value) in headers {
+      request.addValue(value, forHTTPHeaderField: name)
     }
+
+    load(request)
+  }
 }

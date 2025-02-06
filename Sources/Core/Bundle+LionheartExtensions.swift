@@ -8,14 +8,14 @@
 
 import Foundation
 
-public extension Bundle {
-    /// The version string.
-    static var appVersion: String? {
-        return main.infoDictionary?["CFBundleShortVersionString"] as? String
-    }
+extension Bundle {
+  /// The version string.
+  public static var appVersion: String? {
+    return main.infoDictionary?["CFBundleShortVersionString"] as? String
+  }
 
-    /// The bundle version.
-    static var appBuildNumber: String? {
-        return main.infoDictionary?[kCFBundleVersionKey as String] as? String
-    }
+  /// The bundle version.
+  public static var appBuildNumber: String? {
+    return main.infoDictionary?[kCFBundleVersionKey as String] as? String
+  }
 }

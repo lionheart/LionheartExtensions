@@ -17,17 +17,17 @@
 
 import Foundation
 
-public extension Optional where Wrapped == String {
-    /**
+extension Optional where Wrapped == String {
+  /**
      A string identifical to `self` if not an empty string, `nil` otherwise.
 
      - SeeAlso: `String.nilIfEmpty`
      */
-    var nilIfEmpty: String? {
-        guard let value = self, value != "" else {
-            return nil
-        }
-
-        return value
+  public var nilIfEmpty: String? {
+    guard let value = self, value != "" else {
+      return nil
     }
+
+    return value
+  }
 }

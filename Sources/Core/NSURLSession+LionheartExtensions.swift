@@ -18,15 +18,15 @@
 import Foundation
 
 @available(iOS 9.0, *)
-public extension URLSession {
-    /// Cancels all `URLSession` tasks associated with `self`.
-    func cancelAllTasks(withCompletion completion: @escaping () -> Void) {
-        getAllTasks { tasks in
-            for task in tasks {
-                task.cancel()
-            }
-            
-            completion()
-        }
+extension URLSession {
+  /// Cancels all `URLSession` tasks associated with `self`.
+  public func cancelAllTasks(withCompletion completion: @escaping () -> Void) {
+    getAllTasks { tasks in
+      for task in tasks {
+        task.cancel()
+      }
+
+      completion()
     }
+  }
 }

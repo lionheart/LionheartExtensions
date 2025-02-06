@@ -8,9 +8,9 @@
 import Foundation
 
 public protocol CustomButtonType {
-    func setTitle(title: String)
-    func setTitle(title: String, subtitle: String?)
-    func sizeToFit()
-    func startAnimating()
-    func stopAnimating()
+  func setTitle(title: String)
+  func setTitle(title: String, subtitle: String?)
+  func sizeToFit()
+  func startAnimating()
+  func stopAnimating()
 }

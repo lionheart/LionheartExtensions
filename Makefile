@@ -58,3 +58,6 @@ publish: tag
 
 build:
 	xcodebuild build -scheme LionheartExtensions -destination "OS=18.0,name=iPhone 16 Pro"
+
+format:
+	swift format . --recursive --in-place

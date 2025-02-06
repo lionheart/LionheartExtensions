@@ -17,11 +17,15 @@
 
 import Foundation
 
-public extension NSRegularExpression {
-    func replaceMatchesInString(_ string: inout String, options: NSRegularExpression.MatchingOptions, range: NSRange, withTemplate templ: String) -> Int {
-        let mutableString = NSMutableString(string: string)
-        let result = replaceMatches(in: mutableString, options: options, range: range, withTemplate: templ)
-        string = String(mutableString)
-        return result
-    }
+extension NSRegularExpression {
+  public func replaceMatchesInString(
+    _ string: inout String, options: NSRegularExpression.MatchingOptions, range: NSRange,
+    withTemplate templ: String
+  ) -> Int {
+    let mutableString = NSMutableString(string: string)
+    let result = replaceMatches(
+      in: mutableString, options: options, range: range, withTemplate: templ)
+    string = String(mutableString)
+    return result
+  }
 }

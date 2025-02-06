@@ -14,67 +14,67 @@ import Foundation
 
 extension NSDecimalNumber: @retroactive Comparable {}
 
-public extension NSDecimalNumber {
-    /// Returns `true` if two `NSDecimalNumber` values are equal, `false` otherwise.
-    static func ==(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> Bool {
-        return lhs.compare(rhs) == .orderedSame
-    }
+extension NSDecimalNumber {
+  /// Returns `true` if two `NSDecimalNumber` values are equal, `false` otherwise.
+  public static func == (lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> Bool {
+    return lhs.compare(rhs) == .orderedSame
+  }
 
-    /// Returns `true` if the first `NSDecimalNumber` parameter is less than the second, `false` otherwise.
-    static func <(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> Bool {
-        return lhs.compare(rhs) == .orderedAscending
-    }
+  /// Returns `true` if the first `NSDecimalNumber` parameter is less than the second, `false` otherwise.
+  public static func < (lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> Bool {
+    return lhs.compare(rhs) == .orderedAscending
+  }
 
-    /// Returns `true` if the first `NSDecimalNumber` parameter is greater than the second, `false` otherwise.
-    static func >(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> Bool {
-        return lhs.compare(rhs) == .orderedDescending
-    }
+  /// Returns `true` if the first `NSDecimalNumber` parameter is greater than the second, `false` otherwise.
+  public static func > (lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> Bool {
+    return lhs.compare(rhs) == .orderedDescending
+  }
 
-    /// Returns the [additive inverse](https://en.wikipedia.org/wiki/Additive_inverse) of the provided `NSDecimalNumber`.
-    static prefix func -(value: NSDecimalNumber) -> NSDecimalNumber {
-        return value.multiplying(by: NSDecimalNumber(mantissa: 1, exponent: 0, isNegative: true))
-    }
+  /// Returns the [additive inverse](https://en.wikipedia.org/wiki/Additive_inverse) of the provided `NSDecimalNumber`.
+  public static prefix func - (value: NSDecimalNumber) -> NSDecimalNumber {
+    return value.multiplying(by: NSDecimalNumber(mantissa: 1, exponent: 0, isNegative: true))
+  }
 
-    /// Returns the sum of two `NSDecimalNumber` values.
-    static func +(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber {
-        return lhs.adding(rhs)
-    }
+  /// Returns the sum of two `NSDecimalNumber` values.
+  public static func + (lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber {
+    return lhs.adding(rhs)
+  }
 
-    /// Returns the difference of two `NSDecimalNumber` values.
-    static func -(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber {
-        return lhs.subtracting(rhs)
-    }
+  /// Returns the difference of two `NSDecimalNumber` values.
+  public static func - (lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber {
+    return lhs.subtracting(rhs)
+  }
 
-    /// Returns the product of two `NSDecimalNumber` values.
-    static func *(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber {
-        return lhs.multiplying(by: rhs)
-    }
+  /// Returns the product of two `NSDecimalNumber` values.
+  public static func * (lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber {
+    return lhs.multiplying(by: rhs)
+  }
 
-    /// Returns the quotient of two `NSDecimalNumber` values.
-    static func /(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber {
-        return lhs.dividing(by: rhs)
-    }
+  /// Returns the quotient of two `NSDecimalNumber` values.
+  public static func / (lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber {
+    return lhs.dividing(by: rhs)
+  }
 
-    /// Returns the result of raising the provided `NSDecimalNumber` to a specified power.
-    static func ^(lhs: NSDecimalNumber, rhs: Int) -> NSDecimalNumber {
-        return lhs.raising(toPower: rhs)
-    }
+  /// Returns the result of raising the provided `NSDecimalNumber` to a specified power.
+  public static func ^ (lhs: NSDecimalNumber, rhs: Int) -> NSDecimalNumber {
+    return lhs.raising(toPower: rhs)
+  }
 
-    // MARK: - Assignment
+  // MARK: - Assignment
 
-    static func +=(lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
-        lhs = lhs + rhs
-    }
+  public static func += (lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
+    lhs = lhs + rhs
+  }
 
-    static func -=(lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
-        lhs = lhs - rhs
-    }
+  public static func -= (lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
+    lhs = lhs - rhs
+  }
 
-    static func *=(lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
-        lhs = lhs * rhs
-    }
-    
-    static func /=(lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
-        lhs = lhs / rhs
-    }
+  public static func *= (lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
+    lhs = lhs * rhs
+  }
+
+  public static func /= (lhs: inout NSDecimalNumber, rhs: NSDecimalNumber) {
+    lhs = lhs / rhs
+  }
 }

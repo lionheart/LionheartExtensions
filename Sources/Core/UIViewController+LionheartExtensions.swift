@@ -17,44 +17,44 @@
 
 import UIKit
 
-
 /// Helper methods for `UIViewController`.
-public extension UIViewController {
-    /**
+extension UIViewController {
+  /**
      Returns an optional with the top-level `UIViewController`.
-     
+
      - Returns: The active `UIViewController`, if it can be found.
      - Date: February 17, 2016
      */
-    class var topViewController: UIViewController? {
-        return LionheartExtensions.sharedUIApplication?.patchedKeyWindow?.rootViewController?.topViewController
-    }
+  public class var topViewController: UIViewController? {
+    return LionheartExtensions.sharedUIApplication?.patchedKeyWindow?.rootViewController?
+      .topViewController
+  }
 
-    /**
+  /**
      The top-level `UIViewController` within the hierarchy of `self`'s stack.
 
      - Date: February 17, 2016
      */
-    var topViewController: UIViewController? {
-        switch self {
-        case let tabBarController as UITabBarController:
-            return tabBarController.selectedViewController?.topViewController
+  public var topViewController: UIViewController? {
+    switch self {
+    case let tabBarController as UITabBarController:
+      return tabBarController.selectedViewController?.topViewController
 
-        case let navigationController as UINavigationController:
-            return navigationController.visibleViewController?.topViewController
+    case let navigationController as UINavigationController:
+      return navigationController.visibleViewController?.topViewController
 
-        case let splitViewController as UISplitViewController:
-            return splitViewController.viewControllers.first?.topViewController
+    case let splitViewController as UISplitViewController:
+      return splitViewController.viewControllers.first?.topViewController
 
-        case let controller where controller == presentedViewController:
-            if controller is UIAlertController {
-                return controller
-            } else {
-                return controller.topViewController
-            }
+    case let controller where controller == presentedViewController:
+      if controller is UIAlertController {
+        return controller
+      } else {
+        return controller.topViewController
+      }
 
-        default:
-            return self
-        }
+    default:
+      return self
     }
+  }
 }

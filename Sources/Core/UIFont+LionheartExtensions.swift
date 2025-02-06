@@ -17,14 +17,16 @@
 
 import UIKit
 
-let fontDisplayNameRegularExpression = try! NSRegularExpression(pattern: "([a-z])([A-Z])", options: [])
+let fontDisplayNameRegularExpression = try! NSRegularExpression(
+  pattern: "([a-z])([A-Z])", options: [])
 
-public extension UIFont {
-    /// The display name for a given `UIFont`.
-    var displayName: String {
-        let _fontName = NSMutableString(string: fontName)
-        fontDisplayNameRegularExpression.replaceMatches(in: _fontName, options: [], range: _fontName.range, withTemplate: "$1 $2")
-        let components = _fontName.components(separatedBy: "-")
-        return components.joined(separator: " ")
-    }
+extension UIFont {
+  /// The display name for a given `UIFont`.
+  public var displayName: String {
+    let _fontName = NSMutableString(string: fontName)
+    fontDisplayNameRegularExpression.replaceMatches(
+      in: _fontName, options: [], range: _fontName.range, withTemplate: "$1 $2")
+    let components = _fontName.components(separatedBy: "-")
+    return components.joined(separator: " ")
+  }
 }

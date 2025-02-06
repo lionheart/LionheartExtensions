@@ -18,38 +18,39 @@
 import UIKit
 
 /// Helper methods for `UIWindow`.
-public extension UIWindow {
-    /**
+extension UIWindow {
+  /**
      Take a screenshot and save to the specified file path. Helpful for creating screenshots via automated tests.
-     
+
      - parameter path: The path on the local filesystem to save the screenshot to.
      - Returns: A bool indicating whether the save was successful.
      - author: Daniel Loewenherz
      - Copyright: ©2016 Lionheart Software LLC
      - Date: February 17, 2016
      */
-    class func takeScreenshotAndSaveToPath(_ path: String) -> Bool {
-        guard let window = LionheartExtensions.sharedUIApplication?.patchedKeyWindow else {
-                return false
-        }
-
-        let bounds = window.bounds
-        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
-        window.drawHierarchy(in: bounds, afterScreenUpdates: true)
-        let _image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        guard let image = _image,
-              let data = UIImagePNGRepresentation(image) else {
-                return false
-        }
-
-        let url = URL(fileURLWithPath: path)
-
-        guard let _ = try? data.write(to: url, options: []) else {
-            return false
-        }
-
-        return true
+  public class func takeScreenshotAndSaveToPath(_ path: String) -> Bool {
+    guard let window = LionheartExtensions.sharedUIApplication?.patchedKeyWindow else {
+      return false
     }
+
+    let bounds = window.bounds
+    UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
+    window.drawHierarchy(in: bounds, afterScreenUpdates: true)
+    let _image = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+
+    guard let image = _image,
+      let data = UIImagePNGRepresentation(image)
+    else {
+      return false
+    }
+
+    let url = URL(fileURLWithPath: path)
+
+    guard (try? data.write(to: url, options: [])) != nil else {
+      return false
+    }
+
+    return true
+  }
 }

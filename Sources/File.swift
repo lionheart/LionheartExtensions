@@ -17,76 +17,79 @@
 import Foundation
 
 public final class File {
-    public var filename: String?
+  public var filename: String?
 
-    public init(_ filename: String) {
-        self.filename = filename
+  public init(_ filename: String) {
+    self.filename = filename
+  }
+
+  /// The file's full path contained with the documents directory, or `nil` if it does not exist.
+  lazy var documentsPath: String? = {
+    let paths: [NSString] =
+      NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [NSString]
+    guard let path = paths.first,
+      let filename = self.filename
+    else {
+      return nil
     }
 
-    /// The file's full path contained with the documents directory, or `nil` if it does not exist.
-    lazy var documentsPath: String? = {
-        let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [NSString]
-        guard let path = paths.first,
-            let filename = self.filename else {
-                return nil
-        }
+    return path.appendingPathComponent(filename)
+  }()
 
-        return path.appendingPathComponent(filename)
-    }()
-
-    /// The file's full path contained within the bundle, or `nil` if `filename` is `nil`.
-    var bundlePath: String? {
-        let bundle = Bundle.main
-        guard let filename = filename else {
-            return nil
-        }
-
-        let components = filename.components(separatedBy: ".")
-        return bundle.path(forResource: components[0], ofType: components[1])
+  /// The file's full path contained within the bundle, or `nil` if `filename` is `nil`.
+  var bundlePath: String? {
+    let bundle = Bundle.main
+    guard let filename = filename else {
+      return nil
     }
 
-    /// Returns the file's contents as a `String`.
-    func read() -> String? {
-        guard let path = documentsPath ?? bundlePath else {
-            return nil
-        }
+    let components = filename.components(separatedBy: ".")
+    return bundle.path(forResource: components[0], ofType: components[1])
+  }
 
-        return try? String(contentsOfFile: path, encoding: .utf8)
+  /// Returns the file's contents as a `String`.
+  func read() -> String? {
+    guard let path = documentsPath ?? bundlePath else {
+      return nil
     }
 
-    /// A boolean that indicates whether `self` is contained within the app bundle.
-    var existsInBundle: Bool {
-        guard let path = bundlePath else {
-            return false
-        }
+    return try? String(contentsOfFile: path, encoding: .utf8)
+  }
 
-        return FileManager.default.fileExists(atPath: path)
+  /// A boolean that indicates whether `self` is contained within the app bundle.
+  var existsInBundle: Bool {
+    guard let path = bundlePath else {
+      return false
     }
 
-    /// A boolean that indicates whether `self` is contained within the documents directory.
-    var existsInDocuments: Bool {
-        guard let path = documentsPath else {
-            return false
-        }
+    return FileManager.default.fileExists(atPath: path)
+  }
 
-        return FileManager.default.fileExists(atPath: path)
+  /// A boolean that indicates whether `self` is contained within the documents directory.
+  var existsInDocuments: Bool {
+    guard let path = documentsPath else {
+      return false
     }
+
+    return FileManager.default.fileExists(atPath: path)
+  }
 }
 
 extension File: ExpressibleByStringLiteral {
-    public typealias StringLiteralType = String
-    public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
-    public typealias UnicodeScalarLiteralType = StringLiteralType
+  public typealias StringLiteralType = String
+  public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
+  public typealias UnicodeScalarLiteralType = StringLiteralType
 
-    public convenience init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
-        self.init(value)
-    }
+  public convenience init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType)
+  {
+    self.init(value)
+  }
 
-    public convenience init(stringLiteral value: StringLiteralType) {
-        self.init(value)
-    }
+  public convenience init(stringLiteral value: StringLiteralType) {
+    self.init(value)
+  }
 
-    public convenience init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
-        self.init(value)
-    }
+  public convenience init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
+    self.init(value)
+  }
 }

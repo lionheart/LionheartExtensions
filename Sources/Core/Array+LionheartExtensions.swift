@@ -17,29 +17,29 @@
 
 import Foundation
 
-public extension Array {
-    /// Returns an iterator that splits `self` into chunks of `Array<Element>`, each with `size` elements.
-    func chunks(_ size: Int) -> AnyIterator<[Element]> {
-        if size == 0 {
-            return AnyIterator {
-                return nil
-            }
-        }
-
-        let indices = stride(from: startIndex, to: count, by: size)
-        var generator = indices.makeIterator()
-
-        return AnyIterator {
-            guard let i = generator.next() else {
-                return nil
-            }
-
-            var j = self.index(i, offsetBy: size)
-            repeat {
-                j = self.index(before: j)
-            } while j >= self.endIndex
-
-            return self[i...j].lazy.map { $0 }
-        }
+extension Array {
+  /// Returns an iterator that splits `self` into chunks of `Array<Element>`, each with `size` elements.
+  public func chunks(_ size: Int) -> AnyIterator<[Element]> {
+    if size == 0 {
+      return AnyIterator {
+        return nil
+      }
     }
+
+    let indices = stride(from: startIndex, to: count, by: size)
+    var generator = indices.makeIterator()
+
+    return AnyIterator {
+      guard let i = generator.next() else {
+        return nil
+      }
+
+      var j = self.index(i, offsetBy: size)
+      repeat {
+        j = self.index(before: j)
+      } while j >= self.endIndex
+
+      return self[i...j].lazy.map { $0 }
+    }
+  }
 }

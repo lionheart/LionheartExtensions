@@ -17,15 +17,16 @@
 
 import UIKit
 
-public extension UIScreen {
-    /**
+extension UIScreen {
+  /**
      A view snapshot containing the status bar.
 
      - Date: February 17, 2016
      */
-    var statusBarView: UIView? {
-        let view = snapshotView(afterScreenUpdates: true)
-        let rect = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
-        return view.resizableSnapshotView(from: rect, afterScreenUpdates: true, withCapInsets: UIEdgeInsets.zero)
-    }
+  public var statusBarView: UIView? {
+    let view = snapshotView(afterScreenUpdates: true)
+    let rect = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
+    return view.resizableSnapshotView(
+      from: rect, afterScreenUpdates: true, withCapInsets: UIEdgeInsets.zero)
+  }
 }

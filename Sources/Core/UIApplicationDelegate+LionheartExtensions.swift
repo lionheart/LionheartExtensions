@@ -8,20 +8,20 @@
 import UIKit
 
 public protocol UIApplicationDelegateWithWindow: UIApplicationDelegate {
-    var window: UIWindow? { get set }
+  var window: UIWindow? { get set }
 }
 
 /// Usage: `rootViewController = controller`
-public extension UIApplicationDelegateWithWindow {
-    var rootViewController: UIViewController? {
-        set {
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.rootViewController = newValue
-            window?.makeKeyAndVisible()
-        }
-        
-        get {
-            return window?.rootViewController
-        }
+extension UIApplicationDelegateWithWindow {
+  public var rootViewController: UIViewController? {
+    set {
+      window = UIWindow(frame: UIScreen.main.bounds)
+      window?.rootViewController = newValue
+      window?.makeKeyAndVisible()
     }
+
+    get {
+      return window?.rootViewController
+    }
+  }
 }

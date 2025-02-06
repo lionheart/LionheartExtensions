@@ -16,39 +16,41 @@
 
 import UIKit
 
-public extension UIPrintPageRenderer {
-    /// The printable page rendered as a PDF.
-    var PDF: Data {
-        let data = NSMutableData()
+extension UIPrintPageRenderer {
+  /// The printable page rendered as a PDF.
+  public var PDF: Data {
+    let data = NSMutableData()
 
-        UIGraphicsBeginPDFContextToData(data, paperRect, nil)
-        prepare(forDrawingPages: NSMakeRange(0, numberOfPages))
+    UIGraphicsBeginPDFContextToData(data, paperRect, nil)
+    prepare(forDrawingPages: NSMakeRange(0, numberOfPages))
 
-        let bounds = UIGraphicsGetPDFContextBounds()
-        for i in 0..<numberOfPages {
-            UIGraphicsBeginPDFPage()
-            drawPage(at: i, in: bounds)
-        }
-
-        UIGraphicsEndPDFContext()
-        return data as Data
+    let bounds = UIGraphicsGetPDFContextBounds()
+    for i in 0..<numberOfPages {
+      UIGraphicsBeginPDFPage()
+      drawPage(at: i, in: bounds)
     }
 
-    /**
+    UIGraphicsEndPDFContext()
+    return data as Data
+  }
+
+  /**
      Creates a `UIPrintPageRenderer` given the provided formatter, paper size, and insets.
 
      - Note: The size for A4 paper is `CGSize(width: 612, height: 792)`.
      */
-    convenience init(formatter: UIViewPrintFormatter, paperSize: CGSize, insets: UIEdgeInsets) {
-        self.init()
+  public convenience init(formatter: UIViewPrintFormatter, paperSize: CGSize, insets: UIEdgeInsets)
+  {
+    self.init()
 
-        addPrintFormatter(formatter, startingAtPageAt: 0)
+    addPrintFormatter(formatter, startingAtPageAt: 0)
 
-        let printableRect = CGRect(x: insets.left, y: insets.top, width: paperSize.width - insets.left - insets.right, height: paperSize.height - insets.top - insets.bottom)
-        let paperRect = CGRect(origin: CGPoint.zero, size: paperSize)
+    let printableRect = CGRect(
+      x: insets.left, y: insets.top, width: paperSize.width - insets.left - insets.right,
+      height: paperSize.height - insets.top - insets.bottom)
+    let paperRect = CGRect(origin: CGPoint.zero, size: paperSize)
 
-        setValue(NSValue(cgRect: paperRect), forKey: "paperRect")
-        setValue(NSValue(cgRect: printableRect), forKey: "printableRect")
-    }
+    setValue(NSValue(cgRect: paperRect), forKey: "paperRect")
+    setValue(NSValue(cgRect: printableRect), forKey: "printableRect")
+  }
 }
-

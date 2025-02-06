@@ -17,8 +17,8 @@
 
 import UIKit
 
-public extension UIApplication {
-    /**
+extension UIApplication {
+  /**
      Return what the equivalent of `keyWindow` in iOS 12 and below.
 
      - Returns: The `keyWindow` in the foregrounded `UIScene`.
@@ -26,7 +26,7 @@ public extension UIApplication {
      - Date: August 30, 2020
      - Source: https://stackoverflow.com/a/57899013/39155
      */
-    var patchedKeyWindow: UIWindow? {
-        return windows.first(where: \.isKeyWindow)
-    }
+  public var patchedKeyWindow: UIWindow? {
+    return windows.first(where: \.isKeyWindow)
+  }
 }

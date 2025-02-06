@@ -18,87 +18,87 @@
 import Foundation
 
 public struct TruthTeller<T> {
-    public var value: Bool
+  public var value: Bool
 
-    public init(_ value: T?) {
-        guard let value = value else {
-            self.value = false
-            return
-        }
-
-        if let value = value as? Int {
-            self.value = value > 0
-        } else if let value = value as? String {
-            self.value = value.length > 0 && value != ""
-        } else if let value = value as? Bool {
-            self.value = value
-        } else if value is Date {
-            self.value = true
-        } else {
-            self.value = false
-        }
+  public init(_ value: T?) {
+    guard let value = value else {
+      self.value = false
+      return
     }
+
+    if let value = value as? Int {
+      self.value = value > 0
+    } else if let value = value as? String {
+      self.value = value.length > 0 && value != ""
+    } else if let value = value as? Bool {
+      self.value = value
+    } else if value is Date {
+      self.value = true
+    } else {
+      self.value = false
+    }
+  }
 }
 
 public func truthy<T>(_ item: T) -> Bool {
-    return TruthTeller(item).value
+  return TruthTeller(item).value
 }
 
 public func all(_ elements: [Any?], test: ((Any?) -> Bool) = truthy) -> Bool {
-    for element in elements {
-        if !test(element) {
-            return false
-        }
+  for element in elements {
+    if !test(element) {
+      return false
     }
-    return true
+  }
+  return true
 }
 
 public func any(_ elements: [Any?], test: ((Any?) -> Bool) = truthy) -> Bool {
-    for element in elements {
-        if test(element) {
-            return true
-        }
+  for element in elements {
+    if test(element) {
+      return true
     }
+  }
 
-    return false
+  return false
 }
 
 public func all<T>(_ elements: [T?], test: ((Any?) -> Bool)? = nil) -> Bool {
-    for element in elements {
-        if !truthy(element) {
-            return false
-        }
+  for element in elements {
+    if !truthy(element) {
+      return false
     }
+  }
 
-    return true
+  return true
 }
 
 public func any<T>(_ elements: [T?], test: ((Any?) -> Bool) = truthy) -> Bool {
-    for element in elements {
-        if let element = element {
-            if test(element as AnyObject?) {
-                return true
-            }
-        }
+  for element in elements {
+    if let element = element {
+      if test(element as AnyObject?) {
+        return true
+      }
     }
+  }
 
-    return false
+  return false
 }
 
-public extension Array {
-    func all(_ predicate: (Iterator.Element) throws -> Bool = truthy) rethrows -> Bool {
-        for element in self {
-            guard try predicate(element) else { return false }
-        }
-        return true
+extension Array {
+  public func all(_ predicate: (Iterator.Element) throws -> Bool = truthy) rethrows -> Bool {
+    for element in self {
+      guard try predicate(element) else { return false }
     }
+    return true
+  }
 
-    func any(_ predicate: (Iterator.Element) throws -> Bool = truthy) rethrows -> Bool {
-        for element in self {
-            if let result = try? predicate(element), result {
-                return true
-            }
-        }
-        return false
+  public func any(_ predicate: (Iterator.Element) throws -> Bool = truthy) rethrows -> Bool {
+    for element in self {
+      if let result = try? predicate(element), result {
+        return true
+      }
     }
+    return false
+  }
 }

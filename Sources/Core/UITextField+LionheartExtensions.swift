@@ -18,5 +18,5 @@
 import UIKit
 
 public protocol UITextFieldIdentifiable {
-    static var identifier: String { get set }
+  static var identifier: String { get set }
 }
