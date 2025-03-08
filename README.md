@@ -19,12 +19,9 @@ limitations under the License.
 
 ### An invaluable collection of Swift extensions and utilities for iOS development
 
-[![CI Status][ci-badge]][travis-repo-url]
 [![Version][version-badge]][cocoapods-repo-url]
 [![License][license-badge]][cocoapods-repo-url]
 [![Platform][platform-badge]][cocoapods-repo-url]
-[![CocoaPods][downloads-badge]][cocoapods-repo-url]
-[![CocoaPods][downloads-monthly-badge]][cocoapods-repo-url]
 
 ## About
 
