@@ -33,6 +33,7 @@ extension Int {
      - Returns: A `CGFloat` that represents the proportionally sized value.
      - Date: February 17, 2016
     */
+  @MainActor
   public func scaledToDeviceWidth(_ baseWidth: CGFloat) -> CGFloat {
     let screen = UIScreen.main
     return (screen.bounds.width / baseWidth) * CGFloat(self)

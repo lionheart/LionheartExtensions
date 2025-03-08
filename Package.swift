@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
   name: "LionheartExtensions",
   platforms: [
-    .iOS(.v15)
+    .iOS(.v16)
   ],
   products: [
     .library(
@@ -13,9 +13,8 @@ let package = Package(
     )
   ],
   targets: [
-    .target(
-      name: "LionheartExtensions"
-    )
+    .target(name: "LionheartExtensions"),
+    .testTarget(name: "LionheartExtensionsTests", dependencies: [.byName(name: "LionheartExtensions")])
   ],
-  swiftLanguageModes: [.v4]
+  swiftLanguageModes: [.v6]
 )

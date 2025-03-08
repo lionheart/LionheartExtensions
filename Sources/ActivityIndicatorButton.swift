@@ -26,7 +26,7 @@ public final class ActivityIndicatorButton: UIButton {
   override init(frame: CGRect) {
     super.init(frame: .zero)
 
-    activity = UIActivityIndicatorView(activityIndicatorStyle: .medium)
+    activity = UIActivityIndicatorView(style: .medium)
     activity.translatesAutoresizingMaskIntoConstraints = false
 
     addSubview(activity)

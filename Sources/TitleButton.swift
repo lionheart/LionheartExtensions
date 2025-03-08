@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 public protocol TitleButtonThemeProtocol {
   static var normalColor: UIColor { get }
   static var highlightedColor: UIColor { get }

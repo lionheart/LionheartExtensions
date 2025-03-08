@@ -40,7 +40,7 @@ extension UIWindow {
     UIGraphicsEndImageContext()
 
     guard let image = _image,
-      let data = UIImagePNGRepresentation(image)
+          let data = image.pngData()
     else {
       return false
     }

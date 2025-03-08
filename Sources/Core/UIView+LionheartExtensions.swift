@@ -356,6 +356,7 @@ extension UIView {
 }
 
 extension Array where Element: UIView {
+  @MainActor
   public func removeFromSuperviews() {
     forEach { $0.removeFromSuperview() }
   }

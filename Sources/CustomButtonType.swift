@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 public protocol CustomButtonType {
   func setTitle(title: String)
   func setTitle(title: String, subtitle: String?)

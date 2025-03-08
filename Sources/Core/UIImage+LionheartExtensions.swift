@@ -54,6 +54,7 @@ extension UIImage {
 
      - Date: March 9, 2016
      */
+  @MainActor
   public convenience init?(view: UIView, scale: CGFloat? = nil) {
     let size = view.bounds.size
 
@@ -174,6 +175,7 @@ extension UIImage {
 
      - Date: February 17, 2016
      */
+  @MainActor
   public class func screenshot() -> UIImage? {
     let imageSize = UIScreen.main.bounds.size
 
@@ -248,10 +250,10 @@ extension UIImage {
     let data: Data?
     switch format {
     case .PNG:
-      data = UIImagePNGRepresentation(self)
+      data = pngData()
 
     case .JPEG(let quality):
-      data = UIImageJPEGRepresentation(self, quality)
+      data = jpegData(compressionQuality: quality)
     }
 
     try data?.write(to: URL(fileURLWithPath: path), options: .atomicWrite)
