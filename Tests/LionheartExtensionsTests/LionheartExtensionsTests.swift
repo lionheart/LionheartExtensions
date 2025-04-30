@@ -36,6 +36,12 @@ struct DateFormatterLionheartExtensionsTests {
     dates.forEach { #expect(formatter.date(from: $0) != nil) }
   }
 
+  @Test func testAmericanDateKitchenTimeAndOffset() async throws {
+    let dates = ["04-16-2025 10:14 AM -07:00"]
+    let formatter = try DateFormatter.formatter(dateStrings: dates)
+    dates.forEach { #expect(formatter.date(from: $0) != nil) }
+  }
+
   @Test func testTwoSpaceDates() async throws {
     let dates = ["March 2, 2023", "April 5, 2023"]
     let formatter = try DateFormatter.formatter(dateStrings: dates)

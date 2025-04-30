@@ -62,6 +62,7 @@ private struct DateFormatterString {
   static let TimeComponent7 = "HH:mm:ssZ"
   static let TimeComponent8 = "HH:mm:ss.SSSZ"
   static let TimeComponent9 = "HH:mm:ssZZZZZ"
+  static let TimeComponent10 = "HH:mm a Z"
 
   // Take one of the following
   static let ZeroSpaceDateStrings = [
@@ -79,7 +80,7 @@ private struct DateFormatterString {
   static let OneSpaceTimeStrings = [
     TimeComponent2, TimeComponent4, TimeComponent5,
   ]
-  static let TwoSpaceTimeStrings = [TimeComponent6]
+  static let TwoSpaceTimeStrings = [TimeComponent6, TimeComponent10]
 }
 
 nonisolated(unsafe) let badOffset = /-(\d:\d\d)/
