@@ -344,4 +344,10 @@ struct DateFormatterLionheartExtensionsTests {
       try DateFormatter.formatter(dateStrings: dates)
     }
   }
+
+  @Test func testDateFromTodd() async throws {
+    let dates = ["Dec 03, 2024 8:58 PM"]
+    let formatter = try DateFormatter.formatter(dateStrings: dates)
+    dates.forEach { #expect(formatter.date(from: $0) != nil) }
+  }
 }

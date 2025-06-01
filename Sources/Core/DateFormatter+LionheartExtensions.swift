@@ -52,6 +52,7 @@ private struct DateFormatterString {
   static let DateComponent5 = "yyyyMMddHHmmssZ"
   static let DateComponent6 = "MMMM d, yyyy"
   static let DateComponent7 = "MMM dd yyyy"
+  static let DateComponent8 = "MMM dd, yyyy"
 
   static let TimeComponent1 = "HH:mm"
   static let TimeComponent2 = "hh:mm a"
@@ -63,6 +64,7 @@ private struct DateFormatterString {
   static let TimeComponent8 = "HH:mm:ss.SSSZ"
   static let TimeComponent9 = "HH:mm:ssZZZZZ"
   static let TimeComponent10 = "HH:mm a Z"
+  static let TimeComponent11 = "h:mm a"
 
   // Take one of the following
   static let ZeroSpaceDateStrings = [
@@ -146,7 +148,14 @@ extension DateFormatter {
           DateFormatter(
             format:
               "\(DateFormatterString.TimeComponent3) \(DateFormatterString.DateComponent7)"
-          )
+          ),
+          DateFormatter(format: "\(DateFormatterString.DateComponent8) \(DateFormatterString.TimeComponent11)")
+        ])
+        
+      case 4:
+        timeFormatStrings = []
+        formatters.append(contentsOf: [
+          DateFormatter(format: "\(DateFormatterString.DateComponent8) \(DateFormatterString.TimeComponent11)")
         ])
       default: throw DateFormatError.noMatchingFormat(nil)
       }
