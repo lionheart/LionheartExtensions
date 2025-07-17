@@ -350,4 +350,10 @@ struct DateFormatterLionheartExtensionsTests {
     let formatter = try DateFormatter.formatter(dateStrings: dates)
     dates.forEach { #expect(formatter.date(from: $0) != nil) }
   }
+  
+  @Test func testISO8601WithNoSeconds() async throws {
+    let dates = ["2025-07-15T07:41-07:00", "2025-07-15T07:36-07:00"]
+    let formatter = try DateFormatter.formatter(dateStrings: dates)
+    dates.forEach { #expect(formatter.date(from: $0) != nil) }
+  }
 }

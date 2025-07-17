@@ -65,6 +65,7 @@ private struct DateFormatterString {
   static let TimeComponent9 = "HH:mm:ssZZZZZ"
   static let TimeComponent10 = "HH:mm a Z"
   static let TimeComponent11 = "h:mm a"
+  static let TimeComponent12 = "HH:mmZ"
 
   // Take one of the following
   static let ZeroSpaceDateStrings = [
@@ -76,7 +77,7 @@ private struct DateFormatterString {
   // And mix with one of these
   static let ZeroSpaceTimeStrings = [
     TimeComponent1, TimeComponent3, TimeComponent7, TimeComponent8,
-    TimeComponent9,
+    TimeComponent9, TimeComponent12
   ]
 
   static let OneSpaceTimeStrings = [
