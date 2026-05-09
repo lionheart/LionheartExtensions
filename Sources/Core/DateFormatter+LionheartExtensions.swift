@@ -27,6 +27,7 @@ public enum DateFormatError: Error, Equatable {
   case inconsistentFormat
   case unspecified
   case noMatchingFormat(NoMatchingFormat?)
+  case mismatchedDate(String)
 
   public static func == (lhs: DateFormatError, rhs: DateFormatError) -> Bool {
     switch (lhs, rhs) {
@@ -36,14 +37,17 @@ public enum DateFormatError: Error, Equatable {
       return true
     case (.unspecified, .unspecified):
       return true
-    case (.noMatchingFormat(let lhsValue), .noMatchingFormat(let rhsValue)):
-      return lhsValue == rhsValue
+    case (.noMatchingFormat(let lhs), .noMatchingFormat(let rhs)):
+      return lhs == rhs
+    case (.mismatchedDate(let lhs), .mismatchedDate(let rhs)):
+      return lhs == rhs
     default:
       return false
     }
   }
 }
 
+// https://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
 private struct DateFormatterString {
   static let DateComponent1 = "MM-dd-yyyy"
   static let DateComponent2 = "dd-MM-yyyy"
@@ -109,13 +113,12 @@ extension DateFormatter {
   public static func formatter(dateStrings: [String]) throws -> DateFormatter {
     var numberOfSpaces: Int?
     for dateString in dateStrings {
-      let characters: [Character] = dateString.filter({ $0 == " " || $0 == "T" }
-      )
+      let characters: [Character] = dateString.filter { $0 == " " || $0 == "T" }
       let count = characters.count
 
       // If the number of spaces between date strings is inconsistent, there's no way we can find a formatter to match all of them.
-      if let numberOfSpaces = numberOfSpaces, count != numberOfSpaces {
-        throw DateFormatError.emptyDates
+      if let numberOfSpaces, count != numberOfSpaces {
+        throw DateFormatError.mismatchedDate(dateString)
       }
 
       numberOfSpaces = count

@@ -333,7 +333,14 @@ struct DateFormatterLionheartExtensionsTests {
 
   @Test func testInconsistentSpacingThrows() async throws {
     let dates = ["2023-03-28", "2023-03-28 14:30"]
-    #expect(throws: DateFormatError.emptyDates.self) {
+    #expect(throws: DateFormatError.mismatchedDate("2023-03-28 14:30")) {
+      try DateFormatter.formatter(dateStrings: dates)
+    }
+  }
+  
+  @Test func testDateFromTetSuzaki() async throws {
+    let dates = ["2025/06/26 7:15", "1999/11/30"]
+    #expect(throws: DateFormatError.mismatchedDate("1999/11/30")) {
       try DateFormatter.formatter(dateStrings: dates)
     }
   }
@@ -353,6 +360,175 @@ struct DateFormatterLionheartExtensionsTests {
   
   @Test func testISO8601WithNoSeconds() async throws {
     let dates = ["2025-07-15T07:41-07:00", "2025-07-15T07:36-07:00"]
+    let formatter = try DateFormatter.formatter(dateStrings: dates)
+    dates.forEach { #expect(formatter.date(from: $0) != nil) }
+  }
+  
+  @Test func testDateFromRK() async throws {
+    let dates = ["05-21-2022 12:11 AM"]
+    let formatter = try DateFormatter.formatter(dateStrings: dates)
+    dates.forEach { #expect(formatter.date(from: $0) != nil) }
+  }
+  
+  @Test func testDateFromLi() async throws {
+    let dates = ["2024-07-10 08:14:03"]
+    let formatter = try DateFormatter.formatter(dateStrings: dates)
+    dates.forEach { #expect(formatter.date(from: $0) != nil) }
+  }
+  
+  @Test func testDateFromPatrick() async throws {
+    let dates = [
+      "9/10/21",
+      "9/18/21",
+      "9/23/21",
+      "10/6/21",
+      "10/17/21",
+      "10/20/21",
+      "10/25/21",
+      "11/6/21",
+      "11/8/21",
+      "11/17/21",
+      "11/26/21",
+      "11/27/21",
+      "12/6/21",
+      "12/17/21",
+      "12/24/21",
+      "12/27/21",
+      "1/3/22",
+      "1/8/22",
+      "1/23/22",
+      "1/31/22",
+      "2/14/22",
+      "2/19/22",
+      "3/3/22",
+      "3/9/22",
+      "3/11/22",
+      "3/12/22",
+      "4/6/22",
+      "4/16/22",
+      "4/27/22",
+      "5/3/22",
+      "5/13/22",
+      "5/21/22",
+      "6/17/22",
+      "6/23/22",
+      "6/26/22",
+      "7/6/22",
+      "7/17/22",
+      "7/22/22",
+      "7/25/22",
+      "8/12/22",
+      "8/14/22",
+      "8/19/22",
+      "8/27/22",
+      "9/5/22",
+      "9/9/22",
+      "9/30/22",
+      "10/8/22",
+      "10/21/22",
+      "10/24/22",
+      "10/26/22",
+      "10/29/22",
+      "11/13/22",
+      "11/20/22",
+      "12/15/22",
+      "12/20/22",
+      "12/27/22",
+      "1/2/23",
+      "1/9/23",
+      "1/17/23",
+      "1/29/23",
+      "2/14/23",
+      "2/23/23",
+      "2/25/23",
+      "4/2/23",
+      "4/10/23",
+      "4/15/23",
+      "5/5/23",
+      "5/14/23",
+      "5/20/23",
+      "5/27/23",
+      "5/29/23",
+      "6/4/23",
+      "6/8/23",
+      "6/9/23",
+      "6/18/23",
+      "6/26/23",
+      "7/6/23",
+      "7/11/23",
+      "7/22/23",
+      "7/30/23",
+      "8/13/23",
+      "8/20/23",
+      "9/15/23",
+      "9/23/23",
+      "10/7/23",
+      "10/9/23",
+      "10/29/23",
+      "11/5/23",
+      "11/12/23",
+      "11/21/23",
+      "11/25/23",
+      "12/2/23",
+      "12/17/23",
+      "12/22/23",
+      "12/28/23",
+      "12/31/23",
+      "1/9/24",
+      "1/27/24",
+      "2/13/24",
+      "2/21/24",
+      "2/27/24",
+      "3/1/24",
+      "3/2/24",
+      "3/3/24",
+      "3/15/24",
+      "3/16/24",
+      "4/2/24",
+      "4/9/24",
+      "4/16/24",
+      "4/27/24",
+      "5/4/24",
+      "5/6/24",
+      "5/19/24",
+      "5/24/24",
+      "5/27/24",
+      "7/4/24",
+      "7/20/24",
+      "7/30/24",
+      "8/2/24",
+      "8/17/24",
+      "8/20/24",
+      "8/30/24",
+      "9/13/24",
+      "10/2/24",
+      "10/6/24",
+      "10/13/24",
+      "10/18/24",
+      "11/11/24",
+      "11/18/24",
+      "11/28/24",
+      "12/10/24",
+      "12/22/24",
+      "12/27/24",
+      "1/3/25",
+      "1/10/25",
+      "1/23/25",
+      "3/10/25",
+      "3/24/25",
+      "4/2/25",
+      "4/16/25",
+      "4/25/25",
+      "4/28/25",
+      "5/11/25",
+      "6/7/25",
+      "6/20/25",
+      "6/28/25",
+      "7/7/25",
+      "7/14/25",
+      "7/23/25",
+      "8/6/25",
+    ]
     let formatter = try DateFormatter.formatter(dateStrings: dates)
     dates.forEach { #expect(formatter.date(from: $0) != nil) }
   }
