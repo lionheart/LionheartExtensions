@@ -110,7 +110,7 @@ extension DateFormatter {
   }
 
   /// Returns a `DateFormatter` that handles all of the provided `dateStrings`, or `nil` if a formatter could not be found.
-  public static func formatter(dateStrings: [String]) throws -> DateFormatter {
+  public static func formatter(dateStrings: [String]) throws(DateFormatError) -> DateFormatter {
     var numberOfSpaces: Int?
     for dateString in dateStrings {
       let characters: [Character] = dateString.filter { $0 == " " || $0 == "T" }
